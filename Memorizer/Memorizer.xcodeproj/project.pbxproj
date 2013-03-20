@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F3B16FA5623009268D2 /* Tokens.m */; };
 		F2B2443B16E5F85500E11381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443A16E5F85500E11381 /* UIKit.framework */; };
 		F2B2443D16E5F85500E11381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443C16E5F85500E11381 /* Foundation.framework */; };
 		F2B2443F16E5F85500E11381 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443E16E5F85500E11381 /* CoreGraphics.framework */; };
@@ -27,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A8D36F3816FA5623009268D2 /* BaseColorTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseColorTokens.h; sourceTree = "<group>"; };
+		A8D36F3916FA5623009268D2 /* BaseTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTokens.h; sourceTree = "<group>"; };
+		A8D36F3A16FA5623009268D2 /* Tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tokens.h; sourceTree = "<group>"; };
+		A8D36F3B16FA5623009268D2 /* Tokens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tokens.m; sourceTree = "<group>"; };
 		F2B2443716E5F85500E11381 /* Memorizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B2443A16E5F85500E11381 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F2B2443C16E5F85500E11381 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,19 +40,19 @@
 		F2B2444416E5F85500E11381 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2B2444616E5F85500E11381 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F2B2444816E5F85500E11381 /* Memorizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memorizer-Prefix.pch"; sourceTree = "<group>"; };
-		F2B2444916E5F85500E11381 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F2B2444A16E5F85500E11381 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2B2444916E5F85500E11381 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		F2B2444A16E5F85500E11381 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		F2B2444C16E5F85500E11381 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F2B2444E16E5F85500E11381 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F2B2445016E5F85500E11381 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F2B2445216E5F85500E11381 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		F2B2445316E5F85500E11381 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		F2B2445516E5F85500E11381 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		F2B2445716E5F85500E11381 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		F2B2445916E5F85500E11381 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		F2B2445A16E5F85500E11381 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		F2B2445C16E5F85500E11381 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		F2B2445E16E5F85500E11381 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		F2B2445216E5F85500E11381 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../../FirstViewController.h; sourceTree = "<group>"; };
+		F2B2445316E5F85500E11381 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../../FirstViewController.m; sourceTree = "<group>"; };
+		F2B2445516E5F85500E11381 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = ../first.png; sourceTree = "<group>"; };
+		F2B2445716E5F85500E11381 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "../first@2x.png"; sourceTree = "<group>"; };
+		F2B2445916E5F85500E11381 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ../../SecondViewController.h; sourceTree = "<group>"; };
+		F2B2445A16E5F85500E11381 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ../../SecondViewController.m; sourceTree = "<group>"; };
+		F2B2445C16E5F85500E11381 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = ../second.png; sourceTree = "<group>"; };
+		F2B2445E16E5F85500E11381 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "../second@2x.png"; sourceTree = "<group>"; };
 		F2B2446116E5F85500E11381 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
 		F2B2446416E5F85500E11381 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +71,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8D36F3616FA5623009268D2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A8D36F3D16FA5641009268D2 /* Controllers */,
+				A8D36F3716FA5623009268D2 /* Tokens */,
+				F2B2444916E5F85500E11381 /* AppDelegate.h */,
+				F2B2444A16E5F85500E11381 /* AppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A8D36F3716FA5623009268D2 /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				A8D36F3816FA5623009268D2 /* BaseColorTokens.h */,
+				A8D36F3916FA5623009268D2 /* BaseTokens.h */,
+				A8D36F3A16FA5623009268D2 /* Tokens.h */,
+				A8D36F3B16FA5623009268D2 /* Tokens.m */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		A8D36F3D16FA5641009268D2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2B2445216E5F85500E11381 /* FirstViewController.h */,
+				F2B2445316E5F85500E11381 /* FirstViewController.m */,
+				F2B2445916E5F85500E11381 /* SecondViewController.h */,
+				F2B2445A16E5F85500E11381 /* SecondViewController.m */,
+				F2B2446016E5F85500E11381 /* FirstViewController.xib */,
+				F2B2446316E5F85500E11381 /* SecondViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A8D36F3E16FA5667009268D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2B2445516E5F85500E11381 /* first.png */,
+				F2B2445716E5F85500E11381 /* first@2x.png */,
+				F2B2445C16E5F85500E11381 /* second.png */,
+				F2B2445E16E5F85500E11381 /* second@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F2B2442E16E5F85500E11381 = {
 			isa = PBXGroup;
 			children = (
@@ -96,18 +147,8 @@
 		F2B2444016E5F85500E11381 /* Memorizer */ = {
 			isa = PBXGroup;
 			children = (
-				F2B2444916E5F85500E11381 /* AppDelegate.h */,
-				F2B2444A16E5F85500E11381 /* AppDelegate.m */,
-				F2B2445216E5F85500E11381 /* FirstViewController.h */,
-				F2B2445316E5F85500E11381 /* FirstViewController.m */,
-				F2B2445516E5F85500E11381 /* first.png */,
-				F2B2445716E5F85500E11381 /* first@2x.png */,
-				F2B2445916E5F85500E11381 /* SecondViewController.h */,
-				F2B2445A16E5F85500E11381 /* SecondViewController.m */,
-				F2B2445C16E5F85500E11381 /* second.png */,
-				F2B2445E16E5F85500E11381 /* second@2x.png */,
-				F2B2446016E5F85500E11381 /* FirstViewController.xib */,
-				F2B2446316E5F85500E11381 /* SecondViewController.xib */,
+				A8D36F3E16FA5667009268D2 /* Resources */,
+				A8D36F3616FA5623009268D2 /* Classes */,
 				F2B2444116E5F85500E11381 /* Supporting Files */,
 			);
 			path = Memorizer;
@@ -202,6 +243,7 @@
 				F2B2444B16E5F85500E11381 /* AppDelegate.m in Sources */,
 				F2B2445416E5F85500E11381 /* FirstViewController.m in Sources */,
 				F2B2445B16E5F85500E11381 /* SecondViewController.m in Sources */,
+				A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +264,7 @@
 				F2B2446116E5F85500E11381 /* en */,
 			);
 			name = FirstViewController.xib;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		F2B2446316E5F85500E11381 /* SecondViewController.xib */ = {
@@ -230,6 +273,7 @@
 				F2B2446416E5F85500E11381 /* en */,
 			);
 			name = SecondViewController.xib;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -332,6 +376,7 @@
 				F2B2446A16E5F85500E11381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
