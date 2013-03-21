@@ -41,7 +41,6 @@ andNextPresentationDate:(NSDate *)aNextPresentationDate{
 #define kAnswerKey @"answer"
 #define kDescriptionKey @"description"
 #define kNextPresentationDateKey @"nextPresentationDate"
-
 /**
  @brief <#Describe the function purpose#>
  @author : Rémi Lavedrine

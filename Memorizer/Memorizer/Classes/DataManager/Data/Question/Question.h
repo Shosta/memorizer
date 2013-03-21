@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 //! @brief Describes a Question object.
 //! @class Question
 //! @ingroup Data
