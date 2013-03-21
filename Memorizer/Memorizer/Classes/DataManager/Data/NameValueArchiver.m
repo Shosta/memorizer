@@ -54,16 +54,6 @@
 }
 
 
-#pragma mark - Memory management
-
-- (void)dealloc {
-  [self setName:nil];
-  [self setValue:nil];
-  
-  [super dealloc];
-}
-
-
 #pragma mark - Description
 
 - (NSString *)description{

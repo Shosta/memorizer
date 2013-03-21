@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A844A54A16FB17780021037B /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A54916FB17780021037B /* Question.m */; };
+		A844A54E16FB17D10021037B /* Question+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A54D16FB17D10021037B /* Question+Archiver.m */; };
+		A844A55116FB18500021037B /* Question+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A55016FB18500021037B /* Question+Parser.m */; };
+		A878107116FB1C26003E3F91 /* QuestionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A878107016FB1C26003E3F91 /* QuestionSet.m */; };
+		A878107516FB1C74003E3F91 /* QuestionSet+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A878107416FB1C74003E3F91 /* QuestionSet+Parser.m */; };
 		A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F3B16FA5623009268D2 /* Tokens.m */; };
 		A8D36F4316FA5A07009268D2 /* NameValueArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */; };
 		F2B2443B16E5F85500E11381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443A16E5F85500E11381 /* UIKit.framework */; };
@@ -29,6 +34,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A844A54816FB17780021037B /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = Question/Question.h; sourceTree = "<group>"; };
+		A844A54916FB17780021037B /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = Question/Question.m; sourceTree = "<group>"; };
+		A844A54C16FB17D10021037B /* Question+Archiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Question+Archiver.h"; path = "Question/Question+Archiver.h"; sourceTree = "<group>"; };
+		A844A54D16FB17D10021037B /* Question+Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Question+Archiver.m"; path = "Question/Question+Archiver.m"; sourceTree = "<group>"; };
+		A844A54F16FB18500021037B /* Question+Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Question+Parser.h"; path = "Question/Question+Parser.h"; sourceTree = "<group>"; };
+		A844A55016FB18500021037B /* Question+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Question+Parser.m"; path = "Question/Question+Parser.m"; sourceTree = "<group>"; };
+		A844A55416FB192C0021037B /* OLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLLog.h; sourceTree = "<group>"; };
+		A844A55516FB192C0021037B /* OLLogSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLLogSetter.h; sourceTree = "<group>"; };
+		A878106F16FB1C26003E3F91 /* QuestionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSet.h; path = QuestionSet/QuestionSet.h; sourceTree = "<group>"; };
+		A878107016FB1C26003E3F91 /* QuestionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSet.m; path = QuestionSet/QuestionSet.m; sourceTree = "<group>"; };
+		A878107316FB1C74003E3F91 /* QuestionSet+Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "QuestionSet+Parser.h"; path = "QuestionSet/QuestionSet+Parser.h"; sourceTree = "<group>"; };
+		A878107416FB1C74003E3F91 /* QuestionSet+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "QuestionSet+Parser.m"; path = "QuestionSet/QuestionSet+Parser.m"; sourceTree = "<group>"; };
 		A8D36F3816FA5623009268D2 /* BaseColorTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseColorTokens.h; sourceTree = "<group>"; };
 		A8D36F3916FA5623009268D2 /* BaseTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTokens.h; sourceTree = "<group>"; };
 		A8D36F3A16FA5623009268D2 /* Tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tokens.h; sourceTree = "<group>"; };
@@ -74,11 +91,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A844A54B16FB177B0021037B /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				A844A54816FB17780021037B /* Question.h */,
+				A844A54916FB17780021037B /* Question.m */,
+				A844A54F16FB18500021037B /* Question+Parser.h */,
+				A844A55016FB18500021037B /* Question+Parser.m */,
+				A844A54C16FB17D10021037B /* Question+Archiver.h */,
+				A844A54D16FB17D10021037B /* Question+Archiver.m */,
+			);
+			name = Question;
+			sourceTree = "<group>";
+		};
+		A844A55216FB192C0021037B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A844A55316FB192C0021037B /* Log */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A844A55316FB192C0021037B /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				A844A55416FB192C0021037B /* OLLog.h */,
+				A844A55516FB192C0021037B /* OLLogSetter.h */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		A878107216FB1C2A003E3F91 /* QuestionSet */ = {
+			isa = PBXGroup;
+			children = (
+				A878106F16FB1C26003E3F91 /* QuestionSet.h */,
+				A878107016FB1C26003E3F91 /* QuestionSet.m */,
+				A878107316FB1C74003E3F91 /* QuestionSet+Parser.h */,
+				A878107416FB1C74003E3F91 /* QuestionSet+Parser.m */,
+			);
+			name = QuestionSet;
+			sourceTree = "<group>";
+		};
 		A8D36F3616FA5623009268D2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A8D36F3F16FA5A07009268D2 /* DataManager */,
 				A8D36F3D16FA5641009268D2 /* Controllers */,
 				A8D36F3716FA5623009268D2 /* Tokens */,
+				A844A55216FB192C0021037B /* Utilities */,
 				F2B2444916E5F85500E11381 /* AppDelegate.h */,
 				F2B2444A16E5F85500E11381 /* AppDelegate.m */,
 			);
@@ -125,8 +185,7 @@
 			children = (
 				A8D36F4016FA5A07009268D2 /* Data */,
 			);
-			name = DataManager;
-			path = ../../../Memorizer/Memorizer/Memorizer/Classes/DataManager;
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		A8D36F4016FA5A07009268D2 /* Data */ = {
@@ -134,6 +193,8 @@
 			children = (
 				A8D36F4116FA5A07009268D2 /* NameValueArchiver.h */,
 				A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */,
+				A878107216FB1C2A003E3F91 /* QuestionSet */,
+				A844A54B16FB177B0021037B /* Question */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -169,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				A8D36F3E16FA5667009268D2 /* Resources */,
-				A8D36F3F16FA5A07009268D2 /* DataManager */,
 				A8D36F3616FA5623009268D2 /* Classes */,
 				F2B2444116E5F85500E11381 /* Supporting Files */,
 			);
@@ -267,6 +327,11 @@
 				F2B2445B16E5F85500E11381 /* SecondViewController.m in Sources */,
 				A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */,
 				A8D36F4316FA5A07009268D2 /* NameValueArchiver.m in Sources */,
+				A844A54A16FB17780021037B /* Question.m in Sources */,
+				A844A54E16FB17D10021037B /* Question+Archiver.m in Sources */,
+				A844A55116FB18500021037B /* Question+Parser.m in Sources */,
+				A878107116FB1C26003E3F91 /* QuestionSet.m in Sources */,
+				A878107516FB1C74003E3F91 /* QuestionSet+Parser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

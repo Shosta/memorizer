@@ -1,8 +1,8 @@
 //--------------------------------------------------------
-// FT/OLNC/OLPS/SOFT/IDF-NANCY/MSF
+// FT/IMG/RD/MAPS/DVC/HOD
 //--------------------------------------------------------
 // Project     : MobinilAndMe
-// File        : Tokens.h
+// File        : OLLOgSetter.h
 // Created     : $ 20/04/2012 $
 // Maintainer  : $ Rémi LAVEDRINE $
 //
@@ -17,14 +17,15 @@
 //--------------------------------------------------------
 // 
 // @brief 
-// A class that contains all the tokens needed for the app in order to described it in one single location in the project.
-// This class is imported in all project's classes through the "MobinilAndMe-Prefix.pch" file.
-//
+// This class defines the current logging level for the app.
+// The different logging level are described in the "OLLog.h" file.
+// 
 
-#import <Foundation/Foundation.h>
-#import "BaseColorTokens.h"
-#import "BaseTokens.h"
+//! ACTIVATE LOGGING
+#define LOGGING_ENABLED	 1
 
-@interface Tokens : NSObject
+//! SET LOG LEVEL
+//! LOG_LVL_ERR (ERROR) < LOG_LVL_WRN (WARNING) < LOG_LVL_INF (INFO) < LOG_LVL_DBG (DEBUG)
+#define LOGGING_LEVEL	LOG_LVL_DBG
 
-@end
+//#define LOGGING_LEVEL	LOG_LVL_ERR
