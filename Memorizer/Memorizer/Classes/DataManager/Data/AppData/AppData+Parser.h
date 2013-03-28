@@ -10,4 +10,8 @@
 
 @interface AppData (Parser)
 
+//! Parse the data from the File.
+//! @param [in] data : The NSData object that has to be parsed.
+- (void)fetchedData:(NSData *)data;
+
 @end

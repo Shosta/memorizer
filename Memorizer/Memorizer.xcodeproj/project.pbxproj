@@ -10,6 +10,15 @@
 		A844A54A16FB17780021037B /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A54916FB17780021037B /* Question.m */; };
 		A844A54E16FB17D10021037B /* Question+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A54D16FB17D10021037B /* Question+Archiver.m */; };
 		A844A55116FB18500021037B /* Question+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A55016FB18500021037B /* Question+Parser.m */; };
+		A845C05F17044AED0064806D /* irregularVerbs.json in Resources */ = {isa = PBXBuildFile; fileRef = A845C05E17044AED0064806D /* irregularVerbs.json */; };
+		A845C06217044E610064806D /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C06117044E610064806D /* AppData.m */; };
+		A845C06617044FC80064806D /* AppData+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C06517044FC80064806D /* AppData+Archiver.m */; };
+		A845C069170454080064806D /* AppData+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C068170454080064806D /* AppData+Parser.m */; };
+		A845C06C170460840064806D /* ManagerLaunchApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C06B170460830064806D /* ManagerLaunchApp.m */; };
+		A845C0711704639F0064806D /* QuestionSetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C06F1704639F0064806D /* QuestionSetsViewController.m */; };
+		A845C0721704639F0064806D /* QuestionSetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A845C0701704639F0064806D /* QuestionSetsViewController.xib */; };
+		A845C0771704682B0064806D /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C0751704682B0064806D /* QuestionViewController.m */; };
+		A845C0781704682B0064806D /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A845C0761704682B0064806D /* QuestionViewController.xib */; };
 		A878107116FB1C26003E3F91 /* QuestionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A878107016FB1C26003E3F91 /* QuestionSet.m */; };
 		A878107516FB1C74003E3F91 /* QuestionSet+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A878107416FB1C74003E3F91 /* QuestionSet+Parser.m */; };
 		A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F3B16FA5623009268D2 /* Tokens.m */; };
@@ -42,6 +51,21 @@
 		A844A55016FB18500021037B /* Question+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Question+Parser.m"; path = "Question/Question+Parser.m"; sourceTree = "<group>"; };
 		A844A55416FB192C0021037B /* OLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLLog.h; sourceTree = "<group>"; };
 		A844A55516FB192C0021037B /* OLLogSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLLogSetter.h; sourceTree = "<group>"; };
+		A845C05E17044AED0064806D /* irregularVerbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = irregularVerbs.json; sourceTree = "<group>"; };
+		A845C06017044E610064806D /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppData.h; path = AppData/AppData.h; sourceTree = "<group>"; };
+		A845C06117044E610064806D /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppData.m; path = AppData/AppData.m; sourceTree = "<group>"; };
+		A845C06417044FC80064806D /* AppData+Archiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppData+Archiver.h"; path = "AppData/AppData+Archiver.h"; sourceTree = "<group>"; };
+		A845C06517044FC80064806D /* AppData+Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppData+Archiver.m"; path = "AppData/AppData+Archiver.m"; sourceTree = "<group>"; };
+		A845C067170454080064806D /* AppData+Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppData+Parser.h"; path = "AppData/AppData+Parser.h"; sourceTree = "<group>"; };
+		A845C068170454080064806D /* AppData+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppData+Parser.m"; path = "AppData/AppData+Parser.m"; sourceTree = "<group>"; };
+		A845C06A170460820064806D /* ManagerLaunchApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManagerLaunchApp.h; path = ManagerLaunchApp/ManagerLaunchApp.h; sourceTree = "<group>"; };
+		A845C06B170460830064806D /* ManagerLaunchApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManagerLaunchApp.m; path = ManagerLaunchApp/ManagerLaunchApp.m; sourceTree = "<group>"; };
+		A845C06E1704639F0064806D /* QuestionSetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetsViewController.h; path = QuestionSetsViewController/QuestionSetsViewController.h; sourceTree = "<group>"; };
+		A845C06F1704639F0064806D /* QuestionSetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSetsViewController.m; path = QuestionSetsViewController/QuestionSetsViewController.m; sourceTree = "<group>"; };
+		A845C0701704639F0064806D /* QuestionSetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetsViewController.xib; path = QuestionSetsViewController/QuestionSetsViewController.xib; sourceTree = "<group>"; };
+		A845C0741704682B0064806D /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionViewController.h; path = QuestionViewController/QuestionViewController.h; sourceTree = "<group>"; };
+		A845C0751704682B0064806D /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionViewController.m; path = QuestionViewController/QuestionViewController.m; sourceTree = "<group>"; };
+		A845C0761704682B0064806D /* QuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionViewController.xib; path = QuestionViewController/QuestionViewController.xib; sourceTree = "<group>"; };
 		A878106F16FB1C26003E3F91 /* QuestionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSet.h; path = QuestionSet/QuestionSet.h; sourceTree = "<group>"; };
 		A878107016FB1C26003E3F91 /* QuestionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSet.m; path = QuestionSet/QuestionSet.m; sourceTree = "<group>"; };
 		A878107316FB1C74003E3F91 /* QuestionSet+Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "QuestionSet+Parser.h"; path = "QuestionSet/QuestionSet+Parser.h"; sourceTree = "<group>"; };
@@ -121,6 +145,56 @@
 			path = Log;
 			sourceTree = "<group>";
 		};
+		A845C05D17044AED0064806D /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				A845C05E17044AED0064806D /* irregularVerbs.json */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		A845C06317044E670064806D /* AppData */ = {
+			isa = PBXGroup;
+			children = (
+				A845C06017044E610064806D /* AppData.h */,
+				A845C06117044E610064806D /* AppData.m */,
+				A845C067170454080064806D /* AppData+Parser.h */,
+				A845C068170454080064806D /* AppData+Parser.m */,
+				A845C06417044FC80064806D /* AppData+Archiver.h */,
+				A845C06517044FC80064806D /* AppData+Archiver.m */,
+			);
+			name = AppData;
+			sourceTree = "<group>";
+		};
+		A845C06D170460960064806D /* ManagerLaunchApp */ = {
+			isa = PBXGroup;
+			children = (
+				A845C06A170460820064806D /* ManagerLaunchApp.h */,
+				A845C06B170460830064806D /* ManagerLaunchApp.m */,
+			);
+			name = ManagerLaunchApp;
+			sourceTree = "<group>";
+		};
+		A845C073170463C20064806D /* QuestionSetsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A845C06E1704639F0064806D /* QuestionSetsViewController.h */,
+				A845C06F1704639F0064806D /* QuestionSetsViewController.m */,
+				A845C0701704639F0064806D /* QuestionSetsViewController.xib */,
+			);
+			name = QuestionSetsViewController;
+			sourceTree = "<group>";
+		};
+		A845C079170468310064806D /* QuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A845C0741704682B0064806D /* QuestionViewController.h */,
+				A845C0751704682B0064806D /* QuestionViewController.m */,
+				A845C0761704682B0064806D /* QuestionViewController.xib */,
+			);
+			name = QuestionViewController;
+			sourceTree = "<group>";
+		};
 		A878107216FB1C2A003E3F91 /* QuestionSet */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +233,8 @@
 		A8D36F3D16FA5641009268D2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A845C073170463C20064806D /* QuestionSetsViewController */,
+				A845C079170468310064806D /* QuestionViewController */,
 				F2B2445216E5F85500E11381 /* FirstViewController.h */,
 				F2B2445316E5F85500E11381 /* FirstViewController.m */,
 				F2B2445916E5F85500E11381 /* SecondViewController.h */,
@@ -176,6 +252,7 @@
 				F2B2445716E5F85500E11381 /* first@2x.png */,
 				F2B2445C16E5F85500E11381 /* second.png */,
 				F2B2445E16E5F85500E11381 /* second@2x.png */,
+				A845C05D17044AED0064806D /* Content */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -193,6 +270,8 @@
 			children = (
 				A8D36F4116FA5A07009268D2 /* NameValueArchiver.h */,
 				A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */,
+				A845C06D170460960064806D /* ManagerLaunchApp */,
+				A845C06317044E670064806D /* AppData */,
 				A878107216FB1C2A003E3F91 /* QuestionSet */,
 				A844A54B16FB177B0021037B /* Question */,
 			);
@@ -311,6 +390,9 @@
 				F2B2445F16E5F85500E11381 /* second@2x.png in Resources */,
 				F2B2446216E5F85500E11381 /* FirstViewController.xib in Resources */,
 				F2B2446516E5F85500E11381 /* SecondViewController.xib in Resources */,
+				A845C05F17044AED0064806D /* irregularVerbs.json in Resources */,
+				A845C0721704639F0064806D /* QuestionSetsViewController.xib in Resources */,
+				A845C0781704682B0064806D /* QuestionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +414,12 @@
 				A844A55116FB18500021037B /* Question+Parser.m in Sources */,
 				A878107116FB1C26003E3F91 /* QuestionSet.m in Sources */,
 				A878107516FB1C74003E3F91 /* QuestionSet+Parser.m in Sources */,
+				A845C06217044E610064806D /* AppData.m in Sources */,
+				A845C06617044FC80064806D /* AppData+Archiver.m in Sources */,
+				A845C069170454080064806D /* AppData+Parser.m in Sources */,
+				A845C06C170460840064806D /* ManagerLaunchApp.m in Sources */,
+				A845C0711704639F0064806D /* QuestionSetsViewController.m in Sources */,
+				A845C0771704682B0064806D /* QuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

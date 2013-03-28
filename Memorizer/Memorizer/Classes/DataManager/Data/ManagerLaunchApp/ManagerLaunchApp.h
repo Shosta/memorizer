@@ -10,4 +10,13 @@
 
 @interface ManagerLaunchApp : NSObject
 
+
+#pragma mark - Public methods
+//! Singleton method.
++ (ManagerLaunchApp *)sharedInstance;
+
+#pragma mark - Refresh AppData
+//! Refresh the AppData from the network when the user first launchs the application.
+- (void)refreshData;
+
 @end

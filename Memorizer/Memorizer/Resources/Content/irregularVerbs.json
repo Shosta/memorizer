@@ -1,0 +1,78 @@
+{
+    "questionSets": [
+        {
+                "title": "Les verbes irréguliers anglais",
+                "list": [
+                    {
+                        "statement": "Pay",
+                        "answer": "Paid, Paid, Paid",
+                        "description": "C'est un verbe irréguliers du 1er groupe",
+                        "image": "",
+                        "video": "",
+                        "sound": ""
+                    },
+                    {
+                        "statement": "Read",
+                        "answer": "Read, Read, Read",
+                        "description": "C'est un verbe irréguliers du 1er groupe",
+                        "image": "",
+                        "video": "",
+                        "sound": ""
+                    },
+                    {
+                        "statement": "Take",
+                        "answer": "Take, Took, Taken",
+                        "description": "C'est un verbe irréguliers du 1er groupe",
+                        "image": "",
+                        "video": "",
+                        "sound": ""
+                    },
+                    {
+                        "statement": "Sing",
+                        "answer": "Sing, Sang, Sung",
+                        "description": "C'est un verbe irréguliers du 1er groupe",
+                        "image": "",
+                        "video": "",
+                        "sound": ""
+                    }
+                ]
+        },
+        {
+                "title": "Les verbes irréguliers allemand",
+                "list": [
+                    {
+                        "statement": "Payen",
+                        "answer": "Paiden, Paiden, Paiden",
+                        "description": "C'est un verbe irréguliers du 1er groupe",
+                        "image": "",
+                        "video": "",
+                        "sound": ""
+                    },
+                    {
+                        "statement": "Readen",
+                        "answer": "Readen, Readen, Readen",
+                        "description": "C'est un verbe irréguliers du 1er groupe",
+                        "image": "",
+                        "video": "",
+                        "sound": ""
+                    },
+                    {
+                        "statement": "Takieren",
+                        "answer": "Takieren, Takieren, Takieren",
+                        "description": "C'est un verbe irréguliers du 1er groupe",
+                        "image": "",
+                        "video": "",
+                        "sound": ""
+                    },
+                    {
+                        "statement": "Singen",
+                        "answer": "Singen, Singen, Singen",
+                        "description": "C'est un verbe irréguliers du 1er groupe",
+                        "image": "",
+                        "video": "",
+                        "sound": ""
+                    }
+                ]
+        }
+    ]
+}

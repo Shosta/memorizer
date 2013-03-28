@@ -17,5 +17,8 @@
 @property (nonatomic, retain) NSString *answer;
 @property (nonatomic, retain) NSString *description;
 @property (nonatomic, retain) NSDate *nextPresentationDate;
+@property (nonatomic, retain) NSString *imageName;
+@property (nonatomic, retain) NSString *videoName;
+@property (nonatomic, retain) NSString *soundName;
 
 @end

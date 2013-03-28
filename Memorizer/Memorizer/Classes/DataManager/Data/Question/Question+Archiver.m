@@ -22,13 +22,19 @@
 - (id)initWithStatement:(NSString *)aStatement
                  answer:(NSString *)aAnswer
             description:(NSString *)aDescription
-andNextPresentationDate:(NSDate *)aNextPresentationDate{
+   nextPresentationDate:(NSDate *)aNextPresentationDate
+              imageName:(NSString *)aImageName
+              videoName:(NSString *)aVideoName
+              soundName:(NSString *)aSoundName{
     self = [super init];
     if (self) {
         self.statement = aStatement;
         self.answer = aAnswer;
         self.description = aDescription;
         self.nextPresentationDate = aNextPresentationDate;
+        self.imageName = aImageName;
+        self.videoName = aVideoName;
+        self.soundName = aSoundName;
     }
     
     return self;
@@ -41,6 +47,9 @@ andNextPresentationDate:(NSDate *)aNextPresentationDate{
 #define kAnswerKey @"answer"
 #define kDescriptionKey @"description"
 #define kNextPresentationDateKey @"nextPresentationDate"
+#define kImageKey @"image"
+#define kVideoKey @"video"
+#define kSoundKey @"sound"
 /**
  @brief <#Describe the function purpose#>
  @author : Rémi Lavedrine
@@ -52,6 +61,9 @@ andNextPresentationDate:(NSDate *)aNextPresentationDate{
     [encoder encodeObject:self.answer forKey:kAnswerKey];
     [encoder encodeObject:self.description forKey:kDescriptionKey];
     [encoder encodeObject:self.nextPresentationDate forKey:kNextPresentationDateKey];
+    [encoder encodeObject:self.imageName forKey:kImageKey];
+    [encoder encodeObject:self.videoName forKey:kVideoKey];
+    [encoder encodeObject:self.soundName forKey:kSoundKey];
 }
 
 /**
@@ -61,15 +73,21 @@ andNextPresentationDate:(NSDate *)aNextPresentationDate{
  @remarks : <#(optional)#>
  */
 - (id)initWithCoder:(NSCoder *)decoder {
-    NSString *s = [decoder decodeObjectForKey:kStatementKey];
-    NSString *a = [decoder decodeObjectForKey:kAnswerKey];
-    NSString *d = [decoder decodeObjectForKey:kDescriptionKey];
-    NSDate *n = [decoder decodeObjectForKey:kNextPresentationDateKey];
+    NSString  *s = [decoder decodeObjectForKey:kStatementKey];
+    NSString  *a = [decoder decodeObjectForKey:kAnswerKey];
+    NSString  *d = [decoder decodeObjectForKey:kDescriptionKey];
+    NSDate    *n = [decoder decodeObjectForKey:kNextPresentationDateKey];
+    NSString  *i = [decoder decodeObjectForKey:kImageKey];
+    NSString  *v = [decoder decodeObjectForKey:kVideoKey];
+    NSString *sd = [decoder decodeObjectForKey:kSoundKey];
     
     return [self initWithStatement:s
                             answer:a
                        description:d
-           andNextPresentationDate:n];
+              nextPresentationDate:n
+                         imageName:i
+                         videoName:v
+                         soundName:sd];
 }
 
 

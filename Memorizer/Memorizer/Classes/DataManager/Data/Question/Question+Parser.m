@@ -16,6 +16,9 @@
 #define kStatementKey @"statement"
 #define kAnswerKey @"answer"
 #define kDescriptionKey @"description"
+#define kImageKey @"image"
+#define kVideoKey @"video"
+#define kSoundKey @"sound"
 /**
  @brief Create a Question object from an NSdictionary object returned from the parsing.
  @author : Rémi Lavedrine
@@ -45,6 +48,24 @@
     
     // 4. Add the next présentation date to now.
     aQuestion.nextPresentationDate = [NSDate date];
+    
+    // 5. Add the image name if any.
+    NSString *imageName = [questionDict objectForKey:kImageKey];
+    if (answer != nil) {
+        aQuestion.imageName = imageName;
+    }
+    
+    // 6. Add the video name if any.
+    NSString *videoName = [questionDict objectForKey:kVideoKey];
+    if (answer != nil) {
+        aQuestion.videoName = videoName;
+    }
+    
+    // 7. Add the sound name if any.
+    NSString *soundName = [questionDict objectForKey:kSoundKey];
+    if (answer != nil) {
+        aQuestion.soundName = soundName;
+    }
     
     return aQuestion;
 }

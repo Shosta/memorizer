@@ -13,6 +13,7 @@
 //! @ingroup Data
 //! @author Rémi Lavedrine
 @interface QuestionSet : NSObject
+@property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSMutableArray *questionsArray;
 
 @end

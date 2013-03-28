@@ -11,4 +11,6 @@
 
 @implementation Tokens
 
+NSString *kArchiveFileName = @"AppData.archive";
+
 @end

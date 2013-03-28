@@ -27,4 +27,6 @@
 
 @interface Tokens : NSObject
 
+extern NSString *kArchiveFileName;
+
 @end

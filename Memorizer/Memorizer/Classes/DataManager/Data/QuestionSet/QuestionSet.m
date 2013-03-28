@@ -10,4 +10,13 @@
 
 @implementation QuestionSet
 
+- (id)init{
+    self = [super init];
+    if (self) {
+        self.questionsArray = [[NSMutableArray alloc] initWithCapacity:0];
+    }
+    
+    return self;
+}
+
 @end

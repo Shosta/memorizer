@@ -13,29 +13,31 @@
 @implementation QuestionSet (Parser)
 
 #define kQuestionsArrayKey @"questions"
+#define kTitleKey @"title"
 #define kQuestionsArrayListKey @"list"
+
 /**
- @brief Parse the
+ @brief Create a Question object from an NSdictionary object returned from the parsing.
  @author : Rémi Lavedrine
  @date : 21/03/2013
  @remarks : <#(optional)#>
  */
-- (void)fetchedData:(NSData *)data{
-    NSError *error;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
-                                                         options:kNilOptions
-                                                           error:&error];
-    BOOL isValidJSONObject = [NSJSONSerialization isValidJSONObject:json];
-    if (isValidJSONObject) {
-        // 1. Parse the list of questions.
-        NSDictionary *questionsDict = [json objectForKey:kQuestionsArrayKey];
-        if (questionsDict != nil) {
-            NSArray *questionsArray = [questionsDict objectForKey:kQuestionsArrayListKey];
-            for (NSDictionary *questionDict in questionsArray) {
-                [self.questionsArray addObject:[Question parse:questionDict]];
-            }
-        }   
++ (QuestionSet *)parse:(NSDictionary *)questionSetDict{
+    QuestionSet *aQuestionSet = [[QuestionSet alloc] init];
+    
+    // 1. Parse the Question Title.
+    NSString *title = [questionSetDict objectForKey:kTitleKey];
+    if (questionSetDict != nil) {
+        aQuestionSet.title = title;
     }
+
+    // 2. Parse the Question List.
+    NSArray *questionsArray = [questionSetDict objectForKey:kQuestionsArrayListKey];
+    for (NSDictionary *questionDict in questionsArray) {
+        [aQuestionSet.questionsArray addObject:[Question parse:questionDict]];
+    }
+    
+    return aQuestionSet;
 }
 
 @end
