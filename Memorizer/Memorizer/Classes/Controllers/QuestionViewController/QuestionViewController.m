@@ -13,8 +13,8 @@
 
 @property (nonatomic, retain) NSMutableArray *questionSetArray;
 @property int currentQuestionIndex;
-@property BOOL answerRequired;
-@property BOOL descriptionRequired;
+@property BOOL isAnswerRequired;
+@property BOOL isDescriptionRequired;
 @end
 
 @implementation QuestionViewController
@@ -31,8 +31,8 @@
         // Custom initialization
         self.questionSetArray = aQuestionSetArray;
         self.currentQuestionIndex = 0;
-        self.answerRequired = NO;
-        self.descriptionRequired = NO;
+        self.isAnswerRequired = NO;
+        self.isDescriptionRequired = NO;
     }
     return self;
 }
@@ -67,11 +67,15 @@
  1. The answer
  2. The description (something to go further to explain the answer).
  */
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)aTableView
-{
-    int sectionCount = 3;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)aTableView {
+  int sectionCount = 2;
+  
+  int descriptionRowCount = 0;
+  if (self.isDescriptionRequired) {
+    descriptionRowCount = 1;
+  }
     
-    return sectionCount;
+    return sectionCount + descriptionRowCount;
 }
 
 /**
@@ -80,8 +84,7 @@
  @date : <#current date#>
  @remarks : There is always 1 row per section.
  */
-- (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section{
     int rowsInSection = 1;
     
     return rowsInSection;
@@ -113,7 +116,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    if (self.answerRequired == YES) {
+    if (self.isAnswerRequired == YES) {
         [cell setUserInteractionEnabled:NO];
         Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
         NSString *answer = currentQuestion.answer;
@@ -137,7 +140,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         [cell setUserInteractionEnabled:NO];
     }
-    if (self.descriptionRequired == YES) {
+    if (self.isDescriptionRequired == YES) {
         Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
         NSString *description = currentQuestion.description;
         [cell.textLabel setText:description];
@@ -190,7 +193,7 @@
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.section) {
         case 1:
-            self.answerRequired = YES;
+            self.isAnswerRequired = YES;
             [self.tableView reloadData];
             break;
             

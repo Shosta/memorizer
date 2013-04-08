@@ -76,7 +76,7 @@ static AppData * theAppData = nil;
 {
     if(theAppData == nil)
     {
-        // theAppData = [AppData sharedInstanceDecodeArchiveFile:kArchiveFileName];
+        theAppData = [AppData sharedInstanceDecodeArchiveFile:kArchiveFileName];
         if ( !theAppData ) {
             theAppData =[[AppData alloc] init];
             theAppData.questionSetsArray = [[NSMutableArray alloc] initWithCapacity:0];

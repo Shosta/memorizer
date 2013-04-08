@@ -46,9 +46,9 @@
     NSFileManager *manager = [[NSFileManager alloc] init];
     AppData *appData = nil;
     NSString *archivePath = [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
-    if ( [manager fileExistsAtPath:archivePath] ) {
+    if ([manager fileExistsAtPath:archivePath]) {
         appData = [NSKeyedUnarchiver unarchiveObjectWithFile:archivePath];
-        // OLLogDebug(@"%@", [appData describeObject]);
+        OLLogDebug(@"%@", [appData description]);
     }
     
     return appData;
