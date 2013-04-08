@@ -19,8 +19,11 @@
 // @brief
 // 
 
-___IMPORTHEADER_viewControllerSubclass___
+#import <UIKit/UIKit.h>
 
 @interface AnswerTableViewCell : UITableViewCell
+
+@property (retain, nonatomic) IBOutlet UILabel *textLabel;
+@property (nonatomic, retain) IBOutlet UIButton *showDescriptionLabel;
 
 @end

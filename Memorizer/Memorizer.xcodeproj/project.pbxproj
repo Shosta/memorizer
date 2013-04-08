@@ -42,6 +42,8 @@
 		F2B2446516E5F85500E11381 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B2446316E5F85500E11381 /* SecondViewController.xib */; };
 		F2D92A1017130B5C006ED8A6 /* AnswerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D92A0F17130B5C006ED8A6 /* AnswerTableViewCell.m */; };
 		F2D92A1317130B76006ED8A6 /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D92A1217130B76006ED8A6 /* AnswerTableViewCell.xib */; };
+		F2D92A18171316EA006ED8A6 /* explanation.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D92A16171316EA006ED8A6 /* explanation.png */; };
+		F2D92A19171316EA006ED8A6 /* questionMark.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D92A17171316EA006ED8A6 /* questionMark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,8 @@
 		F2D92A0E17130B5C006ED8A6 /* AnswerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnswerTableViewCell.h; path = CustomUIObjects/AnswerTableViewCell/AnswerTableViewCell.h; sourceTree = "<group>"; };
 		F2D92A0F17130B5C006ED8A6 /* AnswerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnswerTableViewCell.m; path = CustomUIObjects/AnswerTableViewCell/AnswerTableViewCell.m; sourceTree = "<group>"; };
 		F2D92A1217130B76006ED8A6 /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnswerTableViewCell.xib; path = CustomUIObjects/AnswerTableViewCell/AnswerTableViewCell.xib; sourceTree = "<group>"; };
+		F2D92A16171316EA006ED8A6 /* explanation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explanation.png; sourceTree = "<group>"; };
+		F2D92A17171316EA006ED8A6 /* questionMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionMark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +263,7 @@
 				F2B2445C16E5F85500E11381 /* second.png */,
 				F2B2445E16E5F85500E11381 /* second@2x.png */,
 				A845C05D17044AED0064806D /* Content */,
+				F2D92A14171316EA006ED8A6 /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -345,6 +350,23 @@
 			name = AnswerTableViewCell;
 			sourceTree = "<group>";
 		};
+		F2D92A14171316EA006ED8A6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F2D92A15171316EA006ED8A6 /* AnswerTableViewCell */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F2D92A15171316EA006ED8A6 /* AnswerTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F2D92A16171316EA006ED8A6 /* explanation.png */,
+				F2D92A17171316EA006ED8A6 /* questionMark.png */,
+			);
+			path = AnswerTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,6 +432,8 @@
 				A845C0721704639F0064806D /* QuestionSetsViewController.xib in Resources */,
 				A845C0781704682B0064806D /* QuestionViewController.xib in Resources */,
 				F2D92A1317130B76006ED8A6 /* AnswerTableViewCell.xib in Resources */,
+				F2D92A18171316EA006ED8A6 /* explanation.png in Resources */,
+				F2D92A19171316EA006ED8A6 /* questionMark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

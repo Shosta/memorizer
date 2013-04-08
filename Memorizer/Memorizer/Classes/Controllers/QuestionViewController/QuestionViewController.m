@@ -8,6 +8,7 @@
 
 #import "QuestionViewController.h"
 #import "Question.h"
+#import "AnswerTableViewCell.h"
 
 @interface QuestionViewController ()
 
@@ -111,24 +112,37 @@
 #pragma mark - Answer Cell
 
 - (UITableViewCell *)answerCell:(UITableView *)aTableView{
-    NSString *cellIdentifier = @"AnswerCellIdentifier";
-    UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    NSString *CellIdentifier = @"AnswerTableViewCell";
+    /*UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }*/
+  
+  AnswerTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  if (cell == nil) {
+    NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"AnswerTableViewCell"
+                                                             owner:self
+                                                           options:nil];
+    
+    for(id currentObject in topLevelObjects){
+      if([currentObject isKindOfClass:[AnswerTableViewCell class]]){
+        cell = (AnswerTableViewCell *) currentObject;
+        break;
+      }
     }
+  }
+  
     if (self.isAnswerRequired == YES) {
-        [cell setUserInteractionEnabled:NO];
+      // [cell setUserInteractionEnabled:NO];
         Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
         NSString *answer = currentQuestion.answer;
         [cell.textLabel setText:answer];
     }else{
-        [cell setUserInteractionEnabled:YES];
+      // [cell setUserInteractionEnabled:YES];
         [cell.textLabel setText:@"Réponse"];
     }
     
     return cell;
-    
-    
 }
 
 #pragma mark - Description Cell
