@@ -29,4 +29,19 @@
 
 extern NSString *kArchiveFileName;
 
+//! Cell Statement
+extern int kCellStatementPaddingX;
+extern int kCellStatementPaddingY;
+extern int kCellStatementDefaultTextWidth;
+
+//! Cell Answer
+extern int kCellAnswerPaddingX;
+extern int kCellAnswerPaddingY;
+extern int kCellAnswerDefaultTextWidth;
+
+//! Cell Description
+extern int kCellDescriptionPaddingX;
+extern int kCellDescriptionPaddingY;
+extern int kCellDescriptionDefaultTextWidth;
+
 @end

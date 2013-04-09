@@ -23,6 +23,7 @@
 		A878107516FB1C74003E3F91 /* QuestionSet+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A878107416FB1C74003E3F91 /* QuestionSet+Parser.m */; };
 		A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F3B16FA5623009268D2 /* Tokens.m */; };
 		A8D36F4316FA5A07009268D2 /* NameValueArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */; };
+		F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */ = {isa = PBXBuildFile; fileRef = F28BE51A1714664600B4AC13 /* nextQuestion.png */; };
 		F2B2443B16E5F85500E11381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443A16E5F85500E11381 /* UIKit.framework */; };
 		F2B2443D16E5F85500E11381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443C16E5F85500E11381 /* Foundation.framework */; };
 		F2B2443F16E5F85500E11381 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443E16E5F85500E11381 /* CoreGraphics.framework */; };
@@ -44,6 +45,13 @@
 		F2D92A1317130B76006ED8A6 /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D92A1217130B76006ED8A6 /* AnswerTableViewCell.xib */; };
 		F2D92A18171316EA006ED8A6 /* explanation.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D92A16171316EA006ED8A6 /* explanation.png */; };
 		F2D92A19171316EA006ED8A6 /* questionMark.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D92A17171316EA006ED8A6 /* questionMark.png */; };
+		F2F8D804171416E9007FC71A /* NSString+LabelSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D800171416E9007FC71A /* NSString+LabelSize.m */; };
+		F2F8D805171416E9007FC71A /* UILabel+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D803171416E9007FC71A /* UILabel+Size.m */; };
+		F2F8D809171447BB007FC71A /* DescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D808171447BB007FC71A /* DescriptionTableViewCell.m */; };
+		F2F8D80C1714480A007FC71A /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F8D80B1714480A007FC71A /* DescriptionTableViewCell.xib */; };
+		F2F8D80E17144D7C007FC71A /* StatementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F8D80D17144D7C007FC71A /* StatementTableViewCell.xib */; };
+		F2F8D81217144DA0007FC71A /* StatementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D81117144DA0007FC71A /* StatementTableViewCell.m */; };
+		F2F8D815171450C6007FC71A /* AutoResizeLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D814171450C5007FC71A /* AutoResizeLabelTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +88,7 @@
 		A8D36F3B16FA5623009268D2 /* Tokens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tokens.m; sourceTree = "<group>"; };
 		A8D36F4116FA5A07009268D2 /* NameValueArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameValueArchiver.h; sourceTree = "<group>"; };
 		A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameValueArchiver.m; sourceTree = "<group>"; };
+		F28BE51A1714664600B4AC13 /* nextQuestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextQuestion.png; sourceTree = "<group>"; };
 		F2B2443716E5F85500E11381 /* Memorizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B2443A16E5F85500E11381 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F2B2443C16E5F85500E11381 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +117,18 @@
 		F2D92A1217130B76006ED8A6 /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnswerTableViewCell.xib; path = CustomUIObjects/AnswerTableViewCell/AnswerTableViewCell.xib; sourceTree = "<group>"; };
 		F2D92A16171316EA006ED8A6 /* explanation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explanation.png; sourceTree = "<group>"; };
 		F2D92A17171316EA006ED8A6 /* questionMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionMark.png; sourceTree = "<group>"; };
+		F2F8D7FF171416E9007FC71A /* NSString+LabelSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LabelSize.h"; sourceTree = "<group>"; };
+		F2F8D800171416E9007FC71A /* NSString+LabelSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelSize.m"; sourceTree = "<group>"; };
+		F2F8D802171416E9007FC71A /* UILabel+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Size.h"; sourceTree = "<group>"; };
+		F2F8D803171416E9007FC71A /* UILabel+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Size.m"; sourceTree = "<group>"; };
+		F2F8D807171447BB007FC71A /* DescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescriptionTableViewCell.h; path = CustomUIObjects/DescriptionTableViewCell/DescriptionTableViewCell.h; sourceTree = "<group>"; };
+		F2F8D808171447BB007FC71A /* DescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescriptionTableViewCell.m; path = CustomUIObjects/DescriptionTableViewCell/DescriptionTableViewCell.m; sourceTree = "<group>"; };
+		F2F8D80B1714480A007FC71A /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DescriptionTableViewCell.xib; path = CustomUIObjects/DescriptionTableViewCell/DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		F2F8D80D17144D7C007FC71A /* StatementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatementTableViewCell.xib; path = CustomUIObjects/StatementTableViewCell/StatementTableViewCell.xib; sourceTree = "<group>"; };
+		F2F8D81017144DA0007FC71A /* StatementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatementTableViewCell.h; path = CustomUIObjects/StatementTableViewCell/StatementTableViewCell.h; sourceTree = "<group>"; };
+		F2F8D81117144DA0007FC71A /* StatementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatementTableViewCell.m; path = CustomUIObjects/StatementTableViewCell/StatementTableViewCell.m; sourceTree = "<group>"; };
+		F2F8D813171450C5007FC71A /* AutoResizeLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoResizeLabelTableViewCell.h; path = CustomUIObjects/AutoResizeLabelTableViewCell/AutoResizeLabelTableViewCell.h; sourceTree = "<group>"; };
+		F2F8D814171450C5007FC71A /* AutoResizeLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoResizeLabelTableViewCell.m; path = CustomUIObjects/AutoResizeLabelTableViewCell/AutoResizeLabelTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +161,9 @@
 		A844A55216FB192C0021037B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F2F8D806171416ED007FC71A /* CustomUIObjects */,
+				F2F8D7FD171416E8007FC71A /* Categories */,
 				A844A55316FB192C0021037B /* Log */,
-				F2D92A1117130B60006ED8A6 /* AnswerTableViewCell */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -289,6 +311,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		F28BE5191714664600B4AC13 /* QuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F28BE51A1714664600B4AC13 /* nextQuestion.png */,
+			);
+			path = QuestionViewController;
+			sourceTree = "<group>";
+		};
 		F2B2442E16E5F85500E11381 = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +383,7 @@
 		F2D92A14171316EA006ED8A6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F28BE5191714664600B4AC13 /* QuestionViewController */,
 				F2D92A15171316EA006ED8A6 /* AnswerTableViewCell */,
 			);
 			path = Images;
@@ -365,6 +396,73 @@
 				F2D92A17171316EA006ED8A6 /* questionMark.png */,
 			);
 			path = AnswerTableViewCell;
+			sourceTree = "<group>";
+		};
+		F2F8D7FD171416E8007FC71A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F2F8D7FE171416E9007FC71A /* NSString+LabelSize */,
+				F2F8D801171416E9007FC71A /* UILabel+Size */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		F2F8D7FE171416E9007FC71A /* NSString+LabelSize */ = {
+			isa = PBXGroup;
+			children = (
+				F2F8D7FF171416E9007FC71A /* NSString+LabelSize.h */,
+				F2F8D800171416E9007FC71A /* NSString+LabelSize.m */,
+			);
+			path = "NSString+LabelSize";
+			sourceTree = "<group>";
+		};
+		F2F8D801171416E9007FC71A /* UILabel+Size */ = {
+			isa = PBXGroup;
+			children = (
+				F2F8D802171416E9007FC71A /* UILabel+Size.h */,
+				F2F8D803171416E9007FC71A /* UILabel+Size.m */,
+			);
+			path = "UILabel+Size";
+			sourceTree = "<group>";
+		};
+		F2F8D806171416ED007FC71A /* CustomUIObjects */ = {
+			isa = PBXGroup;
+			children = (
+				F2F8D816171450CC007FC71A /* AutoResizeLabelTableViewCell */,
+				F2F8D80F17144D82007FC71A /* StatementTableViewCell */,
+				F2D92A1117130B60006ED8A6 /* AnswerTableViewCell */,
+				F2F8D80A171447FA007FC71A /* DescriptionTableViewCell */,
+			);
+			name = CustomUIObjects;
+			sourceTree = "<group>";
+		};
+		F2F8D80A171447FA007FC71A /* DescriptionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F2F8D807171447BB007FC71A /* DescriptionTableViewCell.h */,
+				F2F8D808171447BB007FC71A /* DescriptionTableViewCell.m */,
+				F2F8D80B1714480A007FC71A /* DescriptionTableViewCell.xib */,
+			);
+			name = DescriptionTableViewCell;
+			sourceTree = "<group>";
+		};
+		F2F8D80F17144D82007FC71A /* StatementTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F2F8D81017144DA0007FC71A /* StatementTableViewCell.h */,
+				F2F8D81117144DA0007FC71A /* StatementTableViewCell.m */,
+				F2F8D80D17144D7C007FC71A /* StatementTableViewCell.xib */,
+			);
+			name = StatementTableViewCell;
+			sourceTree = "<group>";
+		};
+		F2F8D816171450CC007FC71A /* AutoResizeLabelTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F2F8D813171450C5007FC71A /* AutoResizeLabelTableViewCell.h */,
+				F2F8D814171450C5007FC71A /* AutoResizeLabelTableViewCell.m */,
+			);
+			name = AutoResizeLabelTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +532,9 @@
 				F2D92A1317130B76006ED8A6 /* AnswerTableViewCell.xib in Resources */,
 				F2D92A18171316EA006ED8A6 /* explanation.png in Resources */,
 				F2D92A19171316EA006ED8A6 /* questionMark.png in Resources */,
+				F2F8D80C1714480A007FC71A /* DescriptionTableViewCell.xib in Resources */,
+				F2F8D80E17144D7C007FC71A /* StatementTableViewCell.xib in Resources */,
+				F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +563,11 @@
 				A845C0711704639F0064806D /* QuestionSetsViewController.m in Sources */,
 				A845C0771704682B0064806D /* QuestionViewController.m in Sources */,
 				F2D92A1017130B5C006ED8A6 /* AnswerTableViewCell.m in Sources */,
+				F2F8D804171416E9007FC71A /* NSString+LabelSize.m in Sources */,
+				F2F8D805171416E9007FC71A /* UILabel+Size.m in Sources */,
+				F2F8D809171447BB007FC71A /* DescriptionTableViewCell.m in Sources */,
+				F2F8D81217144DA0007FC71A /* StatementTableViewCell.m in Sources */,
+				F2F8D815171450C6007FC71A /* AutoResizeLabelTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,15 +1,15 @@
 //
-//  AnswerTableViewCell.m
+//  StatementTableViewCell.m
 //  Memorizer
 //
-//  Created by Rémi LAVEDRINE on 08/04/13.
+//  Created by Rémi LAVEDRINE on 09/04/13.
 //  Copyright (c) 2013 Rémi Lavedrine. All rights reserved.
 //
 
-#import "AnswerTableViewCell.h"
+#import "StatementTableViewCell.h"
 #import "UILabel+Size.h"
 
-@implementation AnswerTableViewCell
+@implementation StatementTableViewCell
 
 
 #pragma mark - Redraw
@@ -26,11 +26,9 @@
   [self configureTextLabelUIWithLabelFont:ANSWER_CELL_TEXT_FONT
                                labelColor:ANSWER_CELL_TEXT_COLOR
                        labelTextAlignment:NSTextAlignmentLeft
-                               labelWidth:kCellAnswerDefaultTextWidth
-                      labelStartXPosition:kCellAnswerPaddingX
-                      labelStartYPosition:kCellAnswerPaddingY];
+                               labelWidth:kCellStatementDefaultTextWidth
+                      labelStartXPosition:kCellStatementPaddingX
+                      labelStartYPosition:kCellStatementPaddingY];
 }
-
-
 
 @end

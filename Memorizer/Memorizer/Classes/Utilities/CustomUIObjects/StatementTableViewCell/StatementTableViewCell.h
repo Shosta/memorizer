@@ -2,8 +2,8 @@
 // FT/IMG/RD/MAPS/DVC/HOD
 //--------------------------------------------------------
 // Project     : Memorizer
-// File        : AnswerTableViewCell.h
-// Created     : $ 08/04/13 $
+// File        : StatementTableViewCell.h
+// Created     : $ 09/04/13 $
 // Maintainer  : $ Rémi LAVEDRINE $
 //
 // Copyright Rémi Lavedrine 2004-2013, All Rights Reserved
@@ -22,6 +22,6 @@
 #import <UIKit/UIKit.h>
 #import "AutoResizeLabelTableViewCell.h"
 
-@interface AnswerTableViewCell : AutoResizeLabelTableViewCell
+@interface StatementTableViewCell : AutoResizeLabelTableViewCell
 
 @end
