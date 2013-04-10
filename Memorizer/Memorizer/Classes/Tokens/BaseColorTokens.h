@@ -23,8 +23,15 @@
 #import <UIKit/UIKit.h>
 
 
+//! COLORS
+//! QuestionSet Cell color
+#define QUESTIONSET_CELL_TEXT_COLOR [UIColor blackColor]
+
+//! Statement Cell color
 #define STATEMENT_CELL_TEXT_COLOR [UIColor blackColor]
 
+//! Answer Cell color
 #define ANSWER_CELL_TEXT_COLOR [UIColor blackColor]
 
+//! Description Cell color
 #define DESCRIPTION_CELL_TEXT_COLOR [UIColor blackColor]

@@ -32,5 +32,17 @@
 }
 
 
+#pragma mark - Animations
+
+- (void)fadeInDescriptionImageView{
+  [UIView animateWithDuration:1.0
+                        delay:0
+                      options:UIViewAnimationOptionCurveEaseInOut
+                   animations:(void (^)(void)) ^{
+                     self.descriptionImageView.alpha = 1.0;
+                   }
+                   completion:^(BOOL finished){
+                   }];
+}
 
 @end

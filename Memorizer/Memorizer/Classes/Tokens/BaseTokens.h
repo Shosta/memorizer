@@ -59,6 +59,9 @@
 #define CELL_MAJOR_STYLE_LABEL_COLOR [UIColor blackColor]
 
 //! FONTS
+//! QuestionSet Cell Fonts
+#define QUESTIONSET_CELL_TEXT_FONT [UIFont systemFontOfSize:17]
+
 //! Statement Cell Fonts
 #define STATEMENT_CELL_TEXT_FONT [UIFont systemFontOfSize:17]
 

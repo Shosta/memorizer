@@ -29,6 +29,19 @@
 
 extern NSString *kArchiveFileName;
 
+
+//! Date Format
+extern NSString *kDayMonthHourMinutesFormatDate;
+extern NSString *kDayMonthYearFormatDate;
+extern NSString *kDayMonthFormatDate;
+
+
+//! Cell QuestionSet
+extern int kCellQuestionSetPaddingX;
+extern int kCellQuestionSetPaddingY;
+extern int kCellQuestionSetOriginY;
+extern int kCellQuestionSetDefaultTextWidth;
+
 //! Cell Statement
 extern int kCellStatementPaddingX;
 extern int kCellStatementPaddingY;

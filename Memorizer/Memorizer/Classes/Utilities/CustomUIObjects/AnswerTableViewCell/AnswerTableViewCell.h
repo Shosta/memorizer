@@ -19,9 +19,16 @@
 // @brief
 // 
 
-#import <UIKit/UIKit.h>
 #import "AutoResizeLabelTableViewCell.h"
 
 @interface AnswerTableViewCell : AutoResizeLabelTableViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *descriptionImageView;
+
+
+#pragma mark - Animations
+
+//! Start a fade in animation on the "descriptionImageView" in order to let it appear.
+- (void)fadeInDescriptionImageView;
 
 @end

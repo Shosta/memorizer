@@ -12,6 +12,19 @@
 @implementation AutoResizeLabelTableViewCell
 
 
+#pragma mark - Object
+
+- (id)initWithCoder:(NSCoder *)aDecoder{
+  self = [super initWithCoder:aDecoder];
+  if (self != nil) {
+    // UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellBackgroundTemplateColor.png"]];
+    [self setBackgroundColor:[UIColor whiteColor]];
+  }
+  
+  return self;
+}
+
+
 #pragma mark - Redraw
 
 /**

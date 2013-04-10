@@ -14,6 +14,18 @@
 NSString *kArchiveFileName = @"AppData.archive";
 
 
+//! Date Format
+NSString *kDayMonthHourMinutesFormatDate = @"d MMMM, HH:mm";
+NSString *kDayMonthYearFormatDate = @"d MMMM yyyy";
+NSString *kDayMonthFormatDate = @"d MMMM";
+
+
+//! Cell QuestionSet
+int kCellQuestionSetPaddingX = 10;
+int kCellQuestionSetPaddingY = 10;
+int kCellQuestionSetOriginY = 120;
+int kCellQuestionSetDefaultTextWidth = 280;
+
 //! Cell Answer
 int kCellStatementPaddingX = 10;
 int kCellStatementPaddingY = 10;

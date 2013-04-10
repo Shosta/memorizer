@@ -19,7 +19,6 @@
 // @brief
 // 
 
-#import <UIKit/UIKit.h>
 #import "AutoResizeLabelTableViewCell.h"
 
 @interface DescriptionTableViewCell : AutoResizeLabelTableViewCell
