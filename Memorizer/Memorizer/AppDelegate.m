@@ -15,22 +15,81 @@
 
 @implementation AppDelegate
 
+#pragma mark - Appearance
+
+- (void)setTableViewCellSelectionStyleAppearance{
+  [[UITableViewCell appearance] setSelectionStyle:UITableViewCellSelectionStyleGray];
+}
+
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : 10/04/2013
+ @remarks : <#(optional)#>
+ */
+- (void)setNavigationTitleAppearance{
+  NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [UIColor whiteColor] /*[UIColor colorWithRed:248.0f/255.0f green:248.0f/255.0f blue:248.0f/255.0f alpha:1.0f]*/, UITextAttributeTextColor,
+                                             // [UIColor whiteColor], UITextAttributeTextShadowColor,
+                                             [NSValue valueWithUIOffset:UIOffsetMake(-1, 0)], UITextAttributeTextShadowOffset, nil];
+  [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
+}
+
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : 10/04/2013
+ @remarks : <#(optional)#>
+ */
+- (void)setNavigationBarTintColorAppearance{
+  [[UINavigationBar appearance] setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"navigationBar.png"]]];
+}
+
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : 10/04/2013
+ @remarks : <#(optional)#>
+ */
+- (void)setNavigationBarAppearance{
+  [self setNavigationTitleAppearance];
+  
+  [self setNavigationBarTintColorAppearance];
+}
+
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : 10/04/2013
+ @remarks : <#(optional)#>
+ */
+- (void)setApplicationAppearance{
+  [self setNavigationBarAppearance];
+}
+
+
+#pragma mark - Application
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-
-    UIViewController *questionSetsViewController = [[QuestionSetsViewController alloc] initWithNibName:@"QuestionSetsViewController" bundle:nil];
-    UINavigationController *questionSetsNavController = [[UINavigationController alloc] initWithRootViewController:questionSetsViewController];
-    
-    UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  // Override point for customization after application launch.
   
-    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+  UIViewController *questionSetsViewController = [[QuestionSetsViewController alloc] initWithNibName:@"QuestionSetsViewController" bundle:nil];
+  UINavigationController *questionSetsNavController = [[UINavigationController alloc] initWithRootViewController:questionSetsViewController];
+  
+  UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
+  
+  UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
   self.tabBarController = [[UITabBarController alloc] init];
   self.tabBarController.viewControllers = @[questionSetsNavController, viewController1, viewController2];
   self.window.rootViewController = self.tabBarController;
-    [self.window makeKeyAndVisible];
-    return YES;
+  [self.window makeKeyAndVisible];
+  
+  // Set appearance for all the defined controls.
+  [self setApplicationAppearance];
+  
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -41,7 +100,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-  // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+  // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
   // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -62,17 +121,17 @@
 }
 
 /*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-}
-*/
+ // Optional UITabBarControllerDelegate method.
+ - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+ {
+ }
+ */
 
 /*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
-}
-*/
+ // Optional UITabBarControllerDelegate method.
+ - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
+ {
+ }
+ */
 
 @end
