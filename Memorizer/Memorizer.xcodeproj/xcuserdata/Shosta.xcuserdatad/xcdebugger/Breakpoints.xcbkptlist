@@ -2,34 +2,4 @@
 <Bucket
    type = "1"
    version = "1.0">
-   <FileBreakpoints>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         condition = "self.currentQuestionIndex == 3"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/Controllers/QuestionViewController/QuestionViewController.m"
-         timestampString = "387213917.688534"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "58"
-         endingLineNumber = "58"
-         landmarkName = "-displayNextQuestion"
-         landmarkType = "5">
-         <Actions>
-            <BreakpointActionProxy
-               ActionType = "Xcode.BreakpointAction.DebuggerCommand">
-               <ActionContent
-                  consoleCommand = "po self.currentQuestionIndex">
-               </ActionContent>
-            </BreakpointActionProxy>
-            <BreakpointActionProxy
-               ActionType = "Xcode.BreakpointAction.DebuggerCommand">
-               <ActionContent
-                  consoleCommand = "po [self.questionSetArray count]">
-               </ActionContent>
-            </BreakpointActionProxy>
-         </Actions>
-      </FileBreakpoint>
-   </FileBreakpoints>
 </Bucket>
