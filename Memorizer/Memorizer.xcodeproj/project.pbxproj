@@ -24,6 +24,13 @@
 		A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F3B16FA5623009268D2 /* Tokens.m */; };
 		A8D36F4316FA5A07009268D2 /* NameValueArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */; };
 		F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */ = {isa = PBXBuildFile; fileRef = F28BE51A1714664600B4AC13 /* nextQuestion.png */; };
+		F292F8941716AE3100F3723A /* QuestionMemorizationLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */; };
+		F292F8951716AE3100F3723A /* QuestionMemorizationLevelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F292F8931716AE3100F3723A /* QuestionMemorizationLevelViewController.xib */; };
+		F292F89C1716B8FA00F3723A /* level1.png in Resources */ = {isa = PBXBuildFile; fileRef = F292F8971716B8FA00F3723A /* level1.png */; };
+		F292F89D1716B8FA00F3723A /* level2.png in Resources */ = {isa = PBXBuildFile; fileRef = F292F8981716B8FA00F3723A /* level2.png */; };
+		F292F89E1716B8FA00F3723A /* level3.png in Resources */ = {isa = PBXBuildFile; fileRef = F292F8991716B8FA00F3723A /* level3.png */; };
+		F292F89F1716B8FA00F3723A /* level4.png in Resources */ = {isa = PBXBuildFile; fileRef = F292F89A1716B8FA00F3723A /* level4.png */; };
+		F292F8A01716B8FA00F3723A /* level5.png in Resources */ = {isa = PBXBuildFile; fileRef = F292F89B1716B8FA00F3723A /* level5.png */; };
 		F2B2443B16E5F85500E11381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443A16E5F85500E11381 /* UIKit.framework */; };
 		F2B2443D16E5F85500E11381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443C16E5F85500E11381 /* Foundation.framework */; };
 		F2B2443F16E5F85500E11381 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443E16E5F85500E11381 /* CoreGraphics.framework */; };
@@ -104,6 +111,14 @@
 		A8D36F4116FA5A07009268D2 /* NameValueArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameValueArchiver.h; sourceTree = "<group>"; };
 		A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameValueArchiver.m; sourceTree = "<group>"; };
 		F28BE51A1714664600B4AC13 /* nextQuestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextQuestion.png; sourceTree = "<group>"; };
+		F292F8911716AE3000F3723A /* QuestionMemorizationLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionMemorizationLevelViewController.h; path = QuestionViewController/QuestionMemorizationLevelViewController.h; sourceTree = "<group>"; };
+		F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionMemorizationLevelViewController.m; path = QuestionViewController/QuestionMemorizationLevelViewController.m; sourceTree = "<group>"; };
+		F292F8931716AE3100F3723A /* QuestionMemorizationLevelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionMemorizationLevelViewController.xib; path = QuestionViewController/QuestionMemorizationLevelViewController.xib; sourceTree = "<group>"; };
+		F292F8971716B8FA00F3723A /* level1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level1.png; sourceTree = "<group>"; };
+		F292F8981716B8FA00F3723A /* level2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level2.png; sourceTree = "<group>"; };
+		F292F8991716B8FA00F3723A /* level3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level3.png; sourceTree = "<group>"; };
+		F292F89A1716B8FA00F3723A /* level4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level4.png; sourceTree = "<group>"; };
+		F292F89B1716B8FA00F3723A /* level5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level5.png; sourceTree = "<group>"; };
 		F2B2443716E5F85500E11381 /* Memorizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B2443A16E5F85500E11381 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F2B2443C16E5F85500E11381 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -256,6 +271,9 @@
 				A845C0741704682B0064806D /* QuestionViewController.h */,
 				A845C0751704682B0064806D /* QuestionViewController.m */,
 				A845C0761704682B0064806D /* QuestionViewController.xib */,
+				F292F8911716AE3000F3723A /* QuestionMemorizationLevelViewController.h */,
+				F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */,
+				F292F8931716AE3100F3723A /* QuestionMemorizationLevelViewController.xib */,
 			);
 			name = QuestionViewController;
 			sourceTree = "<group>";
@@ -276,8 +294,8 @@
 			children = (
 				A8D36F3F16FA5A07009268D2 /* DataManager */,
 				A8D36F3D16FA5641009268D2 /* Controllers */,
-				A8D36F3716FA5623009268D2 /* Tokens */,
 				A844A55216FB192C0021037B /* Utilities */,
+				A8D36F3716FA5623009268D2 /* Tokens */,
 				F2B2444916E5F85500E11381 /* AppDelegate.h */,
 				F2B2444A16E5F85500E11381 /* AppDelegate.m */,
 			);
@@ -352,6 +370,18 @@
 			path = QuestionViewController;
 			sourceTree = "<group>";
 		};
+		F292F8961716B8FA00F3723A /* MemorizationLevelButton */ = {
+			isa = PBXGroup;
+			children = (
+				F292F8971716B8FA00F3723A /* level1.png */,
+				F292F8981716B8FA00F3723A /* level2.png */,
+				F292F8991716B8FA00F3723A /* level3.png */,
+				F292F89A1716B8FA00F3723A /* level4.png */,
+				F292F89B1716B8FA00F3723A /* level5.png */,
+			);
+			path = MemorizationLevelButton;
+			sourceTree = "<group>";
+		};
 		F2B2442E16E5F85500E11381 = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +446,7 @@
 		F2D92A14171316EA006ED8A6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F292F8961716B8FA00F3723A /* MemorizationLevelButton */,
 				F2DE405517159CE800D34892 /* NavigationBar */,
 				F2EA3C191715ABAE0091FAF9 /* UITableView */,
 				F2EA3C141715A8EF0091FAF9 /* UITableViewCell */,
@@ -664,6 +695,12 @@
 				F2EA3C1D1715ABAE0091FAF9 /* tableViewBackgroundTemplateColor@2X.png in Resources */,
 				F2EA3C201715BE910091FAF9 /* shadow.png in Resources */,
 				F2EA3C211715BE910091FAF9 /* shadow@2x.png in Resources */,
+				F292F8951716AE3100F3723A /* QuestionMemorizationLevelViewController.xib in Resources */,
+				F292F89C1716B8FA00F3723A /* level1.png in Resources */,
+				F292F89D1716B8FA00F3723A /* level2.png in Resources */,
+				F292F89E1716B8FA00F3723A /* level3.png in Resources */,
+				F292F89F1716B8FA00F3723A /* level4.png in Resources */,
+				F292F8A01716B8FA00F3723A /* level5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +737,7 @@
 				F2DE403817156B4900D34892 /* QuestionSetTableViewCell.m in Sources */,
 				F2DE404917158AE100D34892 /* NSDateFormatter+Date.m in Sources */,
 				F2DE404E171592A300D34892 /* UIGaugeViewController.m in Sources */,
+				F292F8941716AE3100F3723A /* QuestionMemorizationLevelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
