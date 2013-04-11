@@ -57,11 +57,10 @@
 								<int key="IBUIContentMode">7</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBUIText">Text Label</string>
+								<string key="IBUIText"/>
 								<object class="NSColor" key="IBUITextColor">
 									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MCAwIDAAA</bytes>
-									<string key="IBUIColorCocoaTouchKeyPath">darkTextColor</string>
+									<bytes key="NSRGB">MC41ODQzMTM3MjU1IDAuNiAwLjYxMTc2NDcwNTkAA</bytes>
 								</object>
 								<object class="NSColor" key="IBUIHighlightedColor">
 									<int key="NSColorSpace">3</int>
@@ -85,6 +84,7 @@
 								<string key="NSFrame">{{261, 5}, {34, 34}}</string>
 								<reference key="NSSuperview" ref="534176385"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<float key="IBUIAlpha">0.0</float>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>

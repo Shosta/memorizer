@@ -15,12 +15,8 @@
 
 @interface QuestionViewController ()
 
-@property (nonatomic, retain) NSMutableArray *questionSetArray;
-@property int currentQuestionIndex;
-@property BOOL shouldDisplayAnswer;
-@property BOOL shouldDisplayDescription;
-
 @property (nonatomic, retain) UIButton *nextQuestionButton;
+
 @end
 
 @implementation QuestionViewController
@@ -55,6 +51,14 @@ static const int kDescriptionSection = 2;
 
 #pragma mark - NextQuestion
 
+/**
+ @brief Display the next Question on Screen.
+ @author : Rémi Lavedrine
+ @date : 10/04/2013
+ @remarks : It removes all the question, answer and description from the previous Question. It loads the next one from the questionArray.
+ It sets the navigationBar title to mention the question's number.
+ If it's the last question from the QuestionSet, it pops to the RootViewController.
+ */
 - (void)displayNextQuestion{
   if (self.currentQuestionIndex + 1 < [self.questionSetArray count]){ // As arrays starts at "0" in Objective-C.
                                                                       // 1. Change the question index.
@@ -69,9 +73,6 @@ static const int kDescriptionSection = 2;
     
     // 4. Change the NavigationBar title.
     [self setNavigationBarTitle];
-    
-    // 5. As the TableView's height was reduced to present the "noting buttons" it has to be resized to its original size.
-    [self increaseTableViewHeight];
   }else{
     [self popViewControllerAsQuestionSetFinished];
   }
@@ -251,7 +252,7 @@ static const int kDescriptionSection = 2;
 }
 
 
-#pragma mark - Generic
+#pragma mark - Generic Cell
 
 /**
  @brief It's the row that describes the info for the section.
@@ -297,6 +298,38 @@ static const int kDescriptionSection = 2;
 }
 
 /**
+ @brief It's the row about the content for the section.
+ @author : Rémi Lavedrine
+ @date : 11/04/2013
+ @remarks : <#(optional)#>
+ */
+- (UITableViewCell *)tableView:(UITableView *)aTableView infoDescriptionCellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  UITableViewCell *cell = nil;
+
+  // It's the row that has the info for the section.
+  switch (indexPath.section) {
+    case kStatementSection:
+      cell = [self statementCell:aTableView];
+      break;
+      
+    case kAnswerSection:
+      cell = [self answerCell:aTableView];
+      break;
+      
+    case kDescriptionSection:
+      cell = [self descriptionCell:aTableView];
+      break;
+      
+    default:
+      break;
+  }
+  
+  [cell.textLabel setTextColor:[UIColor colorWithRed:190/255 green:190/255 blue:190/255 alpha:1.0]];
+
+  return cell;
+}
+
+/**
  @brief Create the cells that describes the user data plan and the one that allows the user to add some options or so one.
  @author : Rémi Lavedrine
  @date : 05/07/2012
@@ -310,26 +343,7 @@ static const int kDescriptionSection = 2;
     cell = [self contentDescriptionCellForRowAtIndexPath:indexPath];
     
   } else if (indexPath.row == 1) {
-    // It's the row that has the info for the section.
-    switch (indexPath.section) {
-      case kStatementSection:
-        cell = [self statementCell:aTableView];
-        break;
-        
-      case kAnswerSection:
-        cell = [self answerCell:aTableView];
-        break;
-        
-      case kDescriptionSection:
-        cell = [self descriptionCell:aTableView];
-        break;
-        
-      default:
-        break;
-    }
-    
-    [cell.textLabel setTextColor:[UIColor colorWithRed:190/255 green:190/255 blue:190/255 alpha:1.0]];
-    
+    cell = [self tableView:aTableView infoDescriptionCellForRowAtIndexPath:indexPath];
   }
   
   return cell;
@@ -385,72 +399,38 @@ static const int kDescriptionSection = 2;
     cellHeight = minimumCellHeight;
   }
 }
+  
   return cellHeight;
-}
-
-
-#pragma mark - Animation
-
-- (void)reduceTableViewHeight{
-  @try {
-    self.tableView.contentMode = UIViewContentModeRedraw;
-    [UIView animateWithDuration:.4f animations:^{
-      CGRect theBounds = self.tableView.bounds;
-      CGPoint theCenter = self.tableView.center;
-      theBounds.size.height -= 64.f;
-      theCenter.y -= 32.f;
-      self.tableView.bounds = theBounds;
-      self.tableView.center = theCenter;
-    }];
-    
-  }
-  @catch (NSException *exception) {
-    OLLogDebug(@"%@", exception.reason);
-  }
-  @finally {
-    
-  }
-}
-
-- (void)increaseTableViewHeight{
-  @try {
-    self.tableView.contentMode = UIViewContentModeRedraw;
-    [UIView animateWithDuration:.4f animations:^{
-      CGRect theBounds = self.tableView.bounds;
-      CGPoint theCenter = self.tableView.center;
-      theBounds.size.height += 64.f;
-      theCenter.y += 32.f;
-      self.tableView.bounds = theBounds;
-      self.tableView.center = theCenter;
-    }];
-    
-  }
-  @catch (NSException *exception) {
-    OLLogDebug(@"%@", exception.reason);
-  }
-  @finally {
-    
-  }
 }
 
 
 #pragma mark - Selection
 
+/**
+ @brief Display the Answer when the user taps the cell.
+ @author : Rémi Lavedrine
+ @date : 10/04/2013
+ @remarks : It reloads only the "kAnswerSection" section to avoid unnecessary redraw.
+ */
 - (void)displayAnswer{
-  if (!self.shouldDisplayAnswer) {
-    [self reduceTableViewHeight];
-    
+  if (!self.shouldDisplayAnswer) {    
     self.shouldDisplayAnswer = YES;
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kAnswerSection] withRowAnimation:UITableViewRowAnimationFade];
-    
   }
 }
 
+/**
+ @brief Display the Description when the user taps the cell.
+ @author : Rémi Lavedrine
+ @date : 10/04/2013
+ @remarks : It reloads the all TableView because the "kDescriptionSection" is not yet created it can't be redrawn.
+ When it's been drawn, we scroll to the Answer's cell (the first row of the "kAnswerSection" section).
+ */
 - (void)displayDescription{
   if (self.shouldDisplayAnswer && !self.shouldDisplayDescription) {
     self.shouldDisplayDescription = YES;
     [self.tableView reloadData];
-    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:kDescriptionSection] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:kAnswerSection] atScrollPosition:UITableViewScrollPositionTop animated:YES];
   }
 }
 
@@ -490,13 +470,7 @@ static const int kDescriptionSection = 2;
       }
       break;
       
-      case kDescriptionSection:
-        if (self.shouldDisplayDescription) {
-          footerTitle = @"Choisissez ci-dessous la valeur qui vous semble le plus à même de représenter votre niveau de mémorisation de cette question.";
-      }
-      break;
-      
-    default:
+      default:
       break;
   }
   

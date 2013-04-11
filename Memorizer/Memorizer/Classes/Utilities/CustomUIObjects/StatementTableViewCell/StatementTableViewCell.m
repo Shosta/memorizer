@@ -23,8 +23,8 @@
 - (void)layoutSubviews{
   [super layoutSubviews];
   
-  [self configureTextLabelUIWithLabelFont:ANSWER_CELL_TEXT_FONT
-                               labelColor:ANSWER_CELL_TEXT_COLOR
+  [self configureTextLabelUIWithLabelFont:STATEMENT_CELL_TEXT_FONT
+                               labelColor:STATEMENT_CELL_TEXT_COLOR
                        labelTextAlignment:NSTextAlignmentLeft
                                labelWidth:kCellStatementDefaultTextWidth
                       labelStartXPosition:kCellStatementPaddingX

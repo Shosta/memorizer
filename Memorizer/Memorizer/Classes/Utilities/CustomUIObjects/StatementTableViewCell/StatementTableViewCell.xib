@@ -47,16 +47,19 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<object class="NSColor" key="IBUIBackgroundColor" id="2488340">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MCAwAA</bytes>
+								</object>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBUIText">Label</string>
+								<string key="IBUIText"/>
 								<object class="NSColor" key="IBUITextColor">
 									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MCAwIDAAA</bytes>
-									<string key="IBUIColorCocoaTouchKeyPath">darkTextColor</string>
+									<bytes key="NSRGB">MC41ODQzMTM3MjU1IDAuNiAwLjYxMTc2NDcwNTkAA</bytes>
 								</object>
 								<object class="NSColor" key="IBUIHighlightedColor">
 									<int key="NSColorSpace">3</int>
@@ -80,10 +83,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="646587523"/>
 						<string key="NSReuseIdentifierKey">_NS:11</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MCAwAA</bytes>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="2488340"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>

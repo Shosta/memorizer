@@ -1,7 +1,7 @@
 //--------------------------------------------------------
 // FT/OLNC/OLPS/SOFT/IDF-NANCY/MSF
 //--------------------------------------------------------
-// Project     : MobinilAndMe
+// Project     : Memorizer
 // File        : UIGaugeViewController.h
 // Created     : $ 06/11/12 $
 // Maintainer  : $ Rémi LAVEDRINE $

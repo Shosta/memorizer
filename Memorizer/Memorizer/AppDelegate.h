@@ -1,10 +1,22 @@
+//--------------------------------------------------------
+// FT/OLNC/OLPS/SOFT/IDF-NANCY/MSF
+//--------------------------------------------------------
+// Project     : Memorizer
+// File        : AppDelegate.h
+// Created     : $ 05/03/13 $
+// Maintainer  : $ Rémi LAVEDRINE $
 //
-//  AppDelegate.h
-//  Memorizer
+// Copyright France Telecom 2004-2012, All Rights Reserved
 //
-//  Created by Rémi LAVEDRINE on 05/03/13.
-//  Copyright (c) 2013 Rémi Lavedrine. All rights reserved.
+// This software is the confidential and proprietary
+// information of France Telecom.
+// You shall not disclose such Confidential Information
+// and shall use it only in accordance with the terms
+// of the license agreement you entered into with
+// France Telecom.
+//--------------------------------------------------------
 //
+// @brief
 
 #import <UIKit/UIKit.h>
 

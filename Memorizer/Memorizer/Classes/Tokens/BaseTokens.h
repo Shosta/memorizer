@@ -69,7 +69,7 @@
 #define ANSWER_CELL_TEXT_FONT [UIFont systemFontOfSize:17]
 
 //! Description Cell Text Fonts
-#define DESCRIPTION_CELL_TEXT_FONT [UIFont boldSystemFontOfSize:17]
+#define DESCRIPTION_CELL_TEXT_FONT [UIFont systemFontOfSize:17]
 
 
 //! About Cell's style.
@@ -77,3 +77,12 @@ typedef enum{
   AboutTableViewCellBlackStyle, // Labels are displayed in White and the Background of the RootView is Black.
   AboutTableViewCellWhiteStyle  // Labels are displayed in Black and the Background of the RootView is White.
 }AboutTableViewCellStyle;
+
+//! The Memorization Level for a Question.
+typedef enum{
+  MemorizationLevel1, // From the Worst.
+  MemorizationLevel2,
+  MemorizationLevel3,
+  MemorizationLevel4,
+  MemorizationLevel5  // To the Best.
+}MemorizationLevel;

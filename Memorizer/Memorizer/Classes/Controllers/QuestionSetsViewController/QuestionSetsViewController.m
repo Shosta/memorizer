@@ -9,7 +9,7 @@
 #import "QuestionSetsViewController.h"
 #import "AppData.h"
 #import "QuestionSet.h"
-#import "QuestionViewController.h"
+#import "QuestionMemorizationLevelViewController.h"
 #import "QuestionSetTableViewCell.h"
 #import "NSString+LabelSize.h"
 #import "NSDateFormatter+Date.h"
@@ -187,7 +187,7 @@
   [aTableView deselectRowAtIndexPath:indexPath animated:YES];
   
   QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-  QuestionViewController *questionViewController = [[QuestionViewController alloc] initWithQuestionSet:questionSet.questionsArray];
+  QuestionMemorizationLevelViewController *questionViewController = [[QuestionMemorizationLevelViewController alloc] initWithQuestionSet:questionSet.questionsArray];
   [self.navigationController pushViewController:questionViewController animated:YES];
 }
 

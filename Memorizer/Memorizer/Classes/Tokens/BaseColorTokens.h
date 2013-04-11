@@ -28,10 +28,10 @@
 #define QUESTIONSET_CELL_TEXT_COLOR [UIColor blackColor]
 
 //! Statement Cell color
-#define STATEMENT_CELL_TEXT_COLOR [UIColor blackColor]
+#define STATEMENT_CELL_TEXT_COLOR [UIColor colorWithRed:149.0f/255.0f green:153.0f/255.0f blue:156.0f/255.0f alpha:1.0f]
 
 //! Answer Cell color
 #define ANSWER_CELL_TEXT_COLOR [UIColor blackColor]
 
 //! Description Cell color
-#define DESCRIPTION_CELL_TEXT_COLOR [UIColor blackColor]
+#define DESCRIPTION_CELL_TEXT_COLOR [UIColor colorWithRed:149.0f/255.0f green:153.0f/255.0f blue:156.0f/255.0f alpha:1.0f]
