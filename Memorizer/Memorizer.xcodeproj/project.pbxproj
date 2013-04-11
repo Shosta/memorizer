@@ -10,6 +10,8 @@
 		A844A54A16FB17780021037B /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A54916FB17780021037B /* Question.m */; };
 		A844A54E16FB17D10021037B /* Question+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A54D16FB17D10021037B /* Question+Archiver.m */; };
 		A844A55116FB18500021037B /* Question+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A55016FB18500021037B /* Question+Parser.m */; };
+		A845062F17172F4400C4E0E9 /* bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A845062D17172F4400C4E0E9 /* bar_background.png */; };
+		A845063017172F4400C4E0E9 /* bar_progress_top.png in Resources */ = {isa = PBXBuildFile; fileRef = A845062E17172F4400C4E0E9 /* bar_progress_top.png */; };
 		A845C05F17044AED0064806D /* irregularVerbs.json in Resources */ = {isa = PBXBuildFile; fileRef = A845C05E17044AED0064806D /* irregularVerbs.json */; };
 		A845C06217044E610064806D /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C06117044E610064806D /* AppData.m */; };
 		A845C06617044FC80064806D /* AppData+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C06517044FC80064806D /* AppData+Archiver.m */; };
@@ -57,8 +59,6 @@
 		F2DE404917158AE100D34892 /* NSDateFormatter+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DE404817158AE100D34892 /* NSDateFormatter+Date.m */; };
 		F2DE404E171592A300D34892 /* UIGaugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DE404C171592A300D34892 /* UIGaugeViewController.m */; };
 		F2DE404F171592A300D34892 /* UIGaugeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2DE404D171592A300D34892 /* UIGaugeViewController.xib */; };
-		F2DE40531715943D00D34892 /* bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DE40511715943D00D34892 /* bar_background.png */; };
-		F2DE40541715943D00D34892 /* bar_progress_top.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DE40521715943D00D34892 /* bar_progress_top.png */; };
 		F2DE405817159CE800D34892 /* navigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DE405617159CE800D34892 /* navigationBar.png */; };
 		F2DE405917159CE800D34892 /* navigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DE405717159CE800D34892 /* navigationBar@2x.png */; };
 		F2EA3C171715A8EF0091FAF9 /* cellBackgroundTemplateColor.png in Resources */ = {isa = PBXBuildFile; fileRef = F2EA3C151715A8EF0091FAF9 /* cellBackgroundTemplateColor.png */; };
@@ -85,6 +85,8 @@
 		A844A55016FB18500021037B /* Question+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Question+Parser.m"; path = "Question/Question+Parser.m"; sourceTree = "<group>"; };
 		A844A55416FB192C0021037B /* OLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLLog.h; sourceTree = "<group>"; };
 		A844A55516FB192C0021037B /* OLLogSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLLogSetter.h; sourceTree = "<group>"; };
+		A845062D17172F4400C4E0E9 /* bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_background.png; sourceTree = "<group>"; };
+		A845062E17172F4400C4E0E9 /* bar_progress_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_progress_top.png; sourceTree = "<group>"; };
 		A845C05E17044AED0064806D /* irregularVerbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = irregularVerbs.json; sourceTree = "<group>"; };
 		A845C06017044E610064806D /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppData.h; path = AppData/AppData.h; sourceTree = "<group>"; };
 		A845C06117044E610064806D /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppData.m; path = AppData/AppData.m; sourceTree = "<group>"; };
@@ -155,8 +157,6 @@
 		F2DE404B171592A200D34892 /* UIGaugeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGaugeViewController.h; sourceTree = "<group>"; };
 		F2DE404C171592A300D34892 /* UIGaugeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGaugeViewController.m; sourceTree = "<group>"; };
 		F2DE404D171592A300D34892 /* UIGaugeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIGaugeViewController.xib; sourceTree = "<group>"; };
-		F2DE40511715943D00D34892 /* bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_background.png; sourceTree = "<group>"; };
-		F2DE40521715943D00D34892 /* bar_progress_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_progress_top.png; sourceTree = "<group>"; };
 		F2DE405617159CE800D34892 /* navigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationBar.png; sourceTree = "<group>"; };
 		F2DE405717159CE800D34892 /* navigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar@2x.png"; sourceTree = "<group>"; };
 		F2EA3C151715A8EF0091FAF9 /* cellBackgroundTemplateColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellBackgroundTemplateColor.png; sourceTree = "<group>"; };
@@ -223,6 +223,15 @@
 				A844A55516FB192C0021037B /* OLLogSetter.h */,
 			);
 			path = Log;
+			sourceTree = "<group>";
+		};
+		A845062C17172F4400C4E0E9 /* UIGaugeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A845062D17172F4400C4E0E9 /* bar_background.png */,
+				A845062E17172F4400C4E0E9 /* bar_progress_top.png */,
+			);
+			path = UIGaugeViewController;
 			sourceTree = "<group>";
 		};
 		A845C05D17044AED0064806D /* Content */ = {
@@ -453,6 +462,7 @@
 				F2DE404117156EBA00D34892 /* QuestionSetTableViewCell */,
 				F2D92A15171316EA006ED8A6 /* AnswerTableViewCell */,
 				F28BE5191714664600B4AC13 /* QuestionViewController */,
+				A845062C17172F4400C4E0E9 /* UIGaugeViewController */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -479,7 +489,6 @@
 		F2DE404117156EBA00D34892 /* QuestionSetTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				F2DE40501715943D00D34892 /* UIGaugeViewController */,
 			);
 			path = QuestionSetTableViewCell;
 			sourceTree = "<group>";
@@ -502,16 +511,6 @@
 			);
 			name = UIGaugeViewController;
 			path = CustomUIObjects/UIGaugeViewController;
-			sourceTree = "<group>";
-		};
-		F2DE40501715943D00D34892 /* UIGaugeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F2DE40511715943D00D34892 /* bar_background.png */,
-				F2DE40521715943D00D34892 /* bar_progress_top.png */,
-			);
-			name = UIGaugeViewController;
-			path = ../UIGaugeViewController;
 			sourceTree = "<group>";
 		};
 		F2DE405517159CE800D34892 /* NavigationBar */ = {
@@ -685,8 +684,6 @@
 				F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */,
 				F2DE403B17156C9900D34892 /* QuestionSetTableViewCell.xib in Resources */,
 				F2DE404F171592A300D34892 /* UIGaugeViewController.xib in Resources */,
-				F2DE40531715943D00D34892 /* bar_background.png in Resources */,
-				F2DE40541715943D00D34892 /* bar_progress_top.png in Resources */,
 				F2DE405817159CE800D34892 /* navigationBar.png in Resources */,
 				F2DE405917159CE800D34892 /* navigationBar@2x.png in Resources */,
 				F2EA3C171715A8EF0091FAF9 /* cellBackgroundTemplateColor.png in Resources */,
@@ -701,6 +698,8 @@
 				F292F89E1716B8FA00F3723A /* level3.png in Resources */,
 				F292F89F1716B8FA00F3723A /* level4.png in Resources */,
 				F292F8A01716B8FA00F3723A /* level5.png in Resources */,
+				A845062F17172F4400C4E0E9 /* bar_background.png in Resources */,
+				A845063017172F4400C4E0E9 /* bar_progress_top.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

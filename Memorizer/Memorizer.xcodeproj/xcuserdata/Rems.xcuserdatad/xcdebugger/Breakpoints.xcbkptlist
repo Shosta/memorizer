@@ -8,90 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Memorizer/Classes/Controllers/QuestionViewController/QuestionViewController.m"
-         timestampString = "386167687.336845"
+         timestampString = "387396035.082203"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
-         landmarkName = "-statementCell:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/Controllers/QuestionViewController/QuestionViewController.m"
-         timestampString = "386167656.698245"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "30"
-         endingLineNumber = "30"
-         landmarkName = "-initWithNibName:bundle:questionSet:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/Controllers/QuestionSetsViewController/QuestionSetsViewController.m"
-         timestampString = "386167694.901961"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
-         landmarkName = "-tableView:didSelectRowAtIndexPath:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/DataManager/Data/AppData/AppData+Parser.m"
-         timestampString = "386167862.132144"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
-         landmarkName = "-fetchedData:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/DataManager/Data/QuestionSet/QuestionSet+Parser.m"
-         timestampString = "386167907.044768"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
-         landmarkName = "+parse:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/DataManager/Data/QuestionSet/QuestionSet+Parser.m"
-         timestampString = "386167941.985509"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "40"
-         endingLineNumber = "40"
-         landmarkName = "+parse:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/DataManager/Data/Question/Question+Parser.m"
-         timestampString = "386168187.910025"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32"
-         landmarkName = "+parse:"
+         startingLineNumber = "61"
+         endingLineNumber = "61"
+         landmarkName = "-unregisterFromKVO"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

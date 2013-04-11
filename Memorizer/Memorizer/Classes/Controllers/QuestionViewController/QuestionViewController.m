@@ -169,9 +169,7 @@ static const int kDescriptionSection = 2;
   [self.tableView setBackgroundColor:color];
 }
 
-- (void)viewDidUnload{
-  [super viewDidUnload];
-  
+- (void)dealloc{
   [self unregisterFromKVO];
 }
 
