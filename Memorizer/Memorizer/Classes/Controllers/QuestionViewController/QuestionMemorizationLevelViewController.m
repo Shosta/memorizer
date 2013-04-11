@@ -39,40 +39,44 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
 }
 
 - (NSArray *)observableKeypaths {
-	return [NSArray arrayWithObjects:kIsMemorizationLevelChosenKey, nil];
+	return [NSArray arrayWithObjects:kIsMemorizationLevelChosenKey, kShouldDisplayAnswerKey, kShouldDisplayDescriptionKey, nil];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-	if (![NSThread isMainThread]) {
-		[self performSelectorOnMainThread:@selector(updateUIForKeypath:) withObject:keyPath waitUntilDone:NO];
-	} else {
-		[self updateUIForKeypath:keyPath];
-	}
-}
-
+/**
+ @brief 
+ @author : Rémi Lavedrine
+ @date : 11/04/2013
+ @remarks : 
+ 
+ . Display the Answer when the user taps the cell.
+ It reloads only the "kAnswerSection" section to avoid unnecessary redraw.
+ It reduces the TableView height to make the "Memorizatoin level buttons" available.
+ */
 - (void)updateUIForKeypath:(NSString *)keyPath {
-	if ([keyPath isEqualToString:kIsMemorizationLevelChosenKey]) {
-    if (self.shouldDisplayDescription){
-      [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kDescriptionSection] withRowAnimation:UITableViewRowAnimationFade];
-    }else if (self.shouldDisplayAnswer) {
-      [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kAnswerSection] withRowAnimation:UITableViewRowAnimationFade];
-    } 
-	}
-}
-
-
-#pragma mark - View
-
-- (void)viewDidLoad{
-  [super viewDidLoad];
-  // Do any additional setup after loading the view from its nib.
-  [self registerForKVO];
-}
-
-- (void)viewDidUnload{
-  [super viewDidUnload];
+  [super updateUIForKeypath:keyPath];
   
-  [self unregisterFromKVO];
+  if ([keyPath isEqualToString:kIsMemorizationLevelChosenKey]){
+    if ([self.isMemorizationLevelChosen boolValue] == YES){
+      [self.nextQuestionButton setUserInteractionEnabled:YES];
+      
+      if ([self.shouldDisplayDescription boolValue] == YES){
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kDescriptionSection] withRowAnimation:UITableViewRowAnimationFade];
+        
+      }else if ([self.shouldDisplayAnswer boolValue] == YES){
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kAnswerSection] withRowAnimation:UITableViewRowAnimationFade];
+        
+      }
+    }else{
+      [self.nextQuestionButton setUserInteractionEnabled:NO];
+      
+    }
+  }
+  
+  if ([keyPath isEqualToString:kShouldDisplayAnswerKey]) {
+    if ([self.shouldDisplayAnswer boolValue] == YES && [self.shouldDisplayDescription boolValue] == NO) {
+      [self reduceTableViewHeight];
+    }
+	}
 }
 
 
@@ -89,7 +93,7 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
 - (void)displayNextQuestion{
   [super displayNextQuestion];
   
-  if (self.currentQuestionIndex< [self.questionSetArray count]){
+  if (self.currentQuestionIndex < [self.questionSetArray count]){
     // 1. As the TableView's height was reduced to present the "noting buttons" it has to be resized to its original size.
     [self increaseTableViewHeight];
   }
@@ -146,37 +150,18 @@ static const float boundsHeight = 64.f;
 }
 
 
-#pragma mark - Selection
-
-/**
- @brief Display the Answer when the user taps the cell.
- @author : Rémi Lavedrine
- @date : 11/04/2013
- @remarks : It reloads only the "kAnswerSection" section to avoid unnecessary redraw.
- It reduces the TableView height to make the "Memorizatoin level buttons" available.
- */
-- (void)displayAnswer{
-  if (!self.shouldDisplayAnswer) {
-    [self reduceTableViewHeight];
-    
-    self.shouldDisplayAnswer = YES;
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kAnswerSection] withRowAnimation:UITableViewRowAnimationFade];
-  }
-}
-
-
 #pragma mark - Footer
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
   NSString *footerTitle = @"";
   switch (section) {
     case kAnswerSection:
-      if (!self.shouldDisplayDescription) {
-        if (!self.shouldDisplayAnswer) {
+      if ([self.shouldDisplayDescription boolValue] == NO) {
+        if ([self.shouldDisplayAnswer boolValue] == NO) {
           footerTitle = @"Visualisez la réponse et appuyez sur \"Réponse\".";
         }else{
           if ([self.isMemorizationLevelChosen boolValue]) {
-            footerTitle = @"%d/5 pour cette question. \nPassez à la suivante en cliquant sur la plume en haut à droite.";
+            footerTitle = [NSString stringWithFormat:@"%d/5 pour cette question. \nPassez à la suivante en cliquant sur la plume en haut à droite.", self.memorizationLevel+1]; // As the "MemorizationLevel's Struct" starts at 0.
           }else{
             footerTitle = @"Appuyez sur la flèche si vous voulez en savoir plus.";
           }
@@ -186,8 +171,8 @@ static const float boundsHeight = 64.f;
       
     case kDescriptionSection:
       if ([self.isMemorizationLevelChosen boolValue]) {
-        footerTitle = @"%d/5 pour cette question. \nPassez à la suivante en cliquant sur la plume en haut à droite.";
-      }else if (self.shouldDisplayDescription) {
+        footerTitle = [NSString stringWithFormat:@"%d/5 pour cette question. \nPassez à la suivante en cliquant sur la plume en haut à droite.", self.memorizationLevel+1]; // As the "MemorizationLevel's Struct" starts at 0.
+      }else if ([self.shouldDisplayDescription boolValue]) {
         footerTitle = @"Choisissez ci-dessous la valeur qui vous semble le plus à même de représenter votre niveau de mémorisation de cette question.";
       }      break;
       

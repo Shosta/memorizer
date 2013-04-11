@@ -23,14 +23,18 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *kShouldDisplayAnswerKey = @"shouldDisplayAnswer";
+static NSString *kShouldDisplayDescriptionKey = @"shouldDisplayDescription";
+
 @interface QuestionViewController : UIViewController
 
 @property (nonatomic, retain) NSMutableArray *questionSetArray;
 @property int currentQuestionIndex;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property BOOL shouldDisplayAnswer;
-@property BOOL shouldDisplayDescription;
+@property (nonatomic, retain) UIButton *nextQuestionButton;
+@property (weak, nonatomic) NSNumber *shouldDisplayAnswer;
+@property (weak, nonatomic) NSNumber *shouldDisplayDescription;
 
 
 #pragma mark - Object
@@ -47,8 +51,11 @@
 - (id)initWithQuestionSet:(NSMutableArray *)aQuestionSetArray;
 
 
-#pragma mark - Selection
+#pragma mark - KVO
+- (void)updateUIForKeypath:(NSString *)keyPath;
 
+
+#pragma mark - Selection
 - (void)displayAnswer;
 
 

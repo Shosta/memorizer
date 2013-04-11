@@ -15,7 +15,6 @@
 
 @interface QuestionViewController ()
 
-@property (nonatomic, retain) UIButton *nextQuestionButton;
 
 @end
 
@@ -37,8 +36,8 @@ static const int kDescriptionSection = 2;
     // Custom initialization
     self.questionSetArray = aQuestionSetArray;
     self.currentQuestionIndex = 0;
-    self.shouldDisplayAnswer = NO;
-    self.shouldDisplayDescription = NO;
+    self.shouldDisplayAnswer = [NSNumber numberWithBool:NO];
+    self.shouldDisplayDescription = [NSNumber numberWithBool:NO];
   }
   
   return self;
@@ -46,6 +45,48 @@ static const int kDescriptionSection = 2;
 
 - (id)initWithQuestionSet:(NSMutableArray *)aQuestionSetArray{
   return [self initWithNibName:@"QuestionViewController" bundle:nil questionSet:aQuestionSetArray];
+}
+
+
+#pragma mark - KVO
+
+- (void)registerForKVO {
+	for (NSString *keyPath in [self observableKeypaths]) {
+		[self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:NULL];
+	}
+}
+
+- (void)unregisterFromKVO {
+	for (NSString *keyPath in [self observableKeypaths]) {
+		[self removeObserver:self forKeyPath:keyPath];
+	}
+}
+
+- (NSArray *)observableKeypaths {
+	return [NSArray arrayWithObjects:kShouldDisplayAnswerKey, kShouldDisplayDescriptionKey, nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+	if (![NSThread isMainThread]) {
+		[self performSelectorOnMainThread:@selector(updateUIForKeypath:) withObject:keyPath waitUntilDone:NO];
+	} else {
+		[self updateUIForKeypath:keyPath];
+	}
+}
+
+- (void)updateUIForKeypath:(NSString *)keyPath {
+  if ([keyPath isEqualToString:kShouldDisplayAnswerKey]) {
+    if ([self.shouldDisplayAnswer boolValue] == YES && [self.shouldDisplayDescription boolValue] == NO) {
+      // To display the Answer and change the Footer's title.
+      [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kAnswerSection] withRowAnimation:UITableViewRowAnimationFade];
+    }
+	}
+  
+  if ([keyPath isEqualToString:kShouldDisplayDescriptionKey]) {
+    [self.tableView reloadData];
+    // To display the Answer and change the Footer's title.
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:kAnswerSection] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+	}
 }
 
 
@@ -65,8 +106,8 @@ static const int kDescriptionSection = 2;
     self.currentQuestionIndex = self.currentQuestionIndex + 1;
     
     // 2. Remove answer an description.
-    self.shouldDisplayAnswer = NO;
-    self.shouldDisplayDescription = NO;
+    self.shouldDisplayAnswer = [NSNumber numberWithBool:NO];
+    self.shouldDisplayDescription = [NSNumber numberWithBool:NO];
     
     // 3. Reload the tableView with the new question.
     [self.tableView reloadData];
@@ -118,12 +159,20 @@ static const int kDescriptionSection = 2;
 - (void)viewDidLoad{
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
+  [self registerForKVO];
+  
   [self setNavigationBarTitle];
   [self setNavigationBarNextQuestionButton];
   
   UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackgroundTemplateColor.png"]];
   [self.view setBackgroundColor:color];
   [self.tableView setBackgroundColor:color];
+}
+
+- (void)viewDidUnload{
+  [super viewDidUnload];
+  
+  [self unregisterFromKVO];
 }
 
 
@@ -142,7 +191,7 @@ static const int kDescriptionSection = 2;
   int sectionCount = 2;
   
   int descriptionRowCount = 0;
-  if (self.shouldDisplayDescription) {
+  if ([self.shouldDisplayDescription boolValue]) {
     descriptionRowCount = 1;
   }
   
@@ -207,7 +256,7 @@ static const int kDescriptionSection = 2;
     }
   }
   
-  if (self.shouldDisplayAnswer == YES) {
+  if ([self.shouldDisplayAnswer boolValue] == YES) {
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
     NSString *answer = currentQuestion.answer;
@@ -242,7 +291,7 @@ static const int kDescriptionSection = 2;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
   }
   
-  if (self.shouldDisplayDescription == YES) {
+  if ([self.shouldDisplayDescription boolValue] == YES) {
     Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
     NSString *description = currentQuestion.description;
     [cell.textLabel setText:description];
@@ -262,7 +311,7 @@ static const int kDescriptionSection = 2;
  */
 - (UITableViewCell *)contentDescriptionCellForRowAtIndexPath:(NSIndexPath *)indexPath{
   UITableViewCell *cell = nil;
-
+  
   NSString *CellIdentifier = @"CellContentDescriptionCellIdentifier";
   cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   if (cell == nil) {
@@ -305,7 +354,7 @@ static const int kDescriptionSection = 2;
  */
 - (UITableViewCell *)tableView:(UITableView *)aTableView infoDescriptionCellForRowAtIndexPath:(NSIndexPath *)indexPath{
   UITableViewCell *cell = nil;
-
+  
   // It's the row that has the info for the section.
   switch (indexPath.section) {
     case kStatementSection:
@@ -325,7 +374,7 @@ static const int kDescriptionSection = 2;
   }
   
   [cell.textLabel setTextColor:[UIColor colorWithRed:190/255 green:190/255 blue:190/255 alpha:1.0]];
-
+  
   return cell;
 }
 
@@ -377,28 +426,28 @@ static const int kDescriptionSection = 2;
   }else{
     CGFloat minimumCellHeight = 44;
     Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
-  
-  int index = indexPath.section;
-  switch (index) {
-    case kStatementSection:
-      cellHeight = kCellStatementPaddingY + [self detailElementTextHeight:currentQuestion.statement] + kCellStatementPaddingY;
-      break;
-      
-    case kAnswerSection:
-      cellHeight = kCellAnswerPaddingY + [self detailElementTextHeight:currentQuestion.answer] + kCellAnswerPaddingY;
-      break;
-      
-    case kDescriptionSection:
-      cellHeight = kCellDescriptionPaddingY + [self detailElementTextHeight:currentQuestion.description] + kCellDescriptionPaddingY;
-      break;
-      
-    default:
-      break;
+    
+    int index = indexPath.section;
+    switch (index) {
+      case kStatementSection:
+        cellHeight = kCellStatementPaddingY + [self detailElementTextHeight:currentQuestion.statement] + kCellStatementPaddingY;
+        break;
+        
+      case kAnswerSection:
+        cellHeight = kCellAnswerPaddingY + [self detailElementTextHeight:currentQuestion.answer] + kCellAnswerPaddingY;
+        break;
+        
+      case kDescriptionSection:
+        cellHeight = kCellDescriptionPaddingY + [self detailElementTextHeight:currentQuestion.description] + kCellDescriptionPaddingY;
+        break;
+        
+      default:
+        break;
+    }
+    if (cellHeight < minimumCellHeight) {
+      cellHeight = minimumCellHeight;
+    }
   }
-  if (cellHeight < minimumCellHeight) {
-    cellHeight = minimumCellHeight;
-  }
-}
   
   return cellHeight;
 }
@@ -413,9 +462,9 @@ static const int kDescriptionSection = 2;
  @remarks : It reloads only the "kAnswerSection" section to avoid unnecessary redraw.
  */
 - (void)displayAnswer{
-  if (!self.shouldDisplayAnswer) {    
-    self.shouldDisplayAnswer = YES;
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kAnswerSection] withRowAnimation:UITableViewRowAnimationFade];
+  if ([self.shouldDisplayAnswer boolValue] == NO) {
+    [self setShouldDisplayAnswer:[NSNumber numberWithBool:YES]];
+    // [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kAnswerSection] withRowAnimation:UITableViewRowAnimationFade];
   }
 }
 
@@ -427,10 +476,10 @@ static const int kDescriptionSection = 2;
  When it's been drawn, we scroll to the Answer's cell (the first row of the "kAnswerSection" section).
  */
 - (void)displayDescription{
-  if (self.shouldDisplayAnswer && !self.shouldDisplayDescription) {
-    self.shouldDisplayDescription = YES;
-    [self.tableView reloadData];
-    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:kAnswerSection] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+  if ([self.shouldDisplayAnswer boolValue] == YES && [self.shouldDisplayDescription boolValue] == NO) {
+    self.shouldDisplayDescription = [NSNumber numberWithBool:YES];
+    // [self.tableView reloadData];
+    // [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:kAnswerSection] atScrollPosition:UITableViewScrollPositionTop animated:YES];
   }
 }
 
@@ -441,6 +490,8 @@ static const int kDescriptionSection = 2;
  @remarks : <#(optional)#>
  */
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+  [aTableView deselectRowAtIndexPath:indexPath animated:YES];
+  
   if (indexPath.row == 1) {
     switch (indexPath.section) {
       case kAnswerSection:
@@ -461,8 +512,8 @@ static const int kDescriptionSection = 2;
   NSString *footerTitle = @"";
   switch (section) {
     case kAnswerSection:
-      if (!self.shouldDisplayDescription) {
-        if (!self.shouldDisplayAnswer) {
+      if ([self.shouldDisplayDescription boolValue] == NO) {
+        if ([self.shouldDisplayAnswer boolValue] == NO) {
           footerTitle = @"Visualisez la réponse et appuyez sur \"Réponse\".";
         }else{
           footerTitle = @"Appuyez sur la flèche si vous voulez en savoir plus.";
@@ -470,7 +521,7 @@ static const int kDescriptionSection = 2;
       }
       break;
       
-      default:
+    default:
       break;
   }
   
