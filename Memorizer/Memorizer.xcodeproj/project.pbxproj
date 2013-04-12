@@ -27,6 +27,7 @@
 		A8D36F4316FA5A07009268D2 /* NameValueArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */; };
 		F227DDCC1718007000D694DE /* QuestionSet+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDCB1718007000D694DE /* QuestionSet+Archiver.m */; };
 		F227DDCF1718044E00D694DE /* NextPresentationQuestionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDCE1718044D00D694DE /* NextPresentationQuestionSet.m */; };
+		F227DDD6171836F100D694DE /* OLStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDD4171836F100D694DE /* OLStatusView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */ = {isa = PBXBuildFile; fileRef = F28BE51A1714664600B4AC13 /* nextQuestion.png */; };
 		F292F8941716AE3100F3723A /* QuestionMemorizationLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */; };
 		F292F8951716AE3100F3723A /* QuestionMemorizationLevelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F292F8931716AE3100F3723A /* QuestionMemorizationLevelViewController.xib */; };
@@ -118,6 +119,9 @@
 		F227DDCB1718007000D694DE /* QuestionSet+Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "QuestionSet+Archiver.m"; path = "QuestionSet/QuestionSet+Archiver.m"; sourceTree = "<group>"; };
 		F227DDCD1718044D00D694DE /* NextPresentationQuestionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextPresentationQuestionSet.h; path = NextPresentationQuestionSet/NextPresentationQuestionSet.h; sourceTree = "<group>"; };
 		F227DDCE1718044D00D694DE /* NextPresentationQuestionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NextPresentationQuestionSet.m; path = NextPresentationQuestionSet/NextPresentationQuestionSet.m; sourceTree = "<group>"; };
+		F227DDD3171836F100D694DE /* OLStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLStatusView.h; sourceTree = "<group>"; };
+		F227DDD4171836F100D694DE /* OLStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLStatusView.m; sourceTree = "<group>"; };
+		F227DDD5171836F100D694DE /* OLStatusViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLStatusViewDelegate.h; sourceTree = "<group>"; };
 		F28BE51A1714664600B4AC13 /* nextQuestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextQuestion.png; sourceTree = "<group>"; };
 		F292F8911716AE3000F3723A /* QuestionMemorizationLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionMemorizationLevelViewController.h; path = QuestionViewController/QuestionMemorizationLevelViewController.h; sourceTree = "<group>"; };
 		F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionMemorizationLevelViewController.m; path = QuestionViewController/QuestionMemorizationLevelViewController.m; sourceTree = "<group>"; };
@@ -389,6 +393,24 @@
 			name = NextPresentationQuestionSet;
 			sourceTree = "<group>";
 		};
+		F227DDD1171836F000D694DE /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				F227DDD2171836F100D694DE /* StatusBar */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		F227DDD2171836F100D694DE /* StatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				F227DDD3171836F100D694DE /* OLStatusView.h */,
+				F227DDD4171836F100D694DE /* OLStatusView.m */,
+				F227DDD5171836F100D694DE /* OLStatusViewDelegate.h */,
+			);
+			path = StatusBar;
+			sourceTree = "<group>";
+		};
 		F28BE5191714664600B4AC13 /* QuestionViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				A8D36F3E16FA5667009268D2 /* Resources */,
+				F227DDD1171836F000D694DE /* Externals */,
 				A8D36F3616FA5623009268D2 /* Classes */,
 				F2B2444116E5F85500E11381 /* Supporting Files */,
 			);
@@ -757,6 +780,7 @@
 				F292F8941716AE3100F3723A /* QuestionMemorizationLevelViewController.m in Sources */,
 				F227DDCC1718007000D694DE /* QuestionSet+Archiver.m in Sources */,
 				F227DDCF1718044E00D694DE /* NextPresentationQuestionSet.m in Sources */,
+				F227DDD6171836F100D694DE /* OLStatusView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

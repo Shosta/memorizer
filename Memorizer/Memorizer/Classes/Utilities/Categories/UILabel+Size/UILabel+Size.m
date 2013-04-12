@@ -18,7 +18,7 @@
  */
 -(void)setUpMultiLineFrameWithStartXPosition:(CGFloat)startX withStartYPosition:(CGFloat)startY
 {
-	self.lineBreakMode = UILineBreakModeWordWrap;
+	self.lineBreakMode = NSLineBreakByWordWrapping;
 	self.numberOfLines = 0;//instructs the label to contain any number of lines
 	
 	CGSize minSize = [self getSize];
@@ -32,7 +32,7 @@
  @remarks : <#(optional)#>
  */
 -(void)setUpMultiLineFrameBasedOnWidth:(CGFloat)maxWidth withStartXPosition:(CGFloat)startX withHeight:(CGFloat)maxHeight{
-	self.lineBreakMode = UILineBreakModeWordWrap;
+	self.lineBreakMode = NSLineBreakByWordWrapping;
 	self.numberOfLines = 0; //instructs the label to contain any number of lines
 	
 	CGFloat labelHeight = [self getHeightBasedOnWidth:maxWidth];
@@ -48,7 +48,7 @@
  */
 -(void)setUpMultiLineFrameBasedOnWidth:(CGFloat)maxWidth withStartXPosition:(CGFloat)startX withStartYPosition:(CGFloat)startY{
 	
-	self.lineBreakMode = UILineBreakModeWordWrap;
+	self.lineBreakMode = NSLineBreakByWordWrapping;
 	self.numberOfLines = 0;//instructs the label to contain any number of lines
 	
 	CGFloat labelHeight = [self getHeightBasedOnWidth:maxWidth];
@@ -62,7 +62,7 @@
  @remarks : <#(optional)#>
  */
 -(void)setUpMultiLineFrameBasedOnWidth:(CGFloat)maxWidth withStartXPosition:(CGFloat)startX{
-	self.lineBreakMode = UILineBreakModeWordWrap;
+	self.lineBreakMode = NSLineBreakByWordWrapping;
 	self.numberOfLines = 0;//instructs the label to contain any number of lines
 	
 	CGFloat labelHeight = [self getHeightBasedOnWidth:maxWidth];
