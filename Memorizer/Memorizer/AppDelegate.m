@@ -8,10 +8,8 @@
 
 #import "AppDelegate.h"
 #import "AppData+Archiver.h"
+#import "QuestionSetsViewController.h"
 #import "QuestionSetsMemorizationLevelViewController.h"
-#import "FirstViewController.h"
-
-#import "SecondViewController.h"
 
 @implementation AppDelegate
 
@@ -72,18 +70,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  // Override point for customization after application launch.
-  
-  UIViewController *questionSetsViewController = [[QuestionSetsMemorizationLevelViewController alloc] initWithNibName:@"QuestionSetsViewController" bundle:nil];
-  UINavigationController *questionSetsNavController = [[UINavigationController alloc] initWithRootViewController:questionSetsViewController];
-  
-  UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
-  
-  UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-  self.tabBarController = [[UITabBarController alloc] init];
-  self.tabBarController.viewControllers = @[questionSetsNavController, viewController1, viewController2];
-  self.window.rootViewController = self.tabBarController;
   [self.window makeKeyAndVisible];
   
   // Set appearance for all the defined controls.

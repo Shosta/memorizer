@@ -9,7 +9,6 @@
 #import "QuestionViewController.h"
 #import "NSString+LabelSize.h"
 #import "Question.h"
-#import "QuestionSetsMemorizationLevelViewController.h"
 #import "StatementTableViewCell.h"
 #import "AnswerTableViewCell.h"
 #import "DescriptionTableViewCell.h"
@@ -101,15 +100,7 @@ static const int kDescriptionSection = 2;
  @remarks : It refresh the QuestionSetsViewController's TableView as well.
  */
 - (void)popQuestionSetsViewController{
-  [self popViewControllerAsQuestionSetFinished];
-  
-  UITabBarController *tabBarController = [APP_DELEGATE tabBarController];
-  NSArray *tabBarViewControllers = [tabBarController viewControllers];
-  UINavigationController *navController = [tabBarViewControllers objectAtIndex:0];
-  NSArray *navViewControllers = [navController viewControllers];
-  
-  QuestionSetsMemorizationLevelViewController *rootViewController = [navViewControllers objectAtIndex:navViewControllers.count - 1];
-  [rootViewController refreshView];
+  [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 /**
@@ -148,16 +139,6 @@ static const int kDescriptionSection = 2;
   
   NSString *title = [NSString stringWithFormat:@"Question %d sur %d", index, questionsCount];
   [self.navigationItem setTitle:title];
-}
-
-/**
- @brief The User finished his questionSet, its pops back the ViewController.
- @author : Rémi Lavedrine
- @date : 10/04/2013
- @remarks : <#(optional)#>
- */
-- (void)popViewControllerAsQuestionSetFinished{
-  [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)setNavigationBarNextQuestionButton{

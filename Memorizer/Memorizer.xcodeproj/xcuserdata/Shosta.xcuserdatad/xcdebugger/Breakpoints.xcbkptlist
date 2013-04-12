@@ -21,13 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Memorizer/Classes/Controllers/QuestionSetsViewController/QuestionSetsViewController.m"
-         timestampString = "387464383.340012"
+         timestampString = "387469824.527908"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "226"
-         endingLineNumber = "226"
-         landmarkName = "-tableView:didSelectRowAtIndexPath:"
-         landmarkType = "5">
+         startingLineNumber = "352"
+         endingLineNumber = "352">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -40,6 +38,19 @@
          startingLineNumber = "30"
          endingLineNumber = "30"
          landmarkName = "-nextPresentationDateFromQuestionSet:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Memorizer/Classes/Controllers/QuestionViewController/QuestionMemorizationLevelViewController.m"
+         timestampString = "387471673.944431"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "114"
+         endingLineNumber = "114"
+         landmarkName = "-popQuestionSetsViewController"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

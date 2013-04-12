@@ -41,9 +41,9 @@
   }
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-  if (self) {
+- (id)initWithCoder:(NSCoder *)aDecoder{
+  self = [super initWithCoder:aDecoder];
+  if (self != nil) {
     // Custom initialization
     self.nextPresentationQuestionSetsArray = [[NSMutableArray alloc] initWithCapacity:[[APP_DATA questionSetsArray] count]];
     [self populateNextPresentationQuestionSetsArray];

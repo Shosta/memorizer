@@ -59,7 +59,10 @@ static NSString *kShouldDisplayDescriptionKey = @"shouldDisplayDescription";
 - (void)displayAnswer;
 
 
-#pragma mark - NextQuestion
+#pragma mark - NextQuestion#pragma mark - NextQuestion
+//! Pop the QuestionSetsViewController as the Questions list is finished.
+- (void)popQuestionSetsViewController;
+
 //! Display the next Question on Screen.
 - (void)displayNextQuestion;
 

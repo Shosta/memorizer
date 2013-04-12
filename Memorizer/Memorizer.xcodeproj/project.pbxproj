@@ -28,6 +28,9 @@
 		F227DDCC1718007000D694DE /* QuestionSet+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDCB1718007000D694DE /* QuestionSet+Archiver.m */; };
 		F227DDCF1718044E00D694DE /* NextPresentationQuestionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDCE1718044D00D694DE /* NextPresentationQuestionSet.m */; };
 		F227DDD6171836F100D694DE /* OLStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDD4171836F100D694DE /* OLStatusView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F227DDDA17184C3600D694DE /* QuestionSetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDD817184C3600D694DE /* QuestionSetsViewController.m */; };
+		F227DDDB17184C3600D694DE /* QuestionSetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DDD917184C3600D694DE /* QuestionSetsViewController.xib */; };
+		F227DDDD171852EE00D694DE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DDDC171852EE00D694DE /* MainWindow.xib */; };
 		F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */ = {isa = PBXBuildFile; fileRef = F28BE51A1714664600B4AC13 /* nextQuestion.png */; };
 		F292F8941716AE3100F3723A /* QuestionMemorizationLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */; };
 		F292F8951716AE3100F3723A /* QuestionMemorizationLevelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F292F8931716AE3100F3723A /* QuestionMemorizationLevelViewController.xib */; };
@@ -45,14 +48,10 @@
 		F2B2444D16E5F85500E11381 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B2444C16E5F85500E11381 /* Default.png */; };
 		F2B2444F16E5F85500E11381 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B2444E16E5F85500E11381 /* Default@2x.png */; };
 		F2B2445116E5F85500E11381 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B2445016E5F85500E11381 /* Default-568h@2x.png */; };
-		F2B2445416E5F85500E11381 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B2445316E5F85500E11381 /* FirstViewController.m */; };
 		F2B2445616E5F85500E11381 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B2445516E5F85500E11381 /* first.png */; };
 		F2B2445816E5F85500E11381 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B2445716E5F85500E11381 /* first@2x.png */; };
-		F2B2445B16E5F85500E11381 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B2445A16E5F85500E11381 /* SecondViewController.m */; };
 		F2B2445D16E5F85500E11381 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B2445C16E5F85500E11381 /* second.png */; };
 		F2B2445F16E5F85500E11381 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B2445E16E5F85500E11381 /* second@2x.png */; };
-		F2B2446216E5F85500E11381 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B2446016E5F85500E11381 /* FirstViewController.xib */; };
-		F2B2446516E5F85500E11381 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B2446316E5F85500E11381 /* SecondViewController.xib */; };
 		F2D92A1017130B5C006ED8A6 /* AnswerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D92A0F17130B5C006ED8A6 /* AnswerTableViewCell.m */; };
 		F2D92A1317130B76006ED8A6 /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D92A1217130B76006ED8A6 /* AnswerTableViewCell.xib */; };
 		F2D92A18171316EA006ED8A6 /* explanation.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D92A16171316EA006ED8A6 /* explanation.png */; };
@@ -122,6 +121,10 @@
 		F227DDD3171836F100D694DE /* OLStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLStatusView.h; sourceTree = "<group>"; };
 		F227DDD4171836F100D694DE /* OLStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLStatusView.m; sourceTree = "<group>"; };
 		F227DDD5171836F100D694DE /* OLStatusViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLStatusViewDelegate.h; sourceTree = "<group>"; };
+		F227DDD717184C3600D694DE /* QuestionSetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetsViewController.h; path = QuestionSetsViewController/QuestionSetsViewController.h; sourceTree = "<group>"; };
+		F227DDD817184C3600D694DE /* QuestionSetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSetsViewController.m; path = QuestionSetsViewController/QuestionSetsViewController.m; sourceTree = "<group>"; };
+		F227DDD917184C3600D694DE /* QuestionSetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetsViewController.xib; path = QuestionSetsViewController/QuestionSetsViewController.xib; sourceTree = "<group>"; };
+		F227DDDC171852EE00D694DE /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		F28BE51A1714664600B4AC13 /* nextQuestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextQuestion.png; sourceTree = "<group>"; };
 		F292F8911716AE3000F3723A /* QuestionMemorizationLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionMemorizationLevelViewController.h; path = QuestionViewController/QuestionMemorizationLevelViewController.h; sourceTree = "<group>"; };
 		F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionMemorizationLevelViewController.m; path = QuestionViewController/QuestionMemorizationLevelViewController.m; sourceTree = "<group>"; };
@@ -144,16 +147,10 @@
 		F2B2444C16E5F85500E11381 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F2B2444E16E5F85500E11381 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F2B2445016E5F85500E11381 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F2B2445216E5F85500E11381 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../../FirstViewController.h; sourceTree = "<group>"; };
-		F2B2445316E5F85500E11381 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../../FirstViewController.m; sourceTree = "<group>"; };
 		F2B2445516E5F85500E11381 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = ../first.png; sourceTree = "<group>"; };
 		F2B2445716E5F85500E11381 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "../first@2x.png"; sourceTree = "<group>"; };
-		F2B2445916E5F85500E11381 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ../../SecondViewController.h; sourceTree = "<group>"; };
-		F2B2445A16E5F85500E11381 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ../../SecondViewController.m; sourceTree = "<group>"; };
 		F2B2445C16E5F85500E11381 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = ../second.png; sourceTree = "<group>"; };
 		F2B2445E16E5F85500E11381 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "../second@2x.png"; sourceTree = "<group>"; };
-		F2B2446116E5F85500E11381 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
-		F2B2446416E5F85500E11381 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
 		F2D92A0E17130B5C006ED8A6 /* AnswerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnswerTableViewCell.h; path = CustomUIObjects/AnswerTableViewCell/AnswerTableViewCell.h; sourceTree = "<group>"; };
 		F2D92A0F17130B5C006ED8A6 /* AnswerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnswerTableViewCell.m; path = CustomUIObjects/AnswerTableViewCell/AnswerTableViewCell.m; sourceTree = "<group>"; };
 		F2D92A1217130B76006ED8A6 /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnswerTableViewCell.xib; path = CustomUIObjects/AnswerTableViewCell/AnswerTableViewCell.xib; sourceTree = "<group>"; };
@@ -277,6 +274,9 @@
 		A845C073170463C20064806D /* QuestionSetsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F227DDD717184C3600D694DE /* QuestionSetsViewController.h */,
+				F227DDD817184C3600D694DE /* QuestionSetsViewController.m */,
+				F227DDD917184C3600D694DE /* QuestionSetsViewController.xib */,
 				A845C06E1704639F0064806D /* QuestionSetsMemorizationLevelViewController.h */,
 				A845C06F1704639F0064806D /* QuestionSetsMemorizationLevelViewController.m */,
 				A845C0701704639F0064806D /* QuestionSetsMemorizationLevelViewController.xib */,
@@ -339,12 +339,6 @@
 			children = (
 				A845C073170463C20064806D /* QuestionSetsViewController */,
 				A845C079170468310064806D /* QuestionViewController */,
-				F2B2445216E5F85500E11381 /* FirstViewController.h */,
-				F2B2445316E5F85500E11381 /* FirstViewController.m */,
-				F2B2445916E5F85500E11381 /* SecondViewController.h */,
-				F2B2445A16E5F85500E11381 /* SecondViewController.m */,
-				F2B2446016E5F85500E11381 /* FirstViewController.xib */,
-				F2B2446316E5F85500E11381 /* SecondViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -472,6 +466,7 @@
 		F2B2444116E5F85500E11381 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F227DDDC171852EE00D694DE /* MainWindow.xib */,
 				F2B2444216E5F85500E11381 /* Memorizer-Info.plist */,
 				F2B2444316E5F85500E11381 /* InfoPlist.strings */,
 				F2B2444616E5F85500E11381 /* main.m */,
@@ -712,8 +707,6 @@
 				F2B2445816E5F85500E11381 /* first@2x.png in Resources */,
 				F2B2445D16E5F85500E11381 /* second.png in Resources */,
 				F2B2445F16E5F85500E11381 /* second@2x.png in Resources */,
-				F2B2446216E5F85500E11381 /* FirstViewController.xib in Resources */,
-				F2B2446516E5F85500E11381 /* SecondViewController.xib in Resources */,
 				A845C05F17044AED0064806D /* irregularVerbs.json in Resources */,
 				A845C0721704639F0064806D /* QuestionSetsMemorizationLevelViewController.xib in Resources */,
 				A845C0781704682B0064806D /* QuestionViewController.xib in Resources */,
@@ -741,6 +734,8 @@
 				F292F8A01716B8FA00F3723A /* level5.png in Resources */,
 				A845062F17172F4400C4E0E9 /* bar_background.png in Resources */,
 				A845063017172F4400C4E0E9 /* bar_progress_top.png in Resources */,
+				F227DDDB17184C3600D694DE /* QuestionSetsViewController.xib in Resources */,
+				F227DDDD171852EE00D694DE /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,8 +748,6 @@
 			files = (
 				F2B2444716E5F85500E11381 /* main.m in Sources */,
 				F2B2444B16E5F85500E11381 /* AppDelegate.m in Sources */,
-				F2B2445416E5F85500E11381 /* FirstViewController.m in Sources */,
-				F2B2445B16E5F85500E11381 /* SecondViewController.m in Sources */,
 				A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */,
 				A8D36F4316FA5A07009268D2 /* NameValueArchiver.m in Sources */,
 				A844A54A16FB17780021037B /* Question.m in Sources */,
@@ -781,6 +774,7 @@
 				F227DDCC1718007000D694DE /* QuestionSet+Archiver.m in Sources */,
 				F227DDCF1718044E00D694DE /* NextPresentationQuestionSet.m in Sources */,
 				F227DDD6171836F100D694DE /* OLStatusView.m in Sources */,
+				F227DDDA17184C3600D694DE /* QuestionSetsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,24 +787,6 @@
 				F2B2444416E5F85500E11381 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F2B2446016E5F85500E11381 /* FirstViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F2B2446116E5F85500E11381 /* en */,
-			);
-			name = FirstViewController.xib;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		F2B2446316E5F85500E11381 /* SecondViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F2B2446416E5F85500E11381 /* en */,
-			);
-			name = SecondViewController.xib;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

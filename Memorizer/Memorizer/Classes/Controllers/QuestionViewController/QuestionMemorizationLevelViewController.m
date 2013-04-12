@@ -8,6 +8,8 @@
 
 #import "QuestionMemorizationLevelViewController.h"
 #import "Question.h"
+#import "QuestionSetsMemorizationLevelViewController.h"
+#import "AppDelegate.h"
 
 @implementation QuestionMemorizationLevelViewController
 
@@ -103,6 +105,24 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
 #pragma mark - NextQuestion
 
 /**
+ @brief Pop the QuestionSetsViewController as the Questions list is finished.
+ @author : Rémi Lavedrine
+ @date : 12/04/2013
+ @remarks : It refresh the QuestionSetsViewController's TableView as well.
+ */
+- (void)popQuestionSetsViewController{
+  [super popQuestionSetsViewController];
+  
+  UITabBarController *tabBarController = [APP_DELEGATE tabBarController];
+  NSArray *tabBarViewControllers = [tabBarController viewControllers];
+  UINavigationController *navController = [tabBarViewControllers objectAtIndex:0];
+  NSArray *navViewControllers = [navController viewControllers];
+  
+  QuestionSetsMemorizationLevelViewController *rootViewController = [navViewControllers objectAtIndex:navViewControllers.count - 1];
+  [rootViewController refreshView];
+}
+
+/**
  @brief Display the next Question on Screen.
  @author : Rémi Lavedrine
  @date : 10/04/2013
@@ -111,14 +131,14 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
  If it's the last question from the QuestionSet, it pops to the RootViewController.
  */
 - (void)displayNextQuestion{
-    [super displayNextQuestion];
-    
-    if (self.currentQuestionIndex < [self.questionsArray count]){
-        // 1. As the TableView's height was reduced to present the "noting buttons" it has to be resized to its original size.
-        [self increaseTableViewHeight];
-    }
-    
-    self.isMemorizationLevelChosen = [NSNumber numberWithBool:NO];
+  [super displayNextQuestion];
+  
+  if (self.currentQuestionIndex < [self.questionsArray count]){
+    // 1. As the TableView's height was reduced to present the "noting buttons" it has to be resized to its original size.
+    [self increaseTableViewHeight];
+  }
+  
+  self.isMemorizationLevelChosen = [NSNumber numberWithBool:NO];
 }
 
 

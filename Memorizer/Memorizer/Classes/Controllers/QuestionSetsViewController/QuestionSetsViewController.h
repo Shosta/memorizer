@@ -19,8 +19,10 @@
 // @brief
 // 
 
-___IMPORTHEADER_viewControllerSubclass___
+#import <UIKit/UIKit.h>
 
 @interface QuestionSetsViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
