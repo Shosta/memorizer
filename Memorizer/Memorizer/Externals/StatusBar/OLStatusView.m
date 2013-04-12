@@ -318,6 +318,18 @@
 #pragma mark View life cycle
 
 #define STATUS_VIEW_ACTION_DELAY 1.0
+/**
+ @brief Fait apparaître puis disparaître la vue.
+ @author : Rémi Lavedrine
+ @date : 12/04/2013
+ @remarks : <#(optional)#>
+ */
+- (void)popOnView:(UIView *)addToView{
+  [self animateShowOnView:addToView];
+  
+  [self performSelector:@selector(animateRemove) withObject:nil afterDelay:STATUS_VIEW_ACTION_DELAY*5];
+}
+
 /*
  Anime l'apparition de la vue.
  @In : (UIView *)addToView : La vue à laquelle on souhaite ajouter la statusView.
@@ -372,14 +384,13 @@
   
   if ([delegate respondsToSelector:@selector(statusViewWillAppear)]) {
     [delegate performSelector:@selector(statusViewWillAppear) withObject:nil];
+    
   }
   
   if ( translationDirection == UpToDown ) {
-    
     [self showOnTopOfView:addToView];
 		
 	}else if ( translationDirection == DownToUp ) {
-    
     [self showOnBottomOfView:addToView];
 		
 	}
@@ -402,26 +413,20 @@
     [delegate performSelector:@selector(statusViewWillDisappear) withObject:nil];
   }
   
-  
   float delay = STATUS_VIEW_ACTION_DELAY;
   
-  
 	if ( translationDirection == UpToDown ) {
-		
 		[self translateView:self toX:0 Y:-self.frame.size.height during:delay];
 		
 	}else if ( translationDirection == DownToUp ) {
-		
 		[self translateView:self toX:0 Y:self.frame.size.height during:delay];
 		
 	}
-	
-	
 	[self performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:delay];
-  
   
   if ([delegate respondsToSelector:@selector(statusViewDidDisappear)]) {
     [delegate performSelector:@selector(statusViewDidDisappear) withObject:nil afterDelay:delay];
+  
   }
 }
 
@@ -439,17 +444,8 @@
   
 }
 
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect {
- // Drawing code.
- }
- */
 
-
-#pragma mark -
-#pragma mark Color management
+#pragma mark - Color management
 
 - (void)setViewBackgroundColor:(UIColor *)a_color{
 	viewBackgroundColor = a_color;
@@ -467,8 +463,7 @@
 }
 
 
-#pragma mark -
-#pragma mark Memory management
+#pragma mark - Memory management
 
 - (void)dealloc {
 	[statusLabel release];
@@ -478,7 +473,6 @@
 	[viewBackgroundColor release];
 	[statusTextColor release];
 	[lineBackgroundColor release];
-	
 	
 	[super dealloc];
 }

@@ -22,11 +22,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OLStatusView.h"
 
-@interface QuestionSetsViewController : UIViewController
+@interface QuestionSetsViewController : UIViewController <OLStatusViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 
 #pragma mark - Refresh View
 

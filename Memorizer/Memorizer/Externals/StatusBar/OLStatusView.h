@@ -47,8 +47,7 @@ typedef enum {
 @property (nonatomic, retain) UIColor *statusTextColor;
 @property (nonatomic, retain) UIColor *lineBackgroundColor;
 
-#pragma mark -
-#pragma mark Object life cycle
+#pragma mark - Object
 - (OLStatusView *)initWithStatusLabel:(NSString *)labelText textFont:(UIFont *)textFont orientation:(UIInterfaceOrientation)interfaceOrientation translationDirection:(TranslationDirection)a_translationDirection;
 - (OLStatusView *)initWithStatusLabel:(NSString *)labelText textFont:(UIFont *)textFont infoLabel:(NSString *)infoLabelText orientation:(UIInterfaceOrientation)interfaceOrientation translationDirection:(TranslationDirection)a_translationDirection;
 - (OLStatusView *)initWithStatusLabel:(NSString *)labelText textFont:(UIFont *)textFont icon:(UIImage *)image orientation:(UIInterfaceOrientation)interfaceOrientation translationDirection:(TranslationDirection)a_translationDirection;
@@ -56,8 +55,8 @@ typedef enum {
 - (void)addLabelWithLabelWidth:(int)labelWidth labelText:(NSString *)labelText textAlignmment:(UITextAlignment)textAlignment textFont:(UIFont *)textFont textColor:(UIColor *)textColor textXOrigin:(CGFloat)xOrigin;
 - (void)addLineWithOrientation:(UIInterfaceOrientation)interfaceOrientation;
 
-#pragma mark -
-#pragma mark View life cycle
+#pragma mark - View
+- (void)popOnView:(UIView *)addToView;
 - (void)animateShowOnView:(UIView *)addToView;
 - (void)translateView:(UIView *)view toX:(NSInteger)tx Y:(NSInteger)ty during:(NSTimeInterval)duration;
 - (void)animateRemove;

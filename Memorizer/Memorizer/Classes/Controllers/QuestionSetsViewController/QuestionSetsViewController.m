@@ -19,6 +19,7 @@
 @interface QuestionSetsViewController ()
 
 @property (nonatomic, retain) NSMutableArray *nextPresentationQuestionSetsArray;
+@property (nonatomic, retain) OLStatusView *statusView;
 
 @end
 
@@ -76,6 +77,10 @@
   [self.view setBackgroundColor:color];
   
   [self.navigationItem setTitle:@"Ultimemo"];
+  
+  NSString *message = @"Pas de question pour aujourd'hui.\nAttendez quelques jours pour la prochaine série ou bien faites une série juste pour l'entraînement.";
+  self.statusView = [[OLStatusView alloc] initWithStatusLabel:message textFont:[UIFont fontWithName:@"Helvetica" size:16] orientation:UIInterfaceOrientationPortrait translationDirection:DownToUp];
+  self.statusView.delegate = self;
 }
 
 
@@ -222,7 +227,10 @@
     QuestionMemorizationLevelViewController *questionViewController = [[QuestionMemorizationLevelViewController alloc] initWithQuestionsArray:questionsArray];
     [self.navigationController pushViewController:questionViewController animated:YES];
   }else{
-    OLLogDebug(@"Pas de question pour aujourd'hui. Attendez le %@ pour la prochaine série. Ou bien faites une série juste pour l'entraînement.", [self dayMonthYearFormatDate:nextPresentationQuestionSet.nextPresentationDate ]);
+    NSString *message = [NSString stringWithFormat:@"Pas de question pour aujourd'hui.\nAttendez le %@ pour la prochaine série ou bien faites une série juste pour l'entraînement.", [self dayMonthYearFormatDate:nextPresentationQuestionSet.nextPresentationDate]];
+    OLLogDebug(@"%@", message);
+    [self.statusView.statusLabel setText:message];
+    [self.statusView popOnView:self.view];
   }
 }
 
