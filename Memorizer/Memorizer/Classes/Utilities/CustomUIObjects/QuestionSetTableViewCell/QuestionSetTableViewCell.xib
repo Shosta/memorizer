@@ -92,7 +92,7 @@
 								<int key="IBUIContentMode">7</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBUIText"/>
+								<string key="IBUIText">Plop</string>
 								<object class="NSColor" key="IBUITextColor" id="203405637">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -197,6 +197,7 @@
 								<string key="NSFrame">{{10, 120}, {260, 21}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="577642452"/>
 								<bool key="IBUIOpaque">NO</bool>

@@ -27,4 +27,10 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+
+#pragma mark - Refresh View
+
+//! <#Describe the function purpose#>
+- (void)refreshView;
+
 @end

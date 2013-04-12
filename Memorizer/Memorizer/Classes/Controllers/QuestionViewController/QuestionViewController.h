@@ -28,7 +28,7 @@ static NSString *kShouldDisplayDescriptionKey = @"shouldDisplayDescription";
 
 @interface QuestionViewController : UIViewController
 
-@property (nonatomic, retain) NSMutableArray *questionSetArray;
+@property (nonatomic, retain) NSMutableArray *questionsArray;
 @property int currentQuestionIndex;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -44,11 +44,11 @@ static NSString *kShouldDisplayDescriptionKey = @"shouldDisplayDescription";
 //! @param[in] aQuestionSetArray : The Question array to display within the View.
 - (id)initWithNibName:(NSString *)nibNameOrNil
                bundle:(NSBundle *)nibBundleOrNil
-          questionSet:(NSMutableArray *)aQuestionSetArray;
+          questionsArray:(NSMutableArray *)aQuestionsArray;
 
 //! Object constructor.
 //! @param[in] aQuestionSetArray : The Question array to display within the View.
-- (id)initWithQuestionSet:(NSMutableArray *)aQuestionSetArray;
+- (id)initWithQuestionsArray:(NSMutableArray *)aQuestionsArray;
 
 
 #pragma mark - KVO

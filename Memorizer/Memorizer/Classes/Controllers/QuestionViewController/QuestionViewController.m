@@ -9,9 +9,11 @@
 #import "QuestionViewController.h"
 #import "NSString+LabelSize.h"
 #import "Question.h"
+#import "QuestionSetsViewController.h"
 #import "StatementTableViewCell.h"
 #import "AnswerTableViewCell.h"
 #import "DescriptionTableViewCell.h"
+#import "AppDelegate.h"
 
 @interface QuestionViewController ()
 
@@ -30,11 +32,11 @@ static const int kDescriptionSection = 2;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil
                bundle:(NSBundle *)nibBundleOrNil
-          questionSet:(NSMutableArray *)aQuestionSetArray{
+          questionsArray:(NSMutableArray *)aQuestionSetArray{
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // Custom initialization
-    self.questionSetArray = aQuestionSetArray;
+    self.questionsArray = aQuestionSetArray;
     self.currentQuestionIndex = 0;
     self.shouldDisplayAnswer = [NSNumber numberWithBool:NO];
     self.shouldDisplayDescription = [NSNumber numberWithBool:NO];
@@ -43,8 +45,8 @@ static const int kDescriptionSection = 2;
   return self;
 }
 
-- (id)initWithQuestionSet:(NSMutableArray *)aQuestionSetArray{
-  return [self initWithNibName:@"QuestionViewController" bundle:nil questionSet:aQuestionSetArray];
+- (id)initWithQuestionsArray:(NSMutableArray *)aQuestionSetArray{
+  return [self initWithNibName:@"QuestionViewController" bundle:nil questionsArray:aQuestionSetArray];
 }
 
 
@@ -93,6 +95,24 @@ static const int kDescriptionSection = 2;
 #pragma mark - NextQuestion
 
 /**
+ @brief Pop the QuestionSetsViewController as the Questions list is finished.
+ @author : Rémi Lavedrine
+ @date : 12/04/2013
+ @remarks : It refresh the QuestionSetsViewController's TableView as well.
+ */
+- (void)popQuestionSetsViewController{
+  [self popViewControllerAsQuestionSetFinished];
+  
+  UITabBarController *tabBarController = [APP_DELEGATE tabBarController];
+  NSArray *tabBarViewControllers = [tabBarController viewControllers];
+  UINavigationController *navController = [tabBarViewControllers objectAtIndex:0];
+  NSArray *navViewControllers = [navController viewControllers];
+  
+  QuestionSetsViewController *rootViewController = [navViewControllers objectAtIndex:navViewControllers.count - 1];
+  [rootViewController refreshView];
+}
+
+/**
  @brief Display the next Question on Screen.
  @author : Rémi Lavedrine
  @date : 10/04/2013
@@ -101,7 +121,7 @@ static const int kDescriptionSection = 2;
  If it's the last question from the QuestionSet, it pops to the RootViewController.
  */
 - (void)displayNextQuestion{
-  if (self.currentQuestionIndex + 1 < [self.questionSetArray count]){ // As arrays starts at "0" in Objective-C.
+  if (self.currentQuestionIndex + 1 < [self.questionsArray count]){ // As arrays starts at "0" in Objective-C.
                                                                       // 1. Change the question index.
     self.currentQuestionIndex = self.currentQuestionIndex + 1;
     
@@ -115,7 +135,7 @@ static const int kDescriptionSection = 2;
     // 4. Change the NavigationBar title.
     [self setNavigationBarTitle];
   }else{
-    [self popViewControllerAsQuestionSetFinished];
+    [self popQuestionSetsViewController];
   }
 }
 
@@ -124,7 +144,7 @@ static const int kDescriptionSection = 2;
 
 - (void)setNavigationBarTitle{
   int index = self.currentQuestionIndex + 1; // As arrays starts at "0" in Objective-C.
-  int questionsCount  = [self.questionSetArray count];
+  int questionsCount  = [self.questionsArray count];
   
   NSString *title = [NSString stringWithFormat:@"Question %d sur %d", index, questionsCount];
   [self.navigationItem setTitle:title];
@@ -228,7 +248,7 @@ static const int kDescriptionSection = 2;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
   }
   
-  Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
+  Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
   NSString *statement = currentQuestion.statement;
   [cell.textLabel setText:statement];
   
@@ -256,7 +276,7 @@ static const int kDescriptionSection = 2;
   
   if ([self.shouldDisplayAnswer boolValue] == YES) {
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
+    Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
     NSString *answer = currentQuestion.answer;
     [cell.textLabel setText:answer];
     
@@ -290,7 +310,7 @@ static const int kDescriptionSection = 2;
   }
   
   if ([self.shouldDisplayDescription boolValue] == YES) {
-    Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
+    Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
     NSString *description = currentQuestion.description;
     [cell.textLabel setText:description];
   }
@@ -423,7 +443,7 @@ static const int kDescriptionSection = 2;
     cellHeight = 30;
   }else{
     CGFloat minimumCellHeight = 44;
-    Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
+    Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
     
     int index = indexPath.section;
     switch (index) {

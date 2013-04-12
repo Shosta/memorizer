@@ -10,6 +10,7 @@
 #import "AppData.h"
 #import "QuestionSet.h"
 #import "Question.h"
+#import "NextPresentationQuestionSet.h"
 #import "QuestionMemorizationLevelViewController.h"
 #import "QuestionSetTableViewCell.h"
 #import "NSString+LabelSize.h"
@@ -17,57 +18,79 @@
 
 @interface QuestionSetsViewController ()
 
+@property (nonatomic, retain) NSMutableArray *nextPresentationQuestionSetsArray;
+
 @end
 
 @implementation QuestionSetsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+
+#pragma mark - Object
+
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : 12/04/2013
+ @remarks : <#(optional)#>
+ */
+- (void)populateNextPresentationQuestionSetsArray{
+  for (QuestionSet *questionSet in [APP_DATA questionSetsArray]) {
+    NextPresentationQuestionSet *nextPresentationQuestionSet = [[NextPresentationQuestionSet alloc] initWithQuestionSet:questionSet];
+    [self.nextPresentationQuestionSetsArray addObject:nextPresentationQuestionSet];
+  }
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackgroundTemplateColor.png"]];
-    [self.view setBackgroundColor:color];
-    
-    [self.navigationItem setTitle:@"Ultimemo"];
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    // Custom initialization
+    self.nextPresentationQuestionSetsArray = [[NSMutableArray alloc] initWithCapacity:[[APP_DATA questionSetsArray] count]];
+    [self populateNextPresentationQuestionSetsArray];
+  }
+  
+  return self;
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    
-    // TODO a enlever.
-    [self.tableView reloadData];
+
+#pragma mark - Refresh View
+
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : 12/04/2013
+ @remarks : <#(optional)#>
+ */
+- (void)refreshView{
+  [self.nextPresentationQuestionSetsArray removeAllObjects];
+  [self populateNextPresentationQuestionSetsArray];
+  [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - View
+
+- (void)viewDidLoad{
+  [super viewDidLoad];
+  // Do any additional setup after loading the view from its nib.
+  UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackgroundTemplateColor.png"]];
+  [self.view setBackgroundColor:color];
+  
+  [self.navigationItem setTitle:@"Ultimemo"];
 }
 
 
 #pragma mark - Cell Count
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)aTableView
-{
-    int sectionCount = 1;
-    
-    return sectionCount;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)aTableView{
+  int sectionCount = 1;
+  
+  return sectionCount;
 }
 
-- (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section
-{
-    int rowsInSection = [[APP_DATA questionSetsArray] count];
-    
-    return rowsInSection;
+- (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section{
+  int rowsInSection = [self.nextPresentationQuestionSetsArray count];
+  
+  return rowsInSection;
 }
 
 
@@ -80,10 +103,10 @@
  @remarks : <#(optional)#>
  */
 - (NSString *)formatDate:(NSDate *)date dateFormatTemplate:(NSString *)dateFormatTemplate{
-    NSString *formattedDate = [NSDateFormatter dateStringFromDate:date
-                                                destinationFormat:dateFormatTemplate];
-    
-    return formattedDate;
+  NSString *formattedDate = [NSDateFormatter dateStringFromDate:date
+                                              destinationFormat:dateFormatTemplate];
+  
+  return formattedDate;
 }
 
 /**
@@ -93,32 +116,30 @@
  @remarks : <#(optional)#>
  */
 - (NSString *)dayMonthYearFormatDate:(NSDate *)date{
-    NSString *dateFormatted = [self formatDate:date dateFormatTemplate:kDayMonthYearFormatDate];
-    
-    return dateFormatted;
+  NSString *dateFormatted = [self formatDate:date dateFormatTemplate:kDayMonthYearFormatDate];
+  
+  return dateFormatted;
 }
 
 - (void)configureCell:(QuestionSetTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
-    QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-    
-    // Set the next date.
-    NSDate *today = [NSDate date];
-    NSString *todayDate = [self dayMonthYearFormatDate:today];
-    [cell.nextDateLabel setText:todayDate];
-    
-    // Set the number of questions for the next sets. TODO
-    
-    // Set the number of question done for this set.
-    NSMutableArray *questionSetArray = [self questionSetArrayAtIndexPath:indexPath];
-    NSString *questionDoneCount = [NSString stringWithFormat:@"%d/%d", [questionSetArray count], [questionSet.questionsArray count]];
-    [cell.nextQuestionsNumberLabel setText:questionDoneCount];
-    
-    // Set the progress for the gauge.
-    [cell setGaugeProgress:0.75];
-    
-    // Set the Question Set Title.
-    NSString *questionSetTitle = questionSet.title;
-    [cell.textLabel setText:questionSetTitle];
+  NextPresentationQuestionSet *nextPresentationQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
+  
+  // Set the next date.
+  NSString *nextPresentationDate = [self dayMonthYearFormatDate:nextPresentationQuestionSet.nextPresentationDate];
+  [cell.nextDateLabel setText:nextPresentationDate];
+  
+  // Set the number of questions for the next sets. TODO
+  
+  // Set the number of question done for this set.
+  NSString *questionDoneCount = [NSString stringWithFormat:@"%d/%d", [[nextPresentationQuestionSet nextPresentationQuestionArray] count], [[nextPresentationQuestionSet nextPresentationQuestionArray] count]];
+  [cell.nextQuestionsNumberLabel setText:questionDoneCount];
+  
+  // Set the progress for the gauge.
+  [cell setGaugeProgress:0.75];
+  
+  // Set the Question Set Title.
+  NSString *questionSetTitle = nextPresentationQuestionSet.title;
+  [cell.textLabel setText:questionSetTitle];
 }
 
 /**
@@ -128,24 +149,24 @@
  @remarks : <#(optional)#>
  */
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *CellIdentifier = @"QuestionSetTableViewCell";
-    QuestionSetTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionSetTableViewCell"
-                                                                 owner:self
-                                                               options:nil];
-        
-        for(id currentObject in topLevelObjects){
-            if([currentObject isKindOfClass:[QuestionSetTableViewCell class]]){
-                cell = (QuestionSetTableViewCell *) currentObject;
-                break;
-            }
-        }
+  NSString *CellIdentifier = @"QuestionSetTableViewCell";
+  QuestionSetTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  if (cell == nil) {
+    NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionSetTableViewCell"
+                                                             owner:self
+                                                           options:nil];
+    
+    for(id currentObject in topLevelObjects){
+      if([currentObject isKindOfClass:[QuestionSetTableViewCell class]]){
+        cell = (QuestionSetTableViewCell *) currentObject;
+        break;
+      }
     }
-    
-    [self configureCell:cell atIndexPath:indexPath];
-    
-    return cell;
+  }
+  
+  [self configureCell:cell atIndexPath:indexPath];
+  
+  return cell;
 }
 
 
@@ -158,9 +179,9 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)detailElementTextHeight:(NSString *)detailElementText{
-    CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:ANSWER_CELL_TEXT_FONT forWidth:kCellAnswerDefaultTextWidth];
-    
-    return detailElementTextHeight ;
+  CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:ANSWER_CELL_TEXT_FONT forWidth:kCellAnswerDefaultTextWidth];
+  
+  return detailElementTextHeight ;
 }
 
 /**
@@ -170,42 +191,21 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat minimumCellHeight = 162;
-    CGFloat cellHeight = 0;
-    QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-    
-    cellHeight = kCellAnswerPaddingY + [self detailElementTextHeight:currentQuestionSet.title] + kCellAnswerPaddingY;
-    
-    if (cellHeight < minimumCellHeight) {
-        cellHeight = minimumCellHeight;
-    }
-    
-    return cellHeight;
+  CGFloat minimumCellHeight = 162;
+  CGFloat cellHeight = 0;
+  NextPresentationQuestionSet *currentQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
+  
+  cellHeight = kCellAnswerPaddingY + [self detailElementTextHeight:currentQuestionSet.title] + kCellAnswerPaddingY;
+  
+  if (cellHeight < minimumCellHeight) {
+    cellHeight = minimumCellHeight;
+  }
+  
+  return cellHeight;
 }
 
 
 #pragma mark - Selection
-
-/**
- @brief <#Describe the function purpose#>
- @author : Rémi Lavedrine
- @date : 11/04/2013
- @remarks : <#(optional)#>
- */
-- (NSMutableArray *)questionSetArrayAtIndexPath:(NSIndexPath *)indexPath{
-    NSMutableArray *questionSetArray = [[NSMutableArray alloc] initWithCapacity:0];
-    
-    QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-    NSArray *array = questionSet.questionsArray;
-    NSDate *now = [NSDate date];
-    for (Question *question in array) {
-        if ([question.nextPresentationDate compare:now] == NSOrderedSame || [question.nextPresentationDate compare:now] == NSOrderedAscending) {
-            [questionSetArray addObject:question];
-        }
-    }
-    
-    return questionSetArray;
-}
 
 /**
  @brief It displays the details for the selected part of the user's balance.
@@ -214,11 +214,16 @@
  @remarks : <#(optional)#>
  */
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [aTableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    NSMutableArray *questionSetArray = [self questionSetArrayAtIndexPath:indexPath];
-    QuestionMemorizationLevelViewController *questionViewController = [[QuestionMemorizationLevelViewController alloc] initWithQuestionSet:questionSetArray];
+  [aTableView deselectRowAtIndexPath:indexPath animated:YES];
+  
+  NextPresentationQuestionSet *nextPresentationQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
+  NSMutableArray *questionsArray = nextPresentationQuestionSet.nextPresentationQuestionArray;
+  if ([questionsArray count] > 0) {
+    QuestionMemorizationLevelViewController *questionViewController = [[QuestionMemorizationLevelViewController alloc] initWithQuestionsArray:questionsArray];
     [self.navigationController pushViewController:questionViewController animated:YES];
+  }else{
+    OLLogDebug(@"Pas de question pour aujourd'hui. Attendez le %@ pour la prochaine série. Ou bien faites une série juste pour l'entraînement.", [self dayMonthYearFormatDate:nextPresentationQuestionSet.nextPresentationDate ]);
+  }
 }
 
 

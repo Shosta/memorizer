@@ -18,8 +18,28 @@ static const int kDescriptionSection = 2;
 
 #pragma mark - Object
 
-- (id)initWithQuestionSet:(NSMutableArray *)aQuestionSetArray{
-    return [super initWithNibName:@"QuestionMemorizationLevelViewController" bundle:nil questionSet:aQuestionSetArray];
+- (id)initWithQuestionsArray:(NSMutableArray *)aQuestionsArray{
+  self = [super initWithNibName:@"QuestionMemorizationLevelViewController" bundle:nil questionsArray:aQuestionsArray];
+  if (self != nil) {
+    self.isMemorizationLevelChosen = [NSNumber numberWithBool:NO];
+  }
+  
+  return self;
+}
+
+
+#pragma mark - View
+
+/**
+ @brief Don't allow interaction on "nextQuestionButton" as the user needs to choose a memorization level on this kind of ViewController.
+ @author : Rémi Lavedrine
+ @date : 12/04/2013
+ @remarks : <#(optional)#>
+ */
+- (void)viewDidLoad{
+  [super viewDidLoad];
+  
+  [self.nextQuestionButton setUserInteractionEnabled:NO];
 }
 
 
@@ -48,7 +68,6 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
  @author : Rémi Lavedrine
  @date : 11/04/2013
  @remarks :
- 
  . Display the Answer when the user taps the cell.
  It reloads only the "kAnswerSection" section to avoid unnecessary redraw.
  It reduces the TableView height to make the "Memorizatoin level buttons" available.
@@ -94,7 +113,7 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
 - (void)displayNextQuestion{
     [super displayNextQuestion];
     
-    if (self.currentQuestionIndex < [self.questionSetArray count]){
+    if (self.currentQuestionIndex < [self.questionsArray count]){
         // 1. As the TableView's height was reduced to present the "noting buttons" it has to be resized to its original size.
         [self increaseTableViewHeight];
     }
@@ -214,7 +233,7 @@ static const float boundsHeight = 64.f;
         default:
             break;
     }
-    Question *currentQuestion = [self.questionSetArray objectAtIndex:self.currentQuestionIndex];
+    Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
     
     // Set up date components
     NSDateComponents *components = [[NSDateComponents alloc] init];
