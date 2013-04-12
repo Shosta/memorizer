@@ -17,8 +17,8 @@
 		A845C06617044FC80064806D /* AppData+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C06517044FC80064806D /* AppData+Archiver.m */; };
 		A845C069170454080064806D /* AppData+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C068170454080064806D /* AppData+Parser.m */; };
 		A845C06C170460840064806D /* ManagerLaunchApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C06B170460830064806D /* ManagerLaunchApp.m */; };
-		A845C0711704639F0064806D /* QuestionSetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C06F1704639F0064806D /* QuestionSetsViewController.m */; };
-		A845C0721704639F0064806D /* QuestionSetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A845C0701704639F0064806D /* QuestionSetsViewController.xib */; };
+		A845C0711704639F0064806D /* QuestionSetsMemorizationLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C06F1704639F0064806D /* QuestionSetsMemorizationLevelViewController.m */; };
+		A845C0721704639F0064806D /* QuestionSetsMemorizationLevelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A845C0701704639F0064806D /* QuestionSetsMemorizationLevelViewController.xib */; };
 		A845C0771704682B0064806D /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C0751704682B0064806D /* QuestionViewController.m */; };
 		A845C0781704682B0064806D /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A845C0761704682B0064806D /* QuestionViewController.xib */; };
 		A878107116FB1C26003E3F91 /* QuestionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A878107016FB1C26003E3F91 /* QuestionSet.m */; };
@@ -99,9 +99,9 @@
 		A845C068170454080064806D /* AppData+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppData+Parser.m"; path = "AppData/AppData+Parser.m"; sourceTree = "<group>"; };
 		A845C06A170460820064806D /* ManagerLaunchApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManagerLaunchApp.h; path = ManagerLaunchApp/ManagerLaunchApp.h; sourceTree = "<group>"; };
 		A845C06B170460830064806D /* ManagerLaunchApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManagerLaunchApp.m; path = ManagerLaunchApp/ManagerLaunchApp.m; sourceTree = "<group>"; };
-		A845C06E1704639F0064806D /* QuestionSetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetsViewController.h; path = QuestionSetsViewController/QuestionSetsViewController.h; sourceTree = "<group>"; };
-		A845C06F1704639F0064806D /* QuestionSetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSetsViewController.m; path = QuestionSetsViewController/QuestionSetsViewController.m; sourceTree = "<group>"; };
-		A845C0701704639F0064806D /* QuestionSetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetsViewController.xib; path = QuestionSetsViewController/QuestionSetsViewController.xib; sourceTree = "<group>"; };
+		A845C06E1704639F0064806D /* QuestionSetsMemorizationLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetsMemorizationLevelViewController.h; path = QuestionSetsViewController/QuestionSetsMemorizationLevelViewController.h; sourceTree = "<group>"; };
+		A845C06F1704639F0064806D /* QuestionSetsMemorizationLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSetsMemorizationLevelViewController.m; path = QuestionSetsViewController/QuestionSetsMemorizationLevelViewController.m; sourceTree = "<group>"; };
+		A845C0701704639F0064806D /* QuestionSetsMemorizationLevelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetsMemorizationLevelViewController.xib; path = QuestionSetsViewController/QuestionSetsMemorizationLevelViewController.xib; sourceTree = "<group>"; };
 		A845C0741704682B0064806D /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionViewController.h; path = QuestionViewController/QuestionViewController.h; sourceTree = "<group>"; };
 		A845C0751704682B0064806D /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionViewController.m; path = QuestionViewController/QuestionViewController.m; sourceTree = "<group>"; };
 		A845C0761704682B0064806D /* QuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionViewController.xib; path = QuestionViewController/QuestionViewController.xib; sourceTree = "<group>"; };
@@ -277,9 +277,9 @@
 		A845C073170463C20064806D /* QuestionSetsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A845C06E1704639F0064806D /* QuestionSetsViewController.h */,
-				A845C06F1704639F0064806D /* QuestionSetsViewController.m */,
-				A845C0701704639F0064806D /* QuestionSetsViewController.xib */,
+				A845C06E1704639F0064806D /* QuestionSetsMemorizationLevelViewController.h */,
+				A845C06F1704639F0064806D /* QuestionSetsMemorizationLevelViewController.m */,
+				A845C0701704639F0064806D /* QuestionSetsMemorizationLevelViewController.xib */,
 			);
 			name = QuestionSetsViewController;
 			sourceTree = "<group>";
@@ -715,7 +715,7 @@
 				F2B2446216E5F85500E11381 /* FirstViewController.xib in Resources */,
 				F2B2446516E5F85500E11381 /* SecondViewController.xib in Resources */,
 				A845C05F17044AED0064806D /* irregularVerbs.json in Resources */,
-				A845C0721704639F0064806D /* QuestionSetsViewController.xib in Resources */,
+				A845C0721704639F0064806D /* QuestionSetsMemorizationLevelViewController.xib in Resources */,
 				A845C0781704682B0064806D /* QuestionViewController.xib in Resources */,
 				F2D92A1317130B76006ED8A6 /* AnswerTableViewCell.xib in Resources */,
 				F2D92A18171316EA006ED8A6 /* explanation.png in Resources */,
@@ -766,7 +766,7 @@
 				A845C06617044FC80064806D /* AppData+Archiver.m in Sources */,
 				A845C069170454080064806D /* AppData+Parser.m in Sources */,
 				A845C06C170460840064806D /* ManagerLaunchApp.m in Sources */,
-				A845C0711704639F0064806D /* QuestionSetsViewController.m in Sources */,
+				A845C0711704639F0064806D /* QuestionSetsMemorizationLevelViewController.m in Sources */,
 				A845C0771704682B0064806D /* QuestionViewController.m in Sources */,
 				F2D92A1017130B5C006ED8A6 /* AnswerTableViewCell.m in Sources */,
 				F2F8D804171416E9007FC71A /* NSString+LabelSize.m in Sources */,

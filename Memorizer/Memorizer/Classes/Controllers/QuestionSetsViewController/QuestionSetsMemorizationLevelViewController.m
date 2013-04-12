@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Rémi Lavedrine. All rights reserved.
 //
 
-#import "QuestionSetsViewController.h"
+#import "QuestionSetsMemorizationLevelViewController.h"
 #import "AppData.h"
 #import "QuestionSet.h"
 #import "Question.h"
@@ -16,14 +16,14 @@
 #import "NSString+LabelSize.h"
 #import "NSDateFormatter+Date.h"
 
-@interface QuestionSetsViewController ()
+@interface QuestionSetsMemorizationLevelViewController ()
 
 @property (nonatomic, retain) NSMutableArray *nextPresentationQuestionSetsArray;
 @property (nonatomic, retain) OLStatusView *statusView;
 
 @end
 
-@implementation QuestionSetsViewController
+@implementation QuestionSetsMemorizationLevelViewController
 
 
 #pragma mark - Object

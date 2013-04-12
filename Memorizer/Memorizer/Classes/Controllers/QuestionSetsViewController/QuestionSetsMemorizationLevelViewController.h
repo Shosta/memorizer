@@ -24,7 +24,7 @@
 #import <UIKit/UIKit.h>
 #import "OLStatusView.h"
 
-@interface QuestionSetsViewController : UIViewController <OLStatusViewDelegate>
+@interface QuestionSetsMemorizationLevelViewController : UIViewController <OLStatusViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

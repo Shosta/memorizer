@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppData+Archiver.h"
-#import "QuestionSetsViewController.h"
+#import "QuestionSetsMemorizationLevelViewController.h"
 #import "FirstViewController.h"
 
 #import "SecondViewController.h"
@@ -75,7 +75,7 @@
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   // Override point for customization after application launch.
   
-  UIViewController *questionSetsViewController = [[QuestionSetsViewController alloc] initWithNibName:@"QuestionSetsViewController" bundle:nil];
+  UIViewController *questionSetsViewController = [[QuestionSetsMemorizationLevelViewController alloc] initWithNibName:@"QuestionSetsViewController" bundle:nil];
   UINavigationController *questionSetsNavController = [[UINavigationController alloc] initWithRootViewController:questionSetsViewController];
   
   UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];

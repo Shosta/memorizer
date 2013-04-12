@@ -9,7 +9,7 @@
 #import "QuestionViewController.h"
 #import "NSString+LabelSize.h"
 #import "Question.h"
-#import "QuestionSetsViewController.h"
+#import "QuestionSetsMemorizationLevelViewController.h"
 #import "StatementTableViewCell.h"
 #import "AnswerTableViewCell.h"
 #import "DescriptionTableViewCell.h"
@@ -108,7 +108,7 @@ static const int kDescriptionSection = 2;
   UINavigationController *navController = [tabBarViewControllers objectAtIndex:0];
   NSArray *navViewControllers = [navController viewControllers];
   
-  QuestionSetsViewController *rootViewController = [navViewControllers objectAtIndex:navViewControllers.count - 1];
+  QuestionSetsMemorizationLevelViewController *rootViewController = [navViewControllers objectAtIndex:navViewControllers.count - 1];
   [rootViewController refreshView];
 }
 
