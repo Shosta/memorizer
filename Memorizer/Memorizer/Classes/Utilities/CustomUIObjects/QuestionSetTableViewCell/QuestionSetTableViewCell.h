@@ -21,6 +21,14 @@
 
 #import "AutoResizeLabelTableViewCell.h"
 
+
+
+//! Cell's style.
+typedef enum{
+  QuestionSetTableViewCellMajorStyle, // detailElementTextLabel is used and has to be shown
+  QuestionSetTableViewCellMinorStyle  // detailElementTextLabel isn't used and has to be hidden
+}QuestionSetTableViewCellStyle;
+
 @interface QuestionSetTableViewCell : AutoResizeLabelTableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nextDateLabel;
@@ -33,5 +41,12 @@
 //! Set the percent for the gauge of the UIGaugeController.
 //! @param[in] progress : The percent of the progress bar.
 - (void)setGaugeProgress:(float)progress;
+
+
+#pragma mark - Setters
+
+//! Change the position of the image.
+- (void)setCellStyle:(QuestionSetTableViewCellStyle)style;
+
 
 @end

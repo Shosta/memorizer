@@ -31,6 +31,7 @@
 		F227DDDA17184C3600D694DE /* QuestionSetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDD817184C3600D694DE /* QuestionSetsViewController.m */; };
 		F227DDDB17184C3600D694DE /* QuestionSetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DDD917184C3600D694DE /* QuestionSetsViewController.xib */; };
 		F227DDDD171852EE00D694DE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DDDC171852EE00D694DE /* MainWindow.xib */; };
+		F227DE0817185CE000D694DE /* QuestionSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DE0717185CE000D694DE /* QuestionSetTableViewCell.xib */; };
 		F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */ = {isa = PBXBuildFile; fileRef = F28BE51A1714664600B4AC13 /* nextQuestion.png */; };
 		F292F8941716AE3100F3723A /* QuestionMemorizationLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */; };
 		F292F8951716AE3100F3723A /* QuestionMemorizationLevelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F292F8931716AE3100F3723A /* QuestionMemorizationLevelViewController.xib */; };
@@ -57,7 +58,7 @@
 		F2D92A18171316EA006ED8A6 /* explanation.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D92A16171316EA006ED8A6 /* explanation.png */; };
 		F2D92A19171316EA006ED8A6 /* questionMark.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D92A17171316EA006ED8A6 /* questionMark.png */; };
 		F2DE403817156B4900D34892 /* QuestionSetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DE403717156B4900D34892 /* QuestionSetTableViewCell.m */; };
-		F2DE403B17156C9900D34892 /* QuestionSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2DE403A17156C9900D34892 /* QuestionSetTableViewCell.xib */; };
+		F2DE403B17156C9900D34892 /* QuestionSetMemorizationLevelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2DE403A17156C9900D34892 /* QuestionSetMemorizationLevelTableViewCell.xib */; };
 		F2DE404917158AE100D34892 /* NSDateFormatter+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DE404817158AE100D34892 /* NSDateFormatter+Date.m */; };
 		F2DE404E171592A300D34892 /* UIGaugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DE404C171592A300D34892 /* UIGaugeViewController.m */; };
 		F2DE404F171592A300D34892 /* UIGaugeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2DE404D171592A300D34892 /* UIGaugeViewController.xib */; };
@@ -125,6 +126,7 @@
 		F227DDD817184C3600D694DE /* QuestionSetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSetsViewController.m; path = QuestionSetsViewController/QuestionSetsViewController.m; sourceTree = "<group>"; };
 		F227DDD917184C3600D694DE /* QuestionSetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetsViewController.xib; path = QuestionSetsViewController/QuestionSetsViewController.xib; sourceTree = "<group>"; };
 		F227DDDC171852EE00D694DE /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		F227DE0717185CE000D694DE /* QuestionSetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetTableViewCell.xib; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetTableViewCell.xib; sourceTree = "<group>"; };
 		F28BE51A1714664600B4AC13 /* nextQuestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextQuestion.png; sourceTree = "<group>"; };
 		F292F8911716AE3000F3723A /* QuestionMemorizationLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionMemorizationLevelViewController.h; path = QuestionViewController/QuestionMemorizationLevelViewController.h; sourceTree = "<group>"; };
 		F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionMemorizationLevelViewController.m; path = QuestionViewController/QuestionMemorizationLevelViewController.m; sourceTree = "<group>"; };
@@ -158,7 +160,7 @@
 		F2D92A17171316EA006ED8A6 /* questionMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionMark.png; sourceTree = "<group>"; };
 		F2DE403617156B4900D34892 /* QuestionSetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetTableViewCell.h; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetTableViewCell.h; sourceTree = "<group>"; };
 		F2DE403717156B4900D34892 /* QuestionSetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSetTableViewCell.m; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetTableViewCell.m; sourceTree = "<group>"; };
-		F2DE403A17156C9900D34892 /* QuestionSetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetTableViewCell.xib; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetTableViewCell.xib; sourceTree = "<group>"; };
+		F2DE403A17156C9900D34892 /* QuestionSetMemorizationLevelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetMemorizationLevelTableViewCell.xib; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetMemorizationLevelTableViewCell.xib; sourceTree = "<group>"; };
 		F2DE404717158AE100D34892 /* NSDateFormatter+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Date.h"; sourceTree = "<group>"; };
 		F2DE404817158AE100D34892 /* NSDateFormatter+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Date.m"; sourceTree = "<group>"; };
 		F2DE404B171592A200D34892 /* UIGaugeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGaugeViewController.h; sourceTree = "<group>"; };
@@ -517,7 +519,8 @@
 			children = (
 				F2DE403617156B4900D34892 /* QuestionSetTableViewCell.h */,
 				F2DE403717156B4900D34892 /* QuestionSetTableViewCell.m */,
-				F2DE403A17156C9900D34892 /* QuestionSetTableViewCell.xib */,
+				F227DE0717185CE000D694DE /* QuestionSetTableViewCell.xib */,
+				F2DE403A17156C9900D34892 /* QuestionSetMemorizationLevelTableViewCell.xib */,
 			);
 			name = QuestionSetTableViewCell;
 			sourceTree = "<group>";
@@ -716,7 +719,7 @@
 				F2F8D80C1714480A007FC71A /* DescriptionTableViewCell.xib in Resources */,
 				F2F8D80E17144D7C007FC71A /* StatementTableViewCell.xib in Resources */,
 				F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */,
-				F2DE403B17156C9900D34892 /* QuestionSetTableViewCell.xib in Resources */,
+				F2DE403B17156C9900D34892 /* QuestionSetMemorizationLevelTableViewCell.xib in Resources */,
 				F2DE404F171592A300D34892 /* UIGaugeViewController.xib in Resources */,
 				F2DE405817159CE800D34892 /* navigationBar.png in Resources */,
 				F2DE405917159CE800D34892 /* navigationBar@2x.png in Resources */,
@@ -736,6 +739,7 @@
 				A845063017172F4400C4E0E9 /* bar_progress_top.png in Resources */,
 				F227DDDB17184C3600D694DE /* QuestionSetsViewController.xib in Resources */,
 				F227DDDD171852EE00D694DE /* MainWindow.xib in Resources */,
+				F227DE0817185CE000D694DE /* QuestionSetTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,8 +22,9 @@ NSString *kDayMonthFormatDate = @"d MMMM";
 
 //! Cell QuestionSet
 int kCellQuestionSetPaddingX = 10;
-int kCellQuestionSetPaddingY = 10;
-int kCellQuestionSetOriginY = 120;
+int kCellQuestionSetPaddingY = 15;
+int kCellQuestionSetOriginMajorY = 123;
+int kCellQuestionSetOriginMinorY = 36;
 int kCellQuestionSetDefaultTextWidth = 280;
 
 //! Cell Answer
@@ -34,7 +35,7 @@ int kCellStatementDefaultTextWidth = 280;
 //! Cell Answer
 int kCellAnswerPaddingX = 10;
 int kCellAnswerPaddingY = 10;
-int kCellAnswerDefaultTextWidth = 235;
+int kCellAnswerDefaultTextWidth = 260;
 
 //! Cell Description
 int kCellDescriptionPaddingX = 10;

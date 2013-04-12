@@ -157,7 +157,7 @@
   NSString *CellIdentifier = @"QuestionSetTableViewCell";
   QuestionSetTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   if (cell == nil) {
-    NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionSetTableViewCell"
+    NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionSetMemorizationLevelTableViewCell"
                                                              owner:self
                                                            options:nil];
     
@@ -167,6 +167,7 @@
         break;
       }
     }
+    [cell setCellStyle:QuestionSetTableViewCellMajorStyle];
   }
   
   [self configureCell:cell atIndexPath:indexPath];
@@ -196,11 +197,11 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-  CGFloat minimumCellHeight = 162;
+  CGFloat minimumCellHeight = 164;
   CGFloat cellHeight = 0;
   NextPresentationQuestionSet *currentQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
   
-  cellHeight = kCellAnswerPaddingY + [self detailElementTextHeight:currentQuestionSet.title] + kCellAnswerPaddingY;
+  cellHeight = kCellQuestionSetOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY;
   
   if (cellHeight < minimumCellHeight) {
     cellHeight = minimumCellHeight;

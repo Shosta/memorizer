@@ -112,6 +112,7 @@
         break;
       }
     }
+    [cell setCellStyle:QuestionSetTableViewCellMinorStyle];
   }
   
   [self configureCell:cell atIndexPath:indexPath];
@@ -141,11 +142,11 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-  CGFloat minimumCellHeight = 162;
+  CGFloat minimumCellHeight = 67;
   CGFloat cellHeight = 0;
   QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
   
-  cellHeight = kCellAnswerPaddingY + [self detailElementTextHeight:currentQuestionSet.title] + kCellAnswerPaddingY;
+  cellHeight = kCellQuestionSetOriginMinorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY;
   
   if (cellHeight < minimumCellHeight) {
     cellHeight = minimumCellHeight;

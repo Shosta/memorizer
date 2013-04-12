@@ -12,6 +12,7 @@
 
 @interface QuestionSetTableViewCell ()
 
+@property (nonatomic) QuestionSetTableViewCellStyle cellStyle;
 @property (retain, nonatomic) IBOutlet UIGaugeViewController *gaugeViewController;
 
 @end
@@ -42,15 +43,19 @@
  */
 - (void)layoutSubviews{
   [super layoutSubviews];
+  int cellQuestionSetOriginY = kCellQuestionSetOriginMajorY;
+  if (_cellStyle == QuestionSetTableViewCellMinorStyle){
+    cellQuestionSetOriginY = kCellQuestionSetOriginMinorY;
+  }else{
+    [self.gaugeContainerView addSubview:self.gaugeViewController.view];
+  }
   
   [self configureTextLabelUIWithLabelFont:QUESTIONSET_CELL_TEXT_FONT
                                labelColor:QUESTIONSET_CELL_TEXT_COLOR
                        labelTextAlignment:NSTextAlignmentLeft
                                labelWidth:kCellQuestionSetDefaultTextWidth
                       labelStartXPosition:kCellQuestionSetPaddingX
-                      labelStartYPosition:kCellQuestionSetOriginY];
-  
-  [self.gaugeContainerView addSubview:self.gaugeViewController.view];
+                      labelStartYPosition:cellQuestionSetOriginY];
 }
 
 
@@ -64,6 +69,20 @@
  */
 - (void)setGaugeProgress:(float)progress{
   [self.gaugeViewController setProgress:progress];
+}
+
+
+#pragma mark - Setters
+
+/**
+ @brief Change the position of the image.
+ @author : Rémi Lavedrine
+ @date : 11/05/2012
+ @remarks : The "major" style displays all the information about the QuestionSet in order to display a MemorizationLevel QuestionSet.
+ The "minor" style displays all the information about the QuestionSet in order to display a simple QuestionSet
+ */
+- (void)setCellStyle:(QuestionSetTableViewCellStyle)style{
+  _cellStyle = style;
 }
 
 @end
