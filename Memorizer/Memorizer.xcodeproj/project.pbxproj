@@ -40,6 +40,12 @@
 		F292F89E1716B8FA00F3723A /* level3.png in Resources */ = {isa = PBXBuildFile; fileRef = F292F8991716B8FA00F3723A /* level3.png */; };
 		F292F89F1716B8FA00F3723A /* level4.png in Resources */ = {isa = PBXBuildFile; fileRef = F292F89A1716B8FA00F3723A /* level4.png */; };
 		F292F8A01716B8FA00F3723A /* level5.png in Resources */ = {isa = PBXBuildFile; fileRef = F292F89B1716B8FA00F3723A /* level5.png */; };
+		F2A7ED28171FEE2800DE974D /* MemorizationLevelBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A7ED26171FEE2800DE974D /* MemorizationLevelBackground.png */; };
+		F2A7ED29171FEE2800DE974D /* MemorizationLevelBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A7ED27171FEE2800DE974D /* MemorizationLevelBackground@2x.png */; };
+		F2A7ED2E1720184C00DE974D /* MemorizationLevelButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A7ED2A1720184C00DE974D /* MemorizationLevelButton.png */; };
+		F2A7ED2F1720184C00DE974D /* MemorizationLevelButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A7ED2B1720184C00DE974D /* MemorizationLevelButton@2x.png */; };
+		F2A7ED301720184C00DE974D /* MemorizationLevelButtonHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A7ED2C1720184C00DE974D /* MemorizationLevelButtonHighlighted.png */; };
+		F2A7ED311720184C00DE974D /* MemorizationLevelButtonHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A7ED2D1720184C00DE974D /* MemorizationLevelButtonHighlighted@2x.png */; };
 		F2B2443B16E5F85500E11381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443A16E5F85500E11381 /* UIKit.framework */; };
 		F2B2443D16E5F85500E11381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443C16E5F85500E11381 /* Foundation.framework */; };
 		F2B2443F16E5F85500E11381 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2443E16E5F85500E11381 /* CoreGraphics.framework */; };
@@ -136,6 +142,12 @@
 		F292F8991716B8FA00F3723A /* level3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level3.png; sourceTree = "<group>"; };
 		F292F89A1716B8FA00F3723A /* level4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level4.png; sourceTree = "<group>"; };
 		F292F89B1716B8FA00F3723A /* level5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level5.png; sourceTree = "<group>"; };
+		F2A7ED26171FEE2800DE974D /* MemorizationLevelBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MemorizationLevelBackground.png; sourceTree = "<group>"; };
+		F2A7ED27171FEE2800DE974D /* MemorizationLevelBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MemorizationLevelBackground@2x.png"; sourceTree = "<group>"; };
+		F2A7ED2A1720184C00DE974D /* MemorizationLevelButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MemorizationLevelButton.png; sourceTree = "<group>"; };
+		F2A7ED2B1720184C00DE974D /* MemorizationLevelButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MemorizationLevelButton@2x.png"; sourceTree = "<group>"; };
+		F2A7ED2C1720184C00DE974D /* MemorizationLevelButtonHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MemorizationLevelButtonHighlighted.png; sourceTree = "<group>"; };
+		F2A7ED2D1720184C00DE974D /* MemorizationLevelButtonHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MemorizationLevelButtonHighlighted@2x.png"; sourceTree = "<group>"; };
 		F2B2443716E5F85500E11381 /* Memorizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B2443A16E5F85500E11381 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F2B2443C16E5F85500E11381 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -423,6 +435,12 @@
 				F292F8991716B8FA00F3723A /* level3.png */,
 				F292F89A1716B8FA00F3723A /* level4.png */,
 				F292F89B1716B8FA00F3723A /* level5.png */,
+				F2A7ED26171FEE2800DE974D /* MemorizationLevelBackground.png */,
+				F2A7ED27171FEE2800DE974D /* MemorizationLevelBackground@2x.png */,
+				F2A7ED2A1720184C00DE974D /* MemorizationLevelButton.png */,
+				F2A7ED2B1720184C00DE974D /* MemorizationLevelButton@2x.png */,
+				F2A7ED2C1720184C00DE974D /* MemorizationLevelButtonHighlighted.png */,
+				F2A7ED2D1720184C00DE974D /* MemorizationLevelButtonHighlighted@2x.png */,
 			);
 			path = MemorizationLevelButton;
 			sourceTree = "<group>";
@@ -740,6 +758,12 @@
 				F227DDDB17184C3600D694DE /* QuestionSetsViewController.xib in Resources */,
 				F227DDDD171852EE00D694DE /* MainWindow.xib in Resources */,
 				F227DE0817185CE000D694DE /* QuestionSetTableViewCell.xib in Resources */,
+				F2A7ED28171FEE2800DE974D /* MemorizationLevelBackground.png in Resources */,
+				F2A7ED29171FEE2800DE974D /* MemorizationLevelBackground@2x.png in Resources */,
+				F2A7ED2E1720184C00DE974D /* MemorizationLevelButton.png in Resources */,
+				F2A7ED2F1720184C00DE974D /* MemorizationLevelButton@2x.png in Resources */,
+				F2A7ED301720184C00DE974D /* MemorizationLevelButtonHighlighted.png in Resources */,
+				F2A7ED311720184C00DE974D /* MemorizationLevelButtonHighlighted@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
