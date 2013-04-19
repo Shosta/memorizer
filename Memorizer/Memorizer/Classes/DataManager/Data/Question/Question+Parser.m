@@ -67,6 +67,9 @@
         aQuestion.soundName = soundName;
     }
     
+    // 8. Add the User Last Memorization Level
+    aQuestion.userLastMemorizationLevel = NoMemorizationLevel;
+    
     return aQuestion;
 }
 

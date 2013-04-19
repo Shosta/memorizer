@@ -26,6 +26,7 @@
         self.imageName = @"";
         self.videoName = @"";
         self.soundName = @"";
+        self.userLastMemorizationLevel = NoMemorizationLevel;
     }
     
     return self;

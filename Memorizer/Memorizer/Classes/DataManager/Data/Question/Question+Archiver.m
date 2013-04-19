@@ -25,7 +25,8 @@
    nextPresentationDate:(NSDate *)aNextPresentationDate
               imageName:(NSString *)aImageName
               videoName:(NSString *)aVideoName
-              soundName:(NSString *)aSoundName{
+              soundName:(NSString *)aSoundName
+userLastMemorizationLevel:(MemorizationLevel)aUserLastMemorizationLevel{
     self = [super init];
     if (self) {
         self.statement = aStatement;
@@ -35,6 +36,7 @@
         self.imageName = aImageName;
         self.videoName = aVideoName;
         self.soundName = aSoundName;
+        self.userLastMemorizationLevel = aUserLastMemorizationLevel;
     }
     
     return self;
@@ -43,13 +45,14 @@
 
 #pragma mark - Archiving
 
-#define kStatementKey @"statement"
-#define kAnswerKey @"answer"
-#define kDescriptionKey @"description"
-#define kNextPresentationDateKey @"nextPresentationDate"
-#define kImageKey @"image"
-#define kVideoKey @"video"
-#define kSoundKey @"sound"
+#define                 kStatementKey @"statement"
+#define                    kAnswerKey @"answer"
+#define               kDescriptionKey @"description"
+#define      kNextPresentationDateKey @"nextPresentationDate"
+#define                     kImageKey @"image"
+#define                     kVideoKey @"video"
+#define                     kSoundKey @"sound"
+#define kUserLastMemorizationLevelKey @"userLastMemorizationLevel"
 /**
  @brief <#Describe the function purpose#>
  @author : Rémi Lavedrine
@@ -64,6 +67,7 @@
     [encoder encodeObject:self.imageName forKey:kImageKey];
     [encoder encodeObject:self.videoName forKey:kVideoKey];
     [encoder encodeObject:self.soundName forKey:kSoundKey];
+    [encoder encodeObject:[NSNumber numberWithInt:self.userLastMemorizationLevel] forKey:kUserLastMemorizationLevelKey];
 }
 
 /**
@@ -80,6 +84,7 @@
     NSString  *i = [decoder decodeObjectForKey:kImageKey];
     NSString  *v = [decoder decodeObjectForKey:kVideoKey];
     NSString *sd = [decoder decodeObjectForKey:kSoundKey];
+    int     ulml = [[decoder decodeObjectForKey:kUserLastMemorizationLevelKey] intValue];
     
     return [self initWithStatement:s
                             answer:a
@@ -87,7 +92,8 @@
               nextPresentationDate:n
                          imageName:i
                          videoName:v
-                         soundName:sd];
+                         soundName:sd
+         userLastMemorizationLevel:ulml];
 }
 
 @end

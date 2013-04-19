@@ -80,6 +80,7 @@ typedef enum{
 
 //! The Memorization Level for a Question.
 typedef enum{
+    NoMemorizationLevel,
   MemorizationLevel1, // From the Worst.
   MemorizationLevel2,
   MemorizationLevel3,
