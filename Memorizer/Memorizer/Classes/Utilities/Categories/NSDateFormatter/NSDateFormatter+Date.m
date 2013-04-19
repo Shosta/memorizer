@@ -54,10 +54,11 @@
  @remarks : <#(optional)#>
  */
 + (NSString *)dateStringFromDate:(NSDate *)date
-                 destinationFormat:(NSString *)destinationFormat{
+               destinationFormat:(NSString *)destinationFormat{
+    NSLocale *frLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"];
   NSString *formatString = [NSDateFormatter dateFormatFromTemplate:destinationFormat
                                                            options:0
-                                                            locale:[NSLocale currentLocale]];
+                                                            locale:frLocale];
   NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
   [dateFormatter setDateFormat:formatString];
                                     
