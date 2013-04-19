@@ -43,19 +43,22 @@
  */
 - (void)layoutSubviews{
   [super layoutSubviews];
-  int cellQuestionSetOriginY = kCellQuestionSetOriginMajorY;
+  
+    int cellQuestionSetOriginY = kCellQuestionSetTitleOriginMajorY;
   if (_cellStyle == QuestionSetTableViewCellMinorStyle){
-    cellQuestionSetOriginY = kCellQuestionSetOriginMinorY;
+    cellQuestionSetOriginY = kCellQuestionSetTitleOriginMinorY;
   }else{
     [self.gaugeContainerView addSubview:self.gaugeViewController.view];
   }
   
   [self configureTextLabelUIWithLabelFont:QUESTIONSET_CELL_TEXT_FONT
                                labelColor:QUESTIONSET_CELL_TEXT_COLOR
-                       labelTextAlignment:NSTextAlignmentLeft
+                       labelTextAlignment:NSTextAlignmentCenter
                                labelWidth:kCellQuestionSetDefaultTextWidth
                       labelStartXPosition:kCellQuestionSetPaddingX
                       labelStartYPosition:cellQuestionSetOriginY];
+    
+    self.questionSetInfoContainerView.frame = CGRectMake(0, cellQuestionSetOriginY + self.textLabel.frame.size.height + kCellQuestionSetPaddingY, self.questionSetInfoContainerView.frame.size.width, self.questionSetInfoContainerView.frame.size.height);
 }
 
 

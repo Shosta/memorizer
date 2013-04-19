@@ -31,8 +31,11 @@ typedef enum{
 
 @interface QuestionSetTableViewCell : AutoResizeLabelTableViewCell
 
+@property (weak, nonatomic) IBOutlet UIView *questionSetInfoContainerView;
 @property (weak, nonatomic) IBOutlet UILabel *nextDateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *nextQuestionsNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nextDateQuestionsNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *remainingQuestionsNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *allQuestionsNumberLabel;
 @property (weak, nonatomic) IBOutlet UIView *gaugeContainerView;
 
 

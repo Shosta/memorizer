@@ -189,6 +189,7 @@
 				<reference key="NSNextKeyView" ref="446851555"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+				<int key="IBUISelectionStyle">2</int>
 				<int key="IBUIAccessoryType">1</int>
 				<reference key="IBUIContentView" ref="446851555"/>
 				<integer value="67" key="IBUIRowHeight"/>
@@ -198,19 +199,19 @@
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">nextQuestionsNumberLabel</string>
-						<reference key="source" ref="988246517"/>
-						<reference key="destination" ref="312548087"/>
-					</object>
-					<int key="connectionID">10</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">textLabel</string>
 						<reference key="source" ref="988246517"/>
 						<reference key="destination" ref="859230893"/>
 					</object>
 					<int key="connectionID">11</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">nextDateQuestionsNumberLabel</string>
+						<reference key="source" ref="988246517"/>
+						<reference key="destination" ref="312548087"/>
+					</object>
+					<int key="connectionID">15</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -297,7 +298,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">14</int>
+			<int key="maxID">15</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -324,12 +325,19 @@
 					<string key="className">QuestionSetTableViewCell</string>
 					<string key="superclassName">AutoResizeLabelTableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="allQuestionsNumberLabel">UILabel</string>
 						<string key="gaugeContainerView">UIView</string>
 						<string key="gaugeViewController">UIGaugeViewController</string>
 						<string key="nextDateLabel">UILabel</string>
-						<string key="nextQuestionsNumberLabel">UILabel</string>
+						<string key="nextDateQuestionsNumberLabel">UILabel</string>
+						<string key="questionSetInfoContainerView">UIView</string>
+						<string key="remainingQuestionsNumberLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="allQuestionsNumberLabel">
+							<string key="name">allQuestionsNumberLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="gaugeContainerView">
 							<string key="name">gaugeContainerView</string>
 							<string key="candidateClassName">UIView</string>
@@ -342,8 +350,16 @@
 							<string key="name">nextDateLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="nextQuestionsNumberLabel">
-							<string key="name">nextQuestionsNumberLabel</string>
+						<object class="IBToOneOutletInfo" key="nextDateQuestionsNumberLabel">
+							<string key="name">nextDateQuestionsNumberLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="questionSetInfoContainerView">
+							<string key="name">questionSetInfoContainerView</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="remainingQuestionsNumberLabel">
+							<string key="name">remainingQuestionsNumberLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>
