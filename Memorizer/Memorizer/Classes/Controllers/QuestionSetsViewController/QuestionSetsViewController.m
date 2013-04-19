@@ -13,6 +13,7 @@
 #import "QuestionSet.h"
 #import "QuestionSetTableViewCell.h"
 #import "QuestionViewController.h"
+#import "Question.h"
 
 @implementation QuestionSetsViewController
 
@@ -71,6 +72,27 @@
   return dateFormatted;
 }
 
+/**
+ @brief Calculate the gauge progress percent according to the question saved memorization level.
+ @author : Rémi Lavedrine
+ @date : 19/04/2013
+ @remarks : <#(optional)#>
+ */
+- (float)questionDonePercentAtIndexPath:(NSIndexPath *)indexPath{
+    QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
+    NSArray *questionArray = [questionSet questionsArray];
+    
+    float allQuestionsDoneNumber = [questionArray count] * MemorizationLevel5;
+    float questionsDoneNumber = 0.0f;
+    for (Question *question in questionArray) {
+        questionsDoneNumber = questionsDoneNumber + question.userLastMemorizationLevel;
+    }
+    
+    float percent = questionsDoneNumber / allQuestionsDoneNumber;
+    
+    return percent;
+}
+
 - (void)configureCell:(QuestionSetTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
   QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
   
@@ -85,7 +107,8 @@
   [cell.nextQuestionsNumberLabel setText:questionDoneCount];
   
   // Set the progress for the gauge.
-  [cell setGaugeProgress:0.75];
+    float percent = [self questionDonePercentAtIndexPath:indexPath];
+  [cell setGaugeProgress:percent];
   
   // Set the Question Set Title.
   NSString *questionSetTitle = questionSet.title;

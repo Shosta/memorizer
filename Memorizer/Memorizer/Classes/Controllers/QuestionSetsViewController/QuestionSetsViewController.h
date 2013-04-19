@@ -25,4 +25,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+//! Calculate the gauge progress percent according to the question saved memorization level.
+//! @param [in] indexPath : The indexPath for the cell we want to calculate the "question done percent".
+- (float)questionDonePercentAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

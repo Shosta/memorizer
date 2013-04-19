@@ -138,9 +138,10 @@
   // Set the number of question done for this set.
   NSString *questionDoneCount = [NSString stringWithFormat:@"%d/%d", [[nextPresentationQuestionSet nextPresentationQuestionArray] count], [[nextPresentationQuestionSet nextPresentationQuestionArray] count]];
   [cell.nextQuestionsNumberLabel setText:questionDoneCount];
-  
-  // Set the progress for the gauge.
-  [cell setGaugeProgress:0.75];
+    
+    // Set the progress for the gauge.
+    float percent = [self questionDonePercentAtIndexPath:indexPath];
+    [cell setGaugeProgress:percent];
   
   // Set the Question Set Title.
   NSString *questionSetTitle = nextPresentationQuestionSet.title;

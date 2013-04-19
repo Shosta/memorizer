@@ -21,10 +21,10 @@
 // Each QuestionSet could be choosed.
 //
 
-#import <UIKit/UIKit.h>
+#import "QuestionSetsViewController.h"
 #import "OLStatusView.h"
 
-@interface QuestionSetsMemorizationLevelViewController : UIViewController <OLStatusViewDelegate>
+@interface QuestionSetsMemorizationLevelViewController : QuestionSetsViewController <OLStatusViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
