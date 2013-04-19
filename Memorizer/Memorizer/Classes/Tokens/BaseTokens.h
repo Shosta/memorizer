@@ -60,7 +60,7 @@
 
 //! FONTS
 //! QuestionSet Cell Fonts
-#define QUESTIONSET_CELL_TEXT_FONT [UIFont boldSystemFontOfSize:18]
+#define QUESTIONSET_CELL_TEXT_FONT [UIFont boldSystemFontOfSize:17]
 
 //! Statement Cell Fonts
 #define STATEMENT_CELL_TEXT_FONT [UIFont systemFontOfSize:17]

@@ -12,7 +12,7 @@
 #import "NSString+LabelSize.h"
 #import "QuestionSet.h"
 #import "QuestionSetTableViewCell.h"
-#import "QuestionViewController.h"
+#import "QuestionTrainingSessionViewController.h"
 #import "Question.h"
 
 @implementation QuestionSetsViewController
@@ -103,8 +103,8 @@
   // Set the number of questions for the next sets. TODO
   
   // Set the number of question done for this set.
-  NSString *questionDoneCount = [NSString stringWithFormat:@"%d/%d", [[questionSet questionsArray] count], [[questionSet questionsArray] count]];
-  [cell.nextQuestionsNumberLabel setText:questionDoneCount];
+  NSString *questionsCount = [NSString stringWithFormat:@"%d", [[questionSet questionsArray] count]];
+  [cell.nextDateQuestionsNumberLabel setText:questionsCount];
   
   // Set the progress for the gauge.
     float percent = [self questionDonePercentAtIndexPath:indexPath];
@@ -169,7 +169,7 @@
   CGFloat cellHeight = 0;
   QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
   
-  cellHeight = kCellQuestionSetOriginMinorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY;
+  cellHeight = kCellQuestionSetTitleOriginMinorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY;
   
   if (cellHeight < minimumCellHeight) {
     cellHeight = minimumCellHeight;
@@ -192,7 +192,7 @@
   
   QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
   NSMutableArray *questionsArray = currentQuestionSet.questionsArray;
-  QuestionViewController *questionViewController = [[QuestionViewController alloc] initWithQuestionsArray:questionsArray];
+  QuestionTrainingSessionViewController *questionViewController = [[QuestionTrainingSessionViewController alloc] initWithQuestionsArray:questionsArray];
   [self.navigationController pushViewController:questionViewController animated:YES];
   
 }

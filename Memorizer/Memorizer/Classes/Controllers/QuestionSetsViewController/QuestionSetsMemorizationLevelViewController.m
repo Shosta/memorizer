@@ -126,6 +126,26 @@
   return dateFormatted;
 }
 
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : 19/04/2013
+ @remarks : <#(optional)#>
+ */
+- (int)remainingQuestionsCountAtIndexPath:(NSIndexPath *)indexPath{
+    QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
+    NSArray *questionArray = [questionSet questionsArray];
+    
+    int remainingQuestionsCount = 0;
+    for (Question *question in questionArray) {
+        if (question.userLastMemorizationLevel != NoMemorizationLevel) {
+            remainingQuestionsCount = remainingQuestionsCount + 1;
+        }
+    }
+    
+    return remainingQuestionsCount;
+}
+
 - (void)configureCell:(QuestionSetTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
   NextPresentationQuestionSet *nextPresentationQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
   
@@ -133,11 +153,19 @@
   NSString *nextPresentationDate = [self dayMonthYearFormatDate:nextPresentationQuestionSet.nextPresentationDate];
   [cell.nextDateLabel setText:nextPresentationDate];
   
-  // Set the number of questions for the next sets. TODO
-  
-  // Set the number of question done for this set.
-  NSString *questionDoneCount = [NSString stringWithFormat:@"%d/%d", [[nextPresentationQuestionSet nextPresentationQuestionArray] count], [[nextPresentationQuestionSet nextPresentationQuestionArray] count]];
-  [cell.nextQuestionsNumberLabel setText:questionDoneCount];
+    // Set the number of questions for the next sets.
+    NSString *nextDateQuestionsCount = [NSString stringWithFormat:@": %d", [[nextPresentationQuestionSet nextPresentationQuestionArray] count]];
+    [cell.nextDateQuestionsNumberLabel setText:nextDateQuestionsCount];
+   
+    // Set the number of question that needs to be seen by the user.
+    NSString *remainingQuestionsCount = [NSString stringWithFormat:@": %d", [self remainingQuestionsCountAtIndexPath:indexPath]];
+    [cell.remainingQuestionsNumberLabel setText:remainingQuestionsCount];
+    
+    // Set the number of questions for this QuestionSet.
+    QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
+    NSArray *questionArray = [questionSet questionsArray];
+    NSString *allQuestionsCount = [NSString stringWithFormat:@": %d", [questionArray count]];
+    [cell.allQuestionsNumberLabel setText:allQuestionsCount];
     
     // Set the progress for the gauge.
     float percent = [self questionDonePercentAtIndexPath:indexPath];
@@ -158,7 +186,7 @@
   NSString *CellIdentifier = @"QuestionSetTableViewCell";
   QuestionSetTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   if (cell == nil) {
-    NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionSetMemorizationLevelTableViewCell"
+    NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionSetMemorizationLevelTableViewCell2"
                                                              owner:self
                                                            options:nil];
     
@@ -198,12 +226,12 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-  CGFloat minimumCellHeight = 164;
+  CGFloat minimumCellHeight = 264;
   CGFloat cellHeight = 0;
   NextPresentationQuestionSet *currentQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
   
-  cellHeight = kCellQuestionSetOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY;
-  
+  cellHeight = kCellQuestionSetTitleOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY;
+
   if (cellHeight < minimumCellHeight) {
     cellHeight = minimumCellHeight;
   }

@@ -39,8 +39,8 @@ extern NSString *kDayMonthFormatDate;
 //! Cell QuestionSet
 extern int kCellQuestionSetPaddingX;
 extern int kCellQuestionSetPaddingY;
-extern int kCellQuestionSetOriginMajorY;
-extern int kCellQuestionSetOriginMinorY;
+extern int kCellQuestionSetTitleOriginMajorY;
+extern int kCellQuestionSetTitleOriginMinorY;
 extern int kCellQuestionSetDefaultTextWidth;
 
 //! Cell Statement

@@ -44,7 +44,7 @@ static NSString *kShouldDisplayDescriptionKey = @"shouldDisplayDescription";
 //! @param[in] aQuestionSetArray : The Question array to display within the View.
 - (id)initWithNibName:(NSString *)nibNameOrNil
                bundle:(NSBundle *)nibBundleOrNil
-          questionsArray:(NSMutableArray *)aQuestionsArray;
+       questionsArray:(NSMutableArray *)aQuestionsArray;
 
 //! Object constructor.
 //! @param[in] aQuestionSetArray : The Question array to display within the View.

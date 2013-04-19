@@ -144,19 +144,6 @@ static const int kDescriptionSection = 2;
   [self.navigationItem setTitle:title];
 }
 
-- (void)addNavigationBarNextQuestionButton{
-  // Create the "Next Question" button
-  self.nextQuestionButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 34, 30)];
-  [self.nextQuestionButton setImage:[UIImage imageNamed:@"nextQuestion.png"] forState:UIControlStateNormal];
-  [self.nextQuestionButton addTarget:self action:@selector(displayNextQuestion) forControlEvents:UIControlEventTouchUpInside];
-  
-  UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 34, 30)];
-  UIBarButtonItem *segmentBarItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
-  [self.navigationItem setRightBarButtonItem:segmentBarItem animated:YES];
-  
-  [customView addSubview:self.nextQuestionButton];
-}
-
 
 #pragma mark - View
 
@@ -166,7 +153,6 @@ static const int kDescriptionSection = 2;
   [self registerForKVO];
   
   [self setNavigationBarTitle];
-  [self addNavigationBarNextQuestionButton];
   
   UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackgroundTemplateColor.png"]];
   [self.view setBackgroundColor:color];
