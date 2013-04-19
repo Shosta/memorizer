@@ -84,8 +84,11 @@ static const int kDescriptionSection = 2;
 	}
   
   if ([keyPath isEqualToString:kShouldDisplayDescriptionKey]) {
-    [self.tableView reloadData];
-    // To display the Answer and change the Footer's title.
+      [self.tableView reloadData];
+      if ([self.shouldDisplayDescription boolValue] == YES) {
+          [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kDescriptionSection] withRowAnimation:UITableViewRowAnimationTop];
+      }
+      // To display the Description and change the Footer's title.
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:kAnswerSection] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 	}
 }
@@ -141,7 +144,7 @@ static const int kDescriptionSection = 2;
   [self.navigationItem setTitle:title];
 }
 
-- (void)setNavigationBarNextQuestionButton{
+- (void)addNavigationBarNextQuestionButton{
   // Create the "Next Question" button
   self.nextQuestionButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 34, 30)];
   [self.nextQuestionButton setImage:[UIImage imageNamed:@"nextQuestion.png"] forState:UIControlStateNormal];
@@ -163,7 +166,7 @@ static const int kDescriptionSection = 2;
   [self registerForKVO];
   
   [self setNavigationBarTitle];
-  [self setNavigationBarNextQuestionButton];
+  [self addNavigationBarNextQuestionButton];
   
   UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackgroundTemplateColor.png"]];
   [self.view setBackgroundColor:color];
