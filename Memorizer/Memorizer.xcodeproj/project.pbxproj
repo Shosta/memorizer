@@ -26,6 +26,10 @@
 		A8A9E2C61721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A9E2C51721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib */; };
 		A8A9E2C91721E4C100380F50 /* QuestionTrainingSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A9E2C81721E4C100380F50 /* QuestionTrainingSessionViewController.m */; };
 		A8D075651732B56F00AE3EC9 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D075641732B56F00AE3EC9 /* QuestionViewController.m */; };
+		A8D075681732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D075671732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.m */; };
+		A8D0756B1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0756A1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m */; };
+		A8D0756F1732BE3500AE3EC9 /* QuestionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0756D1732BE3400AE3EC9 /* QuestionsListViewController.m */; };
+		A8D075701732BE3500AE3EC9 /* QuestionsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D0756E1732BE3400AE3EC9 /* QuestionsListViewController.xib */; };
 		A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F3B16FA5623009268D2 /* Tokens.m */; };
 		A8D36F4316FA5A07009268D2 /* NameValueArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */; };
 		F227DDCC1718007000D694DE /* QuestionSet+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDCB1718007000D694DE /* QuestionSet+Archiver.m */; };
@@ -123,6 +127,13 @@
 		A8A9E2C81721E4C100380F50 /* QuestionTrainingSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionTrainingSessionViewController.m; path = QuestionViewController/QuestionTrainingSessionViewController.m; sourceTree = "<group>"; };
 		A8D075631732B56E00AE3EC9 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionViewController.h; path = QuestionViewController/QuestionViewController.h; sourceTree = "<group>"; };
 		A8D075641732B56F00AE3EC9 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionViewController.m; path = QuestionViewController/QuestionViewController.m; sourceTree = "<group>"; };
+		A8D075661732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetsTrainingSessionViewController.h; path = QuestionSetsViewController/QuestionSetsTrainingSessionViewController.h; sourceTree = "<group>"; };
+		A8D075671732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSetsTrainingSessionViewController.m; path = QuestionSetsViewController/QuestionSetsTrainingSessionViewController.m; sourceTree = "<group>"; };
+		A8D075691732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetsQuestionListViewController.h; path = QuestionSetsViewController/QuestionSetsQuestionListViewController.h; sourceTree = "<group>"; };
+		A8D0756A1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSetsQuestionListViewController.m; path = QuestionSetsViewController/QuestionSetsQuestionListViewController.m; sourceTree = "<group>"; };
+		A8D0756C1732BE3300AE3EC9 /* QuestionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionsListViewController.h; path = QuestionsListViewController/QuestionsListViewController.h; sourceTree = "<group>"; };
+		A8D0756D1732BE3400AE3EC9 /* QuestionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionsListViewController.m; path = QuestionsListViewController/QuestionsListViewController.m; sourceTree = "<group>"; };
+		A8D0756E1732BE3400AE3EC9 /* QuestionsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionsListViewController.xib; path = QuestionsListViewController/QuestionsListViewController.xib; sourceTree = "<group>"; };
 		A8D36F3816FA5623009268D2 /* BaseColorTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseColorTokens.h; sourceTree = "<group>"; };
 		A8D36F3916FA5623009268D2 /* BaseTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTokens.h; sourceTree = "<group>"; };
 		A8D36F3A16FA5623009268D2 /* Tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tokens.h; sourceTree = "<group>"; };
@@ -299,6 +310,10 @@
 				F227DDD717184C3600D694DE /* QuestionSetsViewController.h */,
 				F227DDD817184C3600D694DE /* QuestionSetsViewController.m */,
 				F227DDD917184C3600D694DE /* QuestionSetsViewController.xib */,
+				A8D075691732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.h */,
+				A8D0756A1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m */,
+				A8D075661732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.h */,
+				A8D075671732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.m */,
 				A845C06E1704639F0064806D /* QuestionSetsMemorizationLevelViewController.h */,
 				A845C06F1704639F0064806D /* QuestionSetsMemorizationLevelViewController.m */,
 				A845C0701704639F0064806D /* QuestionSetsMemorizationLevelViewController.xib */,
@@ -336,6 +351,16 @@
 			name = QuestionSet;
 			sourceTree = "<group>";
 		};
+		A8D075711732BE3A00AE3EC9 /* QuestionsListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0756C1732BE3300AE3EC9 /* QuestionsListViewController.h */,
+				A8D0756D1732BE3400AE3EC9 /* QuestionsListViewController.m */,
+				A8D0756E1732BE3400AE3EC9 /* QuestionsListViewController.xib */,
+			);
+			name = QuestionsListViewController;
+			sourceTree = "<group>";
+		};
 		A8D36F3616FA5623009268D2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				A845C073170463C20064806D /* QuestionSetsViewController */,
+				A8D075711732BE3A00AE3EC9 /* QuestionsListViewController */,
 				A845C079170468310064806D /* QuestionViewController */,
 			);
 			path = Controllers;
@@ -778,6 +804,7 @@
 				F2A7ED301720184C00DE974D /* MemorizationLevelButtonHighlighted.png in Resources */,
 				F2A7ED311720184C00DE974D /* MemorizationLevelButtonHighlighted@2x.png in Resources */,
 				A8A9E2C61721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib in Resources */,
+				A8D075701732BE3500AE3EC9 /* QuestionsListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,6 +846,9 @@
 				F227DDDA17184C3600D694DE /* QuestionSetsViewController.m in Sources */,
 				A8A9E2C91721E4C100380F50 /* QuestionTrainingSessionViewController.m in Sources */,
 				A8D075651732B56F00AE3EC9 /* QuestionViewController.m in Sources */,
+				A8D075681732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.m in Sources */,
+				A8D0756B1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m in Sources */,
+				A8D0756F1732BE3500AE3EC9 /* QuestionsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

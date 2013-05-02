@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppData+Archiver.h"
-#import "QuestionSetsViewController.h"
+#import "QuestionSetsTrainingSessionViewController.h"
 #import "QuestionSetsMemorizationLevelViewController.h"
 
 @implementation AppDelegate

@@ -45,7 +45,7 @@
 }
 
 
-#pragma mark - Generic
+#pragma mark - QuestionSetCell
 
 /**
  @brief Format the date to handle

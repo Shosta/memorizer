@@ -16,7 +16,6 @@
 
 @interface SingleQuestionViewController ()
 
-
 @end
 
 @implementation SingleQuestionViewController
@@ -45,7 +44,7 @@ static const int kDescriptionSection = 2;
 }
 
 - (id)initWithQuestionsArray:(NSMutableArray *)aQuestionSetArray{
-  return [self initWithNibName:@"SingleQuestionViewController" bundle:nil questionsArray:aQuestionSetArray];
+  return [self initWithNibName:@"QuestionTrainingSessionViewController" bundle:nil questionsArray:aQuestionSetArray];
 }
 
 
