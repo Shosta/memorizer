@@ -24,6 +24,7 @@ static const int kDescriptionSection = 2;
     self = [super initWithNibName:@"QuestionMemorizationLevelViewController" bundle:nil questionsArray:aQuestionsArray];
     if (self != nil) {
         self.isMemorizationLevelChosen = [NSNumber numberWithBool:NO];
+        self.shouldDisplayNextQuestion = [NSNumber numberWithBool:NO];
     }
     
     return self;
@@ -139,20 +140,30 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
  If it's the last question from the QuestionSet, it pops to the RootViewController.
  */
 - (void)displayNextQuestion{
-    [super displayNextQuestion];
+    if ([self.shouldDisplayNextQuestion boolValue] == YES && self.currentQuestionIndex < [self.questionsArray count]){
+        [super displayNextQuestion];
     
-    if (self.currentQuestionIndex < [self.questionsArray count]){
-        // 1. Reset the button state to unselected.
+        // 1. Remove the MemorizationLevelFeedback label.
+        [self hideMemorizationLevelSummaryContainerView];
+        
+        // 2. Reset the button state to unselected.
         [self removePreviousSelectedStateToButton];
-        // 2. As the TableView's height was reduced to present the "noting buttons" it has to be resized to its original size.
+        // 3. As the TableView's height was reduced to present the "noting buttons" it has to be resized to its original size.
         [self increaseTableViewHeight];
     }
     
     self.isMemorizationLevelChosen = [NSNumber numberWithBool:NO];
 }
 
+- (void)displayFeedBackViewAndNextQuestion{
+    [self.memorizationLevelFeedbackLabel setText:[self selectedStateStringFromLevel:self.memorizationLevel]];
+    [self displayMemorizationLevelSummaryContainerView];
+    
+    [self performSelector:@selector(displayNextQuestion) withObject:nil afterDelay:2.0];
+}
 
-#pragma mark - Animation
+
+#pragma mark - TableView Animation
 
 static const float animationDuration = .4f;
 static const float boundsHeight = 105.f;
@@ -196,6 +207,40 @@ static const float boundsHeight = 105.f;
     }
     @finally {
         
+    }
+}
+
+#pragma mark - MemorizationLevelSummary Animation
+
+- (void)displayMemorizationLevelSummaryContainerView{
+    @try {
+        self.tableView.contentMode = UIViewContentModeRedraw;
+        [UIView animateWithDuration:animationDuration animations:^{
+            self.memorizationLevelSummaryContainerView.alpha = 0.9f;
+        }];
+        
+    }
+    @catch (NSException *exception) {
+        OLLogDebug(@"%@", exception.reason);
+    }
+    @finally {
+        self.shouldDisplayNextQuestion = [NSNumber numberWithBool:YES];
+    }
+}
+
+- (IBAction)hideMemorizationLevelSummaryContainerView{
+    @try {
+        self.tableView.contentMode = UIViewContentModeRedraw;
+        [UIView animateWithDuration:animationDuration animations:^{
+            self.memorizationLevelSummaryContainerView.alpha = 0.0f;
+        }];
+        
+    }
+    @catch (NSException *exception) {
+        OLLogDebug(@"%@", exception.reason);
+    }
+    @finally {
+       self.shouldDisplayNextQuestion = [NSNumber numberWithBool:NO];
     }
 }
 
@@ -305,6 +350,37 @@ static const float boundsHeight = 105.f;
     }
 }
 
+- (NSString *)selectedStateStringFromLevel:(MemorizationLevel)memorizationLevel{
+    NSString *selectedStateString = @"";
+    
+    switch (memorizationLevel) {
+        case MemorizationLevel1:
+            selectedStateString = @"Pas du tout";
+            break;
+            
+        case MemorizationLevel2:
+            selectedStateString = @"Un peu";
+            break;
+            
+        case MemorizationLevel3:
+            selectedStateString = @"À peu près";
+            break;
+            
+        case MemorizationLevel4:
+            selectedStateString = @"Bien";
+            break;
+            
+        case MemorizationLevel5:
+            selectedStateString = @"Parfait";
+            break;
+            
+        default:
+            break;
+    }
+    
+    return selectedStateString;
+}
+
 - (void)removePreviousSelectedStateToButton{
     MemorizationLevel memorizationLevel = self.memorizationLevel;
     [self setSelectedState:NO toButton:memorizationLevel];
@@ -346,7 +422,7 @@ static const float boundsHeight = 105.f;
     self.isMemorizationLevelChosen = [NSNumber numberWithBool:YES];
     
     // Display the next question as the user selects his memorization level.
-    [self displayNextQuestion];
+    [self displayFeedBackViewAndNextQuestion];
 }
 
 @end

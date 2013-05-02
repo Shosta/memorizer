@@ -30,9 +30,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *level3Button;
 @property (weak, nonatomic) IBOutlet UIButton *level4Button;
 @property (weak, nonatomic) IBOutlet UIButton *level5Button;
+@property (weak, nonatomic) IBOutlet UIView *memorizationLevelSummaryContainerView;
+@property (weak, nonatomic) IBOutlet UILabel *memorizationLevelFeedbackLabel;
 
 @property (weak, nonatomic) NSNumber *isMemorizationLevelChosen;
 @property  MemorizationLevel memorizationLevel;
+
+@property (weak, nonatomic) NSNumber *shouldDisplayNextQuestion;
 
 
 @end

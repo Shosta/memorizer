@@ -138,7 +138,7 @@
     
     int remainingQuestionsCount = 0;
     for (Question *question in questionArray) {
-        if (question.userLastMemorizationLevel != NoMemorizationLevel) {
+        if (question.userLastMemorizationLevel == NoMemorizationLevel) {
             remainingQuestionsCount = remainingQuestionsCount + 1;
         }
     }
@@ -226,7 +226,7 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-  CGFloat minimumCellHeight = 264;
+  CGFloat minimumCellHeight = 250;
   CGFloat cellHeight = 0;
   NextPresentationQuestionSet *currentQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
   
