@@ -30,6 +30,19 @@
 		A8D0756B1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0756A1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m */; };
 		A8D0756F1732BE3500AE3EC9 /* QuestionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0756D1732BE3400AE3EC9 /* QuestionsListViewController.m */; };
 		A8D075701732BE3500AE3EC9 /* QuestionsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D0756E1732BE3400AE3EC9 /* QuestionsListViewController.xib */; };
+		A8D075741733B40400AE3EC9 /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D075731733B40400AE3EC9 /* QuestionTableViewCell.m */; };
+		A8D075771733B4A400AE3EC9 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D075761733B4A400AE3EC9 /* QuestionTableViewCell.xib */; };
+		A8D0757B1733BA8F00AE3EC9 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D075791733BA8D00AE3EC9 /* StatisticsViewController.m */; };
+		A8D0757C1733BA8F00AE3EC9 /* StatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D0757A1733BA8E00AE3EC9 /* StatisticsViewController.xib */; };
+		A8D075801733BF0300AE3EC9 /* MemorizationCardLevelNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0757F1733BF0300AE3EC9 /* MemorizationCardLevelNumberCell.m */; };
+		A8D075881733BF4900AE3EC9 /* MemorizationCardLevelNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D075871733BF4900AE3EC9 /* MemorizationCardLevelNumberCell.xib */; };
+		A8D0758A1733BFA000AE3EC9 /* MemorizationCardToReviseNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D075891733BF9F00AE3EC9 /* MemorizationCardToReviseNumberCell.xib */; };
+		A8D0758D1733BFB100AE3EC9 /* MemorizationCardToReviseNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0758C1733BFB100AE3EC9 /* MemorizationCardToReviseNumberCell.m */; };
+		A8D0759017395D2300AE3EC9 /* CardMemorizationLevelStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0758F17395D1D00AE3EC9 /* CardMemorizationLevelStatistics.m */; };
+		A8D07596173963C800AE3EC9 /* QuestionSetsStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D07594173963C600AE3EC9 /* QuestionSetsStatisticsViewController.m */; };
+		A8D07597173963C800AE3EC9 /* QuestionSetsStatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D07595173963C700AE3EC9 /* QuestionSetsStatisticsViewController.xib */; };
+		A8D0759A17396A2500AE3EC9 /* CardToReviseNumberStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0759917396A2500AE3EC9 /* CardToReviseNumberStatistics.m */; };
+		A8D0759D17396B4600AE3EC9 /* NSDate+AddDays.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0759C17396B4600AE3EC9 /* NSDate+AddDays.m */; };
 		A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F3B16FA5623009268D2 /* Tokens.m */; };
 		A8D36F4316FA5A07009268D2 /* NameValueArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */; };
 		F227DDCC1718007000D694DE /* QuestionSet+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDCB1718007000D694DE /* QuestionSet+Archiver.m */; };
@@ -134,6 +147,27 @@
 		A8D0756C1732BE3300AE3EC9 /* QuestionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionsListViewController.h; path = QuestionsListViewController/QuestionsListViewController.h; sourceTree = "<group>"; };
 		A8D0756D1732BE3400AE3EC9 /* QuestionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionsListViewController.m; path = QuestionsListViewController/QuestionsListViewController.m; sourceTree = "<group>"; };
 		A8D0756E1732BE3400AE3EC9 /* QuestionsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionsListViewController.xib; path = QuestionsListViewController/QuestionsListViewController.xib; sourceTree = "<group>"; };
+		A8D075721733B40400AE3EC9 /* QuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionTableViewCell.h; path = CustomUIObjects/QuestionTableViewCell/QuestionTableViewCell.h; sourceTree = "<group>"; };
+		A8D075731733B40400AE3EC9 /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionTableViewCell.m; path = CustomUIObjects/QuestionTableViewCell/QuestionTableViewCell.m; sourceTree = "<group>"; };
+		A8D075761733B4A400AE3EC9 /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionTableViewCell.xib; path = CustomUIObjects/QuestionTableViewCell/QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		A8D075781733BA8B00AE3EC9 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatisticsViewController.h; path = StatisticsViewController/StatisticsViewController.h; sourceTree = "<group>"; };
+		A8D075791733BA8D00AE3EC9 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatisticsViewController.m; path = StatisticsViewController/StatisticsViewController.m; sourceTree = "<group>"; };
+		A8D0757A1733BA8E00AE3EC9 /* StatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatisticsViewController.xib; path = StatisticsViewController/StatisticsViewController.xib; sourceTree = "<group>"; };
+		A8D0757E1733BF0300AE3EC9 /* MemorizationCardLevelNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemorizationCardLevelNumberCell.h; path = CustomUIObjects/StatisticsCells/MemorizationCardLevelNumberCell.h; sourceTree = "<group>"; };
+		A8D0757F1733BF0300AE3EC9 /* MemorizationCardLevelNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemorizationCardLevelNumberCell.m; path = CustomUIObjects/StatisticsCells/MemorizationCardLevelNumberCell.m; sourceTree = "<group>"; };
+		A8D075871733BF4900AE3EC9 /* MemorizationCardLevelNumberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MemorizationCardLevelNumberCell.xib; path = CustomUIObjects/StatisticsCells/MemorizationCardLevelNumberCell.xib; sourceTree = "<group>"; };
+		A8D075891733BF9F00AE3EC9 /* MemorizationCardToReviseNumberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MemorizationCardToReviseNumberCell.xib; path = CustomUIObjects/StatisticsCells/MemorizationCardToReviseNumberCell.xib; sourceTree = "<group>"; };
+		A8D0758B1733BFB000AE3EC9 /* MemorizationCardToReviseNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemorizationCardToReviseNumberCell.h; path = CustomUIObjects/StatisticsCells/MemorizationCardToReviseNumberCell.h; sourceTree = "<group>"; };
+		A8D0758C1733BFB100AE3EC9 /* MemorizationCardToReviseNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemorizationCardToReviseNumberCell.m; path = CustomUIObjects/StatisticsCells/MemorizationCardToReviseNumberCell.m; sourceTree = "<group>"; };
+		A8D0758E17395D1900AE3EC9 /* CardMemorizationLevelStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMemorizationLevelStatistics.h; path = Model/Statistics/CardMemorizationLevelStatistics.h; sourceTree = "<group>"; };
+		A8D0758F17395D1D00AE3EC9 /* CardMemorizationLevelStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMemorizationLevelStatistics.m; path = Model/Statistics/CardMemorizationLevelStatistics.m; sourceTree = "<group>"; };
+		A8D07593173963C500AE3EC9 /* QuestionSetsStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetsStatisticsViewController.h; path = QuestionSetsViewController/QuestionSetsStatisticsViewController.h; sourceTree = "<group>"; };
+		A8D07594173963C600AE3EC9 /* QuestionSetsStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSetsStatisticsViewController.m; path = QuestionSetsViewController/QuestionSetsStatisticsViewController.m; sourceTree = "<group>"; };
+		A8D07595173963C700AE3EC9 /* QuestionSetsStatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetsStatisticsViewController.xib; path = QuestionSetsViewController/QuestionSetsStatisticsViewController.xib; sourceTree = "<group>"; };
+		A8D0759817396A2400AE3EC9 /* CardToReviseNumberStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardToReviseNumberStatistics.h; path = Model/Statistics/CardToReviseNumberStatistics.h; sourceTree = "<group>"; };
+		A8D0759917396A2500AE3EC9 /* CardToReviseNumberStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardToReviseNumberStatistics.m; path = Model/Statistics/CardToReviseNumberStatistics.m; sourceTree = "<group>"; };
+		A8D0759B17396B4600AE3EC9 /* NSDate+AddDays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+AddDays.h"; path = "NSDate+AddDays/NSDate+AddDays.h"; sourceTree = "<group>"; };
+		A8D0759C17396B4600AE3EC9 /* NSDate+AddDays.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+AddDays.m"; path = "NSDate+AddDays/NSDate+AddDays.m"; sourceTree = "<group>"; };
 		A8D36F3816FA5623009268D2 /* BaseColorTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseColorTokens.h; sourceTree = "<group>"; };
 		A8D36F3916FA5623009268D2 /* BaseTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTokens.h; sourceTree = "<group>"; };
 		A8D36F3A16FA5623009268D2 /* Tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tokens.h; sourceTree = "<group>"; };
@@ -317,6 +351,9 @@
 				A845C06E1704639F0064806D /* QuestionSetsMemorizationLevelViewController.h */,
 				A845C06F1704639F0064806D /* QuestionSetsMemorizationLevelViewController.m */,
 				A845C0701704639F0064806D /* QuestionSetsMemorizationLevelViewController.xib */,
+				A8D07593173963C500AE3EC9 /* QuestionSetsStatisticsViewController.h */,
+				A8D07594173963C600AE3EC9 /* QuestionSetsStatisticsViewController.m */,
+				A8D07595173963C700AE3EC9 /* QuestionSetsStatisticsViewController.xib */,
 			);
 			name = QuestionSetsViewController;
 			sourceTree = "<group>";
@@ -361,9 +398,71 @@
 			name = QuestionsListViewController;
 			sourceTree = "<group>";
 		};
+		A8D075751733B49100AE3EC9 /* QuestionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A8D075721733B40400AE3EC9 /* QuestionTableViewCell.h */,
+				A8D075731733B40400AE3EC9 /* QuestionTableViewCell.m */,
+				A8D075761733B4A400AE3EC9 /* QuestionTableViewCell.xib */,
+			);
+			name = QuestionTableViewCell;
+			sourceTree = "<group>";
+		};
+		A8D0757D1733BA9700AE3EC9 /* StatisticsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A8D075781733BA8B00AE3EC9 /* StatisticsViewController.h */,
+				A8D075791733BA8D00AE3EC9 /* StatisticsViewController.m */,
+				A8D0757A1733BA8E00AE3EC9 /* StatisticsViewController.xib */,
+			);
+			name = StatisticsViewController;
+			sourceTree = "<group>";
+		};
+		A8D075811733BF0700AE3EC9 /* StatisticsCell */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0757E1733BF0300AE3EC9 /* MemorizationCardLevelNumberCell.h */,
+				A8D0757F1733BF0300AE3EC9 /* MemorizationCardLevelNumberCell.m */,
+				A8D075871733BF4900AE3EC9 /* MemorizationCardLevelNumberCell.xib */,
+				A8D0758B1733BFB000AE3EC9 /* MemorizationCardToReviseNumberCell.h */,
+				A8D0758C1733BFB100AE3EC9 /* MemorizationCardToReviseNumberCell.m */,
+				A8D075891733BF9F00AE3EC9 /* MemorizationCardToReviseNumberCell.xib */,
+			);
+			name = StatisticsCell;
+			sourceTree = "<group>";
+		};
+		A8D0759117395D2B00AE3EC9 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0758E17395D1900AE3EC9 /* CardMemorizationLevelStatistics.h */,
+				A8D0758F17395D1D00AE3EC9 /* CardMemorizationLevelStatistics.m */,
+				A8D0759817396A2400AE3EC9 /* CardToReviseNumberStatistics.h */,
+				A8D0759917396A2500AE3EC9 /* CardToReviseNumberStatistics.m */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		A8D075921739606900AE3EC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0759117395D2B00AE3EC9 /* Statistics */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A8D0759E17396B8600AE3EC9 /* NSDate+AddDays */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0759B17396B4600AE3EC9 /* NSDate+AddDays.h */,
+				A8D0759C17396B4600AE3EC9 /* NSDate+AddDays.m */,
+			);
+			name = "NSDate+AddDays";
+			sourceTree = "<group>";
+		};
 		A8D36F3616FA5623009268D2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A8D075921739606900AE3EC9 /* Model */,
 				A8D36F3F16FA5A07009268D2 /* DataManager */,
 				A8D36F3D16FA5641009268D2 /* Controllers */,
 				A844A55216FB192C0021037B /* Utilities */,
@@ -391,6 +490,7 @@
 				A845C073170463C20064806D /* QuestionSetsViewController */,
 				A8D075711732BE3A00AE3EC9 /* QuestionsListViewController */,
 				A845C079170468310064806D /* QuestionViewController */,
+				A8D0757D1733BA9700AE3EC9 /* StatisticsViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -644,6 +744,7 @@
 				F2DE404617158AE100D34892 /* NSDateFormatter */,
 				F2F8D7FE171416E9007FC71A /* NSString+LabelSize */,
 				F2F8D801171416E9007FC71A /* UILabel+Size */,
+				A8D0759E17396B8600AE3EC9 /* NSDate+AddDays */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -671,10 +772,12 @@
 			children = (
 				F2F8D816171450CC007FC71A /* AutoResizeLabelTableViewCell */,
 				F2DE403917156B6500D34892 /* QuestionSetTableViewCell */,
+				A8D075751733B49100AE3EC9 /* QuestionTableViewCell */,
 				F2F8D80F17144D82007FC71A /* StatementTableViewCell */,
 				F2D92A1117130B60006ED8A6 /* AnswerTableViewCell */,
 				F2F8D80A171447FA007FC71A /* DescriptionTableViewCell */,
 				F2DE404A171592A200D34892 /* UIGaugeViewController */,
+				A8D075811733BF0700AE3EC9 /* StatisticsCell */,
 			);
 			name = CustomUIObjects;
 			sourceTree = "<group>";
@@ -805,6 +908,11 @@
 				F2A7ED311720184C00DE974D /* MemorizationLevelButtonHighlighted@2x.png in Resources */,
 				A8A9E2C61721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib in Resources */,
 				A8D075701732BE3500AE3EC9 /* QuestionsListViewController.xib in Resources */,
+				A8D075771733B4A400AE3EC9 /* QuestionTableViewCell.xib in Resources */,
+				A8D0757C1733BA8F00AE3EC9 /* StatisticsViewController.xib in Resources */,
+				A8D075881733BF4900AE3EC9 /* MemorizationCardLevelNumberCell.xib in Resources */,
+				A8D0758A1733BFA000AE3EC9 /* MemorizationCardToReviseNumberCell.xib in Resources */,
+				A8D07597173963C800AE3EC9 /* QuestionSetsStatisticsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +957,14 @@
 				A8D075681732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.m in Sources */,
 				A8D0756B1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m in Sources */,
 				A8D0756F1732BE3500AE3EC9 /* QuestionsListViewController.m in Sources */,
+				A8D075741733B40400AE3EC9 /* QuestionTableViewCell.m in Sources */,
+				A8D0757B1733BA8F00AE3EC9 /* StatisticsViewController.m in Sources */,
+				A8D075801733BF0300AE3EC9 /* MemorizationCardLevelNumberCell.m in Sources */,
+				A8D0758D1733BFB100AE3EC9 /* MemorizationCardToReviseNumberCell.m in Sources */,
+				A8D0759017395D2300AE3EC9 /* CardMemorizationLevelStatistics.m in Sources */,
+				A8D07596173963C800AE3EC9 /* QuestionSetsStatisticsViewController.m in Sources */,
+				A8D0759A17396A2500AE3EC9 /* CardToReviseNumberStatistics.m in Sources */,
+				A8D0759D17396B4600AE3EC9 /* NSDate+AddDays.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

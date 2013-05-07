@@ -9,6 +9,7 @@
 #import "QuestionsListViewController.h"
 #import "Question.h"
 #import "SingleQuestionViewController.h"
+#import "QuestionTableViewCell.h"
 
 @interface QuestionsListViewController ()
 
@@ -65,26 +66,61 @@
 
 #pragma mark - Cell
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
+- (void)configureCell:(QuestionTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
     Question *currentQuestion = [self.questionsArray objectAtIndex:indexPath.row];
-    [cell.textLabel setText:currentQuestion.statement];
+    [cell.statementLabel setText:currentQuestion.statement];
+    [cell.answerLabel setText:currentQuestion.answer];
+    
+    NSMutableString *imageName = [NSMutableString stringWithString:@"level"];
+    MemorizationLevel memorizationLevel = currentQuestion.userLastMemorizationLevel;
+    switch (memorizationLevel) {
+        case MemorizationLevel1:
+            [imageName appendString:@"1.png"];
+            break;
+            
+        case MemorizationLevel2:
+            [imageName appendString:@"2.png"];
+            break;
+            
+        case MemorizationLevel3:
+            [imageName appendString:@"3.png"];
+            break;
+            
+        case MemorizationLevel4:
+            [imageName appendString:@"4.png"];
+            break;
+            
+        case MemorizationLevel5:
+            [imageName appendString:@"5.png"];
+            break;
+            
+        default:
+            break;
+    }
+    [cell.memorizationLevelImageView setImage:[UIImage imageNamed:imageName]];
 }
 
 /**
  @brief Create the cells that describes the user data plan and the one that allows the user to add some options or so one.
  @author : Rémi Lavedrine
  @date : 05/07/2012
- @remarks : ;
+ @remarks : <#(optional)#>
  */
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *CellIdentifier = @"QuestionSetTableViewCell";
-    UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    NSString *CellIdentifier = @"QuestionTableViewCell";
+    QuestionTableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionTableViewCell"
+                                                                 owner:self
+                                                               options:nil];
+        
+        for(id currentObject in topLevelObjects){
+            if([currentObject isKindOfClass:[QuestionTableViewCell class]]){
+                cell = (QuestionTableViewCell *) currentObject;
+                break;
+            }
+        }
     }
-    
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
