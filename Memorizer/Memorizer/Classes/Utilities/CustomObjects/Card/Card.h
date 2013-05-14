@@ -33,8 +33,8 @@
 @property (nonatomic) int ret_reps_since_lapse; // Le nombre de répétition dans la phase "Révision" depuis un échec.
 @property (nonatomic) int new_interval; // L'intervalle de jours ou la carte doit apparaître (en jours)
 @property (nonatomic) int lapses; // Le nombre d'échecs alors que l'on connaissait auparavant la réponse de la carte.
-@property (nonatomic) int grade; // Dernière note attribué a la carte.
-@property (nonatomic) int new_grade; // Nouvelle note attribué a la carte.
+// @property (nonatomic) int grade; // Dernière note attribué a la carte.
+@property (nonatomic) MemorizationLevel userLastMemorizationLevel;
 @property (nonatomic) int scheduled_interval; // C'est l'intervalle qui prend en compte l'heure à laquelle tu as fait la carte, par exemple si tu as fait la carte après 18h ça te rajoute un jour car si tu lance l'application à 8h tu n'auras pas eu l'intervalle réel à avoir.
 @property (nonatomic, retain) NSString *timing;
 @end

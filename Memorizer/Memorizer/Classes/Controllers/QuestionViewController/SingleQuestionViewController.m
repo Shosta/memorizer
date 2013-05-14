@@ -229,6 +229,7 @@ static const int kDescriptionSection = 2;
     Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
     NSString *description = currentQuestion.description;
     [cell.textLabel setText:description];
+      [cell setSoundFileName:currentQuestion.soundName];
   }
   
   return cell;

@@ -20,6 +20,6 @@
 @property (nonatomic, retain) NSString *imageName;
 @property (nonatomic, retain) NSString *videoName;
 @property (nonatomic, retain) NSString *soundName;
-@property (nonatomic) MemorizationLevel userLastMemorizationLevel;
+// @property (nonatomic) MemorizationLevel userLastMemorizationLevel;
 
 @end

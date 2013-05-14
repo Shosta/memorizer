@@ -16,5 +16,18 @@
          landmarkName = "-fill"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Memorizer/Classes/Utilities/CustomUIObjects/DescriptionTableViewCell/DescriptionTableViewCell.m"
+         timestampString = "390256656.344343"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "19"
+         endingLineNumber = "19"
+         landmarkName = "-playSound:"
+         landmarkType = "5">
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
