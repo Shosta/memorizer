@@ -23,4 +23,6 @@
 
 @interface DescriptionTableViewCell : AutoResizeLabelTableViewCell
 
+@property (nonatomic, retain) NSString *soundFileName;
+
 @end

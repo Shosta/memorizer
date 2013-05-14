@@ -8,8 +8,22 @@
 
 #import "DescriptionTableViewCell.h"
 #import "UILabel+Size.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation DescriptionTableViewCell
+
+
+#pragma mark - Play Sound
+
+- (IBAction)playSound:(id)sender{
+    NSString *soundFilePath = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], _soundFileName];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    player.numberOfLoops = -1; //Infinite
+    
+    [player play];
+}
 
 
 #pragma mark - Redraw
