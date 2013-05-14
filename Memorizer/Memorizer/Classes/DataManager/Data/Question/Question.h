@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Rémi Lavedrine. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Card.h"
 
 //! @brief Describes a Question object.
 //! @class Question
 //! @ingroup Data
 //! @author Rémi Lavedrine
-@interface Question : NSObject
+@interface Question : Card
 @property (nonatomic, retain) NSString *statement;
 @property (nonatomic, retain) NSString *answer;
 @property (nonatomic, retain) NSString *description;

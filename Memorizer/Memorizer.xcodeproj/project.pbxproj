@@ -52,6 +52,7 @@
 		F227DDDB17184C3600D694DE /* QuestionSetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DDD917184C3600D694DE /* QuestionSetsViewController.xib */; };
 		F227DDDD171852EE00D694DE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DDDC171852EE00D694DE /* MainWindow.xib */; };
 		F227DE0817185CE000D694DE /* QuestionSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DE0717185CE000D694DE /* QuestionSetTableViewCell.xib */; };
+		F286450417428D0B00621F39 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F286450317428D0B00621F39 /* Card.m */; };
 		F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */ = {isa = PBXBuildFile; fileRef = F28BE51A1714664600B4AC13 /* nextQuestion.png */; };
 		F292F8941716AE3100F3723A /* QuestionMemorizationLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */; };
 		F292F8951716AE3100F3723A /* QuestionMemorizationLevelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F292F8931716AE3100F3723A /* QuestionMemorizationLevelViewController.xib */; };
@@ -186,6 +187,8 @@
 		F227DDD917184C3600D694DE /* QuestionSetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetsViewController.xib; path = QuestionSetsViewController/QuestionSetsViewController.xib; sourceTree = "<group>"; };
 		F227DDDC171852EE00D694DE /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		F227DE0717185CE000D694DE /* QuestionSetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetTableViewCell.xib; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetTableViewCell.xib; sourceTree = "<group>"; };
+		F286450217428D0B00621F39 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = CustomObjects/Card/Card.h; sourceTree = "<group>"; };
+		F286450317428D0B00621F39 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = CustomObjects/Card/Card.m; sourceTree = "<group>"; };
 		F28BE51A1714664600B4AC13 /* nextQuestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextQuestion.png; sourceTree = "<group>"; };
 		F292F8911716AE3000F3723A /* QuestionMemorizationLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionMemorizationLevelViewController.h; path = QuestionViewController/QuestionMemorizationLevelViewController.h; sourceTree = "<group>"; };
 		F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionMemorizationLevelViewController.m; path = QuestionViewController/QuestionMemorizationLevelViewController.m; sourceTree = "<group>"; };
@@ -283,6 +286,7 @@
 		A844A55216FB192C0021037B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F286450617428D1600621F39 /* CustomObjects */,
 				F2F8D806171416ED007FC71A /* CustomUIObjects */,
 				F2F8D7FD171416E8007FC71A /* Categories */,
 				A844A55316FB192C0021037B /* Log */,
@@ -555,6 +559,23 @@
 				F227DDD5171836F100D694DE /* OLStatusViewDelegate.h */,
 			);
 			path = StatusBar;
+			sourceTree = "<group>";
+		};
+		F286450517428D1200621F39 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				F286450217428D0B00621F39 /* Card.h */,
+				F286450317428D0B00621F39 /* Card.m */,
+			);
+			name = Card;
+			sourceTree = "<group>";
+		};
+		F286450617428D1600621F39 /* CustomObjects */ = {
+			isa = PBXGroup;
+			children = (
+				F286450517428D1200621F39 /* Card */,
+			);
+			name = CustomObjects;
 			sourceTree = "<group>";
 		};
 		F28BE5191714664600B4AC13 /* QuestionViewController */ = {
@@ -965,6 +986,7 @@
 				A8D07596173963C800AE3EC9 /* QuestionSetsStatisticsViewController.m in Sources */,
 				A8D0759A17396A2500AE3EC9 /* CardToReviseNumberStatistics.m in Sources */,
 				A8D0759D17396B4600AE3EC9 /* NSDate+AddDays.m in Sources */,
+				F286450417428D0B00621F39 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
