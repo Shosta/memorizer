@@ -9,7 +9,7 @@
                         "description": "C'est un verbe irréguliers du 1er groupe",
                         "image": "",
                         "video": "",
-                        "sound": ""
+                        "sound": "pay.mp3"
                     },
                     {
                         "statement": "Read",
@@ -17,7 +17,7 @@
                         "description": "C'est un verbe irréguliers du 1er groupe",
                         "image": "",
                         "video": "",
-                        "sound": ""
+                        "sound": "read.mp3"
                     },
                     {
                         "statement": "Take",
@@ -25,7 +25,7 @@
                         "description": "C'est un verbe irréguliers du 1er groupe",
                         "image": "",
                         "video": "",
-                        "sound": ""
+                        "sound": "take.mp3"
                     },
                     {
                         "statement": "Sing",
@@ -33,7 +33,7 @@
                         "description": "C'est un verbe irréguliers du 1er groupe",
                         "image": "",
                         "video": "",
-                        "sound": ""
+                        "sound": "sing.mp3"
                     }
                 ]
         },
@@ -46,7 +46,7 @@
                         "description": "C'est un verbe irréguliers du 1er groupe",
                         "image": "",
                         "video": "",
-                        "sound": ""
+                        "sound": "pay.mp3"
                     },
                     {
                         "statement": "Readen",
@@ -54,7 +54,7 @@
                         "description": "C'est un verbe irréguliers du 1er groupe",
                         "image": "",
                         "video": "",
-                        "sound": ""
+                        "sound": "read.mp3"
                     },
                     {
                         "statement": "Takieren",
@@ -62,7 +62,7 @@
                         "description": "C'est un verbe irréguliers du 1er groupe",
                         "image": "",
                         "video": "",
-                        "sound": ""
+                        "sound": "take.mp3"
                     },
                     {
                         "statement": "Singen",
@@ -70,7 +70,7 @@
                         "description": "C'est un verbe irréguliers du 1er groupe",
                         "image": "",
                         "video": "",
-                        "sound": ""
+                        "sound": "sing.mp3"
                     }
                 ]
         }
