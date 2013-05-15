@@ -1,0 +1,76 @@
+//
+//  HelpViewController.m
+//  Memorizer
+//
+//  Created by Rémi LAVEDRINE on 15/05/13.
+//  Copyright (c) 2013 Rémi Lavedrine. All rights reserved.
+//
+
+#import "HelpViewController.h"
+#import "GuiUtilities.h"
+
+@interface HelpViewController ()
+
+@end
+
+@implementation HelpViewController
+
+
+#pragma mark - Help View
+
+/**
+ @brief Add the help view on top of the current view.
+ @author : Rémi Lavedrine
+ @date : 10/09/2012
+ @remarks : <#(optional)#>
+ */
+- (IBAction)addHelpSubview{
+  [GuiUtilities performUpdateAnimationForView:self.helpImageView];
+}
+
+/**
+ @brief  the help view from its superview.
+ @author : Rémi Lavedrine
+ @date : 10/09/2012
+ @remarks : <#(optional)#>
+ */
+- (IBAction)removeHelpSubviewFromSuperView{
+  [GuiUtilities performHideAnimationForView:self.helpImageView];
+}
+
+
+#pragma mark - Birth
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil helpImageViewName:(NSString *)helpImageViewName
+{
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    // Custom initialization
+    UIImage *helpImage = [UIImage imageNamed:helpImageViewName];
+    [self.helpImageView setImage:helpImage];
+  }
+  
+  return self;
+}
+
+
+#pragma mark - View
+
+- (void)addHelpButtonOnNavigationBar{
+  /*UIButton *helpButton = [[UIButton alloc] init];
+  [helpButton setTitle:@"i" forState:UIControlStateNormal];
+  UIBarButtonItem *displayHelpButtonItem = [[UIBarButtonItem alloc] initWithCustomView:helpButton];*/
+  
+  UIBarButtonItem *displayHelpButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(addHelpSubview)];
+  self.navigationItem.rightBarButtonItem = displayHelpButtonItem;
+}
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  
+  [self.helpImageView setBackgroundColor:[UIColor clearColor]];
+  [self.helpImageView setUserInteractionEnabled:YES];
+}
+
+
+@end

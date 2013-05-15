@@ -19,9 +19,9 @@
 // @brief
 // 
 
-#import <UIKit/UIKit.h>
+#import "HelpViewController.h"
 
-@interface QuestionSetsViewController : UIViewController
+@interface QuestionSetsViewController : HelpViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

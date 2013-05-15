@@ -51,6 +51,7 @@ static const int kDescriptionSection = 2;
     [super viewDidLoad];
     
     [self.nextQuestionButton setUserInteractionEnabled:NO];
+  [self addHelpButtonOnNavigationBar];
 }
 
 

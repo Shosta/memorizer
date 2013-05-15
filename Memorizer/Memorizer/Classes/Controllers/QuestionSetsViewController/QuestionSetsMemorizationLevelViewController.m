@@ -81,6 +81,8 @@
   NSString *message = @"Pas de question pour aujourd'hui.\nAttendez quelques jours pour la prochaine série ou bien faites une série juste pour l'entraînement.";
   self.statusView = [[OLStatusView alloc] initWithStatusLabel:message textFont:[UIFont fontWithName:@"Helvetica" size:16] orientation:UIInterfaceOrientationPortrait translationDirection:DownToUp];
   self.statusView.delegate = self;
+  
+  [self addHelpButtonOnNavigationBar];
 }
 
 

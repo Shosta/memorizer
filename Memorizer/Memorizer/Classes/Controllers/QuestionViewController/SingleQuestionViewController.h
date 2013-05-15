@@ -21,12 +21,12 @@
 // It handles as well the interaction to pass to the next question only when the user displays the answer.
 //
 
-#import <UIKit/UIKit.h>
+#import "HelpViewController.h"
 
 static NSString *kShouldDisplayAnswerKey = @"shouldDisplayAnswer";
 static NSString *kShouldDisplayDescriptionKey = @"shouldDisplayDescription";
 
-@interface SingleQuestionViewController : UIViewController
+@interface SingleQuestionViewController : HelpViewController
 
 @property (nonatomic, retain) NSMutableArray *questionsArray;
 @property int currentQuestionIndex;

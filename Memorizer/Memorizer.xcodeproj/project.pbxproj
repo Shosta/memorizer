@@ -249,6 +249,9 @@
 		F227DDDD171852EE00D694DE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DDDC171852EE00D694DE /* MainWindow.xib */; };
 		F227DE0817185CE000D694DE /* QuestionSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DE0717185CE000D694DE /* QuestionSetTableViewCell.xib */; };
 		F2426AE71743A3E900101E52 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2426AE61743A3E900101E52 /* AudioToolbox.framework */; };
+		F2426AEB1743B10200101E52 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2426AE91743B10200101E52 /* HelpViewController.m */; };
+		F2426AEC1743B10200101E52 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2426AEA1743B10200101E52 /* HelpViewController.xib */; };
+		F2426AF31743B28600101E52 /* GuiUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F2426AF21743B28600101E52 /* GuiUtilities.m */; };
 		F286450417428D0B00621F39 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F286450317428D0B00621F39 /* Card.m */; };
 		F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */ = {isa = PBXBuildFile; fileRef = F28BE51A1714664600B4AC13 /* nextQuestion.png */; };
 		F292F8941716AE3100F3723A /* QuestionMemorizationLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */; };
@@ -581,6 +584,11 @@
 		F227DDDC171852EE00D694DE /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		F227DE0717185CE000D694DE /* QuestionSetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetTableViewCell.xib; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetTableViewCell.xib; sourceTree = "<group>"; };
 		F2426AE61743A3E900101E52 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F2426AE81743B10200101E52 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpViewController.h; path = CustomViewControllers/HelpViewController/HelpViewController.h; sourceTree = "<group>"; };
+		F2426AE91743B10200101E52 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpViewController.m; path = CustomViewControllers/HelpViewController/HelpViewController.m; sourceTree = "<group>"; };
+		F2426AEA1743B10200101E52 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HelpViewController.xib; path = CustomViewControllers/HelpViewController/HelpViewController.xib; sourceTree = "<group>"; };
+		F2426AF11743B28600101E52 /* GuiUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiUtilities.h; sourceTree = "<group>"; };
+		F2426AF21743B28600101E52 /* GuiUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuiUtilities.m; sourceTree = "<group>"; };
 		F286450217428D0B00621F39 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = CustomObjects/Card/Card.h; sourceTree = "<group>"; };
 		F286450317428D0B00621F39 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = CustomObjects/Card/Card.m; sourceTree = "<group>"; };
 		F28BE51A1714664600B4AC13 /* nextQuestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextQuestion.png; sourceTree = "<group>"; };
@@ -684,6 +692,8 @@
 			children = (
 				F286450617428D1600621F39 /* CustomObjects */,
 				F2F8D806171416ED007FC71A /* CustomUIObjects */,
+				F2426AEE1743B11A00101E52 /* CustomViewControllers */,
+				F2426AEF1743B28600101E52 /* UIUtilities */,
 				F2F8D7FD171416E8007FC71A /* Categories */,
 				A844A55316FB192C0021037B /* Log */,
 			);
@@ -1158,6 +1168,41 @@
 				F227DDD5171836F100D694DE /* OLStatusViewDelegate.h */,
 			);
 			path = StatusBar;
+			sourceTree = "<group>";
+		};
+		F2426AED1743B10F00101E52 /* HelpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F2426AE81743B10200101E52 /* HelpViewController.h */,
+				F2426AE91743B10200101E52 /* HelpViewController.m */,
+				F2426AEA1743B10200101E52 /* HelpViewController.xib */,
+			);
+			name = HelpViewController;
+			sourceTree = "<group>";
+		};
+		F2426AEE1743B11A00101E52 /* CustomViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2426AED1743B10F00101E52 /* HelpViewController */,
+			);
+			name = CustomViewControllers;
+			sourceTree = "<group>";
+		};
+		F2426AEF1743B28600101E52 /* UIUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				F2426AF01743B28600101E52 /* GUIUtilities */,
+			);
+			path = UIUtilities;
+			sourceTree = "<group>";
+		};
+		F2426AF01743B28600101E52 /* GUIUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				F2426AF11743B28600101E52 /* GuiUtilities.h */,
+				F2426AF21743B28600101E52 /* GuiUtilities.m */,
+			);
+			path = GUIUtilities;
 			sourceTree = "<group>";
 		};
 		F286450517428D1200621F39 /* Card */ = {
@@ -1730,6 +1775,7 @@
 				A867F93C1742D240002D8B0F /* withdraw.mp3 in Resources */,
 				A867F93D1742D240002D8B0F /* wring.mp3 in Resources */,
 				A867F93E1742D240002D8B0F /* write.mp3 in Resources */,
+				F2426AEC1743B10200101E52 /* HelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1783,6 +1829,8 @@
 				A8D0759A17396A2500AE3EC9 /* CardToReviseNumberStatistics.m in Sources */,
 				A8D0759D17396B4600AE3EC9 /* NSDate+AddDays.m in Sources */,
 				F286450417428D0B00621F39 /* Card.m in Sources */,
+				F2426AEB1743B10200101E52 /* HelpViewController.m in Sources */,
+				F2426AF31743B28600101E52 /* GuiUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
