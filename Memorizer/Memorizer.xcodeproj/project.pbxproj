@@ -248,6 +248,7 @@
 		F227DDDB17184C3600D694DE /* QuestionSetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DDD917184C3600D694DE /* QuestionSetsViewController.xib */; };
 		F227DDDD171852EE00D694DE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DDDC171852EE00D694DE /* MainWindow.xib */; };
 		F227DE0817185CE000D694DE /* QuestionSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227DE0717185CE000D694DE /* QuestionSetTableViewCell.xib */; };
+		F2426AE71743A3E900101E52 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2426AE61743A3E900101E52 /* AudioToolbox.framework */; };
 		F286450417428D0B00621F39 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F286450317428D0B00621F39 /* Card.m */; };
 		F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */ = {isa = PBXBuildFile; fileRef = F28BE51A1714664600B4AC13 /* nextQuestion.png */; };
 		F292F8941716AE3100F3723A /* QuestionMemorizationLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */; };
@@ -579,6 +580,7 @@
 		F227DDD917184C3600D694DE /* QuestionSetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetsViewController.xib; path = QuestionSetsViewController/QuestionSetsViewController.xib; sourceTree = "<group>"; };
 		F227DDDC171852EE00D694DE /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		F227DE0717185CE000D694DE /* QuestionSetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetTableViewCell.xib; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetTableViewCell.xib; sourceTree = "<group>"; };
+		F2426AE61743A3E900101E52 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F286450217428D0B00621F39 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = CustomObjects/Card/Card.h; sourceTree = "<group>"; };
 		F286450317428D0B00621F39 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = CustomObjects/Card/Card.m; sourceTree = "<group>"; };
 		F28BE51A1714664600B4AC13 /* nextQuestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextQuestion.png; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2426AE71743A3E900101E52 /* AudioToolbox.framework in Frameworks */,
 				A867F9401742D728002D8B0F /* AVFoundation.framework in Frameworks */,
 				F2B2443B16E5F85500E11381 /* UIKit.framework in Frameworks */,
 				F2B2443D16E5F85500E11381 /* Foundation.framework in Frameworks */,
@@ -1203,6 +1206,7 @@
 		F2B2442E16E5F85500E11381 = {
 			isa = PBXGroup;
 			children = (
+				F2426AE61743A3E900101E52 /* AudioToolbox.framework */,
 				A867F93F1742D728002D8B0F /* AVFoundation.framework */,
 				F2B2444016E5F85500E11381 /* Memorizer */,
 				F2B2443916E5F85500E11381 /* Frameworks */,

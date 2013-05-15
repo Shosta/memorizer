@@ -40,18 +40,5 @@
          landmarkName = "-nextPresentationDateFromQuestionSet:"
          landmarkType = "5">
       </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/Controllers/QuestionViewController/QuestionMemorizationLevelViewController.m"
-         timestampString = "387471673.944431"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "114"
-         endingLineNumber = "114"
-         landmarkName = "@implementation QuestionMemorizationLevelViewController"
-         landmarkType = "3">
-      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
