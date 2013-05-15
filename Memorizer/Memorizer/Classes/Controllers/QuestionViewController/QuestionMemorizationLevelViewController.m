@@ -17,6 +17,29 @@ static const int kStatementSection = 0;
 static const int kAnswerSection = 1;
 static const int kDescriptionSection = 2;
 
+#pragma mark - Help View
+
+/**
+ @brief Add the help view on top of the current view.
+ @author : Rémi Lavedrine
+ @date : 10/09/2012
+ @remarks : <#(optional)#>
+ */
+- (IBAction)addHelpSubview{
+    NSString *helpImageName = @"QuestionHelpImage@2x.png";
+    if ([self.shouldDisplayAnswer boolValue] == YES) {
+        [self.helpImageContainerScrollView setContentSize:CGSizeMake(320, 940)];
+        [self.helpImageView setFrame:CGRectMake(0, 0, 320, 940)];
+        helpImageName = @"QuestionAnsweredHelpImage@2x.png";
+    }else{
+        [self.helpImageContainerScrollView setContentSize:CGSizeMake(320, 367)];
+        [self.helpImageView setFrame:CGRectMake(0, 0, 320, 367)];
+    }
+    [self.helpImageView setImage:[UIImage imageNamed:helpImageName]];
+    
+    [super addHelpSubview];
+}
+
 
 #pragma mark - Object
 

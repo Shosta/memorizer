@@ -10,12 +10,19 @@
 
 @interface HelpViewController : UIViewController
 
-@property (retain, nonatomic) IBOutlet UIImageView *helpImageView;
+@property (weak, nonatomic) IBOutlet UIScrollView *helpImageContainerScrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *helpImageView;
 
+
+#pragma mark - Help View
+//! Add the help view on top of the current view.
+- (IBAction)addHelpSubview;
 
 #pragma mark - Birth
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil helpImageViewName:(NSString *)helpImageViewName;
+//! 
+- (id)initWithNibName:(NSString *)nibNameOrNil
+               bundle:(NSBundle *)nibBundleOrNil
+    helpImageViewName:(NSString *)helpImageViewName;
 
 - (void)addHelpButtonOnNavigationBar;
 

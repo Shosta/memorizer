@@ -25,7 +25,8 @@
  @remarks : <#(optional)#>
  */
 - (IBAction)addHelpSubview{
-  [GuiUtilities performUpdateAnimationForView:self.helpImageView];
+    [self.helpImageContainerScrollView setUserInteractionEnabled:YES];
+  [GuiUtilities performUpdateAnimationForView:self.helpImageContainerScrollView];
 }
 
 /**
@@ -35,7 +36,9 @@
  @remarks : <#(optional)#>
  */
 - (IBAction)removeHelpSubviewFromSuperView{
-  [GuiUtilities performHideAnimationForView:self.helpImageView];
+    [self.helpImageContainerScrollView setUserInteractionEnabled:NO];
+    // [self.helpImageContainerScrollView setAlpha:0.0];
+  [GuiUtilities performHideAnimationForView:self.helpImageContainerScrollView];
 }
 
 

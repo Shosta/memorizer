@@ -217,6 +217,9 @@
 		A867F93D1742D240002D8B0F /* wring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A867F87A1742D240002D8B0F /* wring.mp3 */; };
 		A867F93E1742D240002D8B0F /* write.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A867F87B1742D240002D8B0F /* write.mp3 */; };
 		A867F9401742D728002D8B0F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A867F93F1742D728002D8B0F /* AVFoundation.framework */; };
+		A867F9431743FBB2002D8B0F /* QuestionSetHelpImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A867F9421743FBB2002D8B0F /* QuestionSetHelpImage@2x.png */; };
+		A867F9451743FE6C002D8B0F /* QuestionHelpImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A867F9441743FE6C002D8B0F /* QuestionHelpImage@2x.png */; };
+		A867F947174414C9002D8B0F /* QuestionAnsweredHelpImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A867F946174414C9002D8B0F /* QuestionAnsweredHelpImage@2x.png */; };
 		A878107116FB1C26003E3F91 /* QuestionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A878107016FB1C26003E3F91 /* QuestionSet.m */; };
 		A878107516FB1C74003E3F91 /* QuestionSet+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A878107416FB1C74003E3F91 /* QuestionSet+Parser.m */; };
 		A8A9E2C61721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A9E2C51721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib */; };
@@ -528,6 +531,9 @@
 		A867F87A1742D240002D8B0F /* wring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wring.mp3; sourceTree = "<group>"; };
 		A867F87B1742D240002D8B0F /* write.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = write.mp3; sourceTree = "<group>"; };
 		A867F93F1742D728002D8B0F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A867F9421743FBB2002D8B0F /* QuestionSetHelpImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuestionSetHelpImage@2x.png"; sourceTree = "<group>"; };
+		A867F9441743FE6C002D8B0F /* QuestionHelpImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuestionHelpImage@2x.png"; sourceTree = "<group>"; };
+		A867F946174414C9002D8B0F /* QuestionAnsweredHelpImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuestionAnsweredHelpImage@2x.png"; sourceTree = "<group>"; };
 		A878106F16FB1C26003E3F91 /* QuestionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSet.h; path = QuestionSet/QuestionSet.h; sourceTree = "<group>"; };
 		A878107016FB1C26003E3F91 /* QuestionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSet.m; path = QuestionSet/QuestionSet.m; sourceTree = "<group>"; };
 		A878107316FB1C74003E3F91 /* QuestionSet+Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "QuestionSet+Parser.h"; path = "QuestionSet/QuestionSet+Parser.h"; sourceTree = "<group>"; };
@@ -988,6 +994,16 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		A867F9411743FBB2002D8B0F /* HelpImages */ = {
+			isa = PBXGroup;
+			children = (
+				A867F9421743FBB2002D8B0F /* QuestionSetHelpImage@2x.png */,
+				A867F9441743FE6C002D8B0F /* QuestionHelpImage@2x.png */,
+				A867F946174414C9002D8B0F /* QuestionAnsweredHelpImage@2x.png */,
+			);
+			path = HelpImages;
+			sourceTree = "<group>";
+		};
 		A878107216FB1C2A003E3F91 /* QuestionSet */ = {
 			isa = PBXGroup;
 			children = (
@@ -1316,6 +1332,7 @@
 		F2D92A14171316EA006ED8A6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A867F9411743FBB2002D8B0F /* HelpImages */,
 				F292F8961716B8FA00F3723A /* MemorizationLevelButton */,
 				F2DE405517159CE800D34892 /* NavigationBar */,
 				F2EA3C191715ABAE0091FAF9 /* UITableView */,
@@ -1776,6 +1793,9 @@
 				A867F93D1742D240002D8B0F /* wring.mp3 in Resources */,
 				A867F93E1742D240002D8B0F /* write.mp3 in Resources */,
 				F2426AEC1743B10200101E52 /* HelpViewController.xib in Resources */,
+				A867F9431743FBB2002D8B0F /* QuestionSetHelpImage@2x.png in Resources */,
+				A867F9451743FE6C002D8B0F /* QuestionHelpImage@2x.png in Resources */,
+				A867F947174414C9002D8B0F /* QuestionAnsweredHelpImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
