@@ -132,6 +132,51 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
     [rootViewController refreshView];
 }
 
+- (void)addDaysToQuestion:(Question *)currentQuestion accordingTo:(MemorizationLevel)aMemorizationLevel{
+  int daysToAdd = 0;
+  
+  switch (aMemorizationLevel) {
+    case MemorizationLevel1:
+      // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
+      [self.questionsArray addObject:currentQuestion];
+      break;
+      
+    case MemorizationLevel2:
+      // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
+      [self.questionsArray addObject:currentQuestion];
+      break;
+      
+    case MemorizationLevel3:
+      // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
+      [self.questionsArray addObject:currentQuestion];
+      break;
+      
+    case MemorizationLevel4:
+      daysToAdd = [currentQuestion daysToAddAccordingToSM2:MemorizationLevel4];
+      break;
+      
+    case MemorizationLevel5:
+      daysToAdd = [currentQuestion daysToAddAccordingToSM2:MemorizationLevel5];
+      break;
+      
+    default:
+      break;
+  }
+  currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
+  [currentQuestion setUserLastMemorizationLevel:aMemorizationLevel];
+  
+  // Set up date components
+  NSDateComponents *components = [[NSDateComponents alloc] init];
+  [components setDay:daysToAdd];
+  
+  // Create a calendar
+  NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+  
+  NSDate *nextPresentationDate = [gregorian dateByAddingComponents:components toDate:currentQuestion.nextPresentationDate options:0];
+  OLLogDebug(@"Question : %@;\nCurrent Presentation Date : %@;\nDays to add : %d;\nNext presentation date: %@", currentQuestion.statement, currentQuestion.nextPresentationDate, daysToAdd, nextPresentationDate);
+  currentQuestion.nextPresentationDate = nextPresentationDate;
+}
+
 /**
  @brief Display the next Question on Screen.
  @author : Rémi Lavedrine
@@ -142,7 +187,11 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
  */
 - (void)displayNextQuestion{
     if ([self.shouldDisplayNextQuestion boolValue] == YES && self.currentQuestionIndex < [self.questionsArray count]){
-        [super displayNextQuestion];
+      Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
+      currentQuestion.numberOfRepetition += 1;
+      [self addDaysToQuestion:currentQuestion accordingTo:self.memorizationLevel];
+      
+      [super displayNextQuestion];
     
         // 1. Remove the MemorizationLevelFeedback label.
         [self hideMemorizationLevelSummaryContainerView];
@@ -287,15 +336,20 @@ static const float boundsHeight = 105.f;
     
     switch (aMemorizationLevel) {
         case MemorizationLevel1:
-            daysToAdd = 2;
+        daysToAdd = 0;
+        // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
+        [self.questionsArray addObject:[self.questionsArray objectAtIndex:self.currentQuestionIndex]];
             break;
             
         case MemorizationLevel2:
-            daysToAdd = 2;
+        daysToAdd = 0;
+        // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
+        [self.questionsArray addObject:[self.questionsArray objectAtIndex:self.currentQuestionIndex]];
             break;
             
-        case MemorizationLevel3:
-            daysToAdd = 4;
+      case MemorizationLevel3:
+        // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
+        [self.questionsArray addObject:[self.questionsArray objectAtIndex:self.currentQuestionIndex]];
             break;
             
         case MemorizationLevel4:
@@ -418,7 +472,7 @@ static const float boundsHeight = 105.f;
     self.memorizationLevel = [self memorisationLevelFromButton:sender];
     [self addSelectedStateToButton];
     
-    [self addDaysAccordingTo:self.memorizationLevel];
+  // [self addDaysAccordingTo:self.memorizationLevel];
     
     self.isMemorizationLevelChosen = [NSNumber numberWithBool:YES];
     

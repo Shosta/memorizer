@@ -34,7 +34,7 @@
     self = [super init];
     if (self) {
         self.userLastMemorizationLevel = NoMemorizationLevel; // Dernière note attribué a la carte.
-        self.easiness = 0.0;
+        self.easiness = 2.5;
         self.acq_reps = 0; // Le nombre de répétition dans la phase "Apprentissage"
         self.acq_reps_since_lapse = 0; // Le nombre de répétition dans la phase "Apprentissage" depuis un échec.
         self.ret_reps = 0; // Le nombre de répétition dans la phase "Révision"
@@ -42,6 +42,7 @@
         self.lapses = 0; // Le nombre d'échecs alors que l'on connaissait auparavant la réponse de la carte.
         self.scheduled_interval = 0; // C'est l'intervalle qui prend en compte l'heure à laquelle tu as fait la carte, par exemple si tu as fait la carte après 18h ça te rajoute un jour car si tu lance l'application à 8h tu n'auras pas eu l'intervalle réel à avoir.
         self.timing = @"ON TIME";
+      self.numberOfRepetition = 0;
     }
     
     return self;
@@ -223,5 +224,43 @@ int DAY = 1;
     
     return daysToAdd;
 }
+
+
+- (float)easinessFromResponseQuality:(MemorizationLevel)newMemorizationLevel{
+  float currentEasiness = self.easiness;
+  float newEasiness = currentEasiness - 0.8 + 0.28 * newMemorizationLevel - 0.02 * newMemorizationLevel * newMemorizationLevel;
+  
+  if (newEasiness < 1.3){
+    newEasiness = 1.3;
+  }
+  
+  return newEasiness;
+}
+
+- (int)daysToAddForRepetition:(int)numberOfRepetition{
+  int daysToAdd = 1;
+  
+  if (numberOfRepetition == 1) {
+    daysToAdd = 1;
+  }
+  else if (numberOfRepetition == 2) {
+    daysToAdd = 6;
+  }
+  else{
+    daysToAdd = [self daysToAddForRepetition:numberOfRepetition - 1] * self.easiness;
+  }
+  
+  return round(daysToAdd);
+}
+
+- (int)daysToAddAccordingToSM2:(MemorizationLevel)newMemorizationLevel{
+  self.easiness = [self easinessFromResponseQuality:newMemorizationLevel];
+  
+  int daysToAdd = [self daysToAddForRepetition:self.numberOfRepetition];
+  
+  return round(daysToAdd);
+}
+
+
 
 @end

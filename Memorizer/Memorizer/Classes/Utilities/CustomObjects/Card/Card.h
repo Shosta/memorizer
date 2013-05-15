@@ -37,4 +37,10 @@
 @property (nonatomic) MemorizationLevel userLastMemorizationLevel;
 @property (nonatomic) int scheduled_interval; // C'est l'intervalle qui prend en compte l'heure à laquelle tu as fait la carte, par exemple si tu as fait la carte après 18h ça te rajoute un jour car si tu lance l'application à 8h tu n'auras pas eu l'intervalle réel à avoir.
 @property (nonatomic, retain) NSString *timing;
+
+@property (nonatomic) int numberOfRepetition;
+
+
+- (int)daysToAddAccordingToSM2:(MemorizationLevel)newMemorizationLevel;
+
 @end
