@@ -20,6 +20,7 @@
 // 
 
 #import "HelpViewController.h"
+#import "UINavigationController+Animations.h"
 
 @interface QuestionSetsViewController : HelpViewController
 

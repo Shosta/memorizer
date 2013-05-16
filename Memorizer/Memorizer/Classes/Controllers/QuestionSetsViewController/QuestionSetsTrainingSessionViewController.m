@@ -29,12 +29,12 @@
  */
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [aTableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+  
     QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
     NSMutableArray *questionsArray = currentQuestionSet.questionsArray;
     QuestionTrainingSessionViewController *questionViewController = [[QuestionTrainingSessionViewController alloc] initWithQuestionsArray:questionsArray];
-    [self.navigationController pushViewController:questionViewController animated:YES];
-    
+  
+  [self.navigationController pushViewControllerFromRight:questionViewController];
 }
 
 @end

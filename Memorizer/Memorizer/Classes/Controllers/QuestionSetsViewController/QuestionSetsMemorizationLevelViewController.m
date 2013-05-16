@@ -257,7 +257,8 @@
   NSMutableArray *questionsArray = nextPresentationQuestionSet.nextPresentationQuestionArray;
   if ([questionsArray count] > 0) {
     QuestionMemorizationLevelViewController *questionViewController = [[QuestionMemorizationLevelViewController alloc] initWithQuestionsArray:questionsArray];
-    [self.navigationController pushViewController:questionViewController animated:YES];
+    
+    [self.navigationController pushViewControllerFromRight:questionViewController];
   }else{
     NSString *message = [NSString stringWithFormat:@"Pas de question pour aujourd'hui.\nAttendez le %@ pour la prochaine série ou bien faites une série juste pour l'entraînement.", [self dayMonthYearFormatDate:nextPresentationQuestionSet.nextPresentationDate]];
     OLLogDebug(@"%@", message);

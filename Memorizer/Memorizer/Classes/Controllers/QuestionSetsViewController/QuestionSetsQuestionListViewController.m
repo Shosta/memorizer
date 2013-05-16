@@ -33,7 +33,7 @@
     QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
     NSMutableArray *questionsArray = currentQuestionSet.questionsArray;
     QuestionsListViewController *questionViewController = [[QuestionsListViewController alloc] initWithShortTitle:currentQuestionSet.shortTitle questionsArray:questionsArray];
-    [self.navigationController pushViewController:questionViewController animated:YES];    
+    [self.navigationController pushViewControllerFromRight:questionViewController];
 }
 
 @end

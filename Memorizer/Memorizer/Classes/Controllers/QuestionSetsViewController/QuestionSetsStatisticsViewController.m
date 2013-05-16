@@ -30,8 +30,9 @@
     [aTableView deselectRowAtIndexPath:indexPath animated:YES];
     
     QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-    StatisticsViewController *questionViewController = [[StatisticsViewController alloc] initWithQuestionSet:currentQuestionSet];
-    [self.navigationController pushViewController:questionViewController animated:YES];
+    StatisticsViewController *statisticsViewController = [[StatisticsViewController alloc] initWithQuestionSet:currentQuestionSet];
+  
+  [self.navigationController pushViewControllerFromRight:statisticsViewController];
 }
 
 @end
