@@ -41,6 +41,20 @@
   [GuiUtilities performHideAnimationForView:self.helpImageContainerScrollView];
 }
 
+/**
+ @brief Add the help view on top of the current view or remove it if it's already visible.
+ @author : Rémi Lavedrine
+ @date : 16/05/2013
+ @remarks : <#(optional)#>
+ */
+- (IBAction)addOrRemoveHelpSubview{
+  if (self.helpImageContainerScrollView.alpha == 0) {
+    [self addHelpSubview];
+  }else{
+    [self removeHelpSubviewFromSuperView];
+  }
+}
+
 
 #pragma mark - Birth
 
@@ -64,7 +78,7 @@
   [helpButton setTitle:@"i" forState:UIControlStateNormal];
   UIBarButtonItem *displayHelpButtonItem = [[UIBarButtonItem alloc] initWithCustomView:helpButton];*/
   
-  UIBarButtonItem *displayHelpButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(addHelpSubview)];
+  UIBarButtonItem *displayHelpButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(addOrRemoveHelpSubview)];
   self.navigationItem.rightBarButtonItem = displayHelpButtonItem;
 }
 
