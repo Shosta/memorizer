@@ -21,9 +21,16 @@
 
 #import <UIKit/UIKit.h>
 
+//! The Presentation Time for a question according to the Current Date and the question's next presentation date.
+typedef enum{
+  MajorStyle,
+  MinorStyle
+}CellPresentationStyle;
+
 @interface AutoResizeLabelTableViewCell : UITableViewCell
 
 @property (retain, nonatomic) IBOutlet UILabel *textLabel;
+@property (nonatomic) CellPresentationStyle cellPresentationStyle;
 
 #pragma mark - Redraw
 

@@ -19,6 +19,7 @@
   if (self != nil) {
     // UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellBackgroundTemplateColor.png"]];
     [self setBackgroundColor:[UIColor whiteColor]];
+    self.cellPresentationStyle = MinorStyle;
   }
   
   return self;

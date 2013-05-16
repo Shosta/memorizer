@@ -63,10 +63,12 @@
 #define QUESTIONSET_CELL_TEXT_FONT [UIFont boldSystemFontOfSize:17]
 
 //! Statement Cell Fonts
-#define STATEMENT_CELL_TEXT_FONT [UIFont systemFontOfSize:17]
+#define STATEMENT_CELL_TEXT_FONT_MAJOR_STYLE [UIFont boldSystemFontOfSize:17]
+#define STATEMENT_CELL_TEXT_FONT_MINOR_STYLE [UIFont systemFontOfSize:17]
 
 //! Answer Cell Fonts
-#define ANSWER_CELL_TEXT_FONT [UIFont systemFontOfSize:17]
+#define ANSWER_CELL_TEXT_FONT_MAJOR_STYLE [UIFont boldSystemFontOfSize:17]
+#define ANSWER_CELL_TEXT_FONT_MINOR_STYLE [UIFont systemFontOfSize:17]
 
 //! Description Cell Text Fonts
 #define DESCRIPTION_CELL_TEXT_FONT [UIFont systemFontOfSize:17]

@@ -153,7 +153,7 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)detailElementTextHeight:(NSString *)detailElementText{
-  CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:ANSWER_CELL_TEXT_FONT forWidth:kCellAnswerDefaultTextWidth];
+  CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:ANSWER_CELL_TEXT_FONT_MAJOR_STYLE forWidth:kCellAnswerDefaultTextWidth];
   
   return detailElementTextHeight ;
 }

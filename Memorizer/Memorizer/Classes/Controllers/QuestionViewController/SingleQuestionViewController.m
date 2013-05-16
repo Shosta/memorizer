@@ -77,8 +77,9 @@ static const int kDescriptionSection = 2;
 - (void)updateUIForKeypath:(NSString *)keyPath {
   if ([keyPath isEqualToString:kShouldDisplayAnswerKey]) {
     if ([self.shouldDisplayAnswer boolValue] == YES && [self.shouldDisplayDescription boolValue] == NO) {
+      // To reload the Statement Cell to change the font and color of the statement.
       // To display the Answer and change the Footer's title.
-      [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:kAnswerSection] withRowAnimation:UITableViewRowAnimationFade];
+      [self.tableView reloadData];
     }
 	}
   
@@ -168,6 +169,12 @@ static const int kDescriptionSection = 2;
   NSString *statement = currentQuestion.statement;
   [cell.textLabel setText:statement];
   
+  if ([self.shouldDisplayAnswer boolValue] == YES) {
+    [cell setCellPresentationStyle:MinorStyle];
+  }else{
+    [cell setCellPresentationStyle:MajorStyle];
+  }
+  
   return cell;
 }
 
@@ -197,9 +204,11 @@ static const int kDescriptionSection = 2;
     [cell.textLabel setText:answer];
     
     [cell fadeInDescriptionImageView];
+    [cell setCellPresentationStyle:MajorStyle];
   }else{
     [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
     [cell.textLabel setText:@"Réponse"];
+    [cell setCellPresentationStyle:MinorStyle];
   }
   
   return cell;
@@ -343,7 +352,7 @@ static const int kDescriptionSection = 2;
  @remarks : <#(optional)#>
  */
 - (CGFloat)detailElementTextHeight:(NSString *)detailElementText{
-  CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:ANSWER_CELL_TEXT_FONT forWidth:kCellAnswerDefaultTextWidth];
+  CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:ANSWER_CELL_TEXT_FONT_MAJOR_STYLE forWidth:kCellAnswerDefaultTextWidth];
   
   return detailElementTextHeight ;
 }

@@ -23,8 +23,16 @@
 - (void)layoutSubviews{
   [super layoutSubviews];
   
-  [self configureTextLabelUIWithLabelFont:STATEMENT_CELL_TEXT_FONT
-                               labelColor:STATEMENT_CELL_TEXT_COLOR
+  UIFont *cellTextLabelFont = STATEMENT_CELL_TEXT_FONT_MINOR_STYLE;
+  UIColor *cellTextLabelColor = STATEMENT_CELL_TEXT_COLOR_MINOR_STYLE;
+  
+  if (self.cellPresentationStyle == MajorStyle){
+    cellTextLabelFont = STATEMENT_CELL_TEXT_FONT_MAJOR_STYLE;
+    cellTextLabelColor = STATEMENT_CELL_TEXT_COLOR_MAJOR_STYLE;
+  }
+  
+  [self configureTextLabelUIWithLabelFont:cellTextLabelFont
+                               labelColor:cellTextLabelColor
                        labelTextAlignment:NSTextAlignmentLeft
                                labelWidth:kCellStatementDefaultTextWidth
                       labelStartXPosition:kCellStatementPaddingX
