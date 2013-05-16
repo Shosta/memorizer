@@ -21,7 +21,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Memorizer/Classes/Controllers/QuestionSetsViewController/QuestionSetsViewController.m"
-         timestampString = "387473866.543131"
+         timestampString = "390408207.599402"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "353"
@@ -39,32 +39,6 @@
          endingLineNumber = "30"
          landmarkName = "-nextPresentationDateFromQuestionSet:"
          landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/Controllers/QuestionViewController/QuestionMemorizationLevelViewController.m"
-         timestampString = "390396145.46537"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "192"
-         endingLineNumber = "192"
-         landmarkName = "-addDaysToQuestion:accordingTo:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/Controllers/QuestionViewController/QuestionMemorizationLevelViewController.m"
-         timestampString = "390325032.630943"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "138"
-         endingLineNumber = "138"
-         landmarkName = "@implementation QuestionMemorizationLevelViewController"
-         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -106,7 +80,7 @@
          landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Memorizer/Classes/Utilities/CustomObjects/Card/Card.m"
@@ -119,7 +93,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Memorizer/Classes/Utilities/CustomObjects/Card/Card.m"
@@ -130,27 +104,6 @@
          endingLineNumber = "168"
          landmarkName = "-addDaysToCardFromAquisitionToRetention:"
          landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Memorizer/Classes/Controllers/QuestionViewController/QuestionMemorizationLevelViewController.m"
-         timestampString = "390396484.064192"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "496"
-         endingLineNumber = "496"
-         landmarkName = "-setMemorizationLevelFromButton:"
-         landmarkType = "5">
-         <Actions>
-            <BreakpointActionProxy
-               ActionType = "Xcode.BreakpointAction.DebuggerCommand">
-               <ActionContent
-                  consoleCommand = "po self.memorizationLevel">
-               </ActionContent>
-            </BreakpointActionProxy>
-         </Actions>
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

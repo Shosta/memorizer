@@ -245,6 +245,7 @@
 		A8D36F4316FA5A07009268D2 /* NameValueArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */; };
 		F211472F1744DB1B00564478 /* NSDate+Comparisons.m in Sources */ = {isa = PBXBuildFile; fileRef = F211472E1744DB1B00564478 /* NSDate+Comparisons.m */; };
 		F211473217451AD800564478 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F211473117451AD800564478 /* QuartzCore.framework */; };
+		F2114735174532B200564478 /* UINavigationController+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = F2114734174532B200564478 /* UINavigationController+Animations.m */; };
 		F227DDCC1718007000D694DE /* QuestionSet+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDCB1718007000D694DE /* QuestionSet+Archiver.m */; };
 		F227DDCF1718044E00D694DE /* NextPresentationQuestionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDCE1718044D00D694DE /* NextPresentationQuestionSet.m */; };
 		F227DDD6171836F100D694DE /* OLStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDD4171836F100D694DE /* OLStatusView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -581,6 +582,8 @@
 		F211472D1744DB1B00564478 /* NSDate+Comparisons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Comparisons.h"; path = "NSDate+Comparisons/NSDate+Comparisons.h"; sourceTree = "<group>"; };
 		F211472E1744DB1B00564478 /* NSDate+Comparisons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Comparisons.m"; path = "NSDate+Comparisons/NSDate+Comparisons.m"; sourceTree = "<group>"; };
 		F211473117451AD800564478 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F2114733174532B200564478 /* UINavigationController+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Animations.h"; path = "UINavigationController+Animations/UINavigationController+Animations.h"; sourceTree = "<group>"; };
+		F2114734174532B200564478 /* UINavigationController+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Animations.m"; path = "UINavigationController+Animations/UINavigationController+Animations.m"; sourceTree = "<group>"; };
 		F227DDCA1718007000D694DE /* QuestionSet+Archiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "QuestionSet+Archiver.h"; path = "QuestionSet/QuestionSet+Archiver.h"; sourceTree = "<group>"; };
 		F227DDCB1718007000D694DE /* QuestionSet+Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "QuestionSet+Archiver.m"; path = "QuestionSet/QuestionSet+Archiver.m"; sourceTree = "<group>"; };
 		F227DDCD1718044D00D694DE /* NextPresentationQuestionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextPresentationQuestionSet.h; path = NextPresentationQuestionSet/NextPresentationQuestionSet.h; sourceTree = "<group>"; };
@@ -1172,6 +1175,15 @@
 			name = "NSDate+Comparisons";
 			sourceTree = "<group>";
 		};
+		F2114736174532B900564478 /* UINavigationController+Animations */ = {
+			isa = PBXGroup;
+			children = (
+				F2114733174532B200564478 /* UINavigationController+Animations.h */,
+				F2114734174532B200564478 /* UINavigationController+Animations.m */,
+			);
+			name = "UINavigationController+Animations";
+			sourceTree = "<group>";
+		};
 		F227DDD01718045300D694DE /* NextPresentationQuestionSet */ = {
 			isa = PBXGroup;
 			children = (
@@ -1444,6 +1456,7 @@
 				F2F8D801171416E9007FC71A /* UILabel+Size */,
 				A8D0759E17396B8600AE3EC9 /* NSDate+AddDays */,
 				F21147301744DB1F00564478 /* NSDate+Comparisons */,
+				F2114736174532B900564478 /* UINavigationController+Animations */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1867,6 +1880,7 @@
 				F2426AEB1743B10200101E52 /* HelpViewController.m in Sources */,
 				F2426AF31743B28600101E52 /* GuiUtilities.m in Sources */,
 				F211472F1744DB1B00564478 /* NSDate+Comparisons.m in Sources */,
+				F2114735174532B200564478 /* UINavigationController+Animations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
