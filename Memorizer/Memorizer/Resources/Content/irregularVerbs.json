@@ -2,6 +2,7 @@
     "questionSets": [
         {
                 "title": "Les verbes irréguliers anglais",
+                     "shortTitle": "Anglais",
                 "list": [
                     {
                         "statement": "Pay",
@@ -38,7 +39,8 @@
                 ]
         },
         {
-                "title": "Les verbes irréguliers allemand",
+                     "title": "Les verbes irréguliers allemand",
+                     "shortTitle": "Allemand",
                 "list": [
                     {
                         "statement": "Payen",

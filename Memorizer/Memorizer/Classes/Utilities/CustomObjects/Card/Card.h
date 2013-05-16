@@ -27,6 +27,7 @@
 //! @author Rémi Lavedrine
 @interface Card : NSObject
 @property (nonatomic) float easiness; // Facteur EF comme l'algo SM-2
+@property (nonatomic) int lastNumberOfDaysAdded;
 @property (nonatomic) int acq_reps; // Le nombre de répétition dans la phase "Apprentissage"
 @property (nonatomic) int acq_reps_since_lapse; // Le nombre de répétition dans la phase "Apprentissage" depuis un échec.
 @property (nonatomic) int ret_reps; // Le nombre de répétition dans la phase "Révision"
@@ -36,11 +37,12 @@
 // @property (nonatomic) int grade; // Dernière note attribué a la carte.
 @property (nonatomic) MemorizationLevel userLastMemorizationLevel;
 @property (nonatomic) int scheduled_interval; // C'est l'intervalle qui prend en compte l'heure à laquelle tu as fait la carte, par exemple si tu as fait la carte après 18h ça te rajoute un jour car si tu lance l'application à 8h tu n'auras pas eu l'intervalle réel à avoir.
-@property (nonatomic, retain) NSString *timing;
+@property (nonatomic) PresentationTime timing;
+@property (nonatomic, retain) NSDate *nextPresentationDate;
 
 @property (nonatomic) int numberOfRepetition;
 
 
-- (int)daysToAddAccordingToSM2:(MemorizationLevel)newMemorizationLevel;
+- (int)daysToAddAccordingTo:(MemorizationLevel)newMemorizationLevel;
 
 @end

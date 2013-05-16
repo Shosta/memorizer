@@ -216,7 +216,6 @@
 		A867F93C1742D240002D8B0F /* withdraw.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A867F8791742D240002D8B0F /* withdraw.mp3 */; };
 		A867F93D1742D240002D8B0F /* wring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A867F87A1742D240002D8B0F /* wring.mp3 */; };
 		A867F93E1742D240002D8B0F /* write.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A867F87B1742D240002D8B0F /* write.mp3 */; };
-		A867F9401742D728002D8B0F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A867F93F1742D728002D8B0F /* AVFoundation.framework */; };
 		A867F9431743FBB2002D8B0F /* QuestionSetHelpImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A867F9421743FBB2002D8B0F /* QuestionSetHelpImage@2x.png */; };
 		A867F9451743FE6C002D8B0F /* QuestionHelpImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A867F9441743FE6C002D8B0F /* QuestionHelpImage@2x.png */; };
 		A867F947174414C9002D8B0F /* QuestionAnsweredHelpImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A867F946174414C9002D8B0F /* QuestionAnsweredHelpImage@2x.png */; };
@@ -244,6 +243,8 @@
 		A8D0759D17396B4600AE3EC9 /* NSDate+AddDays.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0759C17396B4600AE3EC9 /* NSDate+AddDays.m */; };
 		A8D36F3C16FA5623009268D2 /* Tokens.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F3B16FA5623009268D2 /* Tokens.m */; };
 		A8D36F4316FA5A07009268D2 /* NameValueArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */; };
+		F211472F1744DB1B00564478 /* NSDate+Comparisons.m in Sources */ = {isa = PBXBuildFile; fileRef = F211472E1744DB1B00564478 /* NSDate+Comparisons.m */; };
+		F211473217451AD800564478 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F211473117451AD800564478 /* QuartzCore.framework */; };
 		F227DDCC1718007000D694DE /* QuestionSet+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDCB1718007000D694DE /* QuestionSet+Archiver.m */; };
 		F227DDCF1718044E00D694DE /* NextPresentationQuestionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDCE1718044D00D694DE /* NextPresentationQuestionSet.m */; };
 		F227DDD6171836F100D694DE /* OLStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = F227DDD4171836F100D694DE /* OLStatusView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -577,6 +578,9 @@
 		A8D36F3B16FA5623009268D2 /* Tokens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tokens.m; sourceTree = "<group>"; };
 		A8D36F4116FA5A07009268D2 /* NameValueArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameValueArchiver.h; sourceTree = "<group>"; };
 		A8D36F4216FA5A07009268D2 /* NameValueArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameValueArchiver.m; sourceTree = "<group>"; };
+		F211472D1744DB1B00564478 /* NSDate+Comparisons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Comparisons.h"; path = "NSDate+Comparisons/NSDate+Comparisons.h"; sourceTree = "<group>"; };
+		F211472E1744DB1B00564478 /* NSDate+Comparisons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Comparisons.m"; path = "NSDate+Comparisons/NSDate+Comparisons.m"; sourceTree = "<group>"; };
+		F211473117451AD800564478 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F227DDCA1718007000D694DE /* QuestionSet+Archiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "QuestionSet+Archiver.h"; path = "QuestionSet/QuestionSet+Archiver.h"; sourceTree = "<group>"; };
 		F227DDCB1718007000D694DE /* QuestionSet+Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "QuestionSet+Archiver.m"; path = "QuestionSet/QuestionSet+Archiver.m"; sourceTree = "<group>"; };
 		F227DDCD1718044D00D694DE /* NextPresentationQuestionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextPresentationQuestionSet.h; path = NextPresentationQuestionSet/NextPresentationQuestionSet.h; sourceTree = "<group>"; };
@@ -669,8 +673,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F211473217451AD800564478 /* QuartzCore.framework in Frameworks */,
 				F2426AE71743A3E900101E52 /* AudioToolbox.framework in Frameworks */,
-				A867F9401742D728002D8B0F /* AVFoundation.framework in Frameworks */,
 				F2B2443B16E5F85500E11381 /* UIKit.framework in Frameworks */,
 				F2B2443D16E5F85500E11381 /* Foundation.framework in Frameworks */,
 				F2B2443F16E5F85500E11381 /* CoreGraphics.framework in Frameworks */,
@@ -1159,6 +1163,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		F21147301744DB1F00564478 /* NSDate+Comparisons */ = {
+			isa = PBXGroup;
+			children = (
+				F211472D1744DB1B00564478 /* NSDate+Comparisons.h */,
+				F211472E1744DB1B00564478 /* NSDate+Comparisons.m */,
+			);
+			name = "NSDate+Comparisons";
+			sourceTree = "<group>";
+		};
 		F227DDD01718045300D694DE /* NextPresentationQuestionSet */ = {
 			isa = PBXGroup;
 			children = (
@@ -1267,6 +1280,7 @@
 		F2B2442E16E5F85500E11381 = {
 			isa = PBXGroup;
 			children = (
+				F211473117451AD800564478 /* QuartzCore.framework */,
 				F2426AE61743A3E900101E52 /* AudioToolbox.framework */,
 				A867F93F1742D728002D8B0F /* AVFoundation.framework */,
 				F2B2444016E5F85500E11381 /* Memorizer */,
@@ -1429,6 +1443,7 @@
 				F2F8D7FE171416E9007FC71A /* NSString+LabelSize */,
 				F2F8D801171416E9007FC71A /* UILabel+Size */,
 				A8D0759E17396B8600AE3EC9 /* NSDate+AddDays */,
+				F21147301744DB1F00564478 /* NSDate+Comparisons */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1851,6 +1866,7 @@
 				F286450417428D0B00621F39 /* Card.m in Sources */,
 				F2426AEB1743B10200101E52 /* HelpViewController.m in Sources */,
 				F2426AF31743B28600101E52 /* GuiUtilities.m in Sources */,
+				F211472F1744DB1B00564478 /* NSDate+Comparisons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

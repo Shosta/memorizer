@@ -22,82 +22,85 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil
                bundle:(NSBundle *)nibBundleOrNil
+           shortTitle:(NSString *)aShortTitle
        questionsArray:(NSMutableArray *)aQuestionSetArray{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        self.questionsArray = aQuestionSetArray;
-    }
-    
-    return self;
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    // Custom initialization
+    self.shortTitle = aShortTitle;
+    self.questionsArray = aQuestionSetArray;
+  }
+  
+  return self;
 }
 
-- (id)initWithQuestionsArray:(NSMutableArray *)aQuestionSetArray{
-    return [self initWithNibName:@"QuestionsListViewController" bundle:nil questionsArray:aQuestionSetArray];
+- (id)initWithShortTitle:(NSString *)aShortTitle
+          questionsArray:(NSMutableArray *)aQuestionSetArray{
+  return [self initWithNibName:@"QuestionsListViewController" bundle:nil shortTitle:aShortTitle questionsArray:aQuestionSetArray];
 }
 
 
 #pragma mark - View
 
 - (void)viewDidLoad{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackgroundTemplateColor.png"]];
-    [self.view setBackgroundColor:color];
-    
-    [self.navigationItem setTitle:@"Ultimemo"];
+  [super viewDidLoad];
+  // Do any additional setup after loading the view from its nib.
+  UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackgroundTemplateColor.png"]];
+  [self.view setBackgroundColor:color];
+  
+  [self.navigationItem setTitle:self.shortTitle];
 }
 
 
 #pragma mark - Cell Count
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)aTableView{
-    int sectionCount = 1;
-    
-    return sectionCount;
+  int sectionCount = 1;
+  
+  return sectionCount;
 }
 
 - (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section{
-    int rowsInSection = [self.questionsArray count];
-    
-    return rowsInSection;
+  int rowsInSection = [self.questionsArray count];
+  
+  return rowsInSection;
 }
 
 
 #pragma mark - Cell
 
 - (void)configureCell:(QuestionTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
-    Question *currentQuestion = [self.questionsArray objectAtIndex:indexPath.row];
-    [cell.statementLabel setText:currentQuestion.statement];
-    [cell.answerLabel setText:currentQuestion.answer];
-    
-    NSMutableString *imageName = [NSMutableString stringWithString:@"level"];
-    MemorizationLevel memorizationLevel = currentQuestion.userLastMemorizationLevel;
-    switch (memorizationLevel) {
-        case MemorizationLevel1:
-            [imageName appendString:@"1.png"];
-            break;
-            
-        case MemorizationLevel2:
-            [imageName appendString:@"2.png"];
-            break;
-            
-        case MemorizationLevel3:
-            [imageName appendString:@"3.png"];
-            break;
-            
-        case MemorizationLevel4:
-            [imageName appendString:@"4.png"];
-            break;
-            
-        case MemorizationLevel5:
-            [imageName appendString:@"5.png"];
-            break;
-            
-        default:
-            break;
-    }
-    [cell.memorizationLevelImageView setImage:[UIImage imageNamed:imageName]];
+  Question *currentQuestion = [self.questionsArray objectAtIndex:indexPath.row];
+  [cell.statementLabel setText:currentQuestion.statement];
+  [cell.answerLabel setText:currentQuestion.answer];
+  
+  NSMutableString *imageName = [NSMutableString stringWithString:@"level"];
+  MemorizationLevel memorizationLevel = currentQuestion.userLastMemorizationLevel;
+  switch (memorizationLevel) {
+    case MemorizationLevel1:
+      [imageName appendString:@"1.png"];
+      break;
+      
+    case MemorizationLevel2:
+      [imageName appendString:@"2.png"];
+      break;
+      
+    case MemorizationLevel3:
+      [imageName appendString:@"3.png"];
+      break;
+      
+    case MemorizationLevel4:
+      [imageName appendString:@"4.png"];
+      break;
+      
+    case MemorizationLevel5:
+      [imageName appendString:@"5.png"];
+      break;
+      
+    default:
+      break;
+  }
+  [cell.memorizationLevelImageView setImage:[UIImage imageNamed:imageName]];
 }
 
 /**
@@ -107,23 +110,23 @@
  @remarks : <#(optional)#>
  */
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *CellIdentifier = @"QuestionTableViewCell";
-    QuestionTableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionTableViewCell"
-                                                                 owner:self
-                                                               options:nil];
-        
-        for(id currentObject in topLevelObjects){
-            if([currentObject isKindOfClass:[QuestionTableViewCell class]]){
-                cell = (QuestionTableViewCell *) currentObject;
-                break;
-            }
-        }
-    }
-    [self configureCell:cell atIndexPath:indexPath];
+  NSString *CellIdentifier = @"QuestionTableViewCell";
+  QuestionTableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  if (cell == nil) {
+    NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionTableViewCell"
+                                                             owner:self
+                                                           options:nil];
     
-    return cell;
+    for(id currentObject in topLevelObjects){
+      if([currentObject isKindOfClass:[QuestionTableViewCell class]]){
+        cell = (QuestionTableViewCell *) currentObject;
+        break;
+      }
+    }
+  }
+  [self configureCell:cell atIndexPath:indexPath];
+  
+  return cell;
 }
 
 
@@ -136,12 +139,12 @@
  @remarks : <#(optional)#>
  */
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [aTableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    Question *currentQuestion = [self.questionsArray objectAtIndex:indexPath.row];
-    NSMutableArray *questionsArray = [NSArray arrayWithObject:currentQuestion];
-    SingleQuestionViewController *questionViewController = [[SingleQuestionViewController alloc] initWithQuestionsArray:questionsArray];
-    [self.navigationController pushViewController:questionViewController animated:YES];
+  [aTableView deselectRowAtIndexPath:indexPath animated:YES];
+  
+  Question *currentQuestion = [self.questionsArray objectAtIndex:indexPath.row];
+  NSMutableArray *questionsArray = [NSArray arrayWithObject:currentQuestion];
+  SingleQuestionViewController *questionViewController = [[SingleQuestionViewController alloc] initWithQuestionsArray:questionsArray];
+  [self.navigationController pushViewController:questionViewController animated:YES];
 }
 
 

@@ -42,7 +42,7 @@
     [self.view setBackgroundColor:color];
     [self.statisticsTableView setBackgroundColor:color];
     
-    self.navigationItem.title = self.questionSet.title;
+    self.navigationItem.title = self.questionSet.shortTitle;
 }
 
 

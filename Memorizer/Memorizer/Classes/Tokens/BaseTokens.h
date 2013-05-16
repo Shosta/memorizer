@@ -80,10 +80,17 @@ typedef enum{
 
 //! The Memorization Level for a Question.
 typedef enum{
-    NoMemorizationLevel,
+  NoMemorizationLevel,
   MemorizationLevel1, // From the Worst.
   MemorizationLevel2,
   MemorizationLevel3,
   MemorizationLevel4,
   MemorizationLevel5  // To the Best.
 }MemorizationLevel;
+
+//! The Presentation Time for a question according to the Current Date and the question's next presentation date.
+typedef enum{
+  Earlier, // The question was presented earlier than the date it should.
+  OnTime, // The question was presented the correct it should.
+  Later// The question was presented later than the date it should.
+}PresentationTime;

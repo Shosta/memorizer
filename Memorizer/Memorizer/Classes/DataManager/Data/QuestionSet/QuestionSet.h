@@ -27,6 +27,7 @@
 //! @author Rémi Lavedrine
 @interface QuestionSet : NSObject
 @property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *shortTitle;
 @property (nonatomic, retain) NSMutableArray *questionsArray;
 
 @end

@@ -72,6 +72,7 @@
 					<object class="IBUITabBarItem" key="IBUITabBarItem" id="111718990">
 						<string key="IBUITitle">Memoriser</string>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<reference key="IBUITabBar" ref="738611258"/>
 					</object>
 					<reference key="IBUIParentViewController" ref="767106712"/>
 					<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
@@ -111,6 +112,7 @@
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="1030349548">
 							<string key="IBUITitle">S'entraîner</string>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							<reference key="IBUITabBar" ref="738611258"/>
 						</object>
 						<reference key="IBUIParentViewController" ref="767106712"/>
 						<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
@@ -149,6 +151,7 @@
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="331141747">
 							<string key="IBUITitle">Fiches</string>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							<reference key="IBUITabBar" ref="738611258"/>
 						</object>
 						<reference key="IBUIParentViewController" ref="767106712"/>
 						<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
@@ -187,6 +190,7 @@
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="698263980">
 							<string key="IBUITitle">Statistiques</string>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							<reference key="IBUITabBar" ref="738611258"/>
 						</object>
 						<reference key="IBUIParentViewController" ref="767106712"/>
 						<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
@@ -234,6 +238,13 @@
 						<bytes key="NSWhite">MCAwAA</bytes>
 					</object>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					<array class="NSMutableArray" key="IBUIItems">
+						<reference ref="111718990"/>
+						<reference ref="1030349548"/>
+						<reference ref="331141747"/>
+						<reference ref="698263980"/>
+					</array>
+					<reference key="IBUISelectedItem" ref="111718990"/>
 				</object>
 			</object>
 		</array>

@@ -10,12 +10,15 @@
 
 @interface QuestionsListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, retain) NSString *shortTitle;
 @property (nonatomic, retain) NSMutableArray *questionsArray;
 
 
 #pragma mark - Object
 //! Object constructor.
+//! @param[in]       aShortTitle : The Title for the NavigationBar that describes the QuestionSet.
 //! @param[in] aQuestionSetArray : The Question array to display within the View.
-- (id)initWithQuestionsArray:(NSMutableArray *)aQuestionsArray;
+- (id)initWithShortTitle:(NSString *)aShortTitle
+          questionsArray:(NSMutableArray *)aQuestionSetArray;
 
 @end

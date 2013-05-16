@@ -7,6 +7,7 @@
 //
 
 #import "Card.h"
+#import "NSDate+Comparisons.h"
 
 @implementation Card
 
@@ -35,13 +36,14 @@
     if (self) {
         self.userLastMemorizationLevel = NoMemorizationLevel; // Dernière note attribué a la carte.
         self.easiness = 2.5;
-        self.acq_reps = 0; // Le nombre de répétition dans la phase "Apprentissage"
+        self.lastNumberOfDaysAdded = 0;
+        /*self.acq_reps = 0; // Le nombre de répétition dans la phase "Apprentissage"
         self.acq_reps_since_lapse = 0; // Le nombre de répétition dans la phase "Apprentissage" depuis un échec.
         self.ret_reps = 0; // Le nombre de répétition dans la phase "Révision"
         self.ret_reps_since_lapse = 0; // Le nombre de répétition dans la phase "Révision" depuis un échec.
-        self.lapses = 0; // Le nombre d'échecs alors que l'on connaissait auparavant la réponse de la carte.
+        self.lapses = 0; // Le nombre d'échecs alors que l'on connaissait auparavant la réponse de la carte.*/
         self.scheduled_interval = 0; // C'est l'intervalle qui prend en compte l'heure à laquelle tu as fait la carte, par exemple si tu as fait la carte après 18h ça te rajoute un jour car si tu lance l'application à 8h tu n'auras pas eu l'intervalle réel à avoir.
-        self.timing = @"ON TIME";
+      self.timing = [self presentationTiming];
       self.numberOfRepetition = 0;
     }
     
@@ -51,29 +53,95 @@
 
 #pragma mark - Algo
 
-// TODO
-- (int)calculate_initial_interval:(int)grade{
-    return 0;
+/**
+ @brief Méthode qui va calculer l'intervalle en fonction de la note
+ @author : Rémi Lavedrine
+ @date : 16/05/2013
+ @remarks : 
+ Pour note de 0 ou 1 en fond de paquet.
+ Pour un 2 dans 1 jour.
+ Pour un 3 dans 3 jours.
+ Pour un 4 dans 4 jours.
+ Pour un 5 dans 7 jours.
+ */
+- (int)initialDaysToAdd:(MemorizationLevel)newMemorizationLevel{
+  int initialDaysToAdd = 0;
+  switch (newMemorizationLevel) {
+    case NoMemorizationLevel:
+      initialDaysToAdd = 0;
+      break;
+      
+    case MemorizationLevel1:
+      initialDaysToAdd = 0;
+      break;
+      
+    case MemorizationLevel2:
+      initialDaysToAdd = 1;
+      break;
+      
+    case MemorizationLevel3:
+      initialDaysToAdd = 3;
+      break;
+      
+    case MemorizationLevel4:
+      initialDaysToAdd = 4;
+      break;
+      
+    case MemorizationLevel5:
+      initialDaysToAdd = 7;
+      break;
+      
+    default:
+      initialDaysToAdd = 0;
+      break;
+  }
+  
+    return initialDaysToAdd;
 }
 
-// TODO
-- (int)calculate_interval_noise:(int)interval{
-    return 0;
+/**
+ @brief Ajoute ou retire des jours aléatoirement en fonction quand même de l'intervalle calculé pour je pense ne pas toujours avoir la même série
+ @author : Rémi Lavedrine
+ @date : 16/05/2013
+ @remarks : <#(optional)#>
+ */
+- (int)noiseToAddToDaysToAdd:(int)daysToAdd{
+  int noise = 0;
+  
+  if (daysToAdd == 0) {
+    noise = 0;
+  }
+  else {
+    daysToAdd = [[self randomElementFromArray:@[[NSNumber numberWithInt:0], [NSNumber numberWithInt:1]]] intValue] * DAY;
+  }
+  
+  return noise;
 }
 
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : <#current date#>
+ @remarks : <#(optional)#>
+ */
 - (int)addDaysToNewCard:(MemorizationLevel)newMemorizationLevel{
     int daysToAdd = 0;
     
     self.easiness = 2.5; // On place la "facilité" de la carte à la moitié (2.5 sur 5, la meilleure note).
     self.acq_reps = 1; // Le nombre de répétitions de la carte est à 1 vu que c'est une nouvelle carte.
     self.acq_reps_since_lapse = 1; // Le nombre de répétitions de la carte depuis le dernier echec est à 1 vu que c'est une nouvelle carte.
-    
-    // On appelle une méthode qui va calculer l'intervalle en fonction de la note pour note de 0 ou 1 en fond de paquet, pour un 2 dans 1 jour, pour un 3 dans 3 jours, pour un 4 dans 4 jours, pour un 5 dans 7 jours
-    daysToAdd = [self calculate_initial_interval:newMemorizationLevel];
+  
+    daysToAdd = [self initialDaysToAdd:newMemorizationLevel];
     
     return daysToAdd;
 }
 
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : <#current date#>
+ @remarks : <#(optional)#>
+ */
 - (int)addDaysToFailedCard{
     int daysToAdd = 0;
     
@@ -84,6 +152,12 @@
     return daysToAdd;
 }
 
+/**
+ @brief c
+ @author : Rémi Lavedrine
+ @date : <#current date#>
+ @remarks : <#(optional)#>
+ */
 int DAY = 1;
 - (int)addDaysToCardFromAquisitionToRetention:(MemorizationLevel)newMemorizationLevel{
     int daysToAdd = 0;
@@ -117,6 +191,12 @@ int DAY = 1;
     return daysToAdd;
 }
 
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : <#current date#>
+ @remarks : <#(optional)#>
+ */
 - (int)addDaysToCardFromRetentionToRetention:(MemorizationLevel)newMemorizationLevel{
     int daysToAdd = 0;
     int actual_interval = self.new_interval;
@@ -124,7 +204,7 @@ int DAY = 1;
     self.ret_reps += 1;
     self.ret_reps_since_lapse += 1;
 
-    if ([self.timing isEqualToString:@"LATE"] || [self.timing isEqualToString:@"ON TIME"]){
+    if (self.timing == Later || self.timing == OnTime){
         switch (newMemorizationLevel) {
             case MemorizationLevel2:
                 self.easiness -= 0.16;
@@ -151,20 +231,20 @@ int DAY = 1;
         }else{
             switch (self.userLastMemorizationLevel) {
                 case MemorizationLevel2:
-                    if ([self.timing isEqualToString:@"ON TIME"] || [self.timing isEqualToString:@"EARLY"]){
+                    if (self.timing == OnTime || self.timing == Earlier){
                         daysToAdd = actual_interval * self.easiness;
                     }else{
                         // Learning late and interval was too long, so don't increase the interval and use scheduled_interval again as opposed to the much larger actual_interval * card.easiness.
-                        daysToAdd = self.scheduled_interval;
+                        daysToAdd = self.lastNumberOfDaysAdded;
                     }
                     break;
                     
                 case MemorizationLevel3:
-                    if ([self.timing isEqualToString:@"ON TIME"] || [self.timing isEqualToString:@"EARLY"]){
+                    if (self.timing == OnTime || self.timing == Earlier){
                         daysToAdd = actual_interval * self.easiness;
                     }else{
                         // Learning late and interval was too long, so don't increase the interval and use scheduled_interval again as opposed to the much larger actual_interval * card.easiness.
-                        daysToAdd = self.scheduled_interval;
+                        daysToAdd = self.lastNumberOfDaysAdded;
                     }
                     break;
                     
@@ -173,9 +253,9 @@ int DAY = 1;
                     break;
                     
                 case MemorizationLevel5:
-                    if ([self.timing isEqualToString:@"EARLY"]){
+                    if (self.timing == Earlier){
                         // Learning ahead and interval was too short. To avoid that the intervals increase explosively when learning ahead, take scheduled_interval as opposed to the much larger actual_interval * card.easiness.
-                        daysToAdd = self.scheduled_interval;
+                        daysToAdd = self.lastNumberOfDaysAdded;
                     }
                     else{
                         daysToAdd = actual_interval * self.easiness;
@@ -190,42 +270,85 @@ int DAY = 1;
         }
     }
     
-    // On ajoute ou retire des jours aléatoirement en fonction quand même de l'intervalle calculé pour je pense ne pas toujours avoir la même série
-    daysToAdd += [self calculate_interval_noise:newMemorizationLevel];
+  // On ajoute ou retire des jours aléatoirement en fonction quand même de l'intervalle calculé pour je pense ne pas toujours avoir la même série
+  daysToAdd += [self noiseToAddToDaysToAdd:newMemorizationLevel];
     
     return daysToAdd;
 }
 
-- (int)addDaysAccordingTo:(MemorizationLevel)newMemorizationLevel{
+- (int)daysToAddAccordingTo:(MemorizationLevel)newMemorizationLevel{
     int daysToAdd = 0;
     
     //  Si c'est une nouvelle carte
     if (self.userLastMemorizationLevel == -1){
         daysToAdd = [self addDaysToNewCard:newMemorizationLevel];
         
-    }else if ((self.userLastMemorizationLevel == MemorizationLevel1 ||  self.userLastMemorizationLevel == MemorizationLevel2) &&
-              (newMemorizationLevel == MemorizationLevel1 || newMemorizationLevel == MemorizationLevel2)){// Si l'ancienne note était de 0 ou 1 et la nouvelle de 0 ou 1 on met la carte en fond de paquet (new_interval = 0)
+    }else if ([self isMemorizationLevelInAcquisitionPhase:self.userLastMemorizationLevel] &&
+              [self isMemorizationLevelInAcquisitionPhase:newMemorizationLevel]){ // Si l'ancienne note était de 0 ou 1 et la nouvelle de 0 ou 1 on met la carte en fond de paquet (new_interval = 0)
+      // In the acquisition phase and staying there.
         daysToAdd = [self addDaysToFailedCard];
-        
-    }else if ((self.userLastMemorizationLevel >= NoMemorizationLevel && self.userLastMemorizationLevel <= MemorizationLevel1) &&
-              (newMemorizationLevel >= MemorizationLevel2 && newMemorizationLevel <= MemorizationLevel5)){
+      
+    }else if ([self isMemorizationLevelInRetentionPhase:self.userLastMemorizationLevel] &&
+               [self isMemorizationLevelInAcquisitionPhase:newMemorizationLevel]){ // Si l'ancienne note était entre 2 et 5 et la nouvelle de 0 ou 1 on met la carte en fond de paquet (new_interval = 0)
+        // In the retention phase and moving to the acquisition one.
+        daysToAdd = [self addDaysToFailedCard];
+      
+    }else if ([self isMemorizationLevelInAcquisitionPhase:self.userLastMemorizationLevel] &&
+              [self isMemorizationLevelInRetentionPhase:newMemorizationLevel]){
         // In the acquisition phase and moving to the retention phase.
-        [self addDaysToCardFromAquisitionToRetention:newMemorizationLevel];
+        daysToAdd = [self addDaysToCardFromAquisitionToRetention:newMemorizationLevel];
         
-    }else if ((self.userLastMemorizationLevel >= MemorizationLevel2 && self.userLastMemorizationLevel <= MemorizationLevel5) &&
-              (newMemorizationLevel >= MemorizationLevel2 && newMemorizationLevel <= MemorizationLevel5)){
+    }else if ([self isMemorizationLevelInRetentionPhase:self.userLastMemorizationLevel] &&
+              [self isMemorizationLevelInRetentionPhase:newMemorizationLevel]){
         // In the retention phase and staying there.
-        [self addDaysToCardFromRetentionToRetention:newMemorizationLevel];
+        daysToAdd = [self addDaysToCardFromRetentionToRetention:newMemorizationLevel];
         
     }
     
-    // On ajoute ou retire des jours aléatoirement en fonction quand même de l'intervalle calculé pour je pense ne pas toujours avoir la même série
-    daysToAdd += [self calculate_interval_noise:daysToAdd];
+  // On ajoute ou retire des jours aléatoirement en fonction quand même de l'intervalle calculé pour je pense ne pas toujours avoir la même série
+  daysToAdd += [self noiseToAddToDaysToAdd:daysToAdd];
     
     return daysToAdd;
 }
 
 
+#pragma mark - Algo Helper
+
+- (BOOL)isMemorizationLevelInAcquisitionPhase:(MemorizationLevel)memorizationLevel{
+  BOOL result = (memorizationLevel == NoMemorizationLevel || memorizationLevel == MemorizationLevel1);
+  
+  return result;
+}
+
+- (BOOL)isMemorizationLevelInRetentionPhase:(MemorizationLevel)memorizationLevel{
+  BOOL result = (memorizationLevel == MemorizationLevel2 || memorizationLevel == MemorizationLevel3 || memorizationLevel == MemorizationLevel4 || memorizationLevel == MemorizationLevel5);
+  
+  return result;
+}
+
+- (PresentationTime)presentationTiming{
+  PresentationTime datePresented = OnTime;
+  
+  BOOL nextPresentationDateEarlierThanCurrentDate = [[NSDate date] isEarlierThan:self.nextPresentationDate];
+  if (nextPresentationDateEarlierThanCurrentDate) {
+    datePresented = Earlier;
+  }
+  
+  BOOL nextPresentationDateEqualThanCurrentDate = [[NSDate date] isSameDayAs:self.nextPresentationDate];
+  if (nextPresentationDateEqualThanCurrentDate) {
+    datePresented = OnTime;
+  }
+  
+  BOOL nextPresentationDateLaterThanCurrentDate = [[NSDate date] isLaterThan:self.nextPresentationDate];
+  if (nextPresentationDateLaterThanCurrentDate) {
+    datePresented = Later;
+  }
+  
+  return datePresented;
+}
+
+
+/*
 - (float)easinessFromResponseQuality:(MemorizationLevel)newMemorizationLevel{
   float currentEasiness = self.easiness;
   float newEasiness = currentEasiness - 0.8 + 0.28 * newMemorizationLevel - 0.02 * newMemorizationLevel * newMemorizationLevel;
@@ -259,7 +382,7 @@ int DAY = 1;
   int daysToAdd = [self daysToAddForRepetition:self.numberOfRepetition];
   
   return round(daysToAdd);
-}
+}*/
 
 
 

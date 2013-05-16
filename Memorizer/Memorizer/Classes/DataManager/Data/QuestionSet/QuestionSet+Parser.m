@@ -14,6 +14,7 @@
 
 #define kQuestionsArrayKey @"questions"
 #define kTitleKey @"title"
+#define kShortTitleKey @"shortTitle"
 #define kQuestionsArrayListKey @"list"
 
 /**
@@ -30,8 +31,14 @@
     if (questionSetDict != nil) {
         aQuestionSet.title = title;
     }
+  
+  // 2. Parse the Question shortTitle.
+  NSString *shortTitle = [questionSetDict objectForKey:kShortTitleKey];
+  if (questionSetDict != nil) {
+    aQuestionSet.shortTitle = shortTitle;
+  }
 
-    // 2. Parse the Question List.
+    // 3. Parse the Question List.
     NSArray *questionsArray = [questionSetDict objectForKey:kQuestionsArrayListKey];
     for (NSDictionary *questionDict in questionsArray) {
         [aQuestionSet.questionsArray addObject:[Question parse:questionDict]];

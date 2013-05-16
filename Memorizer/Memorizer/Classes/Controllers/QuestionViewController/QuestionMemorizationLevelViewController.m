@@ -166,20 +166,20 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
       
     case MemorizationLevel2:
       // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
-      [self.questionsArray addObject:currentQuestion];
+      daysToAdd = [currentQuestion daysToAddAccordingTo:MemorizationLevel2];
       break;
       
     case MemorizationLevel3:
       // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
-      [self.questionsArray addObject:currentQuestion];
+      daysToAdd = [currentQuestion daysToAddAccordingTo:MemorizationLevel3];
       break;
       
     case MemorizationLevel4:
-      daysToAdd = [currentQuestion daysToAddAccordingToSM2:MemorizationLevel4];
+      daysToAdd = [currentQuestion daysToAddAccordingTo:MemorizationLevel4];
       break;
       
     case MemorizationLevel5:
-      daysToAdd = [currentQuestion daysToAddAccordingToSM2:MemorizationLevel5];
+      daysToAdd = [currentQuestion daysToAddAccordingTo:MemorizationLevel5];
       break;
       
     default:
