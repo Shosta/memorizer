@@ -232,7 +232,7 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
     [self.memorizationLevelFeedbackLabel setText:[self selectedStateStringFromLevel:self.memorizationLevel]];
     [self displayMemorizationLevelSummaryContainerView];
     
-    [self performSelector:@selector(displayNextQuestion) withObject:nil afterDelay:2.0];
+    [self performSelector:@selector(displayNextQuestion) withObject:nil afterDelay:0.9];
 }
 
 
@@ -353,7 +353,7 @@ static const float boundsHeight = 105.f;
 
 
 #pragma mark - Memorization Level
-
+/*
 - (void)addDaysAccordingTo:(MemorizationLevel)aMemorizationLevel{
     int daysToAdd = 0;
     
@@ -399,7 +399,7 @@ static const float boundsHeight = 105.f;
     NSDate *nextPresentationDate = [gregorian dateByAddingComponents:components toDate:currentQuestion.nextPresentationDate options:0];
     OLLogDebug(@"Question : %@;\nCurrent Presentation Date : %@;\nDays to add : %d;\nNext presentation date: %@", currentQuestion.statement, currentQuestion.nextPresentationDate, daysToAdd, nextPresentationDate);
     currentQuestion.nextPresentationDate = nextPresentationDate;
-}
+}*/
 
 - (void)setSelectedState:(BOOL)isSelected toButton:(MemorizationLevel)memorizationLevel{
     switch (memorizationLevel) {
