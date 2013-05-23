@@ -43,6 +43,7 @@ extern int kCellQuestionSetTitleOriginMajorY;
 extern int kCellQuestionSetTitleOriginMinorY;
 extern int kCellQuestionSetDefaultTextWidth;
 extern int kCellQuestionSetInfoContainerViewHeight;
+extern int kCellQuestionSetListInfoContainerViewHeight;
 extern int kCellQuestionSetStatisticsInfoContainerViewHeight;
 
 //! Cell Statement

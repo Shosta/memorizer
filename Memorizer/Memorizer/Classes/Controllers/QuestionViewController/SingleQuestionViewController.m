@@ -383,8 +383,8 @@ shouldDisplayDescription:(BOOL)aShouldDisplayDescription{
  @date : 28/08/2012
  @remarks : <#(optional)#>
  */
-- (CGFloat)detailElementTextHeight:(NSString *)detailElementText{
-    CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:ANSWER_CELL_TEXT_FONT_MAJOR_STYLE forWidth:kCellAnswerDefaultTextWidth];
+- (CGFloat)detailElementTextHeight:(NSString *)detailElementText withFont:(UIFont *)detailElementTextFont{
+    CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:detailElementTextFont forWidth:kCellAnswerDefaultTextWidth];
     
     return detailElementTextHeight ;
 }
@@ -431,19 +431,21 @@ shouldDisplayDescription:(BOOL)aShouldDisplayDescription{
         int index = indexPath.section;
         switch (index) {
             case kStatementSection:
-                cellHeight = kCellStatementPaddingY + [self detailElementTextHeight:currentQuestion.statement] + kCellStatementPaddingY;
+                cellHeight = kCellStatementPaddingY + [self detailElementTextHeight:currentQuestion.statement withFont:STATEMENT_CELL_TEXT_FONT_MAJOR_STYLE] + kCellStatementPaddingY;
                 break;
                 
             case kAnswerSection:
-                cellHeight = kCellAnswerPaddingY + [self detailElementTextHeight:currentQuestion.answer] + kCellAnswerPaddingY;
+                cellHeight = kCellAnswerPaddingY + [self detailElementTextHeight:currentQuestion.answer withFont:ANSWER_CELL_TEXT_FONT_MAJOR_STYLE] + kCellAnswerPaddingY;
                 break;
                 
             default:
                 cellHeight = 30;
                 break;
         }
-    } else if (indexPath.row == 1) {cellHeight = kCellDescriptionPaddingY + [self detailElementTextHeight:currentQuestion.description] + kCellDescriptionPaddingY;
+    } else if (indexPath.row == 1) {
+        cellHeight = kCellDescriptionPaddingY + [self detailElementTextHeight:currentQuestion.description withFont:DESCRIPTION_CELL_TEXT_FONT] + kCellDescriptionPaddingY;
     }
+    
     if (cellHeight != 30 && cellHeight < minimumCellHeight) {
         cellHeight = minimumCellHeight;
     }
