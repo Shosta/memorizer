@@ -75,6 +75,21 @@
                         "sound": "sing"
                     }
                 ]
-        }
+        },
+                     {
+                     "title": "SET DE QUESTIONS DE TEST QUI SONT VRAIMENT TRÈS LONGUE AVEC PLEIN DE CARACTÈRES",
+                     "shortTitle": "Allemand",
+                     "list": [
+                              {
+                              "statement": "Quel est la couleur du chevale blanc d'Henri 4?",
+                              "answer": "J'ai l'impression que c'est blanc la réponse. Mais sinon vous pouvez regarder un cheval blanc et voir par vous même.",
+                              "description": "Voici une explication fumeuse.\nJ'ai l'impression que c'est blanc la réponse. Mais sinon vous pouvez regarder un cheval blanc et voir par vous même.",
+                              "image": "",
+                              "video": "",
+                              "sound": "pay"
+                              }
+                              ]
+                     }
+
     ]
 }
