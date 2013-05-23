@@ -506,7 +506,7 @@ shouldDisplayDescription:(BOOL)aShouldDisplayDescription{
 
 
 #pragma mark - Footer
-
+/*
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
     NSString *footerTitle = @"";
     switch (section) {
@@ -526,7 +526,7 @@ shouldDisplayDescription:(BOOL)aShouldDisplayDescription{
     
     return footerTitle;
 }
-
+*/
 
 
 @end
