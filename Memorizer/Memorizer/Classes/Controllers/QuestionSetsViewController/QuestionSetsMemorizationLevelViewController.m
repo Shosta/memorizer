@@ -233,7 +233,7 @@
   CGFloat cellHeight = 0;
   NextPresentationQuestionSet *currentQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
   
-    cellHeight = kCellQuestionSetTitleOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY + kCellQuestionSetInfoContainerViewHeight;
+    cellHeight = kCellQuestionSetTitleOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY + kCellQuestionSetInfoContainerViewHeight + kCellQuestionSetPaddingY;
 
   if (cellHeight < minimumCellHeight) {
     cellHeight = minimumCellHeight;

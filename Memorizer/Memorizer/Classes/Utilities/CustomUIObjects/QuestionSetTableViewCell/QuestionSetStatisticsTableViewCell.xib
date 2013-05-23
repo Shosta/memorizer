@@ -91,7 +91,7 @@
 							</object>
 							<object class="IBUIView" id="543404362">
 								<reference key="NSNextResponder" ref="446851555"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">-2147483356</int>
 								<string key="NSFrame">{{168, 0}, {1, 31}}</string>
 								<reference key="NSSuperview" ref="446851555"/>
 								<reference key="NSWindow"/>
@@ -236,7 +236,7 @@
 												<string key="NSFrame">{{10, 84}, {80, 34}}</string>
 												<reference key="NSSuperview" ref="392285391"/>
 												<reference key="NSWindow"/>
-												<reference key="NSNextKeyView" ref="727740718"/>
+												<reference key="NSNextKeyView" ref="65505171"/>
 												<string key="NSReuseIdentifierKey">_NS:9</string>
 												<bool key="IBUIOpaque">NO</bool>
 												<bool key="IBUIClipsSubviews">YES</bool>
@@ -264,13 +264,13 @@
 										</object>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									</object>
-									<object class="IBUIView" id="823459264">
+									<object class="IBUIView" id="307501847">
 										<reference key="NSNextResponder" ref="905394153"/>
 										<int key="NSvFlags">292</int>
 										<string key="NSFrameSize">{300, 1}</string>
 										<reference key="NSSuperview" ref="905394153"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView" ref="781431570"/>
+										<reference key="NSNextKeyView" ref="1010296656"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<object class="NSColor" key="IBUIBackgroundColor">
 											<int key="NSColorSpace">1</int>
@@ -342,7 +342,7 @@
 										<string key="NSFrame">{{52, 44}, {139, 34}}</string>
 										<reference key="NSSuperview" ref="905394153"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView" ref="823459264"/>
+										<reference key="NSNextKeyView" ref="1063018754"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<reference key="IBUIBackgroundColor" ref="530955454"/>
 										<bool key="IBUIOpaque">NO</bool>
@@ -395,7 +395,7 @@
 										<reference key="IBUIFont" ref="827674304"/>
 										<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 									</object>
-									<object class="IBUIView" id="781431570">
+									<object class="IBUIView" id="1063018754">
 										<reference key="NSNextResponder" ref="905394153"/>
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{0, 119}, {300, 1}}</string>
@@ -415,7 +415,6 @@
 										<string key="NSFrame">{{10, 128}, {280, 21}}</string>
 										<reference key="NSSuperview" ref="905394153"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
@@ -423,7 +422,10 @@
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 										<string key="IBUIText">Voir la suite</string>
-										<reference key="IBUITextColor" ref="490071222"/>
+										<object class="NSColor" key="IBUITextColor">
+											<int key="NSColorSpace">1</int>
+											<bytes key="NSRGB">MC4zNDUwOTgwMzkyIDAuNDE5NjA3ODQzMSAwLjQ0NzA1ODgyMzUAA</bytes>
+										</object>
 										<nil key="IBUIHighlightedColor"/>
 										<int key="IBUIBaselineAdjustment">0</int>
 										<object class="IBUIFontDescription" key="IBUIFontDescription">
@@ -439,19 +441,28 @@
 										</object>
 										<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 									</object>
+									<object class="IBUIImageView" id="65505171">
+										<reference key="NSNextResponder" ref="905394153"/>
+										<int key="NSvFlags">292</int>
+										<string key="NSFrame">{{0, 121}, {300, 36}}</string>
+										<reference key="NSSuperview" ref="905394153"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView" ref="727740718"/>
+										<string key="NSReuseIdentifierKey">_NS:9</string>
+										<bool key="IBUIUserInteractionEnabled">NO</bool>
+										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+										<object class="NSCustomResource" key="IBUIImage">
+											<string key="NSClassName">NSImage</string>
+											<string key="NSResourceName">questionSetStatisticsTableViewCellSelectionArrow@2x.png</string>
+										</object>
+									</object>
 								</array>
 								<string key="NSFrame">{{0, 83}, {300, 160}}</string>
 								<reference key="NSSuperview" ref="446851555"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="1010296656"/>
+								<reference key="NSNextKeyView" ref="307501847"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<object class="NSColor" key="IBUIBackgroundColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MQA</bytes>
-									<object class="NSColorSpace" key="NSCustomColorSpace">
-										<int key="NSID">2</int>
-									</object>
-								</object>
+								<reference key="IBUIBackgroundColor" ref="530955454"/>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
@@ -596,6 +607,7 @@
 						<int key="objectID">14</int>
 						<reference key="object" ref="543404362"/>
 						<reference key="parent" ref="988246517"/>
+						<string key="objectName">Vertical Divider - UIView</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">32</int>
@@ -608,9 +620,10 @@
 							<reference ref="999756690"/>
 							<reference ref="871694202"/>
 							<reference ref="808994181"/>
-							<reference ref="781431570"/>
+							<reference ref="1063018754"/>
 							<reference ref="392285391"/>
-							<reference ref="823459264"/>
+							<reference ref="307501847"/>
+							<reference ref="65505171"/>
 						</array>
 						<reference key="parent" ref="988246517"/>
 						<string key="objectName">Statistics Part Container View - UIView</string>
@@ -684,15 +697,20 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">54</int>
-						<reference key="object" ref="781431570"/>
+						<reference key="object" ref="1063018754"/>
 						<reference key="parent" ref="905394153"/>
 						<string key="objectName">Horizontal Divider - UIView</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">55</int>
-						<reference key="object" ref="823459264"/>
+						<reference key="object" ref="307501847"/>
 						<reference key="parent" ref="905394153"/>
 						<string key="objectName">Horizontal Divider - UIView</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">56</int>
+						<reference key="object" ref="65505171"/>
+						<reference key="parent" ref="905394153"/>
 					</object>
 				</array>
 			</object>
@@ -720,6 +738,7 @@
 				<string key="52.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="54.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="55.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -727,7 +746,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">55</int>
+			<int key="maxID">56</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -866,6 +885,7 @@
 			<string key="level1.png">{64, 64}</string>
 			<string key="level2.png">{64, 64}</string>
 			<string key="level3.png">{64, 64}</string>
+			<string key="questionSetStatisticsTableViewCellSelectionArrow@2x.png">{600, 80}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>

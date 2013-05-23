@@ -30,4 +30,8 @@
 //! @param [in] indexPath : The indexPath for the cell we want to calculate the "question done percent".
 - (float)questionDonePercentAtIndexPath:(NSIndexPath *)indexPath;
 
+//! <#Method comment#>
+//! @param[in] <#param#> : <#param description#>
+- (CGFloat)detailElementTextHeight:(NSString *)detailElementText;
+
 @end

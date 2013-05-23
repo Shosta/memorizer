@@ -165,7 +165,7 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat minimumCellHeight = 67;
+    CGFloat minimumCellHeight = 115;
     CGFloat cellHeight = 0;
     QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
     

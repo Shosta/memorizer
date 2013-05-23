@@ -18,6 +18,25 @@
 
 @implementation QuestionSetsQuestionListViewController
 
+/**
+ @brief Return custom height from each row based on each row data and assuming it is a GenericBalanceCell. Else it returns 0.
+ @author : Rémi Lavedrine
+ @date : 04/05/2012 (May the 4th be with you ^^)
+ @remarks : <#(optional)#>
+ */
+- (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat minimumCellHeight = 115;
+    CGFloat cellHeight = 0;
+    QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
+    
+    cellHeight = kCellQuestionSetTitleOriginMinorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY + kCellQuestionSetListInfoContainerViewHeight + kCellQuestionSetPaddingY;
+    
+    if (cellHeight < minimumCellHeight) {
+        cellHeight = minimumCellHeight;
+    }
+    
+    return cellHeight;
+}
 
 #pragma mark - Selection
 
