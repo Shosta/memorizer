@@ -320,7 +320,7 @@ static const float boundsHeight = 105.f;
 
 
 #pragma mark - Footer
-
+/*
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
     NSString *footerTitle = @"";
     switch (section) {
@@ -350,7 +350,7 @@ static const float boundsHeight = 105.f;
     }
     
     return footerTitle;
-}
+}*/
 
 
 #pragma mark - Memorization Level
