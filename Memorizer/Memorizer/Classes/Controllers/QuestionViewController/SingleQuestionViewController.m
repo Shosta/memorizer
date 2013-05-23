@@ -104,6 +104,8 @@ static const int kDescriptionSection = 2;
   UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackgroundTemplateColor.png"]];
   [self.view setBackgroundColor:color];
   [self.tableView setBackgroundColor:color];
+    
+    [self.navigationItem setTitle:@"Fiche"];
 }
 
 - (void)dealloc{
@@ -140,7 +142,11 @@ static const int kDescriptionSection = 2;
  @remarks : There is always 1 row per section.
  */
 - (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section{
-  int rowsInSection = 2; // There is one row for the information and another one for the cell that describes it.
+    int rowsInSection = 1;
+
+    if (section == 2) {
+        rowsInSection = 2;// There is one row for the information and another one for the cell that describes it.
+    }
   
   return rowsInSection;
 }
@@ -201,13 +207,15 @@ static const int kDescriptionSection = 2;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
     NSString *answer = currentQuestion.answer;
-    [cell.textLabel setText:answer];
+      [cell.textLabel setText:answer];
+      [cell setSoundFileName:currentQuestion.soundName];
     
     [cell fadeInDescriptionImageView];
+      [cell fadeInPlaySoundButton];
     [cell setCellPresentationStyle:MajorStyle];
   }else{
     [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
-    [cell.textLabel setText:@"Réponse"];
+    [cell.textLabel setText:@"Afficher la réponse"];
     [cell setCellPresentationStyle:MinorStyle];
   }
   
@@ -238,7 +246,6 @@ static const int kDescriptionSection = 2;
     Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
     NSString *description = currentQuestion.description;
     [cell.textLabel setText:description];
-      [cell setSoundFileName:currentQuestion.soundName];
   }
   
   return cell;
@@ -332,8 +339,12 @@ static const int kDescriptionSection = 2;
   UITableViewCell *cell = nil;
   
   if (indexPath.row == 0) {
-    // It's the row that describes the info for the section.
-    cell = [self contentDescriptionCellForRowAtIndexPath:indexPath];
+      if (indexPath.section == 0 || indexPath.section == 1) {
+          cell = [self tableView:aTableView infoDescriptionCellForRowAtIndexPath:indexPath];
+      }else{
+          // It's the row that describes the info for the section.
+          cell = [self contentDescriptionCellForRowAtIndexPath:indexPath];
+      }
     
   } else if (indexPath.row == 1) {
     cell = [self tableView:aTableView infoDescriptionCellForRowAtIndexPath:indexPath];
@@ -365,14 +376,14 @@ static const int kDescriptionSection = 2;
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
   CGFloat cellHeight = 0;
-  if (indexPath.row == 0) {
+  /*if (indexPath.row == 0) {
     cellHeight = 30;
   }else{
     CGFloat minimumCellHeight = 44;
     Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
     
     int index = indexPath.section;
-    switch (index) {
+      switch (index) {
       case kStatementSection:
         cellHeight = kCellStatementPaddingY + [self detailElementTextHeight:currentQuestion.statement] + kCellStatementPaddingY;
         break;
@@ -391,8 +402,31 @@ static const int kDescriptionSection = 2;
     if (cellHeight < minimumCellHeight) {
       cellHeight = minimumCellHeight;
     }
-  }
-  
+  }*/
+    CGFloat minimumCellHeight = 90;
+    Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
+    
+    if (indexPath.row == 0) {
+        int index = indexPath.section;
+        switch (index) {
+            case kStatementSection:
+                cellHeight = kCellStatementPaddingY + [self detailElementTextHeight:currentQuestion.statement] + kCellStatementPaddingY;
+                break;
+                
+            case kAnswerSection:
+                cellHeight = kCellAnswerPaddingY + [self detailElementTextHeight:currentQuestion.answer] + kCellAnswerPaddingY;
+                break;
+                
+            default:
+                cellHeight = 30;
+                break;
+        }
+    } else if (indexPath.row == 1) {cellHeight = kCellDescriptionPaddingY + [self detailElementTextHeight:currentQuestion.description] + kCellDescriptionPaddingY;
+    }
+    if (cellHeight != 30 && cellHeight < minimumCellHeight) {
+        cellHeight = minimumCellHeight;
+    }
+    
   return cellHeight;
 }
 
@@ -436,7 +470,7 @@ static const int kDescriptionSection = 2;
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
   [aTableView deselectRowAtIndexPath:indexPath animated:YES];
   
-  if (indexPath.row == 1) {
+  if (indexPath.row == 0) {
     switch (indexPath.section) {
       case kAnswerSection:
         [self displayDescription];
