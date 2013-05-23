@@ -31,6 +31,19 @@
     return self;
 }
 
+- (id)initWithQuestionSet:(QuestionSet *)aQuestionSet
+cardMemorizationLevelStatistics:(CardMemorizationLevelStatistics *)aCardMemorizationLevelStatistics{
+    self = [super initWithNibName:@"StatisticsViewController" bundle:nil];
+    if (self) {
+        // Custom initialization
+        self.questionSet = aQuestionSet;
+        self.cardMemorizationLevelStatistics = aCardMemorizationLevelStatistics;
+        self.cardToReviseNumberStatistics = [[CardToReviseNumberStatistics alloc] initWithQuestionsArray:aQuestionSet.questionsArray];
+    }
+    
+    return self;
+}
+
 
 #pragma mark - View
 

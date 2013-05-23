@@ -39,6 +39,18 @@ static NSString *kShouldDisplayDescriptionKey = @"shouldDisplayDescription";
 
 #pragma mark - Object
 //! Object constructor.
+//! @param[in]              nibNameOrNil : The nib name or nil.
+//! @param[in]            nibBundleOrNil : The nib bundle or nil.
+//! @param[in]         aQuestionSetArray : The Question array to display within the View.
+//! @param[in]      aShouldDisplayAnswer : A Boolean to know if we should display the Answer.
+//! @param[in] aShouldDisplayDescription : A Boolean to know if we should display the Description.
+- (id)initWithNibName:(NSString *)nibNameOrNil
+               bundle:(NSBundle *)nibBundleOrNil
+       questionsArray:(NSMutableArray *)aQuestionSetArray
+  shouldDisplayAnswer:(BOOL)aShouldDisplayAnswer
+shouldDisplayDescription:(BOOL)aShouldDisplayDescription;
+
+//! Object constructor.
 //! @param[in]      nibNameOrNil : The nib name or nil.
 //! @param[in]    nibBundleOrNil : The nib bundle or nil.
 //! @param[in] aQuestionSetArray : The Question array to display within the View.
@@ -49,6 +61,14 @@ static NSString *kShouldDisplayDescriptionKey = @"shouldDisplayDescription";
 //! Object constructor.
 //! @param[in] aQuestionSetArray : The Question array to display within the View.
 - (id)initWithQuestionsArray:(NSMutableArray *)aQuestionsArray;
+
+//! Object constructor.
+//! @param[in]         aQuestionSetArray : The Question array to display within the View.
+//! @param[in]      aShouldDisplayAnswer : A Boolean to know if we should display the Answer.
+//! @param[in] aShouldDisplayDescription : A Boolean to know if we should display the Description.
+- (id)initWithQuestionsArray:(NSMutableArray *)aQuestionSetArray
+         shouldDisplayAnswer:(BOOL)aShouldDisplayAnswer
+    shouldDisplayDescription:(BOOL)aShouldDisplayDescription;
 
 
 #pragma mark - KVO

@@ -143,7 +143,9 @@
   
   Question *currentQuestion = [self.questionsArray objectAtIndex:indexPath.row];
   NSMutableArray *questionsArray = [NSArray arrayWithObject:currentQuestion];
-  SingleQuestionViewController *questionViewController = [[SingleQuestionViewController alloc] initWithQuestionsArray:questionsArray];
+  SingleQuestionViewController *questionViewController = [[SingleQuestionViewController alloc] initWithQuestionsArray:questionsArray
+                                                                                                  shouldDisplayAnswer:YES
+                                                                                             shouldDisplayDescription:YES];
   [self.navigationController pushViewController:questionViewController animated:YES];
 }
 

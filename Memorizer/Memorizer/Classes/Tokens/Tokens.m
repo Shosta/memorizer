@@ -27,6 +27,7 @@ int kCellQuestionSetTitleOriginMajorY = 57;
 int kCellQuestionSetTitleOriginMinorY = 41;
 int kCellQuestionSetDefaultTextWidth = 280;
 int kCellQuestionSetInfoContainerViewHeight = 241;
+int kCellQuestionSetStatisticsInfoContainerViewHeight = 160;
 
 
 //! Cell Answer

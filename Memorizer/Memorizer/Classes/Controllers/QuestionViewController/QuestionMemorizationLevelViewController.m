@@ -354,53 +354,6 @@ static const float boundsHeight = 105.f;
 
 
 #pragma mark - Memorization Level
-/*
-- (void)addDaysAccordingTo:(MemorizationLevel)aMemorizationLevel{
-    int daysToAdd = 0;
-    
-    switch (aMemorizationLevel) {
-        case MemorizationLevel1:
-        daysToAdd = 0;
-        // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
-        [self.questionsArray addObject:[self.questionsArray objectAtIndex:self.currentQuestionIndex]];
-            break;
-            
-        case MemorizationLevel2:
-        daysToAdd = 0;
-        // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
-        [self.questionsArray addObject:[self.questionsArray objectAtIndex:self.currentQuestionIndex]];
-            break;
-            
-      case MemorizationLevel3:
-        // On est dans la phase d'acquisition, on remet la question à la fin de la liste pour que l'utilisteur la revoie encore une fois.
-        [self.questionsArray addObject:[self.questionsArray objectAtIndex:self.currentQuestionIndex]];
-            break;
-            
-        case MemorizationLevel4:
-            daysToAdd = 10;
-            break;
-            
-        case MemorizationLevel5:
-            daysToAdd = 15;
-            break;
-            
-        default:
-            break;
-    }
-    Question *currentQuestion = [self.questionsArray objectAtIndex:self.currentQuestionIndex];
-    [currentQuestion setUserLastMemorizationLevel:aMemorizationLevel];
-    
-    // Set up date components
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setDay:daysToAdd];
-    
-    // Create a calendar
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    
-    NSDate *nextPresentationDate = [gregorian dateByAddingComponents:components toDate:currentQuestion.nextPresentationDate options:0];
-    OLLogDebug(@"Question : %@;\nCurrent Presentation Date : %@;\nDays to add : %d;\nNext presentation date: %@", currentQuestion.statement, currentQuestion.nextPresentationDate, daysToAdd, nextPresentationDate);
-    currentQuestion.nextPresentationDate = nextPresentationDate;
-}*/
 
 - (void)setSelectedState:(BOOL)isSelected toButton:(MemorizationLevel)memorizationLevel{
     switch (memorizationLevel) {

@@ -242,6 +242,7 @@
 										<string key="NSFrame">{{10, 168}, {80, 34}}</string>
 										<reference key="NSSuperview" ref="80643223"/>
 										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
@@ -585,6 +586,7 @@
 							<reference ref="340095452"/>
 						</array>
 						<reference key="parent" ref="295725777"/>
+						<string key="objectName">Statistics Container View - UIView</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
@@ -620,26 +622,31 @@
 						<int key="objectID">13</int>
 						<reference key="object" ref="121584007"/>
 						<reference key="parent" ref="295725777"/>
+						<string key="objectName">Level 1 Description Label - UILabel</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
 						<reference key="object" ref="64866727"/>
 						<reference key="parent" ref="295725777"/>
+						<string key="objectName">Level 2 Description Label - UILabel</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">15</int>
 						<reference key="object" ref="585380629"/>
 						<reference key="parent" ref="295725777"/>
+						<string key="objectName">Level 3 Description Label - UILabel</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">16</int>
 						<reference key="object" ref="285567321"/>
 						<reference key="parent" ref="295725777"/>
+						<string key="objectName">Level 4 Description Label - UILabel</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
 						<reference key="object" ref="548132050"/>
 						<reference key="parent" ref="295725777"/>
+						<string key="objectName">Level 5 Description Label - UILabel</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">22</int>

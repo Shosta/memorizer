@@ -20,8 +20,14 @@
 
 
 #pragma mark - Object
-//! <#Method comment#>
-//! @param[in] <#param#> : <#param description#>
+//! Object constructor.
+//! @param[in] aQuestionSet : <#param description#>
 - (id)initWithQuestionSet:(QuestionSet *)aQuestionSet;
+
+//! Object constructor.
+//! @param[in]                     aQuestionSet : <#param description#>
+//! @param[in] aCardMemorizationLevelStatistics : <#param description#>
+- (id)initWithQuestionSet:(QuestionSet *)aQuestionSet
+cardMemorizationLevelStatistics:(CardMemorizationLevelStatistics *)aCardMemorizationLevelStatistics;
 
 @end

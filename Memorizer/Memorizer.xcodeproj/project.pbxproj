@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80B9176174EBB87006ACD0F /* QuestionSetStatisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AB1C1A174EB58B00D15BFF /* QuestionSetStatisticsTableViewCell.m */; };
 		A844A54A16FB17780021037B /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A54916FB17780021037B /* Question.m */; };
 		A844A54E16FB17D10021037B /* Question+Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A54D16FB17D10021037B /* Question+Archiver.m */; };
 		A844A55116FB18500021037B /* Question+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A844A55016FB18500021037B /* Question+Parser.m */; };
@@ -239,6 +240,7 @@
 		A8AB1C11174E925A00D15BFF /* questionSetPercent7.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C06174E925A00D15BFF /* questionSetPercent7.png */; };
 		A8AB1C12174E925A00D15BFF /* questionSetPercent8.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C07174E925A00D15BFF /* questionSetPercent8.png */; };
 		A8AB1C13174E925A00D15BFF /* questionSetPercent9.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C08174E925A00D15BFF /* questionSetPercent9.png */; };
+		A8AB1C15174EB27B00D15BFF /* QuestionSetStatisticsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C14174EB27B00D15BFF /* QuestionSetStatisticsTableViewCell.xib */; };
 		A8D075651732B56F00AE3EC9 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D075641732B56F00AE3EC9 /* QuestionViewController.m */; };
 		A8D075681732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D075671732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.m */; };
 		A8D0756B1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0756A1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m */; };
@@ -575,6 +577,9 @@
 		A8AB1C06174E925A00D15BFF /* questionSetPercent7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent7.png; sourceTree = "<group>"; };
 		A8AB1C07174E925A00D15BFF /* questionSetPercent8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent8.png; sourceTree = "<group>"; };
 		A8AB1C08174E925A00D15BFF /* questionSetPercent9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent9.png; sourceTree = "<group>"; };
+		A8AB1C14174EB27B00D15BFF /* QuestionSetStatisticsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetStatisticsTableViewCell.xib; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetStatisticsTableViewCell.xib; sourceTree = "<group>"; };
+		A8AB1C19174EB58900D15BFF /* QuestionSetStatisticsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QuestionSetStatisticsTableViewCell.h; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetStatisticsTableViewCell.h; sourceTree = "<group>"; };
+		A8AB1C1A174EB58B00D15BFF /* QuestionSetStatisticsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = QuestionSetStatisticsTableViewCell.m; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetStatisticsTableViewCell.m; sourceTree = "<group>"; };
 		A8D075631732B56E00AE3EC9 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionViewController.h; path = QuestionViewController/QuestionViewController.h; sourceTree = "<group>"; };
 		A8D075641732B56F00AE3EC9 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionViewController.m; path = QuestionViewController/QuestionViewController.m; sourceTree = "<group>"; };
 		A8D075661732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetsTrainingSessionViewController.h; path = QuestionSetsViewController/QuestionSetsTrainingSessionViewController.h; sourceTree = "<group>"; };
@@ -1449,9 +1454,12 @@
 			children = (
 				F2DE403617156B4900D34892 /* QuestionSetTableViewCell.h */,
 				F2DE403717156B4900D34892 /* QuestionSetTableViewCell.m */,
+				A8A9E2C51721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib */,
+				A8AB1C19174EB58900D15BFF /* QuestionSetStatisticsTableViewCell.h */,
+				A8AB1C1A174EB58B00D15BFF /* QuestionSetStatisticsTableViewCell.m */,
+				A8AB1C14174EB27B00D15BFF /* QuestionSetStatisticsTableViewCell.xib */,
 				F227DE0717185CE000D694DE /* QuestionSetTableViewCell.xib */,
 				F2DE403A17156C9900D34892 /* QuestionSetMemorizationLevelTableViewCell.xib */,
-				A8A9E2C51721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib */,
 			);
 			name = QuestionSetTableViewCell;
 			sourceTree = "<group>";
@@ -1904,6 +1912,7 @@
 				A8AB1C11174E925A00D15BFF /* questionSetPercent7.png in Resources */,
 				A8AB1C12174E925A00D15BFF /* questionSetPercent8.png in Resources */,
 				A8AB1C13174E925A00D15BFF /* questionSetPercent9.png in Resources */,
+				A8AB1C15174EB27B00D15BFF /* QuestionSetStatisticsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1961,6 +1970,7 @@
 				F2426AF31743B28600101E52 /* GuiUtilities.m in Sources */,
 				F211472F1744DB1B00564478 /* NSDate+Comparisons.m in Sources */,
 				F2114735174532B200564478 /* UINavigationController+Animations.m in Sources */,
+				A80B9176174EBB87006ACD0F /* QuestionSetStatisticsTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
