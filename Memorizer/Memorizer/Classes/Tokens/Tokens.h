@@ -42,6 +42,7 @@ extern int kCellQuestionSetPaddingY;
 extern int kCellQuestionSetTitleOriginMajorY;
 extern int kCellQuestionSetTitleOriginMinorY;
 extern int kCellQuestionSetDefaultTextWidth;
+extern int kCellQuestionSetInfoContainerViewHeight;
 
 //! Cell Statement
 extern int kCellStatementPaddingX;

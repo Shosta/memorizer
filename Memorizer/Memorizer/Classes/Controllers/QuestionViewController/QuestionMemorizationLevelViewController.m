@@ -229,7 +229,8 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
 }
 
 - (void)displayFeedBackViewAndNextQuestion{
-    [self.memorizationLevelFeedbackLabel setText:[self selectedStateStringFromLevel:self.memorizationLevel]];
+    // [self.memorizationLevelFeedbackLabel setText:[self selectedStateStringFromLevel:self.memorizationLevel]];
+    [self.memorizationLevelFeedbackImageView setImage:[self selectedStateFeedbackImageFromLevel:self.memorizationLevel]];
     [self displayMemorizationLevelSummaryContainerView];
     
     [self performSelector:@selector(displayNextQuestion) withObject:nil afterDelay:0.9];
@@ -457,6 +458,37 @@ static const float boundsHeight = 105.f;
     }
     
     return selectedStateString;
+}
+
+- (UIImage *)selectedStateFeedbackImageFromLevel:(MemorizationLevel)memorizationLevel{
+    UIImage *selectedStateUIImage = [UIImage imageNamed:@""];
+    
+    switch (memorizationLevel) {
+        case MemorizationLevel1:
+            selectedStateUIImage = [UIImage imageNamed:@"cancelButtonLevel1.png"];
+            break;
+            
+        case MemorizationLevel2:
+            selectedStateUIImage = [UIImage imageNamed:@"cancelButtonLevel2.png"];
+            break;
+            
+        case MemorizationLevel3:
+            selectedStateUIImage = [UIImage imageNamed:@"cancelButtonLevel3.png"];
+            break;
+            
+        case MemorizationLevel4:
+            selectedStateUIImage = [UIImage imageNamed:@"cancelButtonLevel4.png"];
+            break;
+            
+        case MemorizationLevel5:
+            selectedStateUIImage = [UIImage imageNamed:@"cancelButtonLevel5.png"];
+            break;
+            
+        default:
+            break;
+    }
+    
+    return selectedStateUIImage;
 }
 
 - (void)removePreviousSelectedStateToButton{

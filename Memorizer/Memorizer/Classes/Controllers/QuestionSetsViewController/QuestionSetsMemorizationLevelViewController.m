@@ -171,7 +171,8 @@
     
     // Set the progress for the gauge.
     float percent = [self questionDonePercentAtIndexPath:indexPath];
-    [cell setGaugeProgress:percent];
+    // [cell setGaugeProgress:percent];
+    [cell setAnimatedImageAnimationFromPercent:percent];
   
   // Set the Question Set Title.
   NSString *questionSetTitle = nextPresentationQuestionSet.title;
@@ -228,11 +229,11 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-  CGFloat minimumCellHeight = 250;
+  CGFloat minimumCellHeight = 350;
   CGFloat cellHeight = 0;
   NextPresentationQuestionSet *currentQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
   
-  cellHeight = kCellQuestionSetTitleOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY;
+    cellHeight = kCellQuestionSetTitleOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY + kCellQuestionSetInfoContainerViewHeight;
 
   if (cellHeight < minimumCellHeight) {
     cellHeight = minimumCellHeight;

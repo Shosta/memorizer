@@ -21,27 +21,27 @@
 #pragma mark - View
 
 - (void)viewDidLoad{
-  [super viewDidLoad];
-  // Do any additional setup after loading the view from its nib.
-  UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackgroundTemplateColor.png"]];
-  [self.view setBackgroundColor:color];
-  
-  [self.navigationItem setTitle:@"Ultimemo"];
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackgroundTemplateColor.png"]];
+    [self.view setBackgroundColor:color];
+    
+    [self.navigationItem setTitle:@"Ultimemo"];
 }
 
 
 #pragma mark - Cell Count
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)aTableView{
-  int sectionCount = 1;
-  
-  return sectionCount;
+    int sectionCount = 1;
+    
+    return sectionCount;
 }
 
 - (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section{
-  int rowsInSection = [[APP_DATA questionSetsArray] count];
-  
-  return rowsInSection;
+    int rowsInSection = [[APP_DATA questionSetsArray] count];
+    
+    return rowsInSection;
 }
 
 
@@ -54,10 +54,10 @@
  @remarks : <#(optional)#>
  */
 - (NSString *)formatDate:(NSDate *)date dateFormatTemplate:(NSString *)dateFormatTemplate{
-  NSString *formattedDate = [NSDateFormatter dateStringFromDate:date
-                                              destinationFormat:dateFormatTemplate];
-  
-  return formattedDate;
+    NSString *formattedDate = [NSDateFormatter dateStringFromDate:date
+                                                destinationFormat:dateFormatTemplate];
+    
+    return formattedDate;
 }
 
 /**
@@ -67,9 +67,9 @@
  @remarks : <#(optional)#>
  */
 - (NSString *)dayMonthYearFormatDate:(NSDate *)date{
-  NSString *dateFormatted = [self formatDate:date dateFormatTemplate:kDayMonthYearFormatDate];
-  
-  return dateFormatted;
+    NSString *dateFormatted = [self formatDate:date dateFormatTemplate:kDayMonthYearFormatDate];
+    
+    return dateFormatted;
 }
 
 /**
@@ -94,25 +94,25 @@
 }
 
 - (void)configureCell:(QuestionSetTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
-  QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-  
-  // Set the next date.
-  NSString *nextPresentationDate = [self dayMonthYearFormatDate:[NSDate date]];
-  [cell.nextDateLabel setText:nextPresentationDate];
-  
-  // Set the number of questions for the next sets. TODO
-  
-  // Set the number of question done for this set.
-  NSString *questionsCount = [NSString stringWithFormat:@"%d", [[questionSet questionsArray] count]];
-  [cell.nextDateQuestionsNumberLabel setText:questionsCount];
-  
-  // Set the progress for the gauge.
-    float percent = [self questionDonePercentAtIndexPath:indexPath];
-  [cell setGaugeProgress:percent];
-  
-  // Set the Question Set Title.
-  NSString *questionSetTitle = questionSet.title;
-  [cell.textLabel setText:questionSetTitle];
+    QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
+    
+    // Set the next date.
+    NSString *nextPresentationDate = [self dayMonthYearFormatDate:[NSDate date]];
+    [cell.nextDateLabel setText:nextPresentationDate];
+    
+    // Set the number of questions for the next sets. TODO
+    
+    // Set the number of question done for this set.
+    NSString *questionsCount = [NSString stringWithFormat:@"%d", [[questionSet questionsArray] count]];
+    [cell.nextDateQuestionsNumberLabel setText:questionsCount];
+    
+    // Set the progress for the gauge.
+    // float percent = [self questionDonePercentAtIndexPath:indexPath];
+    // [cell setGaugeProgress:percent];
+    
+    // Set the Question Set Title.
+    NSString *questionSetTitle = questionSet.title;
+    [cell.textLabel setText:questionSetTitle];
 }
 
 /**
@@ -122,25 +122,25 @@
  @remarks : <#(optional)#>
  */
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-  NSString *CellIdentifier = @"QuestionSetTableViewCell";
-  QuestionSetTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-  if (cell == nil) {
-    NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionSetTableViewCell"
-                                                             owner:self
-                                                           options:nil];
-    
-    for(id currentObject in topLevelObjects){
-      if([currentObject isKindOfClass:[QuestionSetTableViewCell class]]){
-        cell = (QuestionSetTableViewCell *) currentObject;
-        break;
-      }
+    NSString *CellIdentifier = @"QuestionSetTableViewCell";
+    QuestionSetTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuestionSetTableViewCell"
+                                                                 owner:self
+                                                               options:nil];
+        
+        for(id currentObject in topLevelObjects){
+            if([currentObject isKindOfClass:[QuestionSetTableViewCell class]]){
+                cell = (QuestionSetTableViewCell *) currentObject;
+                break;
+            }
+        }
+        [cell setCellStyle:QuestionSetTableViewCellMinorStyle];
     }
-    [cell setCellStyle:QuestionSetTableViewCellMinorStyle];
-  }
-  
-  [self configureCell:cell atIndexPath:indexPath];
-  
-  return cell;
+    
+    [self configureCell:cell atIndexPath:indexPath];
+    
+    return cell;
 }
 
 
@@ -153,9 +153,9 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)detailElementTextHeight:(NSString *)detailElementText{
-  CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:ANSWER_CELL_TEXT_FONT_MAJOR_STYLE forWidth:kCellAnswerDefaultTextWidth];
-  
-  return detailElementTextHeight ;
+    CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:ANSWER_CELL_TEXT_FONT_MAJOR_STYLE forWidth:kCellAnswerDefaultTextWidth];
+    
+    return detailElementTextHeight ;
 }
 
 /**
@@ -165,17 +165,17 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-  CGFloat minimumCellHeight = 67;
-  CGFloat cellHeight = 0;
-  QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-  
-  cellHeight = kCellQuestionSetTitleOriginMinorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY;
-  
-  if (cellHeight < minimumCellHeight) {
-    cellHeight = minimumCellHeight;
-  }
-  
-  return cellHeight;
+    CGFloat minimumCellHeight = 67;
+    CGFloat cellHeight = 0;
+    QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
+    
+    cellHeight = kCellQuestionSetTitleOriginMinorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY;
+    
+    if (cellHeight < minimumCellHeight) {
+        cellHeight = minimumCellHeight;
+    }
+    
+    return cellHeight;
 }
 
 
@@ -188,13 +188,13 @@
  @remarks : <#(optional)#>
  */
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-  [aTableView deselectRowAtIndexPath:indexPath animated:YES];
-  
-  QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-  NSMutableArray *questionsArray = currentQuestionSet.questionsArray;
-  QuestionTrainingSessionViewController *questionViewController = [[QuestionTrainingSessionViewController alloc] initWithQuestionsArray:questionsArray];
-  [self.navigationController pushViewController:questionViewController animated:YES];
-  
+    [aTableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
+    NSMutableArray *questionsArray = currentQuestionSet.questionsArray;
+    QuestionTrainingSessionViewController *questionViewController = [[QuestionTrainingSessionViewController alloc] initWithQuestionsArray:questionsArray];
+    [self.navigationController pushViewController:questionViewController animated:YES];
+    
 }
 
 
