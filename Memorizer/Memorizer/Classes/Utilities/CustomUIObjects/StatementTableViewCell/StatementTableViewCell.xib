@@ -78,7 +78,7 @@
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{300, 43}</string>
+						<string key="NSFrameSize">{300, 89}</string>
 						<reference key="NSSuperview" ref="174836230"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="646587523"/>
@@ -91,7 +91,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{300, 44}</string>
+				<string key="NSFrameSize">{300, 90}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="386611500"/>

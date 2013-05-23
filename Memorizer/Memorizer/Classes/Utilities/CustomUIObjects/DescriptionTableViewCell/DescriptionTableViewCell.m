@@ -8,24 +8,8 @@
 
 #import "DescriptionTableViewCell.h"
 #import "UILabel+Size.h"
-#import <AVFoundation/AVFoundation.h>
-#import <AudioToolbox/AudioToolbox.h>
 
 @implementation DescriptionTableViewCell
-
-
-#pragma mark - Play Sound
-
-- (IBAction)playSound:(id)sender{
-  SystemSoundID soundID;
-  // NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@.mp3", [[NSBundle mainBundle] resourcePath], _soundFileName]];
-  NSString *pewPewPath = [[NSBundle mainBundle]
-                          pathForResource:_soundFileName ofType:@"mp3"];
-  
-  NSURL *pewPewURL = [NSURL fileURLWithPath:pewPewPath];
-  AudioServicesCreateSystemSoundID((__bridge CFURLRef)(pewPewURL), &soundID);
-  AudioServicesPlaySystemSound (soundID);
-}
 
 
 #pragma mark - Redraw

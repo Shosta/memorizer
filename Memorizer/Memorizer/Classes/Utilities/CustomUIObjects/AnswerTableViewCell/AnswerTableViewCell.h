@@ -24,11 +24,16 @@
 @interface AnswerTableViewCell : AutoResizeLabelTableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *descriptionImageView;
+@property (weak, nonatomic) IBOutlet UIButton *playSoundButton;
+@property (nonatomic, retain) NSString *soundFileName;
 
 
 #pragma mark - Animations
 
 //! Start a fade in animation on the "descriptionImageView" in order to let it appear.
 - (void)fadeInDescriptionImageView;
+
+//! Start a fade in animation on the "playSoundButton" in order to let it appear.
+- (void)fadeInPlaySoundButton;
 
 @end

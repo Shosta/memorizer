@@ -223,6 +223,22 @@
 		A878107516FB1C74003E3F91 /* QuestionSet+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A878107416FB1C74003E3F91 /* QuestionSet+Parser.m */; };
 		A8A9E2C61721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A9E2C51721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib */; };
 		A8A9E2C91721E4C100380F50 /* QuestionTrainingSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A9E2C81721E4C100380F50 /* QuestionTrainingSessionViewController.m */; };
+		A8AB1BF8174D3CCF00D15BFF /* cancelButtonLevel1.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1BF3174D3CCF00D15BFF /* cancelButtonLevel1.png */; };
+		A8AB1BF9174D3CCF00D15BFF /* cancelButtonLevel2.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1BF4174D3CCF00D15BFF /* cancelButtonLevel2.png */; };
+		A8AB1BFA174D3CCF00D15BFF /* cancelButtonLevel3.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1BF5174D3CCF00D15BFF /* cancelButtonLevel3.png */; };
+		A8AB1BFB174D3CCF00D15BFF /* cancelButtonLevel4.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1BF6174D3CCF00D15BFF /* cancelButtonLevel4.png */; };
+		A8AB1BFC174D3CCF00D15BFF /* cancelButtonLevel5.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1BF7174D3CCF00D15BFF /* cancelButtonLevel5.png */; };
+		A8AB1C09174E925A00D15BFF /* questionSetPercent0.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1BFE174E925A00D15BFF /* questionSetPercent0.png */; };
+		A8AB1C0A174E925A00D15BFF /* questionSetPercent1.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1BFF174E925A00D15BFF /* questionSetPercent1.png */; };
+		A8AB1C0B174E925A00D15BFF /* questionSetPercent10.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C00174E925A00D15BFF /* questionSetPercent10.png */; };
+		A8AB1C0C174E925A00D15BFF /* questionSetPercent2.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C01174E925A00D15BFF /* questionSetPercent2.png */; };
+		A8AB1C0D174E925A00D15BFF /* questionSetPercent3.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C02174E925A00D15BFF /* questionSetPercent3.png */; };
+		A8AB1C0E174E925A00D15BFF /* questionSetPercent4.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C03174E925A00D15BFF /* questionSetPercent4.png */; };
+		A8AB1C0F174E925A00D15BFF /* questionSetPercent5.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C04174E925A00D15BFF /* questionSetPercent5.png */; };
+		A8AB1C10174E925A00D15BFF /* questionSetPercent6.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C05174E925A00D15BFF /* questionSetPercent6.png */; };
+		A8AB1C11174E925A00D15BFF /* questionSetPercent7.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C06174E925A00D15BFF /* questionSetPercent7.png */; };
+		A8AB1C12174E925A00D15BFF /* questionSetPercent8.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C07174E925A00D15BFF /* questionSetPercent8.png */; };
+		A8AB1C13174E925A00D15BFF /* questionSetPercent9.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB1C08174E925A00D15BFF /* questionSetPercent9.png */; };
 		A8D075651732B56F00AE3EC9 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D075641732B56F00AE3EC9 /* QuestionViewController.m */; };
 		A8D075681732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D075671732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.m */; };
 		A8D0756B1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D0756A1732BDA400AE3EC9 /* QuestionSetsQuestionListViewController.m */; };
@@ -543,6 +559,22 @@
 		A8A9E2C51721B76400380F50 /* QuestionSetMemorizationLevelTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionSetMemorizationLevelTableViewCell2.xib; path = CustomUIObjects/QuestionSetTableViewCell/QuestionSetMemorizationLevelTableViewCell2.xib; sourceTree = "<group>"; };
 		A8A9E2C71721E4C100380F50 /* QuestionTrainingSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionTrainingSessionViewController.h; path = QuestionViewController/QuestionTrainingSessionViewController.h; sourceTree = "<group>"; };
 		A8A9E2C81721E4C100380F50 /* QuestionTrainingSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionTrainingSessionViewController.m; path = QuestionViewController/QuestionTrainingSessionViewController.m; sourceTree = "<group>"; };
+		A8AB1BF3174D3CCF00D15BFF /* cancelButtonLevel1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButtonLevel1.png; sourceTree = "<group>"; };
+		A8AB1BF4174D3CCF00D15BFF /* cancelButtonLevel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButtonLevel2.png; sourceTree = "<group>"; };
+		A8AB1BF5174D3CCF00D15BFF /* cancelButtonLevel3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButtonLevel3.png; sourceTree = "<group>"; };
+		A8AB1BF6174D3CCF00D15BFF /* cancelButtonLevel4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButtonLevel4.png; sourceTree = "<group>"; };
+		A8AB1BF7174D3CCF00D15BFF /* cancelButtonLevel5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButtonLevel5.png; sourceTree = "<group>"; };
+		A8AB1BFE174E925A00D15BFF /* questionSetPercent0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent0.png; sourceTree = "<group>"; };
+		A8AB1BFF174E925A00D15BFF /* questionSetPercent1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent1.png; sourceTree = "<group>"; };
+		A8AB1C00174E925A00D15BFF /* questionSetPercent10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent10.png; sourceTree = "<group>"; };
+		A8AB1C01174E925A00D15BFF /* questionSetPercent2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent2.png; sourceTree = "<group>"; };
+		A8AB1C02174E925A00D15BFF /* questionSetPercent3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent3.png; sourceTree = "<group>"; };
+		A8AB1C03174E925A00D15BFF /* questionSetPercent4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent4.png; sourceTree = "<group>"; };
+		A8AB1C04174E925A00D15BFF /* questionSetPercent5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent5.png; sourceTree = "<group>"; };
+		A8AB1C05174E925A00D15BFF /* questionSetPercent6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent6.png; sourceTree = "<group>"; };
+		A8AB1C06174E925A00D15BFF /* questionSetPercent7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent7.png; sourceTree = "<group>"; };
+		A8AB1C07174E925A00D15BFF /* questionSetPercent8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent8.png; sourceTree = "<group>"; };
+		A8AB1C08174E925A00D15BFF /* questionSetPercent9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionSetPercent9.png; sourceTree = "<group>"; };
 		A8D075631732B56E00AE3EC9 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionViewController.h; path = QuestionViewController/QuestionViewController.h; sourceTree = "<group>"; };
 		A8D075641732B56F00AE3EC9 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionViewController.m; path = QuestionViewController/QuestionViewController.m; sourceTree = "<group>"; };
 		A8D075661732BB1A00AE3EC9 /* QuestionSetsTrainingSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetsTrainingSessionViewController.h; path = QuestionSetsViewController/QuestionSetsTrainingSessionViewController.h; sourceTree = "<group>"; };
@@ -1024,6 +1056,36 @@
 			name = QuestionSet;
 			sourceTree = "<group>";
 		};
+		A8AB1BF2174D3CCF00D15BFF /* QuestionMemorizationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A8AB1BF3174D3CCF00D15BFF /* cancelButtonLevel1.png */,
+				A8AB1BF4174D3CCF00D15BFF /* cancelButtonLevel2.png */,
+				A8AB1BF5174D3CCF00D15BFF /* cancelButtonLevel3.png */,
+				A8AB1BF6174D3CCF00D15BFF /* cancelButtonLevel4.png */,
+				A8AB1BF7174D3CCF00D15BFF /* cancelButtonLevel5.png */,
+			);
+			path = QuestionMemorizationViewController;
+			sourceTree = "<group>";
+		};
+		A8AB1BFD174E925A00D15BFF /* QuestionSetPercent */ = {
+			isa = PBXGroup;
+			children = (
+				A8AB1BFE174E925A00D15BFF /* questionSetPercent0.png */,
+				A8AB1BFF174E925A00D15BFF /* questionSetPercent1.png */,
+				A8AB1C00174E925A00D15BFF /* questionSetPercent10.png */,
+				A8AB1C01174E925A00D15BFF /* questionSetPercent2.png */,
+				A8AB1C02174E925A00D15BFF /* questionSetPercent3.png */,
+				A8AB1C03174E925A00D15BFF /* questionSetPercent4.png */,
+				A8AB1C04174E925A00D15BFF /* questionSetPercent5.png */,
+				A8AB1C05174E925A00D15BFF /* questionSetPercent6.png */,
+				A8AB1C06174E925A00D15BFF /* questionSetPercent7.png */,
+				A8AB1C07174E925A00D15BFF /* questionSetPercent8.png */,
+				A8AB1C08174E925A00D15BFF /* questionSetPercent9.png */,
+			);
+			path = QuestionSetPercent;
+			sourceTree = "<group>";
+		};
 		A8D075711732BE3A00AE3EC9 /* QuestionsListViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1359,6 +1421,7 @@
 			isa = PBXGroup;
 			children = (
 				A867F9411743FBB2002D8B0F /* HelpImages */,
+				A8AB1BFD174E925A00D15BFF /* QuestionSetPercent */,
 				F292F8961716B8FA00F3723A /* MemorizationLevelButton */,
 				F2DE405517159CE800D34892 /* NavigationBar */,
 				F2EA3C191715ABAE0091FAF9 /* UITableView */,
@@ -1366,6 +1429,7 @@
 				F2DE404117156EBA00D34892 /* QuestionSetTableViewCell */,
 				F2D92A15171316EA006ED8A6 /* AnswerTableViewCell */,
 				F28BE5191714664600B4AC13 /* QuestionViewController */,
+				A8AB1BF2174D3CCF00D15BFF /* QuestionMemorizationViewController */,
 				A845062C17172F4400C4E0E9 /* UIGaugeViewController */,
 			);
 			path = Images;
@@ -1824,6 +1888,22 @@
 				A867F9431743FBB2002D8B0F /* QuestionSetHelpImage@2x.png in Resources */,
 				A867F9451743FE6C002D8B0F /* QuestionHelpImage@2x.png in Resources */,
 				A867F947174414C9002D8B0F /* QuestionAnsweredHelpImage@2x.png in Resources */,
+				A8AB1BF8174D3CCF00D15BFF /* cancelButtonLevel1.png in Resources */,
+				A8AB1BF9174D3CCF00D15BFF /* cancelButtonLevel2.png in Resources */,
+				A8AB1BFA174D3CCF00D15BFF /* cancelButtonLevel3.png in Resources */,
+				A8AB1BFB174D3CCF00D15BFF /* cancelButtonLevel4.png in Resources */,
+				A8AB1BFC174D3CCF00D15BFF /* cancelButtonLevel5.png in Resources */,
+				A8AB1C09174E925A00D15BFF /* questionSetPercent0.png in Resources */,
+				A8AB1C0A174E925A00D15BFF /* questionSetPercent1.png in Resources */,
+				A8AB1C0B174E925A00D15BFF /* questionSetPercent10.png in Resources */,
+				A8AB1C0C174E925A00D15BFF /* questionSetPercent2.png in Resources */,
+				A8AB1C0D174E925A00D15BFF /* questionSetPercent3.png in Resources */,
+				A8AB1C0E174E925A00D15BFF /* questionSetPercent4.png in Resources */,
+				A8AB1C0F174E925A00D15BFF /* questionSetPercent5.png in Resources */,
+				A8AB1C10174E925A00D15BFF /* questionSetPercent6.png in Resources */,
+				A8AB1C11174E925A00D15BFF /* questionSetPercent7.png in Resources */,
+				A8AB1C12174E925A00D15BFF /* questionSetPercent8.png in Resources */,
+				A8AB1C13174E925A00D15BFF /* questionSetPercent9.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

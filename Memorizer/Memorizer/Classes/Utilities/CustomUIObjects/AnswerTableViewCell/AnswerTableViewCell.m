@@ -8,8 +8,23 @@
 
 #import "AnswerTableViewCell.h"
 #import "UILabel+Size.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @implementation AnswerTableViewCell
+
+
+#pragma mark - Play Sound
+
+- (IBAction)playSound:(id)sender{
+    SystemSoundID soundID;
+    // NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@.mp3", [[NSBundle mainBundle] resourcePath], _soundFileName]];
+    NSString *pewPewPath = [[NSBundle mainBundle]
+                            pathForResource:_soundFileName ofType:@"mp3"];
+    
+    NSURL *pewPewURL = [NSURL fileURLWithPath:pewPewPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)(pewPewURL), &soundID);
+    AudioServicesPlaySystemSound (soundID);
+}
 
 
 #pragma mark - Redraw
@@ -43,14 +58,29 @@
 #pragma mark - Animations
 
 - (void)fadeInDescriptionImageView{
-  [UIView animateWithDuration:1.0
-                        delay:0
-                      options:UIViewAnimationOptionCurveEaseInOut
-                   animations:(void (^)(void)) ^{
-                     self.descriptionImageView.alpha = 1.0;
-                   }
-                   completion:^(BOOL finished){
-                   }];
+    if (self.descriptionImageView.alpha == 0) {
+        [UIView animateWithDuration:1.0
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:(void (^)(void)) ^{
+                             self.descriptionImageView.alpha = 1.0;
+                         }
+                         completion:^(BOOL finished){
+                         }];
+    }
+}
+
+- (void)fadeInPlaySoundButton{
+    if (self.playSoundButton.alpha == 0) {
+        [UIView animateWithDuration:1.0
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:(void (^)(void)) ^{
+                             self.playSoundButton.alpha = 1.0;
+                         }
+                         completion:^(BOOL finished){
+                         }];
+    }
 }
 
 @end

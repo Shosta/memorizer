@@ -12,6 +12,7 @@
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
+			<string>IBUIButton</string>
 			<string>IBUIImageView</string>
 			<string>IBUILabel</string>
 			<string>IBUITableViewCell</string>
@@ -43,7 +44,7 @@
 							<object class="IBUILabel" id="491711841">
 								<reference key="NSNextResponder" ref="534176385"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{10, 10}, {235, 25}}</string>
+								<string key="NSFrame">{{10, 9}, {235, 25}}</string>
 								<reference key="NSSuperview" ref="534176385"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="922097596"/>
@@ -62,7 +63,7 @@
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MC41ODQzMTM3MjU1IDAuNiAwLjYxMTc2NDcwNTkAA</bytes>
 								</object>
-								<object class="NSColor" key="IBUIHighlightedColor">
+								<object class="NSColor" key="IBUIHighlightedColor" id="231285065">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MQA</bytes>
 								</object>
@@ -84,6 +85,7 @@
 								<string key="NSFrame">{{261, 5}, {34, 34}}</string>
 								<reference key="NSSuperview" ref="534176385"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="997816363"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<float key="IBUIAlpha">0.0</float>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -93,8 +95,42 @@
 									<string key="NSResourceName">questionMark.png</string>
 								</object>
 							</object>
+							<object class="IBUIButton" id="997816363">
+								<reference key="NSNextResponder" ref="534176385"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{261, 47}, {34, 34}}</string>
+								<reference key="NSSuperview" ref="534176385"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<float key="IBUIAlpha">0.0</float>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<int key="IBUIButtonType">1</int>
+								<string key="IBUINormalTitle">Play</string>
+								<reference key="IBUIHighlightedTitleColor" ref="231285065"/>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+								</object>
+								<object class="NSColor" key="IBUINormalTitleShadowColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MC41AA</bytes>
+								</object>
+								<object class="IBUIFontDescription" key="IBUIFontDescription">
+									<int key="type">2</int>
+									<double key="pointSize">15</double>
+								</object>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica-Bold</string>
+									<double key="NSSize">15</double>
+									<int key="NSfFlags">16</int>
+								</object>
+							</object>
 						</array>
-						<string key="NSFrameSize">{300, 43}</string>
+						<string key="NSFrameSize">{300, 89}</string>
 						<reference key="NSSuperview" ref="735010219"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="491711841"/>
@@ -107,7 +143,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{300, 44}</string>
+				<string key="NSFrameSize">{300, 90}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="534176385"/>
@@ -115,7 +151,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">2</int>
 				<reference key="IBUIContentView" ref="534176385"/>
-				<integer value="44" key="IBUIRowHeight"/>
+				<real value="83" key="IBUIRowHeight"/>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -135,6 +171,23 @@
 						<reference key="destination" ref="922097596"/>
 					</object>
 					<int key="connectionID">89</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">playSoundButton</string>
+						<reference key="source" ref="735010219"/>
+						<reference key="destination" ref="997816363"/>
+					</object>
+					<int key="connectionID">92</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">playSound:</string>
+						<reference key="source" ref="997816363"/>
+						<reference key="destination" ref="735010219"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">91</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -160,8 +213,9 @@
 						<int key="objectID">2</int>
 						<reference key="object" ref="735010219"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="491711841"/>
 							<reference ref="922097596"/>
+							<reference ref="491711841"/>
+							<reference ref="997816363"/>
 						</array>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">The Answer Cell - AnswerTableViewCell</string>
@@ -179,6 +233,11 @@
 						<reference key="parent" ref="735010219"/>
 						<string key="objectName">The Description Image - UIImage</string>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">90</int>
+						<reference key="object" ref="997816363"/>
+						<reference key="parent" ref="735010219"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -189,29 +248,44 @@
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="88.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="90.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">89</int>
+			<int key="maxID">92</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">AnswerTableViewCell</string>
 					<string key="superclassName">AutoResizeLabelTableViewCell</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">descriptionImageView</string>
-						<string key="NS.object.0">UIImageView</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">playSound:</string>
+						<string key="NS.object.0">id</string>
 					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">descriptionImageView</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">playSound:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">playSound:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="descriptionImageView">UIImageView</string>
+						<string key="playSoundButton">UIButton</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="descriptionImageView">
 							<string key="name">descriptionImageView</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
-					</object>
+						<object class="IBToOneOutletInfo" key="playSoundButton">
+							<string key="name">playSoundButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/AnswerTableViewCell.h</string>

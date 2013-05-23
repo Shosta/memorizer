@@ -24,12 +24,12 @@
 #pragma mark - Object
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
-  self = [super initWithCoder:aDecoder];
-  if (self != nil) {
-    self.gaugeViewController = [[UIGaugeViewController alloc] initWithNibName:@"UIGaugeViewController" bundle:nil];
-  }
-  
-  return self;
+    self = [super initWithCoder:aDecoder];
+    if (self != nil) {
+        self.gaugeViewController = [[UIGaugeViewController alloc] initWithNibName:@"UIGaugeViewController" bundle:nil];
+    }
+    
+    return self;
 }
 
 
@@ -42,21 +42,21 @@
  @remarks : <#(optional)#>
  */
 - (void)layoutSubviews{
-  [super layoutSubviews];
-  
+    [super layoutSubviews];
+    
     int cellQuestionSetOriginY = kCellQuestionSetTitleOriginMajorY;
-  if (_cellStyle == QuestionSetTableViewCellMinorStyle){
-    cellQuestionSetOriginY = kCellQuestionSetTitleOriginMinorY;
-  }else{
-    [self.gaugeContainerView addSubview:self.gaugeViewController.view];
-  }
-  
-  [self configureTextLabelUIWithLabelFont:QUESTIONSET_CELL_TEXT_FONT
-                               labelColor:QUESTIONSET_CELL_TEXT_COLOR
-                       labelTextAlignment:NSTextAlignmentCenter
-                               labelWidth:kCellQuestionSetDefaultTextWidth
-                      labelStartXPosition:kCellQuestionSetPaddingX
-                      labelStartYPosition:cellQuestionSetOriginY];
+    if (_cellStyle == QuestionSetTableViewCellMinorStyle){
+        cellQuestionSetOriginY = kCellQuestionSetTitleOriginMinorY;
+    }else{
+        [self.gaugeContainerView addSubview:self.gaugeViewController.view];
+    }
+    
+    [self configureTextLabelUIWithLabelFont:QUESTIONSET_CELL_TEXT_FONT
+                                 labelColor:QUESTIONSET_CELL_TEXT_COLOR
+                         labelTextAlignment:NSTextAlignmentCenter
+                                 labelWidth:kCellQuestionSetDefaultTextWidth
+                        labelStartXPosition:kCellQuestionSetPaddingX
+                        labelStartYPosition:cellQuestionSetOriginY];
     
     self.questionSetInfoContainerView.frame = CGRectMake(0, cellQuestionSetOriginY + self.textLabel.frame.size.height + kCellQuestionSetPaddingY, self.questionSetInfoContainerView.frame.size.width, self.questionSetInfoContainerView.frame.size.height);
 }
@@ -71,7 +71,21 @@
  @remarks : <#(optional)#>
  */
 - (void)setGaugeProgress:(float)progress{
-  [self.gaugeViewController setProgress:progress];
+    [self.gaugeViewController setProgress:progress];
+}
+
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : <#current date#>
+ @remarks : <#(optional)#>
+ */
+- (void)setAnimatedImageAnimationFromPercent:(float)percent{
+    int finalImageNumber = round(percent * 10);
+    
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"questionSetPercent%d.png", finalImageNumber]];
+    
+    [self.questionSetProgressionAnimatedImageView setImage:image];
 }
 
 
@@ -85,7 +99,7 @@
  The "minor" style displays all the information about the QuestionSet in order to display a simple QuestionSet
  */
 - (void)setCellStyle:(QuestionSetTableViewCellStyle)style{
-  _cellStyle = style;
+    _cellStyle = style;
 }
 
 @end
