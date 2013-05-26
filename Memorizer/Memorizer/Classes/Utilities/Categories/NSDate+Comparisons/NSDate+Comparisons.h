@@ -15,6 +15,6 @@
 - (BOOL)isLaterThan:(NSDate*)date;
 - (BOOL)isEarlierThan:(NSDate*)date;
 - (BOOL)isSameDayAs:(NSDate *)date;
-
+- (BOOL)isTwoMonthLaterThan:(NSDate *)date;
 
 @end

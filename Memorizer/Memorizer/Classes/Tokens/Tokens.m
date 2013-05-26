@@ -14,9 +14,14 @@
 NSString *kArchiveFileName = @"AppData.archive";
 
 //! First Launch Help
-NSString *kIsQuestionSetMemorizationHelpAlreadyDisplayedKey = @"isQuestionSetMemorizationHelpAlreadyDisplayed";
-NSString *kIsQuestionStatementHelpAlreadyDisplayedKey = @"isQuestionStatementHelpAlreadyDisplayed";
-NSString *kIsQuestionAnswerHelpAlreadyDisplayedKey = @"isQuestionAnswerHelpAlreadyDisplayed";
+//NSString *kIsQuestionSetMemorizationHelpAlreadyDisplayedKey = @"isQuestionSetMemorizationHelpAlreadyDisplayed";
+//NSString *kIsQuestionStatementHelpAlreadyDisplayedKey = @"isQuestionStatementHelpAlreadyDisplayed";
+//NSString *kIsQuestionAnswerHelpAlreadyDisplayedKey = @"isQuestionAnswerHelpAlreadyDisplayed";
+
+NSString *kQuestionSetHelpViewLastDisplayedDateKey = @"QuestionSetHelpViewLastDisplayedDate";
+NSString *kQuestionStatementHelpViewLastDisplayedDateKey = @"QuestionStatementHelpViewLastDisplayedDate";
+NSString *kQuestionAnswerHelpViewLastDisplayedDateKey = @"QuestionAnswerHelpViewLastDisplayedDate";
+
 
 //! Date Format
 NSString *kDayMonthHourMinutesFormatDate = @"d MMMM, HH:mm";

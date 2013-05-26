@@ -30,9 +30,13 @@
 extern NSString *kArchiveFileName;
 
 //! First Launch Help
-extern NSString *kIsQuestionSetMemorizationHelpAlreadyDisplayedKey;
-extern NSString *kIsQuestionStatementHelpAlreadyDisplayedKey;
-extern NSString *kIsQuestionAnswerHelpAlreadyDisplayedKey;
+//extern NSString *kIsQuestionSetMemorizationHelpAlreadyDisplayedKey;
+//extern NSString *kIsQuestionStatementHelpAlreadyDisplayedKey;
+//extern NSString *kIsQuestionAnswerHelpAlreadyDisplayedKey;
+
+extern NSString *kQuestionSetHelpViewLastDisplayedDateKey;
+extern NSString *kQuestionStatementHelpViewLastDisplayedDateKey;
+extern NSString *kQuestionAnswerHelpViewLastDisplayedDateKey;
 
 //! Date Format
 extern NSString *kDayMonthHourMinutesFormatDate;

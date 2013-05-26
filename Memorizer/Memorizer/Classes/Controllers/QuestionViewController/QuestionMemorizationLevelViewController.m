@@ -10,6 +10,7 @@
 #import "Question.h"
 #import "QuestionSetsMemorizationLevelViewController.h"
 #import "AppDelegate.h"
+#import "NSDate+Comparisons.h"
 
 @implementation QuestionMemorizationLevelViewController
 
@@ -47,11 +48,18 @@ static const int kDescriptionSection = 2;
  @remarks : <#(optional)#>
  */
 - (void)displayStatementHelpImageOnFirstLaunch{
-    NSNumber *isFirstLaunch = [[NSUserDefaults standardUserDefaults] objectForKey:kIsQuestionStatementHelpAlreadyDisplayedKey];
+    /*NSNumber *isFirstLaunch = [[NSUserDefaults standardUserDefaults] objectForKey:kIsQuestionStatementHelpAlreadyDisplayedKey];
     
     if ([isFirstLaunch boolValue] == NO) {
         [self addHelpSubview];
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:kIsQuestionStatementHelpAlreadyDisplayedKey];
+    }*/
+    NSDate *QuestionSetHelpViewLastDisplayedDate = [[NSUserDefaults standardUserDefaults] objectForKey:kQuestionStatementHelpViewLastDisplayedDateKey];
+    
+    BOOL isDateLaterThanTwoMonths = [QuestionSetHelpViewLastDisplayedDate isTwoMonthLaterThan:[NSDate date]];
+    if (QuestionSetHelpViewLastDisplayedDate == nil || isDateLaterThanTwoMonths == YES) {
+        [self addHelpSubview];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kQuestionStatementHelpViewLastDisplayedDateKey];
     }
 }
 
@@ -62,11 +70,18 @@ static const int kDescriptionSection = 2;
  @remarks : <#(optional)#>
  */
 - (void)displayAnswerHelpImageOnFirstLaunch{
-    NSNumber *isFirstLaunch = [[NSUserDefaults standardUserDefaults] objectForKey:kIsQuestionAnswerHelpAlreadyDisplayedKey];
+    /*NSNumber *isFirstLaunch = [[NSUserDefaults standardUserDefaults] objectForKey:kIsQuestionAnswerHelpAlreadyDisplayedKey];
     
     if ([isFirstLaunch boolValue] == NO) {
         [self addHelpSubview];
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:kIsQuestionAnswerHelpAlreadyDisplayedKey];
+    }*/
+    NSDate *QuestionSetHelpViewLastDisplayedDate = [[NSUserDefaults standardUserDefaults] objectForKey:kQuestionAnswerHelpViewLastDisplayedDateKey];
+    
+    BOOL isDateLaterThanTwoMonths = [QuestionSetHelpViewLastDisplayedDate isTwoMonthLaterThan:[NSDate date]];
+    if (QuestionSetHelpViewLastDisplayedDate == nil || isDateLaterThanTwoMonths == YES) {
+        [self addHelpSubview];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kQuestionAnswerHelpViewLastDisplayedDateKey];
     }
 }
 

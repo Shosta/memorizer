@@ -31,5 +31,20 @@
   return (days1 == days2);
 }
 
+- (BOOL)isTwoMonthLaterThan:(NSDate *)date{
+    BOOL result = NO;
+    
+    int secondsInADay = 3600 * 24;
+    int secondsInTwoMonths = secondsInADay * 60;
+    NSTimeInterval timeInterval = [date timeIntervalSinceDate:self];
+    if(timeInterval > secondsInTwoMonths)
+    {
+        //It's been than two months.
+        result = YES;
+    }
+    
+    return result;
+}
+
 
 @end

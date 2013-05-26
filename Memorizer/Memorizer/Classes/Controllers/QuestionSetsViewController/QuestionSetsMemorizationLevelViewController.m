@@ -15,6 +15,7 @@
 #import "QuestionSetTableViewCell.h"
 #import "NSString+LabelSize.h"
 #import "NSDateFormatter+Date.h"
+#import "NSDate+Comparisons.h"
 
 @interface QuestionSetsMemorizationLevelViewController ()
 
@@ -77,11 +78,12 @@
  @remarks : <#(optional)#>
  */
 - (void)displayHelpImageOnFirstLaunch{
-    NSNumber *isFirstLaunch = [[NSUserDefaults standardUserDefaults] objectForKey:kIsQuestionSetMemorizationHelpAlreadyDisplayedKey];
+    NSDate *QuestionSetHelpViewLastDisplayedDate = [[NSUserDefaults standardUserDefaults] objectForKey:kQuestionSetHelpViewLastDisplayedDateKey];
     
-    if ([isFirstLaunch boolValue] == NO) {
+    BOOL isDateLaterThanTwoMonths = [QuestionSetHelpViewLastDisplayedDate isTwoMonthLaterThan:[NSDate date]];
+    if (QuestionSetHelpViewLastDisplayedDate == nil || isDateLaterThanTwoMonths == YES) {
         [self addHelpSubview];
-        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:kIsQuestionSetMemorizationHelpAlreadyDisplayedKey];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kQuestionSetHelpViewLastDisplayedDateKey];
     }
 }
 
@@ -100,6 +102,18 @@
   [self addHelpButtonOnNavigationBar];
     
     [self displayHelpImageOnFirstLaunch];
+}
+
+/**
+ @brief In order to reload the table view when the user comes from the QuestionView through the "Back" button.
+ @author : Rémi Lavedrine
+ @date : 26/05/2013
+ @remarks : <#(optional)#>
+ */
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [self refreshView];
 }
 
 

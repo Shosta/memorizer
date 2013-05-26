@@ -66,6 +66,21 @@
 }
 
 
+#pragma mark - Help Views
+
+/**
+ @brief Sauvegarde la date à laquelle l'application a été lancée (lors de la mise en background) afin d'afficher les help views si cela fait plus de deux mois que l'application n'a pas été lancé.
+ @author : Rémi Lavedrine
+ @date : 26/05/2013
+ @remarks : <#(optional)#>
+ */
+- (void)saveLastApplicationLaunchDate{
+    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kQuestionSetHelpViewLastDisplayedDateKey];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kQuestionStatementHelpViewLastDisplayedDateKey];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kQuestionAnswerHelpViewLastDisplayedDateKey];
+}
+
+
 #pragma mark - Application
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -88,6 +103,7 @@
 {
   // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
   // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [self saveLastApplicationLaunchDate];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
