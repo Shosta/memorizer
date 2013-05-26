@@ -40,6 +40,36 @@ static const int kDescriptionSection = 2;
     [super addHelpSubview];
 }
 
+/**
+ @brief Display the Help View for the Statement if it's the first launch.
+ @author : Rémi Lavedrine
+ @date : 26/05/2013
+ @remarks : <#(optional)#>
+ */
+- (void)displayStatementHelpImageOnFirstLaunch{
+    NSNumber *isFirstLaunch = [[NSUserDefaults standardUserDefaults] objectForKey:kIsQuestionStatementHelpAlreadyDisplayedKey];
+    
+    if ([isFirstLaunch boolValue] == NO) {
+        [self addHelpSubview];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:kIsQuestionStatementHelpAlreadyDisplayedKey];
+    }
+}
+
+/**
+ @brief Display the Help View for the Answer if it's the first launch.
+ @author : Rémi Lavedrine
+ @date : 26/05/2013
+ @remarks : <#(optional)#>
+ */
+- (void)displayAnswerHelpImageOnFirstLaunch{
+    NSNumber *isFirstLaunch = [[NSUserDefaults standardUserDefaults] objectForKey:kIsQuestionAnswerHelpAlreadyDisplayedKey];
+    
+    if ([isFirstLaunch boolValue] == NO) {
+        [self addHelpSubview];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:kIsQuestionAnswerHelpAlreadyDisplayedKey];
+    }
+}
+
 
 #pragma mark - Object
 
@@ -75,6 +105,8 @@ static const int kDescriptionSection = 2;
     
     [self.nextQuestionButton setUserInteractionEnabled:NO];
   [self addHelpButtonOnNavigationBar];
+    
+    [self displayStatementHelpImageOnFirstLaunch];
 }
 
 
@@ -130,6 +162,7 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
     if ([keyPath isEqualToString:kShouldDisplayAnswerKey]) {
         if ([self.shouldDisplayAnswer boolValue] == YES && [self.shouldDisplayDescription boolValue] == NO) {
             [self reduceTableViewHeight];
+            [self displayAnswerHelpImageOnFirstLaunch];
         }
 	}
 }

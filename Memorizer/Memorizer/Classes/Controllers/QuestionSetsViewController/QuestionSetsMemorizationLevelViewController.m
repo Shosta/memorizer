@@ -70,6 +70,21 @@
 
 #pragma mark - View
 
+/**
+ @brief Display the Help View if it's the first launch.
+ @author : Rémi Lavedrine
+ @date : 26/05/2013
+ @remarks : <#(optional)#>
+ */
+- (void)displayHelpImageOnFirstLaunch{
+    NSNumber *isFirstLaunch = [[NSUserDefaults standardUserDefaults] objectForKey:kIsQuestionSetMemorizationHelpAlreadyDisplayedKey];
+    
+    if ([isFirstLaunch boolValue] == NO) {
+        [self addHelpSubview];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:kIsQuestionSetMemorizationHelpAlreadyDisplayedKey];
+    }
+}
+
 - (void)viewDidLoad{
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
@@ -83,6 +98,8 @@
   self.statusView.delegate = self;
   
   [self addHelpButtonOnNavigationBar];
+    
+    [self displayHelpImageOnFirstLaunch];
 }
 
 

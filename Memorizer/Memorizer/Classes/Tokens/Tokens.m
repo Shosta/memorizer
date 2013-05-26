@@ -13,12 +13,15 @@
 
 NSString *kArchiveFileName = @"AppData.archive";
 
+//! First Launch Help
+NSString *kIsQuestionSetMemorizationHelpAlreadyDisplayedKey = @"isQuestionSetMemorizationHelpAlreadyDisplayed";
+NSString *kIsQuestionStatementHelpAlreadyDisplayedKey = @"isQuestionStatementHelpAlreadyDisplayed";
+NSString *kIsQuestionAnswerHelpAlreadyDisplayedKey = @"isQuestionAnswerHelpAlreadyDisplayed";
 
 //! Date Format
 NSString *kDayMonthHourMinutesFormatDate = @"d MMMM, HH:mm";
 NSString *kDayMonthYearFormatDate = @"d MMMM yyyy";
 NSString *kDayMonthFormatDate = @"d MMMM";
-
 
 //! Cell QuestionSet
 int kCellQuestionSetPaddingX = 10;
@@ -29,7 +32,6 @@ int kCellQuestionSetDefaultTextWidth = 280;
 int kCellQuestionSetInfoContainerViewHeight = 241;
 int kCellQuestionSetListInfoContainerViewHeight = 26;
 int kCellQuestionSetStatisticsInfoContainerViewHeight = 160;
-
 
 //! Cell Answer
 int kCellStatementPaddingX = 10;

@@ -29,12 +29,15 @@
 
 extern NSString *kArchiveFileName;
 
+//! First Launch Help
+extern NSString *kIsQuestionSetMemorizationHelpAlreadyDisplayedKey;
+extern NSString *kIsQuestionStatementHelpAlreadyDisplayedKey;
+extern NSString *kIsQuestionAnswerHelpAlreadyDisplayedKey;
 
 //! Date Format
 extern NSString *kDayMonthHourMinutesFormatDate;
 extern NSString *kDayMonthYearFormatDate;
 extern NSString *kDayMonthFormatDate;
-
 
 //! Cell QuestionSet
 extern int kCellQuestionSetPaddingX;
