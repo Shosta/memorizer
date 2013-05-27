@@ -269,6 +269,7 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
         
         // 2. Reset the button state to unselected.
         [self removePreviousSelectedStateToButton];
+      
         // 3. As the TableView's height was reduced to present the "noting buttons" it has to be resized to its original size.
         [self increaseTableViewHeight];
     }
@@ -282,6 +283,20 @@ static NSString *kIsMemorizationLevelChosenKey = @"isMemorizationLevelChosen";
     [self displayMemorizationLevelSummaryContainerView];
     
     [self performSelector:@selector(displayNextQuestion) withObject:nil afterDelay:0.9];
+}
+
+/**
+ @brief Hide the MemorizationLevelSummaryContainerView and reset the "SelectedState Buttons".
+ @author : Rémi Lavedrine
+ @date : 27/05/2013
+ @remarks : <#(optional)#>
+ */
+- (IBAction)cancelLevelSelection:(id)sender{
+  // 1. Remove the MemorizationLevelFeedback label.
+  [self hideMemorizationLevelSummaryContainerView];
+  
+  // 2. Reset the button state to unselected.
+  [self removePreviousSelectedStateToButton];
 }
 
 
