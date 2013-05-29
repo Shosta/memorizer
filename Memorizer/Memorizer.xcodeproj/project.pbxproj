@@ -329,6 +329,7 @@
 		F2F8D80E17144D7C007FC71A /* StatementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F8D80D17144D7C007FC71A /* StatementTableViewCell.xib */; };
 		F2F8D81217144DA0007FC71A /* StatementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D81117144DA0007FC71A /* StatementTableViewCell.m */; };
 		F2F8D815171450C6007FC71A /* AutoResizeLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D814171450C5007FC71A /* AutoResizeLabelTableViewCell.m */; };
+		F2FB453D1756436D0035A37D /* SF_Arch_Rival_Extended_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2FB453C1756436D0035A37D /* SF_Arch_Rival_Extended_Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -710,6 +711,16 @@
 		F2F8D81117144DA0007FC71A /* StatementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatementTableViewCell.m; path = CustomUIObjects/StatementTableViewCell/StatementTableViewCell.m; sourceTree = "<group>"; };
 		F2F8D813171450C5007FC71A /* AutoResizeLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoResizeLabelTableViewCell.h; path = CustomUIObjects/AutoResizeLabelTableViewCell/AutoResizeLabelTableViewCell.h; sourceTree = "<group>"; };
 		F2F8D814171450C5007FC71A /* AutoResizeLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoResizeLabelTableViewCell.m; path = CustomUIObjects/AutoResizeLabelTableViewCell/AutoResizeLabelTableViewCell.m; sourceTree = "<group>"; };
+		F2FB452C175637B60035A37D /* Airstream.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Airstream.ttf; sourceTree = "<group>"; };
+		F2FB452D175637B60035A37D /* BLESD___.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BLESD___.otf"; sourceTree = "<group>"; };
+		F2FB452E175637B60035A37D /* Parisienne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Parisienne-Regular.ttf"; sourceTree = "<group>"; };
+		F2FB452F175637B60035A37D /* SocietyEditor_Personal_Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SocietyEditor_Personal_Use.ttf; sourceTree = "<group>"; };
+		F2FB453417563A990035A37D /* GrandHotel-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GrandHotel-Regular.otf"; sourceTree = "<group>"; };
+		F2FB453617563C4D0035A37D /* Redressed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Redressed.ttf; sourceTree = "<group>"; };
+		F2FB4538175640240035A37D /* SF_Burlington_Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SF_Burlington_Script.ttf; sourceTree = "<group>"; };
+		F2FB453A175641680035A37D /* SF_Burlington_Script_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SF_Burlington_Script_Bold.ttf; sourceTree = "<group>"; };
+		F2FB453C1756436D0035A37D /* SF_Arch_Rival_Extended_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SF_Arch_Rival_Extended_Bold.ttf; sourceTree = "<group>"; };
+		F2FD8035175626BD00E30557 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1210,6 +1221,7 @@
 				F2B2445C16E5F85500E11381 /* second.png */,
 				F2B2445E16E5F85500E11381 /* second@2x.png */,
 				A845C05D17044AED0064806D /* Content */,
+				F2FD8034175626BD00E30557 /* Fonts */,
 				F2D92A14171316EA006ED8A6 /* Images */,
 			);
 			path = Resources;
@@ -1601,6 +1613,23 @@
 			name = AutoResizeLabelTableViewCell;
 			sourceTree = "<group>";
 		};
+		F2FD8034175626BD00E30557 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F2FB453C1756436D0035A37D /* SF_Arch_Rival_Extended_Bold.ttf */,
+				F2FD8035175626BD00E30557 /* Pacifico.ttf */,
+				F2FB452C175637B60035A37D /* Airstream.ttf */,
+				F2FB452D175637B60035A37D /* BLESD___.otf */,
+				F2FB453417563A990035A37D /* GrandHotel-Regular.otf */,
+				F2FB452E175637B60035A37D /* Parisienne-Regular.ttf */,
+				F2FB453617563C4D0035A37D /* Redressed.ttf */,
+				F2FB452F175637B60035A37D /* SocietyEditor_Personal_Use.ttf */,
+				F2FB4538175640240035A37D /* SF_Burlington_Script.ttf */,
+				F2FB453A175641680035A37D /* SF_Burlington_Script_Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1921,6 +1950,7 @@
 				A8AB1C15174EB27B00D15BFF /* QuestionSetStatisticsTableViewCell.xib in Resources */,
 				A80B9179174EC363006ACD0F /* questionSetStatisticsTableViewCellSelectionArrow@2x.png in Resources */,
 				A80B917A174EC363006ACD0F /* questionSetTableViewCellSelectionArrow@2x.png in Resources */,
+				F2FB453D1756436D0035A37D /* SF_Arch_Rival_Extended_Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

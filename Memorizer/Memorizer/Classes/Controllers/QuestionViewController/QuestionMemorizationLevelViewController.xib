@@ -188,6 +188,7 @@
 						<string key="NSFrame">{{256, 262}, {64, 105}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
@@ -684,6 +685,7 @@
 						<string key="NSFrame">{{69, 276}, {160, 109}}</string>
 						<reference key="NSSuperview" ref="329854749"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -1201,17 +1203,6 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">QuestionMemorizationLevelViewController</string>
 					<string key="superclassName">QuestionViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">setMemorizationLevelFromButton:</string>
-						<string key="NS.object.0">UIButton</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">setMemorizationLevelFromButton:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">setMemorizationLevelFromButton:</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="level1Button">UIButton</string>
 						<string key="level2Button">UIButton</string>

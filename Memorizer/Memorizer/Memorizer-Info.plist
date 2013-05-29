@@ -26,6 +26,16 @@
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Pacifico.ttf</string>
+		<string>SocietyEditor_Personal_Use.ttf</string>
+		<string>Airstream.ttf</string>
+		<string>GrandHotel-Regular.otf</string>
+		<string>Redressed.ttf</string>
+		<string>SF_Burlington_Script_Bold.ttf</string>
+		<string>SF_Arch_Rival_Extended_Bold.ttf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
