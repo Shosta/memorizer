@@ -175,17 +175,16 @@
 									<object class="IBUILabel" id="543280206">
 										<reference key="NSNextResponder" ref="677492774"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{9, 0}, {283, 19}}</string>
+										<string key="NSFrame">{{9, 0}, {283, 26}}</string>
 										<reference key="NSSuperview" ref="677492774"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
 										<int key="IBUIContentMode">7</int>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-										<string key="IBUIText">Voir toutes les fiches de la série :</string>
+										<string key="IBUIText">Voir toutes les fiches de la série</string>
 										<object class="NSColor" key="IBUITextColor">
 											<int key="NSColorSpace">1</int>
 											<bytes key="NSRGB">MC4zNDUwOTgwMzkyIDAuNDE5NjA3ODQzMSAwLjQ0NzA1ODgyMzUAA</bytes>
@@ -251,6 +250,10 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="446851555"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
+				<object class="NSColor" key="IBUIBackgroundColor">
+					<int key="NSColorSpace">1</int>
+					<bytes key="NSRGB">MC45ODAzOTIxNTY5IDAuOTgwMzkyMTU2OSAwLjk4MDM5MjE1NjkAA</bytes>
+				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">2</int>
 				<reference key="IBUIContentView" ref="446851555"/>
@@ -282,6 +285,14 @@
 						<reference key="destination" ref="677492774"/>
 					</object>
 					<int key="connectionID">18</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">seeNextActionLabel</string>
+						<reference key="source" ref="988246517"/>
+						<reference key="destination" ref="543280206"/>
+					</object>
+					<int key="connectionID">20</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -322,7 +333,7 @@
 						<reference key="object" ref="859230893"/>
 						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="988246517"/>
-						<string key="objectName">QuestionSet Title - Label</string>
+						<string key="objectName">QuestionSet Title - UILabel</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
@@ -344,6 +355,7 @@
 						<int key="objectID">13</int>
 						<reference key="object" ref="345187533"/>
 						<reference key="parent" ref="988246517"/>
+						<string key="objectName">Horizontal Line - UIView</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
@@ -393,7 +405,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">20</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -428,6 +440,7 @@
 						<string key="questionSetInfoContainerView">UIView</string>
 						<string key="questionSetProgressionAnimatedImageView">UIImageView</string>
 						<string key="remainingQuestionsNumberLabel">UILabel</string>
+						<string key="seeNextActionLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="allQuestionsNumberLabel">
@@ -460,6 +473,10 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="remainingQuestionsNumberLabel">
 							<string key="name">remainingQuestionsNumberLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="seeNextActionLabel">
+							<string key="name">seeNextActionLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>

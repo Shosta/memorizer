@@ -33,7 +33,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUITableViewCell" id="1004873636">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIView" id="565062058">
@@ -45,6 +45,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrameSize">{300, 31}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="626222385"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -58,6 +59,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{10, 5}, {155, 21}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="228787301"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor" id="577642452">
@@ -95,6 +97,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{165, 0}, {1, 31}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="637492091"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -108,6 +111,7 @@
 								<int key="NSvFlags">289</int>
 								<string key="NSFrame">{{143, 5}, {127, 21}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="107671166"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="577642452"/>
@@ -141,6 +145,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{0, 31}, {300, 1}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="322540422"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -154,6 +159,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{10, 36}, {156, 21}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="273853783"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="577642452"/>
@@ -175,6 +181,7 @@
 								<int key="NSvFlags">289</int>
 								<string key="NSFrame">{{174, 36}, {96, 21}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1028458354"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="577642452"/>
@@ -197,6 +204,7 @@
 								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{10, 67}, {260, 21}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="196700283"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="577642452"/>
@@ -229,6 +237,7 @@
 								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{10, 91}, {260, 20}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="274412671"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="577642452"/>
@@ -239,6 +248,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{0, 117}, {300, 1}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1035480260"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -252,6 +262,7 @@
 								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{10, 128}, {260, 21}}</string>
 								<reference key="NSSuperview" ref="565062058"/>
+								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="577642452"/>
 								<bool key="IBUIOpaque">NO</bool>
@@ -277,6 +288,7 @@
 						</array>
 						<string key="NSFrameSize">{280, 163}</string>
 						<reference key="NSSuperview" ref="1004873636"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="588962533"/>
 						<string key="NSReuseIdentifierKey">_NS:11</string>
 						<reference key="IBUIBackgroundColor" ref="577642452"/>
@@ -288,9 +300,14 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{300, 164}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="565062058"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<reference key="IBUIBackgroundColor" ref="577642452"/>
+				<object class="NSColor" key="IBUIBackgroundColor">
+					<int key="NSColorSpace">1</int>
+					<bytes key="NSRGB">MC45ODAzOTIxNTY5IDAuOTgwMzkyMTU2OSAwLjk4MDM5MjE1NjkAA</bytes>
+				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUIAccessoryType">1</int>
 				<reference key="IBUIContentView" ref="565062058"/>
@@ -479,12 +496,21 @@
 					<string key="className">QuestionSetTableViewCell</string>
 					<string key="superclassName">AutoResizeLabelTableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="allQuestionsNumberLabel">UILabel</string>
 						<string key="gaugeContainerView">UIView</string>
 						<string key="gaugeViewController">UIGaugeViewController</string>
 						<string key="nextDateLabel">UILabel</string>
-						<string key="nextQuestionsNumberLabel">UILabel</string>
+						<string key="nextDateQuestionsNumberLabel">UILabel</string>
+						<string key="questionSetInfoContainerView">UIView</string>
+						<string key="questionSetProgressionAnimatedImageView">UIImageView</string>
+						<string key="remainingQuestionsNumberLabel">UILabel</string>
+						<string key="seeNextActionLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="allQuestionsNumberLabel">
+							<string key="name">allQuestionsNumberLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="gaugeContainerView">
 							<string key="name">gaugeContainerView</string>
 							<string key="candidateClassName">UIView</string>
@@ -497,8 +523,24 @@
 							<string key="name">nextDateLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="nextQuestionsNumberLabel">
-							<string key="name">nextQuestionsNumberLabel</string>
+						<object class="IBToOneOutletInfo" key="nextDateQuestionsNumberLabel">
+							<string key="name">nextDateQuestionsNumberLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="questionSetInfoContainerView">
+							<string key="name">questionSetInfoContainerView</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="questionSetProgressionAnimatedImageView">
+							<string key="name">questionSetProgressionAnimatedImageView</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="remainingQuestionsNumberLabel">
+							<string key="name">remainingQuestionsNumberLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="seeNextActionLabel">
+							<string key="name">seeNextActionLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>

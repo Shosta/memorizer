@@ -150,4 +150,19 @@
 }
 
 
+#pragma mark - Footer
+
+/**
+ @brief Remove extra separator lines for empty rows and display a shadow effect.
+ @author : Rémi Lavedrine
+ @date : 29/05/2013
+ @remarks : <#(optional)#>
+ */
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+  UIImageView *footerShadowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"shadow.png"]];
+
+  return footerShadowView;
+}
+
+
 @end

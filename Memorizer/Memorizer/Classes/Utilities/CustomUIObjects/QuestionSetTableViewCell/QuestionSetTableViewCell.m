@@ -43,14 +43,21 @@
  */
 - (void)layoutSubviews{
     [super layoutSubviews];
-    
-    int cellQuestionSetOriginY = kCellQuestionSetTitleOriginMajorY;
+  
+  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"Pacifico" size:17]];
+  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"Airstream" size:24]];
+  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"Grand Hotel" size:24]];
+  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"Society Editor Personal Use" size:24]];
+  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"Redressed" size:24]];
+  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"SF Burlington Script" size:32]];
+  
+  int cellQuestionSetOriginY = kCellQuestionSetTitleOriginMajorY;
     if (_cellStyle == QuestionSetTableViewCellMinorStyle){
         cellQuestionSetOriginY = kCellQuestionSetTitleOriginMinorY;
     }else{
         [self.gaugeContainerView addSubview:self.gaugeViewController.view];
     }
-    
+  
     [self configureTextLabelUIWithLabelFont:QUESTIONSET_CELL_TEXT_FONT
                                  labelColor:QUESTIONSET_CELL_TEXT_COLOR
                          labelTextAlignment:NSTextAlignmentCenter
@@ -59,6 +66,8 @@
                         labelStartYPosition:cellQuestionSetOriginY];
     
     self.questionSetInfoContainerView.frame = CGRectMake(0, cellQuestionSetOriginY + self.textLabel.frame.size.height + kCellQuestionSetPaddingY, self.questionSetInfoContainerView.frame.size.width, self.questionSetInfoContainerView.frame.size.height);
+    
+  
 }
 
 

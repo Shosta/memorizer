@@ -322,7 +322,6 @@
 										<string key="NSFrame">{{234, 217}, {59, 14}}</string>
 										<reference key="NSSuperview" ref="1063054005"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
@@ -368,18 +367,19 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="972107138"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
+				<object class="NSColor" key="IBUIBackgroundColor">
+					<int key="NSColorSpace">1</int>
+					<bytes key="NSRGB">MC45ODAzOTIxNTY5IDAuOTgwMzkyMTU2OSAwLjk4MDM5MjE1NjkAA</bytes>
+				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">2</int>
 				<reference key="IBUIContentView" ref="972107138"/>
 				<real value="338" key="IBUIRowHeight"/>
 			</object>
 			<object class="IBUIView" id="1039165673">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<string key="NSFrameSize">{260, 20}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -646,6 +646,7 @@
 						<string key="questionSetInfoContainerView">UIView</string>
 						<string key="questionSetProgressionAnimatedImageView">UIImageView</string>
 						<string key="remainingQuestionsNumberLabel">UILabel</string>
+						<string key="seeNextActionLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="allQuestionsNumberLabel">
@@ -678,6 +679,10 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="remainingQuestionsNumberLabel">
 							<string key="name">remainingQuestionsNumberLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="seeNextActionLabel">
+							<string key="name">seeNextActionLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>

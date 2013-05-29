@@ -38,6 +38,7 @@ typedef enum{
 @property (weak, nonatomic) IBOutlet UILabel *allQuestionsNumberLabel;
 @property (weak, nonatomic) IBOutlet UIView *gaugeContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *questionSetProgressionAnimatedImageView;
+@property (weak, nonatomic) IBOutlet UILabel *seeNextActionLabel;
 
 
 #pragma mark - Accessors
