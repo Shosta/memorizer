@@ -74,11 +74,14 @@
 #pragma mark - View
 
 - (void)addHelpButtonOnNavigationBar{
-  /*UIButton *helpButton = [[UIButton alloc] init];
-  [helpButton setTitle:@"i" forState:UIControlStateNormal];
-  UIBarButtonItem *displayHelpButtonItem = [[UIBarButtonItem alloc] initWithCustomView:helpButton];*/
+  UIImage *image = [UIImage imageNamed:@"questionMark.png"];
+  UIButton *helpButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+  [helpButton setImage:image forState:UIControlStateNormal];
+  [helpButton setShowsTouchWhenHighlighted:YES];
+  [helpButton addTarget:self action:@selector(addOrRemoveHelpSubview) forControlEvents:UIControlEventTouchUpInside];
+  UIBarButtonItem *displayHelpButtonItem = [[UIBarButtonItem alloc] initWithCustomView:helpButton];
   
-  UIBarButtonItem *displayHelpButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(addOrRemoveHelpSubview)];
+  //UIBarButtonItem *displayHelpButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(addOrRemoveHelpSubview)];
   self.navigationItem.rightBarButtonItem = displayHelpButtonItem;
 }
 

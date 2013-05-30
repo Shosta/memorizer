@@ -277,6 +277,8 @@
 		F2426AEB1743B10200101E52 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2426AE91743B10200101E52 /* HelpViewController.m */; };
 		F2426AEC1743B10200101E52 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2426AEA1743B10200101E52 /* HelpViewController.xib */; };
 		F2426AF31743B28600101E52 /* GuiUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F2426AF21743B28600101E52 /* GuiUtilities.m */; };
+		F25D1F8C1757A6BE00D0F92E /* questionMark.png in Resources */ = {isa = PBXBuildFile; fileRef = F25D1F8B1757A6BE00D0F92E /* questionMark.png */; };
+		F25D1F8F1757A79C00D0F92E /* questionMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F25D1F8E1757A79C00D0F92E /* questionMark@2x.png */; };
 		F286450417428D0B00621F39 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F286450317428D0B00621F39 /* Card.m */; };
 		F28BE51B1714664600B4AC13 /* nextQuestion.png in Resources */ = {isa = PBXBuildFile; fileRef = F28BE51A1714664600B4AC13 /* nextQuestion.png */; };
 		F292F8941716AE3100F3723A /* QuestionMemorizationLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F292F8921716AE3000F3723A /* QuestionMemorizationLevelViewController.m */; };
@@ -644,6 +646,8 @@
 		F2426AEA1743B10200101E52 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HelpViewController.xib; path = CustomViewControllers/HelpViewController/HelpViewController.xib; sourceTree = "<group>"; };
 		F2426AF11743B28600101E52 /* GuiUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiUtilities.h; sourceTree = "<group>"; };
 		F2426AF21743B28600101E52 /* GuiUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuiUtilities.m; sourceTree = "<group>"; };
+		F25D1F8B1757A6BE00D0F92E /* questionMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = questionMark.png; path = QuestionSetViewController/questionMark.png; sourceTree = "<group>"; };
+		F25D1F8E1757A79C00D0F92E /* questionMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "questionMark@2x.png"; path = "QuestionSetViewController/questionMark@2x.png"; sourceTree = "<group>"; };
 		F286450217428D0B00621F39 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = CustomObjects/Card/Card.h; sourceTree = "<group>"; };
 		F286450317428D0B00621F39 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = CustomObjects/Card/Card.m; sourceTree = "<group>"; };
 		F28BE51A1714664600B4AC13 /* nextQuestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextQuestion.png; sourceTree = "<group>"; };
@@ -1329,6 +1333,15 @@
 			path = GUIUtilities;
 			sourceTree = "<group>";
 		};
+		F25D1F8D1757A6CA00D0F92E /* QuestionSetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F25D1F8B1757A6BE00D0F92E /* questionMark.png */,
+				F25D1F8E1757A79C00D0F92E /* questionMark@2x.png */,
+			);
+			name = QuestionSetViewController;
+			sourceTree = "<group>";
+		};
 		F286450517428D1200621F39 /* Card */ = {
 			isa = PBXGroup;
 			children = (
@@ -1447,6 +1460,7 @@
 				F2DE405517159CE800D34892 /* NavigationBar */,
 				F2EA3C191715ABAE0091FAF9 /* UITableView */,
 				F2EA3C141715A8EF0091FAF9 /* UITableViewCell */,
+				F25D1F8D1757A6CA00D0F92E /* QuestionSetViewController */,
 				F2DE404117156EBA00D34892 /* QuestionSetTableViewCell */,
 				F2D92A15171316EA006ED8A6 /* AnswerTableViewCell */,
 				F28BE5191714664600B4AC13 /* QuestionViewController */,
@@ -1951,6 +1965,8 @@
 				A80B9179174EC363006ACD0F /* questionSetStatisticsTableViewCellSelectionArrow@2x.png in Resources */,
 				A80B917A174EC363006ACD0F /* questionSetTableViewCellSelectionArrow@2x.png in Resources */,
 				F2FB453D1756436D0035A37D /* SF_Arch_Rival_Extended_Bold.ttf in Resources */,
+				F25D1F8C1757A6BE00D0F92E /* questionMark.png in Resources */,
+				F25D1F8F1757A79C00D0F92E /* questionMark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
