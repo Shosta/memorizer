@@ -24,6 +24,8 @@
 
 
 //! COLORS
+#define CELL_BACKGROUND_COLOR [UIColor colorWithRed:248.0f/255.0f green:248.0f/255.0f blue:248.0f/255.0f alpha:1.0f]
+
 //! QuestionSet Cell color
 #define QUESTIONSET_CELL_TEXT_COLOR [UIColor colorWithRed:34.0f/255.0f green:34.0F/255.0f blue:34.0F/255.0f alpha:1.0f]
 

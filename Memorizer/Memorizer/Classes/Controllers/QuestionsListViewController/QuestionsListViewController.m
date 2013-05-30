@@ -120,10 +120,14 @@
     for(id currentObject in topLevelObjects){
       if([currentObject isKindOfClass:[QuestionTableViewCell class]]){
         cell = (QuestionTableViewCell *) currentObject;
+        
         break;
       }
     }
+    
   }
+  // [cell.backgroundView setBackgroundColor:CELL_BACKGROUND_COLOR];
+  [cell setBackgroundColor:[UIColor darkGrayColor]];
   [self configureCell:cell atIndexPath:indexPath];
   
   return cell;
