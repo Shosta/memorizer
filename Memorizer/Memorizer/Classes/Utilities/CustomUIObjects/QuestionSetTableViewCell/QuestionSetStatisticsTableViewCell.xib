@@ -423,7 +423,7 @@
 											<int key="NSColorSpace">1</int>
 											<bytes key="NSRGB">MC4zNDUwOTgwMzkyIDAuNDE5NjA3ODQzMSAwLjQ0NzA1ODgyMzUAA</bytes>
 										</object>
-										<nil key="IBUIHighlightedColor"/>
+										<reference key="IBUIHighlightedColor" ref="838550375"/>
 										<int key="IBUIBaselineAdjustment">0</int>
 										<object class="IBUIFontDescription" key="IBUIFontDescription">
 											<string key="name">ChalkboardSE-Bold</string>
