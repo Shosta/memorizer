@@ -292,7 +292,7 @@ shouldDisplayDescription:(BOOL)aShouldDisplayDescription{
         
         [cell setBackgroundColor:[UIColor colorWithRed:248.0f/255.0f green:248.0f/255.0f blue:248.0f/255.0f alpha:1.0f]];
         [cell.textLabel setTextColor:[UIColor colorWithRed:88.0f/255.0f green:107.0f/255.0f blue:114.0f/255.0f alpha:1.0f]];
-        [cell.textLabel setFont:[UIFont boldSystemFontOfSize:13]];
+        [cell.textLabel setFont:DESCRIPTION_HEADER_CELL_TEXT_FONT];
     }
     
     NSString *cellContentDescriptionText = @"";

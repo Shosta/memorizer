@@ -96,8 +96,11 @@
   [self.navigationItem setTitle:@"Ultimemo"];
   
   NSString *message = @"Pas de question pour aujourd'hui.\nAttendez quelques jours pour la prochaine série ou bien faites une série juste pour l'entraînement.";
-  self.statusView = [[OLStatusView alloc] initWithStatusLabel:message textFont:[UIFont fontWithName:@"Helvetica" size:16] orientation:UIInterfaceOrientationPortrait translationDirection:DownToUp];
+  self.statusView = [[OLStatusView alloc] initWithStatusLabel:message textFont:[UIFont fontWithName:@"Grand Hotel" size:24] orientation:UIInterfaceOrientationPortrait translationDirection:DownToUp];
   self.statusView.delegate = self;
+  [self.statusView setBackgroundColor:CONTENT_BACKGROUND_COLOR];
+  [self.statusView setLineBackgroundColor:SEPARATOR_LINE_COLOR];
+  [self.statusView setStatusTextColor:DARK_TEXT_COLOR];
   
   [self addHelpButtonOnNavigationBar];
     

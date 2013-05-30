@@ -189,14 +189,14 @@ cardMemorizationLevelStatistics:(CardMemorizationLevelStatistics *)aCardMemoriza
  @remarks : <#(optional)#>
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat cellHeight = 257;
+    CGFloat cellHeight = 276;
     
     if (indexPath.row == 0) {
         // It's the row that describes the info for the section.
-        cellHeight = 257;
+        cellHeight = 276;
         
     } else if (indexPath.row == 1) {
-        cellHeight = 193;
+        cellHeight = 197;
     }
         
     return cellHeight;

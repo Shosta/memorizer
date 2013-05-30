@@ -44,13 +44,6 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
   
-  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"Pacifico" size:17]];
-  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"Airstream" size:24]];
-  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"Grand Hotel" size:24]];
-  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"Society Editor Personal Use" size:24]];
-  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"Redressed" size:24]];
-  // [self.seeNextActionLabel setFont:[UIFont fontWithName:@"SF Burlington Script" size:32]];
-  
   int cellQuestionSetOriginY = kCellQuestionSetTitleOriginMajorY;
     if (_cellStyle == QuestionSetTableViewCellMinorStyle){
         cellQuestionSetOriginY = kCellQuestionSetTitleOriginMinorY;

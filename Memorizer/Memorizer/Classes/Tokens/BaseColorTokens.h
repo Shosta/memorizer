@@ -36,4 +36,11 @@
 #define ANSWER_CELL_TEXT_COLOR_MINOR_STYLE [UIColor colorWithRed:149.0f/255.0f green:153.0f/255.0f blue:156.0f/255.0f alpha:1.0f]
 
 //! Description Cell color
+#define DESCRIPTION_CELL_HEADER_BACKGROUND_COLOR [UIColor colorWithRed:238.0f/255.0f green:238.0f/255.0f blue:238.0f/255.0f alpha:1.0f]
 #define DESCRIPTION_CELL_TEXT_COLOR [UIColor colorWithRed:149.0f/255.0f green:153.0f/255.0f blue:156.0f/255.0f alpha:1.0f]
+
+#define SEPARATOR_LINE_COLOR [UIColor colorWithRed:145.0f/255.0f green:145.0f/255.0f blue:145.0f/255.0f alpha:1.0f]
+
+#define CONTENT_BACKGROUND_COLOR [UIColor colorWithRed:248.0f/255.0f green:248.0f/255.0f blue:248.0f/255.0f alpha:1.0f]
+#define TEXT_COLOR [UIColor colorWithRed:88.0f/255.0f green:107.0f/255.0f blue:114.0f/255.0f alpha:1.0f]
+#define DARK_TEXT_COLOR [UIColor colorWithRed:66.0f/255.0f green:66.0f/255.0f blue:66.0f/255.0f alpha:1.0f]

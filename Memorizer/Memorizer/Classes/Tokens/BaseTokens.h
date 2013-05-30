@@ -71,6 +71,7 @@
 #define ANSWER_CELL_TEXT_FONT_MINOR_STYLE [UIFont systemFontOfSize:17]
 
 //! Description Cell Text Fonts
+#define DESCRIPTION_HEADER_CELL_TEXT_FONT [UIFont fontWithName:@"SF Arch Rival Extended" size:13]
 #define DESCRIPTION_CELL_TEXT_FONT [UIFont systemFontOfSize:17]
 
 
