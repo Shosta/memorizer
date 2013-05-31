@@ -17,14 +17,13 @@
 //--------------------------------------------------------
 // 
 // @brief
-// 
+//
 
+#import "AlignScrollViewController.h"
 #import "HelpViewController.h"
 #import "UINavigationController+Animations.h"
 
 @interface QuestionSetsViewController : HelpViewController
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 //! Calculate the gauge progress percent according to the question saved memorization level.
 //! @param [in] indexPath : The indexPath for the cell we want to calculate the "question done percent".

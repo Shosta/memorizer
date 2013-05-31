@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlignScrollViewController.h"
 
-@interface HelpViewController : UIViewController
+@interface HelpViewController : AlignScrollViewController
 
 @property (weak, nonatomic) IBOutlet UIScrollView *helpImageContainerScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *helpImageView;

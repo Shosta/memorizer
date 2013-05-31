@@ -30,9 +30,9 @@ NSString *kDayMonthFormatDate = @"d MMMM";
 
 //! Cell QuestionSet
 int kCellQuestionSetPaddingX = 10;
-int kCellQuestionSetPaddingY = 15;
+int kCellQuestionSetPaddingY = 10;
 int kCellQuestionSetTitleOriginMajorY = 57;
-int kCellQuestionSetTitleOriginMinorY = 41;
+int kCellQuestionSetTitleOriginMinorY = 57;
 int kCellQuestionSetDefaultTextWidth = 280;
 int kCellQuestionSetInfoContainerViewHeight = 241;
 int kCellQuestionSetListInfoContainerViewHeight = 37;

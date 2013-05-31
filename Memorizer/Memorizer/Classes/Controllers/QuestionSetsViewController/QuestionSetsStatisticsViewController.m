@@ -116,7 +116,7 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)detailElementTextHeight:(NSString *)detailElementText{
-    CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:ANSWER_CELL_TEXT_FONT_MAJOR_STYLE forWidth:kCellAnswerDefaultTextWidth];
+    CGFloat detailElementTextHeight = [detailElementText getTextHeightAtFont:QUESTIONSET_CELL_TEXT_FONT forWidth:kCellAnswerDefaultTextWidth];
     
     return detailElementTextHeight ;
 }
@@ -128,11 +128,11 @@
  @remarks : <#(optional)#>
  */
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat minimumCellHeight = 287;
+    CGFloat minimumCellHeight = 304;
     CGFloat cellHeight = 0;
     QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
         
-    cellHeight = kCellQuestionSetTitleOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY + kCellQuestionSetStatisticsInfoContainerViewHeight;
+    cellHeight = kCellQuestionSetTitleOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetStatisticsInfoContainerViewHeight;
     
     if (cellHeight < minimumCellHeight) {
         cellHeight = minimumCellHeight;

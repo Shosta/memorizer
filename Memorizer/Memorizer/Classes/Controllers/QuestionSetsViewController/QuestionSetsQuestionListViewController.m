@@ -18,6 +18,9 @@
 
 @implementation QuestionSetsQuestionListViewController
 
+
+#pragma mark - Height
+
 /**
  @brief Return custom height from each row based on each row data and assuming it is a GenericBalanceCell. Else it returns 0.
  @author : Rémi Lavedrine
@@ -29,7 +32,7 @@
     CGFloat cellHeight = 0;
     QuestionSet *currentQuestionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
     
-    cellHeight = kCellQuestionSetTitleOriginMinorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY + kCellQuestionSetListInfoContainerViewHeight + kCellQuestionSetPaddingY;
+    cellHeight = kCellQuestionSetTitleOriginMinorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY + kCellQuestionSetListInfoContainerViewHeight;
     
     if (cellHeight < minimumCellHeight) {
         cellHeight = minimumCellHeight;
@@ -37,6 +40,7 @@
     
     return cellHeight;
 }
+
 
 #pragma mark - Selection
 

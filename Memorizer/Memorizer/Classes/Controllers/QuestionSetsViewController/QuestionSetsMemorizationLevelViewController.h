@@ -26,8 +26,6 @@
 
 @interface QuestionSetsMemorizationLevelViewController : QuestionSetsViewController <OLStatusViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 #pragma mark - Refresh View
 
 //! <#Describe the function purpose#>
