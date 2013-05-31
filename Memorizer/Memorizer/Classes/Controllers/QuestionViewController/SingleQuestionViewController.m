@@ -446,7 +446,7 @@ shouldDisplayDescription:(BOOL)aShouldDisplayDescription{
         cellHeight = kCellDescriptionPaddingY + [self detailElementTextHeight:currentQuestion.description withFont:DESCRIPTION_CELL_TEXT_FONT] + kCellDescriptionPaddingY;
     }
     
-    if (cellHeight != 30 && cellHeight < minimumCellHeight) {
+    if ((cellHeight != 30 && cellHeight < minimumCellHeight) || [self.shouldDisplayAnswer boolValue] == NO) {
         cellHeight = minimumCellHeight;
     }
     

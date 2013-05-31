@@ -62,16 +62,21 @@
 #define QUESTIONSET_CELL_TEXT_FONT [UIFont fontWithName:@"SF Arch Rival Extended" size:17] //[UIFont boldSystemFontOfSize:17]
 
 //! Statement Cell Fonts
-#define STATEMENT_CELL_TEXT_FONT_MAJOR_STYLE [UIFont boldSystemFontOfSize:17]
-#define STATEMENT_CELL_TEXT_FONT_MINOR_STYLE [UIFont systemFontOfSize:17]
+#define STATEMENT_CELL_TEXT_FONT_MAJOR_STYLE [UIFont fontWithName:@"Grand Hotel" size:24]
+#define STATEMENT_CELL_TEXT_FONT_MINOR_STYLE [UIFont fontWithName:@"Grand Hotel" size:24]
+// #define STATEMENT_CELL_TEXT_FONT_MAJOR_STYLE [UIFont boldSystemFontOfSize:17]
+// #define STATEMENT_CELL_TEXT_FONT_MINOR_STYLE [UIFont systemFontOfSize:17]
 
 //! Answer Cell Fonts
-#define ANSWER_CELL_TEXT_FONT_MAJOR_STYLE [UIFont boldSystemFontOfSize:17]
-#define ANSWER_CELL_TEXT_FONT_MINOR_STYLE [UIFont systemFontOfSize:17]
+#define ANSWER_CELL_TEXT_FONT_MAJOR_STYLE [UIFont fontWithName:@"SF Arch Rival Extended" size:17]
+#define ANSWER_CELL_TEXT_FONT_MINOR_STYLE [UIFont fontWithName:@"SF Arch Rival Extended" size:17]
+// #define ANSWER_CELL_TEXT_FONT_MAJOR_STYLE [UIFont boldSystemFontOfSize:17]
+// #define ANSWER_CELL_TEXT_FONT_MINOR_STYLE [UIFont systemFontOfSize:17]
 
 //! Description Cell Text Fonts
 #define DESCRIPTION_HEADER_CELL_TEXT_FONT [UIFont fontWithName:@"SF Arch Rival Extended" size:13]
-#define DESCRIPTION_CELL_TEXT_FONT [UIFont systemFontOfSize:17]
+#define DESCRIPTION_CELL_TEXT_FONT [UIFont fontWithName:@"Grand Hotel" size:24]
+// #define DESCRIPTION_CELL_TEXT_FONT [UIFont systemFontOfSize:17]
 
 
 //! About Cell's style.
