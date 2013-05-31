@@ -332,6 +332,11 @@
 		F2F8D81217144DA0007FC71A /* StatementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D81117144DA0007FC71A /* StatementTableViewCell.m */; };
 		F2F8D815171450C6007FC71A /* AutoResizeLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D814171450C5007FC71A /* AutoResizeLabelTableViewCell.m */; };
 		F2FB453D1756436D0035A37D /* SF_Arch_Rival_Extended_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2FB453C1756436D0035A37D /* SF_Arch_Rival_Extended_Bold.ttf */; };
+		F2FE0B9917589F94003D16E8 /* displayDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE0B9717589F94003D16E8 /* displayDescription.png */; };
+		F2FE0B9A17589F94003D16E8 /* displayDescription@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE0B9817589F94003D16E8 /* displayDescription@2x.png */; };
+		F2FE0B9D1758A818003D16E8 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE0B9B1758A818003D16E8 /* speaker.png */; };
+		F2FE0B9E1758A818003D16E8 /* speaker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE0B9C1758A818003D16E8 /* speaker@2x.png */; };
+		F2FE0BA51758C419003D16E8 /* AlignScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE0BA41758C419003D16E8 /* AlignScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -725,6 +730,12 @@
 		F2FB453A175641680035A37D /* SF_Burlington_Script_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SF_Burlington_Script_Bold.ttf; sourceTree = "<group>"; };
 		F2FB453C1756436D0035A37D /* SF_Arch_Rival_Extended_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SF_Arch_Rival_Extended_Bold.ttf; sourceTree = "<group>"; };
 		F2FD8035175626BD00E30557 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
+		F2FE0B9717589F94003D16E8 /* displayDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = displayDescription.png; sourceTree = "<group>"; };
+		F2FE0B9817589F94003D16E8 /* displayDescription@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "displayDescription@2x.png"; sourceTree = "<group>"; };
+		F2FE0B9B1758A818003D16E8 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
+		F2FE0B9C1758A818003D16E8 /* speaker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker@2x.png"; sourceTree = "<group>"; };
+		F2FE0BA31758C419003D16E8 /* AlignScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlignScrollViewController.h; path = CustomViewControllers/AlignScrollViewController/AlignScrollViewController.h; sourceTree = "<group>"; };
+		F2FE0BA41758C419003D16E8 /* AlignScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlignScrollViewController.m; path = CustomViewControllers/AlignScrollViewController/AlignScrollViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1311,6 +1322,7 @@
 		F2426AEE1743B11A00101E52 /* CustomViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F2FE0BA61758C421003D16E8 /* AlignScrollViewController */,
 				F2426AED1743B10F00101E52 /* HelpViewController */,
 			);
 			name = CustomViewControllers;
@@ -1363,6 +1375,10 @@
 			isa = PBXGroup;
 			children = (
 				F28BE51A1714664600B4AC13 /* nextQuestion.png */,
+				F2FE0B9717589F94003D16E8 /* displayDescription.png */,
+				F2FE0B9817589F94003D16E8 /* displayDescription@2x.png */,
+				F2FE0B9B1758A818003D16E8 /* speaker.png */,
+				F2FE0B9C1758A818003D16E8 /* speaker@2x.png */,
 			);
 			path = QuestionViewController;
 			sourceTree = "<group>";
@@ -1642,6 +1658,15 @@
 				F2FB453A175641680035A37D /* SF_Burlington_Script_Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F2FE0BA61758C421003D16E8 /* AlignScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F2FE0BA31758C419003D16E8 /* AlignScrollViewController.h */,
+				F2FE0BA41758C419003D16E8 /* AlignScrollViewController.m */,
+			);
+			name = AlignScrollViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1967,6 +1992,10 @@
 				F2FB453D1756436D0035A37D /* SF_Arch_Rival_Extended_Bold.ttf in Resources */,
 				F25D1F8C1757A6BE00D0F92E /* questionMark.png in Resources */,
 				F25D1F8F1757A79C00D0F92E /* questionMark@2x.png in Resources */,
+				F2FE0B9917589F94003D16E8 /* displayDescription.png in Resources */,
+				F2FE0B9A17589F94003D16E8 /* displayDescription@2x.png in Resources */,
+				F2FE0B9D1758A818003D16E8 /* speaker.png in Resources */,
+				F2FE0B9E1758A818003D16E8 /* speaker@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2025,6 +2054,7 @@
 				F211472F1744DB1B00564478 /* NSDate+Comparisons.m in Sources */,
 				F2114735174532B200564478 /* UINavigationController+Animations.m in Sources */,
 				A80B9176174EBB87006ACD0F /* QuestionSetStatisticsTableViewCell.m in Sources */,
+				F2FE0BA51758C419003D16E8 /* AlignScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
