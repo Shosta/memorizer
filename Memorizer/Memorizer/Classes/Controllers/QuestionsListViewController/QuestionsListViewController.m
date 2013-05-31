@@ -127,7 +127,7 @@
     
   }
   // [cell.backgroundView setBackgroundColor:CELL_BACKGROUND_COLOR];
-  [cell setBackgroundColor:[UIColor darkGrayColor]];
+  // [cell setBackgroundColor:[UIColor darkGrayColor]];
   [self configureCell:cell atIndexPath:indexPath];
   
   return cell;
