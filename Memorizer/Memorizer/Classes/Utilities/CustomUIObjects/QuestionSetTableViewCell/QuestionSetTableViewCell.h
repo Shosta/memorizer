@@ -36,16 +36,11 @@ typedef enum{
 @property (weak, nonatomic) IBOutlet UILabel *nextDateQuestionsNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *remainingQuestionsNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *allQuestionsNumberLabel;
-@property (weak, nonatomic) IBOutlet UIView *gaugeContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *questionSetProgressionAnimatedImageView;
 @property (weak, nonatomic) IBOutlet UILabel *seeNextActionLabel;
 
 
 #pragma mark - Accessors
-
-//! Set the percent for the gauge of the UIGaugeController.
-//! @param[in] progress : The percent of the progress bar.
-- (void)setGaugeProgress:(float)progress;
 
 - (void)setAnimatedImageAnimationFromPercent:(float)percent;
 

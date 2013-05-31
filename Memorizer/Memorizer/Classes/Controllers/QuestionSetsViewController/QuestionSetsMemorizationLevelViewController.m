@@ -78,13 +78,13 @@
  @remarks : <#(optional)#>
  */
 - (void)displayHelpImageOnFirstLaunch{
-    NSDate *QuestionSetHelpViewLastDisplayedDate = [[NSUserDefaults standardUserDefaults] objectForKey:kQuestionSetHelpViewLastDisplayedDateKey];
-    
-    BOOL isDateLaterThanTwoMonths = [QuestionSetHelpViewLastDisplayedDate isTwoMonthLaterThan:[NSDate date]];
-    if (QuestionSetHelpViewLastDisplayedDate == nil || isDateLaterThanTwoMonths == YES) {
-        [self addHelpSubview];
-        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kQuestionSetHelpViewLastDisplayedDateKey];
-    }
+  NSDate *QuestionSetHelpViewLastDisplayedDate = [[NSUserDefaults standardUserDefaults] objectForKey:kQuestionSetHelpViewLastDisplayedDateKey];
+  
+  BOOL isDateLaterThanTwoMonths = [QuestionSetHelpViewLastDisplayedDate isTwoMonthLaterThan:[NSDate date]];
+  if (QuestionSetHelpViewLastDisplayedDate == nil || isDateLaterThanTwoMonths == YES) {
+    [self addHelpSubview];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kQuestionSetHelpViewLastDisplayedDateKey];
+  }
 }
 
 - (void)viewDidLoad{
@@ -103,8 +103,8 @@
   [self.statusView setStatusTextColor:DARK_TEXT_COLOR];
   
   [self addHelpButtonOnNavigationBar];
-    
-    [self displayHelpImageOnFirstLaunch];
+  
+  [self displayHelpImageOnFirstLaunch];
 }
 
 /**
@@ -114,9 +114,9 @@
  @remarks : <#(optional)#>
  */
 - (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    
-    [self refreshView];
+  [super viewDidAppear:animated];
+  
+  [self refreshView];
 }
 
 
@@ -151,13 +151,22 @@
 }
 
 /**
- @brief Format the date with the day, the month and the year.
+ @brief <#Describe the function purpose#>
  @author : Rémi Lavedrine
- @date : 13/02/2013
+ @date : 31/05/2013
  @remarks : <#(optional)#>
  */
-- (NSString *)dayMonthYearFormatDate:(NSDate *)date{
-  NSString *dateFormatted = [self formatDate:date dateFormatTemplate:kDayMonthYearFormatDate];
+- (NSString *)nextPresentationFormattedDate:(NSDate *)date{
+  NSString *dateFormatted = @"";
+  NSString *dayMonthDate = [self formatDate:date dateFormatTemplate:kDayMonthFormatDate];
+  
+  NSDate *today = [NSDate date];
+  if ([today isSameDayAs:date]) {
+        NSString *hourMinutesDate = [self formatDate:date dateFormatTemplate:kHourMinutesFormatDate];
+    dateFormatted = [NSString stringWithFormat:@"%@ à %@", dayMonthDate, hourMinutesDate];
+  }else{
+    dateFormatted = dayMonthDate;
+  }
   
   return dateFormatted;
 }
@@ -169,44 +178,43 @@
  @remarks : <#(optional)#>
  */
 - (int)remainingQuestionsCountAtIndexPath:(NSIndexPath *)indexPath{
-    QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-    NSArray *questionArray = [questionSet questionsArray];
-    
-    int remainingQuestionsCount = 0;
-    for (Question *question in questionArray) {
-        if (question.userLastMemorizationLevel == NoMemorizationLevel) {
-            remainingQuestionsCount = remainingQuestionsCount + 1;
-        }
+  QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
+  NSArray *questionArray = [questionSet questionsArray];
+  
+  int remainingQuestionsCount = 0;
+  for (Question *question in questionArray) {
+    if (question.userLastMemorizationLevel == NoMemorizationLevel) {
+      remainingQuestionsCount = remainingQuestionsCount + 1;
     }
-    
-    return remainingQuestionsCount;
+  }
+  
+  return remainingQuestionsCount;
 }
 
 - (void)configureCell:(QuestionSetTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
   NextPresentationQuestionSet *nextPresentationQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
   
   // Set the next date.
-  NSString *nextPresentationDate = [self dayMonthYearFormatDate:nextPresentationQuestionSet.nextPresentationDate];
+  NSString *nextPresentationDate = [self nextPresentationFormattedDate:nextPresentationQuestionSet.nextPresentationDate];
   [cell.nextDateLabel setText:nextPresentationDate];
   
-    // Set the number of questions for the next sets.
-    NSString *nextDateQuestionsCount = [NSString stringWithFormat:@": %d", [[nextPresentationQuestionSet nextPresentationQuestionArray] count]];
-    [cell.nextDateQuestionsNumberLabel setText:nextDateQuestionsCount];
-   
-    // Set the number of question that needs to be seen by the user.
-    NSString *remainingQuestionsCount = [NSString stringWithFormat:@": %d", [self remainingQuestionsCountAtIndexPath:indexPath]];
-    [cell.remainingQuestionsNumberLabel setText:remainingQuestionsCount];
-    
-    // Set the number of questions for this QuestionSet.
-    QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-    NSArray *questionArray = [questionSet questionsArray];
-    NSString *allQuestionsCount = [NSString stringWithFormat:@": %d", [questionArray count]];
-    [cell.allQuestionsNumberLabel setText:allQuestionsCount];
-    
-    // Set the progress for the gauge.
-    float percent = [self questionDonePercentAtIndexPath:indexPath];
-    // [cell setGaugeProgress:percent];
-    [cell setAnimatedImageAnimationFromPercent:percent];
+  // Set the number of questions for the next sets.
+  NSString *nextDateQuestionsCount = [NSString stringWithFormat:@": %d", [[nextPresentationQuestionSet nextPresentationQuestionArray] count]];
+  [cell.nextDateQuestionsNumberLabel setText:nextDateQuestionsCount];
+  
+  // Set the number of question that needs to be seen by the user.
+  NSString *remainingQuestionsCount = [NSString stringWithFormat:@": %d", [self remainingQuestionsCountAtIndexPath:indexPath]];
+  [cell.remainingQuestionsNumberLabel setText:remainingQuestionsCount];
+  
+  // Set the number of questions for this QuestionSet.
+  QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
+  NSArray *questionArray = [questionSet questionsArray];
+  NSString *allQuestionsCount = [NSString stringWithFormat:@": %d", [questionArray count]];
+  [cell.allQuestionsNumberLabel setText:allQuestionsCount];
+  
+  // Set the progress for the gauge.
+  float percent = [self questionDonePercentAtIndexPath:indexPath];
+  [cell setAnimatedImageAnimationFromPercent:percent];
   
   // Set the Question Set Title.
   NSString *questionSetTitle = nextPresentationQuestionSet.title;
@@ -227,12 +235,7 @@
                                                              owner:self
                                                            options:nil];
     
-    for(id currentObject in topLevelObjects){
-      if([currentObject isKindOfClass:[QuestionSetTableViewCell class]]){
-        cell = (QuestionSetTableViewCell *) currentObject;
-        break;
-      }
-    }
+    cell = (QuestionSetTableViewCell *)[topLevelObjects objectAtIndex:0];
     [cell setCellStyle:QuestionSetTableViewCellMajorStyle];
   }
   
@@ -267,8 +270,8 @@
   CGFloat cellHeight = 0;
   NextPresentationQuestionSet *currentQuestionSet = [self.nextPresentationQuestionSetsArray objectAtIndex:indexPath.row];
   
-    cellHeight = kCellQuestionSetTitleOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY + kCellQuestionSetInfoContainerViewHeight;
-
+  cellHeight = kCellQuestionSetTitleOriginMajorY + [self detailElementTextHeight:currentQuestionSet.title] + kCellQuestionSetPaddingY + kCellQuestionSetInfoContainerViewHeight;
+  
   if (cellHeight < minimumCellHeight) {
     cellHeight = minimumCellHeight;
   }
@@ -295,7 +298,7 @@
     
     [self.navigationController pushViewControllerFromRight:questionViewController];
   }else{
-    NSString *message = [NSString stringWithFormat:@"Pas de question pour aujourd'hui.\nAttendez le %@ pour la prochaine série ou bien faites une série juste pour l'entraînement.", [self dayMonthYearFormatDate:nextPresentationQuestionSet.nextPresentationDate]];
+    NSString *message = [NSString stringWithFormat:@"Pas de question pour aujourd'hui.\nAttendez le %@ pour la prochaine série ou bien faites une série juste pour l'entraînement.", [self nextPresentationFormattedDate:nextPresentationQuestionSet.nextPresentationDate]];
     OLLogDebug(@"%@", message);
     [self.statusView.statusLabel setText:message];
     [self.statusView popOnView:self.view];

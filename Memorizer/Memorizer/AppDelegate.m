@@ -27,9 +27,10 @@
  */
 - (void)setNavigationTitleAppearance{
   NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                             [UIColor whiteColor] /*[UIColor colorWithRed:248.0f/255.0f green:248.0f/255.0f blue:248.0f/255.0f alpha:1.0f]*/, UITextAttributeTextColor,
-                                             // [UIColor whiteColor], UITextAttributeTextShadowColor,
-                                             [NSValue valueWithUIOffset:UIOffsetMake(-1, 0)], UITextAttributeTextShadowOffset, nil];
+                                             TEXT_COLOR_MINOR_STYLE, UITextAttributeTextColor,
+                                             [NSValue valueWithUIOffset:UIOffsetMake(-1, 0)],
+                                             UITextAttributeTextShadowOffset,
+                                             nil];
   [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
 }
 
@@ -40,7 +41,19 @@
  @remarks : <#(optional)#>
  */
 - (void)setNavigationBarTintColorAppearance{
-  [[UINavigationBar appearance] setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"navigationBar.png"]]];
+  [[UINavigationBar appearance] setTintColor:NAVIGATION_BAR_BACKGROUND_COLOR];
+  // [[UINavigationBar appearance] setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"navigationBar.png"]]];
+}
+
+/**
+ @brief <#Describe the function purpose#>
+ @author : Rémi Lavedrine
+ @date : 10/04/2013
+ @remarks : <#(optional)#>
+ */
+- (void)setBarButtonItemTintColorAppearance{
+  [[UIBarButtonItem appearance] setTintColor:BAR_BUTTON_ITEM_COLOR];
+  // [[UINavigationBar appearance] setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"navigationBar.png"]]];
 }
 
 /**
@@ -53,6 +66,7 @@
   [self setNavigationTitleAppearance];
   
   [self setNavigationBarTintColorAppearance];
+  [self setBarButtonItemTintColorAppearance];
 }
 
 /**

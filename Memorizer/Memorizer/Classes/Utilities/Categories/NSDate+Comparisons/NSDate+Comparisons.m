@@ -39,7 +39,7 @@
     NSTimeInterval timeInterval = [date timeIntervalSinceDate:self];
     if(timeInterval > secondsInTwoMonths)
     {
-        //It's been than two months.
+        //It's been more than two months.
         result = YES;
     }
     

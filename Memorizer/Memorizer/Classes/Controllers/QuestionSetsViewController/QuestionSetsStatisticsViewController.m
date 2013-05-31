@@ -15,24 +15,28 @@
 #import "QuestionSet.h"
 #import "QuestionSetStatisticsTableViewCell.h"
 #import "NSString+LabelSize.h"
+#import "QuestionSetStatisticsInfo.h"
 
 @interface QuestionSetsStatisticsViewController ()
-
+@property (nonatomic, retain) NSMutableArray *questionSetStatisticsInfoArray;
 @end
 
 @implementation QuestionSetsStatisticsViewController
 
-#pragma mark - QuestionSetCell
 
-- (void)configureStatisticsPartForCell:(QuestionSetStatisticsTableViewCell *)cell withQuestionSet:(QuestionSet *)aQuestionSet{
-    
-    CardMemorizationLevelStatistics *cardMemorizationLevelStatistics = [[CardMemorizationLevelStatistics alloc] initWithQuestionsArray:aQuestionSet.questionsArray];
-    
-    [cell.level1CardSatistiscs setText:[NSString stringWithFormat:@"(%0.0f%%) %0.0f", cardMemorizationLevelStatistics.level1Percent, cardMemorizationLevelStatistics.level1Number]];
-    [cell.level2CardSatistiscs setText:[NSString stringWithFormat:@"(%0.0f%%) %0.0f", cardMemorizationLevelStatistics.level2Percent, cardMemorizationLevelStatistics.level2Number]];
-    [cell.level3CardSatistiscs setText:[NSString stringWithFormat:@"(%0.0f%%) %0.0f", cardMemorizationLevelStatistics.level3Percent, cardMemorizationLevelStatistics.level3Number]];
+#pragma mark - View
+
+- (void)viewDidLoad{
+  [super viewDidLoad];
+  
+  self.questionSetStatisticsInfoArray = [[NSMutableArray alloc] initWithCapacity:0];
+  for (QuestionSet *aQuestionSet in [APP_DATA questionSetsArray]) {
+    QuestionSetStatisticsInfo *questionSetStatisticsInfo = [[QuestionSetStatisticsInfo alloc] initWithQuestionSet:aQuestionSet];
+    [self.questionSetStatisticsInfoArray addObject:questionSetStatisticsInfo];
+  }
 }
 
+#pragma mark - QuestionSetCell
 
 /**
  @brief Format the date to handle
@@ -60,23 +64,18 @@
 }
 
 - (void)configureCell:(QuestionSetStatisticsTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
-    QuestionSet *questionSet = [[APP_DATA questionSetsArray] objectAtIndex:indexPath.row];
-    
-    // Set the next date.
-    NSString *nextPresentationDate = [self dayMonthYearFormatDate:[NSDate date]];
-    [cell.nextDateLabel setText:nextPresentationDate];
-    
-    // Set the number of questions for the next sets. TODO
-    
-    // Set the number of question done for this set.
-    NSString *questionsCount = [NSString stringWithFormat:@"%d", [[questionSet questionsArray] count]];
-    [cell.nextDateQuestionsNumberLabel setText:questionsCount];
-    
-    // Set the Question Set Title.
-    NSString *questionSetTitle = questionSet.title;
-    [cell.textLabel setText:questionSetTitle];
-    
-    [self configureStatisticsPartForCell:cell withQuestionSet:questionSet];
+  QuestionSetStatisticsInfo *questionSetStatisticsInfo = [self.questionSetStatisticsInfoArray objectAtIndex:indexPath.row];
+  
+  // Set the number of questions for this set.
+  [cell.nextDateQuestionsNumberLabel setText:questionSetStatisticsInfo.questionSetTotalCardsNumber];
+  
+  // Set the Question Set Title.
+  [cell.textLabel setText:questionSetStatisticsInfo.questionSetTitle];
+
+  // Set the Statistics info.
+  [cell.level1CardSatistiscs setText:questionSetStatisticsInfo.level1CardSatistiscs];
+  [cell.level2CardSatistiscs setText:questionSetStatisticsInfo.level2CardSatistiscs];
+  [cell.level3CardSatistiscs setText:questionSetStatisticsInfo.level3CardSatistiscs];
 }
 
 /**

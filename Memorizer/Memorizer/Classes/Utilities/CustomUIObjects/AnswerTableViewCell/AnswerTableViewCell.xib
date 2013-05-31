@@ -82,7 +82,7 @@
 							<object class="IBUIImageView" id="922097596">
 								<reference key="NSNextResponder" ref="534176385"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{261, 5}, {34, 34}}</string>
+								<string key="NSFrame">{{261, 47}, {34, 34}}</string>
 								<reference key="NSSuperview" ref="534176385"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="997816363"/>
@@ -99,7 +99,7 @@
 							<object class="IBUIButton" id="997816363">
 								<reference key="NSNextResponder" ref="534176385"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{261, 47}, {34, 34}}</string>
+								<string key="NSFrame">{{261, 5}, {34, 34}}</string>
 								<reference key="NSSuperview" ref="534176385"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
@@ -265,17 +265,6 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">AnswerTableViewCell</string>
 					<string key="superclassName">AutoResizeLabelTableViewCell</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">playSound:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">playSound:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">playSound:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="descriptionImageView">UIImageView</string>
 						<string key="playSoundButton">UIButton</string>

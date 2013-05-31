@@ -32,6 +32,8 @@
 
 //! Start a fade in animation on the "descriptionImageView" in order to let it appear.
 - (void)fadeInDescriptionImageView;
+//! Start a fade out animation on the "descriptionImageView" in order to let it disappear.
+- (void)fadeOutDescriptionImageView;
 
 //! Start a fade in animation on the "playSoundButton" in order to let it appear.
 - (void)fadeInPlaySoundButton;

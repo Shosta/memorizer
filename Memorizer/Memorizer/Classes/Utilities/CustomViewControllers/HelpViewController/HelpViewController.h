@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AlignScrollViewController.h"
 
-@interface HelpViewController : AlignScrollViewController
+@interface HelpViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIScrollView *helpImageContainerScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *helpImageView;
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 #pragma mark - Help View
 //! Add the help view on top of the current view.

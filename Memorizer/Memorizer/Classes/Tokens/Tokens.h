@@ -42,6 +42,7 @@ extern NSString *kQuestionAnswerHelpViewLastDisplayedDateKey;
 extern NSString *kDayMonthHourMinutesFormatDate;
 extern NSString *kDayMonthYearFormatDate;
 extern NSString *kDayMonthFormatDate;
+extern NSString *kHourMinutesFormatDate;
 
 //! Cell QuestionSet
 extern int kCellQuestionSetPaddingX;

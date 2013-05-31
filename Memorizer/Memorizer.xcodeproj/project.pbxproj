@@ -337,6 +337,7 @@
 		F2FE0B9D1758A818003D16E8 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE0B9B1758A818003D16E8 /* speaker.png */; };
 		F2FE0B9E1758A818003D16E8 /* speaker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE0B9C1758A818003D16E8 /* speaker@2x.png */; };
 		F2FE0BA51758C419003D16E8 /* AlignScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE0BA41758C419003D16E8 /* AlignScrollViewController.m */; };
+		F2FE0BAD1758D5FD003D16E8 /* QuestionSetStatisticsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE0BAC1758D5FD003D16E8 /* QuestionSetStatisticsInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -736,6 +737,8 @@
 		F2FE0B9C1758A818003D16E8 /* speaker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker@2x.png"; sourceTree = "<group>"; };
 		F2FE0BA31758C419003D16E8 /* AlignScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlignScrollViewController.h; path = CustomViewControllers/AlignScrollViewController/AlignScrollViewController.h; sourceTree = "<group>"; };
 		F2FE0BA41758C419003D16E8 /* AlignScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlignScrollViewController.m; path = CustomViewControllers/AlignScrollViewController/AlignScrollViewController.m; sourceTree = "<group>"; };
+		F2FE0BAB1758D5FD003D16E8 /* QuestionSetStatisticsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionSetStatisticsInfo.h; path = Model/Statistics/QuestionSetStatisticsInfo.h; sourceTree = "<group>"; };
+		F2FE0BAC1758D5FD003D16E8 /* QuestionSetStatisticsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionSetStatisticsInfo.m; path = Model/Statistics/QuestionSetStatisticsInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1171,6 +1174,8 @@
 				A8D0758F17395D1D00AE3EC9 /* CardMemorizationLevelStatistics.m */,
 				A8D0759817396A2400AE3EC9 /* CardToReviseNumberStatistics.h */,
 				A8D0759917396A2500AE3EC9 /* CardToReviseNumberStatistics.m */,
+				F2FE0BAB1758D5FD003D16E8 /* QuestionSetStatisticsInfo.h */,
+				F2FE0BAC1758D5FD003D16E8 /* QuestionSetStatisticsInfo.m */,
 			);
 			name = Statistics;
 			sourceTree = "<group>";
@@ -2055,6 +2060,7 @@
 				F2114735174532B200564478 /* UINavigationController+Animations.m in Sources */,
 				A80B9176174EBB87006ACD0F /* QuestionSetStatisticsTableViewCell.m in Sources */,
 				F2FE0BA51758C419003D16E8 /* AlignScrollViewController.m in Sources */,
+				F2FE0BAD1758D5FD003D16E8 /* QuestionSetStatisticsInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

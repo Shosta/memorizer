@@ -70,6 +70,19 @@
     }
 }
 
+- (void)fadeOutDescriptionImageView{
+  if (self.descriptionImageView.alpha == 1) {
+    [UIView animateWithDuration:1.0
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:(void (^)(void)) ^{
+                       self.descriptionImageView.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                     }];
+  }
+}
+
 - (void)fadeInPlaySoundButton{
     if (self.playSoundButton.alpha == 0) {
         [UIView animateWithDuration:1.0

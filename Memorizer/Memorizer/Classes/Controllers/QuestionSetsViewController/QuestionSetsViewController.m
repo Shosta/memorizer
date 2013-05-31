@@ -106,10 +106,6 @@
     NSString *questionsCount = [NSString stringWithFormat:@"%d", [[questionSet questionsArray] count]];
     [cell.nextDateQuestionsNumberLabel setText:questionsCount];
     
-    // Set the progress for the gauge.
-    // float percent = [self questionDonePercentAtIndexPath:indexPath];
-    // [cell setGaugeProgress:percent];
-    
     // Set the Question Set Title.
     NSString *questionSetTitle = questionSet.title;
     [cell.textLabel setText:questionSetTitle];

@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Memorizer/Classes/Controllers/QuestionSetsViewController/QuestionSetsViewController.m"
-         timestampString = "390408207.599402"
+         timestampString = "391699685.738339"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "353"
-         endingLineNumber = "353">
+         startingLineNumber = "349"
+         endingLineNumber = "349">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

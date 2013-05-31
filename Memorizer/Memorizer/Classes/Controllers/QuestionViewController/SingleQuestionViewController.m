@@ -230,10 +230,14 @@ shouldDisplayDescription:(BOOL)aShouldDisplayDescription{
         NSString *answer = currentQuestion.answer;
         [cell.textLabel setText:answer];
         [cell setSoundFileName:currentQuestion.soundName];
-        
-        [cell fadeInDescriptionImageView];
-        [cell fadeInPlaySoundButton];
+      
+      [cell fadeInPlaySoundButton];
         [cell setCellPresentationStyle:MajorStyle];
+      if ([self.shouldDisplayDescription boolValue] == NO) {
+        [cell fadeInDescriptionImageView];
+      }else{
+        [cell fadeOutDescriptionImageView];
+      }
     }else{
         [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
         [cell.textLabel setText:@"Afficher la réponse"];
@@ -291,7 +295,7 @@ shouldDisplayDescription:(BOOL)aShouldDisplayDescription{
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         
         [cell setBackgroundColor:[UIColor colorWithRed:248.0f/255.0f green:248.0f/255.0f blue:248.0f/255.0f alpha:1.0f]];
-        [cell.textLabel setTextColor:[UIColor colorWithRed:88.0f/255.0f green:107.0f/255.0f blue:114.0f/255.0f alpha:1.0f]];
+        [cell.textLabel setTextColor:HEADER_TEXT_COLOR];
         [cell.textLabel setFont:DESCRIPTION_HEADER_CELL_TEXT_FONT];
     }
     

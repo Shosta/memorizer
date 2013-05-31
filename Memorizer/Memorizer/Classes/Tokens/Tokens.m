@@ -27,6 +27,7 @@ NSString *kQuestionAnswerHelpViewLastDisplayedDateKey = @"QuestionAnswerHelpView
 NSString *kDayMonthHourMinutesFormatDate = @"d MMMM, HH:mm";
 NSString *kDayMonthYearFormatDate = @"d MMMM yyyy";
 NSString *kDayMonthFormatDate = @"d MMMM";
+NSString *kHourMinutesFormatDate = @"HH:mm";
 
 //! Cell QuestionSet
 int kCellQuestionSetPaddingX = 10;

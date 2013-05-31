@@ -24,7 +24,12 @@
 
 
 //! COLORS
+#define NAVIGATION_BAR_BACKGROUND_COLOR [UIColor colorWithRed:237.0f/255.0f green:237.0f/255.0f blue:237.0f/255.0f alpha:1.0f]
+#define BAR_BUTTON_ITEM_COLOR [UIColor colorWithRed:148.0f/255.0f green:157.0f/255.0f blue:164.0f/255.0f alpha:1.0f]
 #define CELL_BACKGROUND_COLOR [UIColor colorWithRed:248.0f/255.0f green:248.0f/255.0f blue:248.0f/255.0f alpha:1.0f]
+#define HEADER_TEXT_COLOR [UIColor colorWithRed:88.0f/255.0f green:107.0f/255.0f blue:114.0f/255.0f alpha:1.0f]
+#define TEXT_COLOR_MAJOR_STYLE [UIColor colorWithRed:34.0f/255.0f green:34.0F/255.0f blue:34.0F/255.0f alpha:1.0f]
+#define TEXT_COLOR_MINOR_STYLE [UIColor colorWithRed:149.0f/255.0f green:153.0f/255.0f blue:156.0f/255.0f alpha:1.0f]
 
 //! QuestionSet Cell color
 #define QUESTIONSET_CELL_TEXT_COLOR [UIColor colorWithRed:34.0f/255.0f green:34.0F/255.0f blue:34.0F/255.0f alpha:1.0f]
