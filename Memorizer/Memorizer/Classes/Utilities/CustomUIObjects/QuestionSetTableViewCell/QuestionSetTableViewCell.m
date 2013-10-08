@@ -29,22 +29,22 @@
  @remarks : <#(optional)#>
  */
 - (void)layoutSubviews{
-  [super layoutSubviews];
-  
-  int cellQuestionSetOriginY = kCellQuestionSetTitleOriginMajorY;
-  if (_cellStyle == QuestionSetTableViewCellMinorStyle){
-    cellQuestionSetOriginY = kCellQuestionSetTitleOriginMinorY;
-  }
-  
-  [self configureTextLabelUIWithLabelFont:QUESTIONSET_CELL_TEXT_FONT
-                               labelColor:QUESTIONSET_CELL_TEXT_COLOR
-                       labelTextAlignment:NSTextAlignmentCenter
-                               labelWidth:kCellQuestionSetDefaultTextWidth
-                      labelStartXPosition:kCellQuestionSetPaddingX
-                      labelStartYPosition:cellQuestionSetOriginY];
-  
-   self.questionSetInfoContainerView.center = CGPointMake(self.frame.size.width/2, cellQuestionSetOriginY + self.textLabel.frame.size.height + kCellQuestionSetPaddingY + self.questionSetInfoContainerView.frame.size.height/2);
-  
+    [super layoutSubviews];
+    
+    int cellQuestionSetOriginY = kCellQuestionSetTitleOriginMajorY;
+    if (_cellStyle == QuestionSetTableViewCellMinorStyle){
+        cellQuestionSetOriginY = kCellQuestionSetTitleOriginMinorY;
+    }
+    
+    [self configureTextLabelUIWithLabelFont:QUESTIONSET_CELL_TEXT_FONT
+                                 labelColor:QUESTIONSET_CELL_TEXT_COLOR
+                         labelTextAlignment:NSTextAlignmentCenter
+                                 labelWidth:kCellQuestionSetDefaultTextWidth
+                        labelStartXPosition:kCellQuestionSetPaddingX
+                        labelStartYPosition:cellQuestionSetOriginY];
+    
+    self.questionSetInfoContainerView.center = CGPointMake(self.frame.size.width/2, cellQuestionSetOriginY + self.textLabel.frame.size.height + kCellQuestionSetPaddingY + self.questionSetInfoContainerView.frame.size.height/2);
+    
 }
 
 
@@ -57,12 +57,13 @@
  @remarks : <#(optional)#>
  */
 - (void)setAnimatedImageAnimationFromPercent:(float)percent{
-  
-  int finalImageNumber = round(percent * 10);
-  
-  UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"questionSetPercent%d.png", finalImageNumber]];
-  
-  [self.questionSetProgressionAnimatedImageView setImage:image];
+    int finalImageNumber = round(percent * 10);
+    
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"questionSetPercent%d.png", finalImageNumber]];
+    UIImage *highlightedImage = [UIImage imageNamed:[NSString stringWithFormat:@"questionSetPercent%dHighlighted.png", finalImageNumber]];
+    
+    [self.questionSetProgressionAnimatedImageView setImage:image];
+    [self.questionSetProgressionAnimatedImageView setHighlightedImage:highlightedImage];
 }
 
 
@@ -76,7 +77,7 @@
  The "minor" style displays all the information about the QuestionSet in order to display a simple QuestionSet
  */
 - (void)setCellStyle:(QuestionSetTableViewCellStyle)style{
-  _cellStyle = style;
+    _cellStyle = style;
 }
 
 @end
