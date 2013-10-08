@@ -1,95 +1,1571 @@
 {
     "questionSets": [
-        {
-                "title": "LES VERBES IRRÉGULIERS EN ANGLAIS",
-                     "shortTitle": "Anglais",
-                "list": [
-                    {
-                        "statement": "Pay",
-                        "answer": "Paid, Paid, Paid",
-                        "description": "C'est un verbe irréguliers du 1er groupe",
-                        "image": "",
-                        "video": "",
-                        "sound": "pay"
-                    },
-                    {
-                        "statement": "Read",
-                        "answer": "Read, Read, Read",
-                        "description": "C'est un verbe irréguliers du 1er groupe",
-                        "image": "",
-                        "video": "",
-                        "sound": "read"
-                    },
-                    {
-                        "statement": "Take",
-                        "answer": "Take, Took, Taken",
-                        "description": "C'est un verbe irréguliers du 1er groupe",
-                        "image": "",
-                        "video": "",
-                        "sound": "take"
-                    },
-                    {
-                        "statement": "Sing",
-                        "answer": "Sing, Sang, Sung",
-                        "description": "C'est un verbe irréguliers du 1er groupe",
-                        "image": "",
-                        "video": "",
-                        "sound": "sing"
-                    }
-                ]
-        },
-        {
-                     "title": "LES VERBES IRRÉGULIERS EN ALLEMAND",
-                     "shortTitle": "Allemand",
-                "list": [
-                    {
-                        "statement": "Payen",
-                        "answer": "Paiden, Paiden, Paiden",
-                        "description": "C'est un verbe irréguliers du 1er groupe",
-                        "image": "",
-                        "video": "",
-                        "sound": "pay"
-                    },
-                    {
-                        "statement": "Readen",
-                        "answer": "Readen, Readen, Readen",
-                        "description": "C'est un verbe irréguliers du 1er groupe",
-                        "image": "",
-                        "video": "",
-                        "sound": "read"
-                    },
-                    {
-                        "statement": "Takieren",
-                        "answer": "Takieren, Takieren, Takieren",
-                        "description": "C'est un verbe irréguliers du 1er groupe",
-                        "image": "",
-                        "video": "",
-                        "sound": "take"
-                    },
-                    {
-                        "statement": "Singen",
-                        "answer": "Singen, Singen, Singen",
-                        "description": "C'est un verbe irréguliers du 1er groupe",
-                        "image": "",
-                        "video": "",
-                        "sound": "sing"
-                    }
-                ]
-        },
                      {
-                     "title": "SET DE QUESTIONS DE TEST QUI SONT VRAIMENT TRÈS LONGUE AVEC PLEIN DE CARACTÈRES",
-                     "shortTitle": "Allemand",
+                     "title": "Verbes irrÈguliers d'anglais",
+                     "shortTitle": "Anglais",
                      "list": [
                               {
-                              "statement": "Quel est la couleur du chevale blanc d'Henri 4?",
-                              "answer": "J'ai l'impression que c'est blanc la réponse. Mais sinon vous pouvez regarder un cheval blanc et voir par vous même.",
-                              "description": "Voici une explication fumeuse.\nJ'ai l'impression que c'est blanc la réponse. Mais sinon vous pouvez regarder un cheval blanc et voir par vous même.",
+                              "statement": "endurer / demeurer",
+                              "answer": "abide, abode, abode",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "abide"
+                              },
+                              {
+                              "statement": "survenir",
+                              "answer": "arise, arose, arisen",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "arise"
+                              },
+                              {
+                              "statement": "(se) rÈveiller (littÈraire)",
+                              "answer": "awake, awoke, awoken",
+                              "description": "To awake est un verbe plutÙt employÈ ‡ l'Ècrit. ¿ l'oral on emploiera plutÙt to wake.",
+                              "image": "",
+                              "video": "",
+                              "sound": "awake"
+                              },
+                              {
+                              "statement": "Ítre",
+                              "answer": "be, was / were, been",
+                              "description": "Exception : ne pas oublier qu'il y a 2 formes au prÈtÈrit : I was, you were, he was, they were.",
+                              "image": "",
+                              "video": "",
+                              "sound": "be"
+                              },
+                              {
+                              "statement": "porter / supporter / soutenir",
+                              "answer": "bear, bore, borne",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "bear"
+                              },
+                              {
+                              "statement": "battre",
+                              "answer": "beat, beat, beaten",
+                              "description": "Le beat d'une chanson, c'est le battement du rythme.",
+                              "image": "",
+                              "video": "",
+                              "sound": "beat"
+                              },
+                              {
+                              "statement": "devenir",
+                              "answer": "become, became, become",
+                              "description": "To come = venir / to become = devenir",
+                              "image": "",
+                              "video": "",
+                              "sound": "become"
+                              },
+                              {
+                              "statement": "engendrer",
+                              "answer": "beget, begat, begotten",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "beget"
+                              },
+                              {
+                              "statement": "commencer",
+                              "answer": "begin, began, begun",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "begin"
+                              },
+                              {
+                              "statement": "se courber",
+                              "answer": "bend, bent, bent",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "bend"
+                              },
+                              {
+                              "statement": "dÈpossÈder / priver",
+                              "answer": "bereave, bereft, bereft",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "bereave"
+                              },
+                              {
+                              "statement": "implorer / supplier",
+                              "answer": "beseech, besought, besought",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "beseech"
+                              },
+                              {
+                              "statement": "parier",
+                              "answer": "bet, bet, bet",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "bet"
+                              },
+                              {
+                              "statement": "ordonner",
+                              "answer": "bid, bade, bidden",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "bid"
+                              },
+                              {
+                              "statement": "lier",
+                              "answer": "bind, bound, bound",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "bind"
+                              },
+                              {
+                              "statement": "mordre",
+                              "answer": "bite, bit, bitten",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "bite"
+                              },
+                              {
+                              "statement": "saigner",
+                              "answer": "bleed, bled, bled",
+                              "description": "Blood = sang / bleed = saigner.",
+                              "image": "",
+                              "video": "",
+                              "sound": "bleed"
+                              },
+                              {
+                              "statement": "souffler",
+                              "answer": "blow, blew, blown",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "blow"
+                              },
+                              {
+                              "statement": "casser",
+                              "answer": "break, broke, broken",
+                              "description": "Faire un break, c'est casser le travail.",
+                              "image": "",
+                              "video": "",
+                              "sound": "break"
+                              },
+                              {
+                              "statement": "Èlever / se reproduire",
+                              "answer": "breed, bred, bred",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "breed"
+                              },
+                              {
+                              "statement": "apporter",
+                              "answer": "bring, brought, brought",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "bring"
+                              },
+                              {
+                              "statement": "diffuser / Èmettre",
+                              "answer": "broadcast, broadcast, broadcast",
+                              "description": "Broad = large / cast = projeter. Les ondes de la radio et de la tÈlÈvision sont largement projetÈes.",
+                              "image": "",
+                              "video": "",
+                              "sound": "broadcast"
+                              },
+                              {
+                              "statement": "construire",
+                              "answer": "build, built, built",
+                              "description": "Un building, c'est une construction.",
+                              "image": "",
+                              "video": "",
+                              "sound": "build"
+                              },
+                              {
+                              "statement": "br˚ler",
+                              "answer": "burn, burnt, burnt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "burn"
+                              },
+                              {
+                              "statement": "Èclater",
+                              "answer": "burst, burst, burst",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "burst"
+                              },
+                              {
+                              "statement": "acheter",
+                              "answer": "buy, bought, bought",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "buy"
+                              },
+                              {
+                              "statement": "pouvoir",
+                              "answer": "can, could, could",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "can"
+                              },
+                              {
+                              "statement": "jeter / rejeter",
+                              "answer": "cast, cast, cast",
+                              "description": "Lors d'un \"casting\" il y abeaucoup d'appelÈs et peu d'Èlus. Beaucoup de personnes se font rejeter.",
+                              "image": "",
+                              "video": "",
+                              "sound": "cast"
+                              },
+                              {
+                              "statement": "attraper",
+                              "answer": "catch, caught, caught",
+                              "description": "Le catch est un sport o˘ l'on s'attrape.",
+                              "image": "",
+                              "video": "",
+                              "sound": "catch"
+                              },
+                              {
+                              "statement": "gronder / rÈprimander",
+                              "answer": "chide, chid, chidden",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "chide"
+                              },
+                              {
+                              "statement": "choisir",
+                              "answer": "choose, chose, chosen",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "choose"
+                              },
+                              {
+                              "statement": "fendre / se cramponner",
+                              "answer": "cleave, cleft, cleft",
+                              "description": "Cleavage = dÈcolletÈ, un haut de vÍtement fendu.",
+                              "image": "",
+                              "video": "",
+                              "sound": "cleave"
+                              },
+                              {
+                              "statement": "se cramponner",
+                              "answer": "cling, clung, clung",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "cling"
+                              },
+                              {
+                              "statement": "habiller / recouvrir",
+                              "answer": "clothe, clad, clad",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "clothe"
+                              },
+                              {
+                              "statement": "venir",
+                              "answer": "come, came, come",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "come"
+                              },
+                              {
+                              "statement": "co˚ter",
+                              "answer": "cost, cost, cost",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "cost"
+                              },
+                              {
+                              "statement": "ramper / se glisser / se hÈrisser",
+                              "answer": "creep, crept, crept",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "creep"
+                              },
+                              {
+                              "statement": "chanter (un coq) / jubiler",
+                              "answer": "crow, crew, crowed",
+                              "description": "\"Crowcrow\" est le son que fait le coq quand il chante. Il chante de fiertÈ, car il jubile.",
+                              "image": "",
+                              "video": "",
+                              "sound": "crow"
+                              },
+                              {
+                              "statement": "couper",
+                              "answer": "cut, cut, cut",
+                              "description": "Un cutter, c'est un outil pour couper.",
+                              "image": "",
+                              "video": "",
+                              "sound": "cut"
+                              },
+                              {
+                              "statement": "distribuer / traiter",
+                              "answer": "deal, dealt, dealt",
+                              "description": "Faire un \"deal\", c'est \"traiter\" une affaire.",
+                              "image": "",
+                              "video": "",
+                              "sound": "deal"
+                              },
+                              {
+                              "statement": "bÍcher / creuser",
+                              "answer": "dig, dug, dug",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "dig"
+                              },
+                              {
+                              "statement": "faire",
+                              "answer": "do, did, done",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "do"
+                              },
+                              {
+                              "statement": "tirer / dessiner",
+                              "answer": "draw, drew, drawn",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "draw"
+                              },
+                              {
+                              "statement": "rÍver",
+                              "answer": "dream, dreamt, dreamt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "dream"
+                              },
+                              {
+                              "statement": "boire",
+                              "answer": "drink, drank, drunk",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "drink"
+                              },
+                              {
+                              "statement": "conduire",
+                              "answer": "drive, drove, driven",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "drive"
+                              },
+                              {
+                              "statement": "habiter / rester",
+                              "answer": "dwell, dwelt, dwelt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "dwell"
+                              },
+                              {
+                              "statement": "manger",
+                              "answer": "eat, ate, eaten",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "eat"
+                              },
+                              {
+                              "statement": "tomber",
+                              "answer": "fall, fell, fallen",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "fall"
+                              },
+                              {
+                              "statement": "nourrir",
+                              "answer": "feed, fed, fed",
+                              "description": "Food = la nourriture / feed = nourrir",
+                              "image": "",
+                              "video": "",
+                              "sound": "feed"
+                              },
+                              {
+                              "statement": "(se) sentir / ressentir",
+                              "answer": "feel, felt, felt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "feel"
+                              },
+                              {
+                              "statement": "combattre",
+                              "answer": "fight, fought, fought",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "fight"
+                              },
+                              {
+                              "statement": "trouver",
+                              "answer": "find, found, found",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "find"
+                              },
+                              {
+                              "statement": "fuir",
+                              "answer": "flee, fled, fled",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "flee"
+                              },
+                              {
+                              "statement": "lancer (avec force)",
+                              "answer": "fling, flung, flung",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "fling"
+                              },
+                              {
+                              "statement": "voler (en avion)",
+                              "answer": "fly, flew, flown",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "fly"
+                              },
+                              {
+                              "statement": "interdire",
+                              "answer": "forbid, forbade, forbidden",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "forbid"
+                              },
+                              {
+                              "statement": "prÈvoir",
+                              "answer": "forecast, forecast, forecast",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "forecast"
+                              },
+                              {
+                              "statement": "oublier",
+                              "answer": "forget, forgot, forgotten",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "forget"
+                              },
+                              {
+                              "statement": "pardonner",
+                              "answer": "forgive, forgave, forgiven",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "forgive"
+                              },
+                              {
+                              "statement": "abandonner",
+                              "answer": "forsake, forsook, forsaken",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "forsake"
+                              },
+                              {
+                              "statement": "prÈvoir / prÈsentir",
+                              "answer": "forsee, foresaw, foresawn",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "forsee"
+                              },
+                              {
+                              "statement": "geler",
+                              "answer": "freeze, froze, frozen",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "freeze"
+                              },
+                              {
+                              "statement": "obtenir",
+                              "answer": "get, got, got",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "get"
+                              },
+                              {
+                              "statement": "ceindre",
+                              "answer": "gird, girt, girt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "gird"
+                              },
+                              {
+                              "statement": "donner",
+                              "answer": "give, gave, given",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "give"
+                              },
+                              {
+                              "statement": "aller",
+                              "answer": "go, went, gone",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "go"
+                              },
+                              {
+                              "statement": "broyer / moudre",
+                              "answer": "grind, ground, ground",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "grind"
+                              },
+                              {
+                              "statement": "cultiver / pousser / grandir",
+                              "answer": "grow, grew, grown",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "grow"
+                              },
+                              {
+                              "statement": "pendre",
+                              "answer": "hang, hung, hung",
+                              "description": "Si l'on parle de pendre une personne, alors le verbe est rÈgulier.",
+                              "image": "",
+                              "video": "",
+                              "sound": "hang"
+                              },
+                              {
+                              "statement": "avoir",
+                              "answer": "have, had, had",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "have"
+                              },
+                              {
+                              "statement": "entendre",
+                              "answer": "hear, heard, heard",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "hear"
+                              },
+                              {
+                              "statement": "soulever / pousser un soupir",
+                              "answer": "heave, hove, hove",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "heave"
+                              },
+                              {
+                              "statement": "couper / tailler",
+                              "answer": "hew, hewed, hewn",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "hew"
+                              },
+                              {
+                              "statement": "(se) cacher",
+                              "answer": "hide, hid, hidden",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "hide"
+                              },
+                              {
+                              "statement": "frapper / percuter / atteindre",
+                              "answer": "hit, hit, hit",
+                              "description": "Un \"hit\" en musique, c'est une chanson precutante, qui vous frappe.",
+                              "image": "",
+                              "video": "",
+                              "sound": "hit"
+                              },
+                              {
+                              "statement": "tenir",
+                              "answer": "hold, held, held",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "hold"
+                              },
+                              {
+                              "statement": "nuire / se blesser",
+                              "answer": "hurt, hurt, hurt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "hurt"
+                              },
+                              {
+                              "statement": "garder",
+                              "answer": "keep, kept, kept",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "keep"
+                              },
+                              {
+                              "statement": "s'agenouiller",
+                              "answer": "kneel, knelt, knelt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "kneel"
+                              },
+                              {
+                              "statement": "tricoter",
+                              "answer": "knit, knit, knit",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "knit"
+                              },
+                              {
+                              "statement": "savoir / connaÓtre",
+                              "answer": "know, knew, known",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "know"
+                              },
+                              {
+                              "statement": "Ètendre / coucher",
+                              "answer": "lay, laid, laid",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "lay"
+                              },
+                              {
+                              "statement": "mener",
+                              "answer": "lead, led, led",
+                              "description": "Un \"leader\", c'est le meneur du groupe.",
+                              "image": "",
+                              "video": "",
+                              "sound": "lead"
+                              },
+                              {
+                              "statement": "pencher",
+                              "answer": "lean, leant, leant",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "lean"
+                              },
+                              {
+                              "statement": "sauter / bondir",
+                              "answer": "leap, leapt, leapt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "leap"
+                              },
+                              {
+                              "statement": "apprendre",
+                              "answer": "learn, learnt, learnt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "learn"
+                              },
+                              {
+                              "statement": "quitter / laisser",
+                              "answer": "leave, left, left",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "leave"
+                              },
+                              {
+                              "statement": "prÍter",
+                              "answer": "lend, lent, lent",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "lend"
+                              },
+                              {
+                              "statement": "laisser / louer",
+                              "answer": "let, let, let",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "let"
+                              },
+                              {
+                              "statement": "reposer / Ítre couchÈ",
+                              "answer": "lie, lay, lain",
+                              "description": "To lie est rÈgulier quand il signifie mentir.",
+                              "image": "",
+                              "video": "",
+                              "sound": "lie"
+                              },
+                              {
+                              "statement": "allumer",
+                              "answer": "light, lit, lit",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "light"
+                              },
+                              {
+                              "statement": "perdre",
+                              "answer": "lose, lost, lost",
+                              "description": "Un \"loser\" c'est un perdant.",
+                              "image": "",
+                              "video": "",
+                              "sound": "lose"
+                              },
+                              {
+                              "statement": "faire / fabriquer / construire",
+                              "answer": "make, made, made",
+                              "description": "Made in France = fabriquÈ en France",
+                              "image": "",
+                              "video": "",
+                              "sound": "make"
+                              },
+                              {
+                              "statement": "vouloir dire / signifier",
+                              "answer": "mean, meant, meant",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "mean"
+                              },
+                              {
+                              "statement": "rencontrer",
+                              "answer": "meet, met, met",
+                              "description": "Un \"meeting\", c'est une rencontre.",
+                              "image": "",
+                              "video": "",
+                              "sound": "meet"
+                              },
+                              {
+                              "statement": "faucher / tondre / dÈcimer",
+                              "answer": "mow, mowed, mown",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "mow"
+                              },
+                              {
+                              "statement": "compenser",
+                              "answer": "offset, offset, offset",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "offset"
+                              },
+                              {
+                              "statement": "surmonter",
+                              "answer": "overcome, overcame, overcome",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "overcome"
+                              },
+                              {
+                              "statement": "prendre part ‡",
+                              "answer": "partake, partook, partaken",
+                              "description": "CalquÈ sur le franÁais : prendre = take, part = par, prendre part = to partake.",
+                              "image": "",
+                              "video": "",
+                              "sound": "partake"
+                              },
+                              {
+                              "statement": "payer",
+                              "answer": "pay, paid, paid",
+                              "description": "",
                               "image": "",
                               "video": "",
                               "sound": "pay"
+                              },
+                              {
+                              "statement": "supplier / plaider",
+                              "answer": "plead, pled, pled",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "plead"
+                              },
+                              {
+                              "statement": "programmer",
+                              "answer": "preset, preset, preset",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "preset"
+                              },
+                              {
+                              "statement": "prouver (souvent rÈgulier)",
+                              "answer": "prove, proved, proven",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "prove"
+                              },
+                              {
+                              "statement": "poser / mettre",
+                              "answer": "put, put, put",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "put"
+                              },
+                              {
+                              "statement": "quitter / abandonner",
+                              "answer": "quit, quit, quit",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "quit"
+                              },
+                              {
+                              "statement": "lire",
+                              "answer": "read, read, read",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "read"
+                              },
+                              {
+                              "statement": "relayer",
+                              "answer": "relay, relaid, relaid",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "relay"
+                              },
+                              {
+                              "statement": "dÈchirer (formel)",
+                              "answer": "rend, rent, rent",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "rend"
+                              },
+                              {
+                              "statement": "se dÈbarrasser",
+                              "answer": "rid, rid, ridden",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "rid"
+                              },
+                              {
+                              "statement": "monter (un cheval, une moto)",
+                              "answer": "ride, rode, ridden",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "ride"
+                              },
+                              {
+                              "statement": "sonner / rÈsonner",
+                              "answer": "ring, rang, rung",
+                              "description": "\"Ringring\" est le bruit d'une sonnette, bruit trËs proche de notre \"dringdring\".",
+                              "image": "",
+                              "video": "",
+                              "sound": "ring"
+                              },
+                              {
+                              "statement": "se lever",
+                              "answer": "rise, rose, risen",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "rise"
+                              },
+                              {
+                              "statement": "courir",
+                              "answer": "run, ran, run",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "run"
+                              },
+                              {
+                              "statement": "scier",
+                              "answer": "saw, sawed, sawn",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "saw"
+                              },
+                              {
+                              "statement": "dire",
+                              "answer": "say, said, said",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "say"
+                              },
+                              {
+                              "statement": "voir",
+                              "answer": "see, saw, seen",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "see"
+                              },
+                              {
+                              "statement": "chercher",
+                              "answer": "seek, sought, sought",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "seek"
+                              },
+                              {
+                              "statement": "vendre",
+                              "answer": "sell, sold, sold",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "sell"
+                              },
+                              {
+                              "statement": "envoyer",
+                              "answer": "send, sent, sent",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "send"
+                              },
+                              {
+                              "statement": "mettre / se coucher (soleil) / fixer",
+                              "answer": "set, set, set",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "set"
+                              },
+                              {
+                              "statement": "coudre",
+                              "answer": "sew, sewed, sewn",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "sew"
+                              },
+                              {
+                              "statement": "secouer",
+                              "answer": "shake, shook, shaken",
+                              "description": "Un \"milkshake\" c'est du lait secouÈ.",
+                              "image": "",
+                              "video": "",
+                              "sound": "shake"
+                              },
+                              {
+                              "statement": "couper / cisailler / tondre",
+                              "answer": "shear, sheared, shorn",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "shear"
+                              },
+                              {
+                              "statement": "perdre (feuilles) / verser (larmes, sang)",
+                              "answer": "shed, shed, shed",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "shed"
+                              },
+                              {
+                              "statement": "briller",
+                              "answer": "shine, shone, shone",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "shine"
+                              },
+                              {
+                              "statement": "chausser",
+                              "answer": "shoe, shod, shod",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "shoe"
+                              },
+                              {
+                              "statement": "tirer / tuer par balle / filmer",
+                              "answer": "shoot, shot, shot",
+                              "description": "Un \"shoot\" au foot, c'est un tir au but.",
+                              "image": "",
+                              "video": "",
+                              "sound": "shoot"
+                              },
+                              {
+                              "statement": "montrer",
+                              "answer": "show, showed, shown",
+                              "description": "Un \"show\" c'est un spectacle o˘ les gens se montrent.",
+                              "image": "",
+                              "video": "",
+                              "sound": "show"
+                              },
+                              {
+                              "statement": "(se) contracter / (se) rÈtrÈcir",
+                              "answer": "shrink, shrank, shrunk",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "shrink"
+                              },
+                              {
+                              "statement": "absoudre",
+                              "answer": "shrive, shrove, shriven",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "shrive"
+                              },
+                              {
+                              "statement": "fermer",
+                              "answer": "shut, shut, shut",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "shut"
+                              },
+                              {
+                              "statement": "chanter",
+                              "answer": "sing, sang, sung",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "sing"
+                              },
+                              {
+                              "statement": "couler",
+                              "answer": "sink, sank, sunk",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "sink"
+                              },
+                              {
+                              "statement": "s'asseoir",
+                              "answer": "sit, sat, sat",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "sit"
+                              },
+                              {
+                              "statement": "tuer / pourfendre",
+                              "answer": "slay, slew, slain",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "slay"
+                              },
+                              {
+                              "statement": "dormir",
+                              "answer": "sleep, slept, slept",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "sleep"
+                              },
+                              {
+                              "statement": "glisser",
+                              "answer": "slide, slid, slid",
+                              "description": "Un \"slide\" en skateboard, c'est faire glisser sa planche sur un obstacle.  Sur une guitare, c'est faire glisser son doigt. ",
+                              "image": "",
+                              "video": "",
+                              "sound": "slide"
+                              },
+                              {
+                              "statement": "jeter / catapulter",
+                              "answer": "sling, slung, slung",
+                              "description": "A sling = un lance-pierre",
+                              "image": "",
+                              "video": "",
+                              "sound": "sling"
+                              },
+                              {
+                              "statement": "se dÈplacer furtivement",
+                              "answer": "slink, slunk, slunk",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "slink"
+                              },
+                              {
+                              "statement": "fendre / inciser",
+                              "answer": "slit, slit, slit",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "slit"
+                              },
+                              {
+                              "statement": "sentir (une odeur)",
+                              "answer": "smell, smelt, smelt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "smell"
+                              },
+                              {
+                              "statement": "frapper / abattre (formel)",
+                              "answer": "smite, smote, smitten",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "smite"
+                              },
+                              {
+                              "statement": "semer",
+                              "answer": "sow, sowed, sown",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "sow"
+                              },
+                              {
+                              "statement": "parler",
+                              "answer": "speak, spoke, spoken",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "speak"
+                              },
+                              {
+                              "statement": "se presser",
+                              "answer": "speed, sped, sped",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "speed"
+                              },
+                              {
+                              "statement": "Èpeler / orthographier",
+                              "answer": "spell, spelt, spelt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "spell"
+                              },
+                              {
+                              "statement": "dÈpenser",
+                              "answer": "spend, spent, spent",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "spend"
+                              },
+                              {
+                              "statement": "(se) renverser / (se) rÈpandre",
+                              "answer": "spill, spilt, spilt",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "spill"
+                              },
+                              {
+                              "statement": "faire tourner / filer",
+                              "answer": "spin, span, spun",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "spin"
+                              },
+                              {
+                              "statement": "cracher",
+                              "answer": "spit, spat, spat",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "spit"
+                              },
+                              {
+                              "statement": "(se) fendre / (se) diviser",
+                              "answer": "split, split, split",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "split"
+                              },
+                              {
+                              "statement": "abÓmer / g‚ter",
+                              "answer": "spoil, spoilt, spoilt",
+                              "description": "Un \"spoiler\", c'est une information qui g‚che un film.",
+                              "image": "",
+                              "video": "",
+                              "sound": "spoil"
+                              },
+                              {
+                              "statement": "(s') Ètendre / (se) propager",
+                              "answer": "spread, spread, spread",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "spread"
+                              },
+                              {
+                              "statement": "jaillir / surgir",
+                              "answer": "spring, sprang, sprung",
+                              "description": "\"Spring\", le printemps, quand les fleurs jaillissent des arbres.",
+                              "image": "",
+                              "video": "",
+                              "sound": "spring"
+                              },
+                              {
+                              "statement": "Ítre debout",
+                              "answer": "stand, stood, stood",
+                              "description": "Un \"stand\", c'est un Ètalage derriËre lequel le vendeur se tient debout.",
+                              "image": "",
+                              "video": "",
+                              "sound": "stand"
+                              },
+                              {
+                              "statement": "dÈfoncer / crever",
+                              "answer": "stave, stove, stove",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "stave"
+                              },
+                              {
+                              "statement": "voler (un objet)",
+                              "answer": "steal, stole, stolen",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "steal"
+                              },
+                              {
+                              "statement": "coller / planter",
+                              "answer": "stick, stuck, stuck",
+                              "description": "Un \"stick\" de colle est un b‚ton que l'on peut planter.",
+                              "image": "",
+                              "video": "",
+                              "sound": "stick"
+                              },
+                              {
+                              "statement": "piquer / br˚ler",
+                              "answer": "sting, stung, stung",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "sting"
+                              },
+                              {
+                              "statement": "puer",
+                              "answer": "stink, stank, stunk",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "stink"
+                              },
+                              {
+                              "statement": "semer / joncher",
+                              "answer": "strew, strew, strewn",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "strew"
+                              },
+                              {
+                              "statement": "marcher ‡ grands pas",
+                              "answer": "stride, strode, stridden",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "stride"
+                              },
+                              {
+                              "statement": "frapper / attaquer / se mettre en grËve",
+                              "answer": "strike, struck, struck",
+                              "description": "Un \"strike\" au bowling, c'est quand on frappe toutes les quilles.",
+                              "image": "",
+                              "video": "",
+                              "sound": "strike"
+                              },
+                              {
+                              "statement": "ficeler",
+                              "answer": "string, strung, strung",
+                              "description": "Un \"string\" c'est une culotte fait d'une ficelle.",
+                              "image": "",
+                              "video": "",
+                              "sound": "string"
+                              },
+                              {
+                              "statement": "s'efforcer",
+                              "answer": "strive, strove, striven",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "strive"
+                              },
+                              {
+                              "statement": "jurer",
+                              "answer": "swear, swore, sworn",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "swear"
+                              },
+                              {
+                              "statement": "suer",
+                              "answer": "sweat, sweat, sweat",
+                              "description": "Un \"sweat-shirt\" est un habit pour faire du sport, dans lequel on sue.",
+                              "image": "",
+                              "video": "",
+                              "sound": "sweat"
+                              },
+                              {
+                              "statement": "balayer",
+                              "answer": "sweep, swept, swept",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "sweep"
+                              },
+                              {
+                              "statement": "gonfler",
+                              "answer": "swell, swelled, swollen",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "swell"
+                              },
+                              {
+                              "statement": "nager",
+                              "answer": "swim, swam, swum",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "swim"
+                              },
+                              {
+                              "statement": "balancer",
+                              "answer": "swing, swung, swung",
+                              "description": "Le \"swing\" au glof, est un mouvement de balancier. Quand une chanson \"swingue\", elle balance.",
+                              "image": "",
+                              "video": "",
+                              "sound": "swing"
+                              },
+                              {
+                              "statement": "prendre",
+                              "answer": "take, took, taken",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "take"
+                              },
+                              {
+                              "statement": "enseigner",
+                              "answer": "teach, taught, taught",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "teach"
+                              },
+                              {
+                              "statement": "dÈchirer / arracher / diviser",
+                              "answer": "tear, tore, torn",
+                              "description": "Lorsque nous sommes dÈchirÈs, nous versons une larme (a tear).",
+                              "image": "",
+                              "video": "",
+                              "sound": "tear"
+                              },
+                              {
+                              "statement": "raconter",
+                              "answer": "tell, told, told",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "tell"
+                              },
+                              {
+                              "statement": "penser",
+                              "answer": "think, thought, thought",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "think"
+                              },
+                              {
+                              "statement": "prospÈrer",
+                              "answer": "thrive, throve, thriven",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "thrive"
+                              },
+                              {
+                              "statement": "lancer",
+                              "answer": "throw, threw, thrown",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "throw"
+                              },
+                              {
+                              "statement": "pousser / enfoncer / imposer",
+                              "answer": "thrust, thrust, thrust",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "thrust"
+                              },
+                              {
+                              "statement": "piÈtiner / fouler / marcher",
+                              "answer": "tread, trod, trodden",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "tread"
+                              },
+                              {
+                              "statement": "composer",
+                              "answer": "typeset, typeset, typeset",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "typeset"
+                              },
+                              {
+                              "statement": "subir",
+                              "answer": "undergo, underwent, undergone",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "undergo"
+                              },
+                              {
+                              "statement": "comprendre",
+                              "answer": "understand, understood, understood",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "understand"
+                              },
+                              {
+                              "statement": "(se) rÈveiller / (se) ranimer",
+                              "answer": "wake, woke, woken",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "wake"
+                              },
+                              {
+                              "statement": "porter (vÍtement) / user",
+                              "answer": "wear, wore, worn",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "wear"
+                              },
+                              {
+                              "statement": "tisser / tresser / tituber",
+                              "answer": "weave, wove, woven",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "weave"
+                              },
+                              {
+                              "statement": "Èpouser / marier",
+                              "answer": "wed, wed, wed",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "wed"
+                              },
+                              {
+                              "statement": "pleurer",
+                              "answer": "weep, wept, wept",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "weep"
+                              },
+                              {
+                              "statement": "mouiller",
+                              "answer": "wet, wet, wet",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "wet"
+                              },
+                              {
+                              "statement": "gagner",
+                              "answer": "win, won, won",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "win"
+                              },
+                              {
+                              "statement": "remonter / enrouler / rembobiner",
+                              "answer": "wind, wound, wound",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "wind"
+                              },
+                              {
+                              "statement": "(se) retirer",
+                              "answer": "withdraw, withdrew, withdrawn",
+                              "description": "To draw = tirer / to withdraw = se retirer",
+                              "image": "",
+                              "video": "",
+                              "sound": "withdraw"
+                              },
+                              {
+                              "statement": "tordre",
+                              "answer": "wring, wrung, wrung",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "wring"
+                              },
+                              {
+                              "statement": "Ècrire",
+                              "answer": "write, wrote, written",
+                              "description": "",
+                              "image": "",
+                              "video": "",
+                              "sound": "write"
                               }
                               ]
                      }
-
-    ]
+                     ]
+    
 }
